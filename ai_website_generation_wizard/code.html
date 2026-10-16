@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#f4f4f4", "on-surface": "#161616", "primary-fixed-dim": "#78a9ff", "surface": "#ffffff", "on-secondary-fixed": "#161616", "tertiary-fixed-dim": "#42be65", "secondary-fixed-dim": "#c6c6c6", "on-secondary": "#ffffff", "surface-container-high": "#e0e0e0", "tertiary-fixed": "#a7f0ba", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-background": "#161616", "on-error-container": "#750e13", "inverse-primary": "#78a9ff", "on-primary": "#ffffff", "secondary": "#6f6f6f", "on-secondary-fixed-variant": "#525252", "on-primary-fixed": "#001d6c", "error": "#da1e28", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-surface-variant": "#525252", "on-tertiary-container": "#044317", "surface-tint": "#0f62fe", "primary-container": "#d0e2ff", "on-tertiary-fixed": "#022d0d", "primary": "#0f62fe", "primary-fixed": "#d0e2ff", "secondary-container": "#e0e0e0", "inverse-on-surface": "#f4f4f4", "outline": "#8d8d8d", "surface-dim": "#e0e0e0", "outline-variant": "#e0e0e0", "tertiary": "#198038", "on-primary-fixed-variant": "#0043ce", "surface-container-highest": "#c6c6c6", "inverse-surface": "#393939", "on-tertiary-fixed-variant": "#044317", "surface-container-lowest": "#ffffff", "tertiary-container": "#a7f0ba", "secondary-fixed": "#e0e0e0", "background": "#ffffff", "error-container": "#fff1f1", "on-primary-container": "#161616", "on-secondary-container": "#525252", "surface-container": "#f4f4f4" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": {}, "fontFamily": { "headline": [ "IBM Plex Sans" ], "display": [ "IBM Plex Sans" ], "body": [ "IBM Plex Sans" ], "label": [ "IBM Plex Sans" ] }, "fontSize": {} } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col py-6"><div class="px-6 mb-8 text-xl font-headline font-bold tracking-tight text-primary">FUNNELAI</div><nav class="flex-1 px-4 space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="visual-editor" href="#"><span class="material-symbols-outlined mr-3">edit_note</span>Website Editor</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="template-library" href="#"><span class="material-symbols-outlined mr-3">grid_view</span>Templates</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="leads" href="#"><span class="material-symbols-outlined mr-3">contacts</span>Leads</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined mr-3">analytics</span>Analytics</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="subscription" href="#"><span class="material-symbols-outlined mr-3">credit_card</span>Subscription</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="admin" href="#"><span class="material-symbols-outlined mr-3">admin_panel_settings</span>Admin Panel</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="text-sm text-on-surface-variant">Enterprise Tier Active (₦50,000/yr)</div><div class="flex items-center gap-4"><span class="material-symbols-outlined text-on-surface-variant cursor-pointer">notifications</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface"><div class="flex flex-col w-full p-8 max-w-7xl mx-auto">
+<div class="flex items-center justify-between mb-8">
+<div>
+<span class="text-xs uppercase font-mono tracking-wider text-primary">AI Website Wizard</span>
+<h1 class="text-2xl font-headline font-semibold text-on-surface mt-1">Autonomous Funnel Builder</h1>
+</div>
+<div class="flex items-center gap-2 text-sm text-on-surface-variant font-mono">
+<span>Step <span id="current-step-num">1</span> of 7</span>
+</div>
+</div>
+<div class="flex gap-4 mb-8 overflow-x-auto pb-2" id="wizard-steps-indicator">
+<div class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator" data-step="1">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs font-mono">1</span>
+<span class="text-sm font-medium truncate">Business Info</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 bg-surface-container-low text-on-surface-variant rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator" data-step="2">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center text-xs font-mono">2</span>
+<span class="text-sm font-medium truncate">Products</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 bg-surface-container-low text-on-surface-variant rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator" data-step="3">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center text-xs font-mono">3</span>
+<span class="text-sm font-medium truncate">Branding</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 bg-surface-container-low text-on-surface-variant rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator" data-step="4">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center text-xs font-mono">4</span>
+<span class="text-sm font-medium truncate">Goals</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 bg-surface-container-low text-on-surface-variant rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator" data-step="5">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center text-xs font-mono">5</span>
+<span class="text-sm font-medium truncate">Templates</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 bg-surface-container-low text-on-surface-variant rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator" data-step="6">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center text-xs font-mono">6</span>
+<span class="text-sm font-medium truncate">AI Generation</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 bg-surface-container-low text-on-surface-variant rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator" data-step="7">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center text-xs font-mono">7</span>
+<span class="text-sm font-medium truncate">Preview</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8 min-h-[460px] flex flex-col justify-between relative shadow-sm">
+<div class="wizard-step-content" id="step-1-content">
+<div class="max-w-2xl">
+<h2 class="text-xl font-headline font-semibold text-on-surface mb-2">Tell us about your business</h2>
+<p class="text-sm text-on-surface-variant mb-6">Our AI engine uses this context to structure your high-converting copy and layout.</p>
+<div class="space-y-6">
+<div>
+<label class="block text-xs font-mono uppercase text-on-surface-variant mb-2">Business Name</label>
+<input class="w-full bg-surface border-b-2 border-outline-variant px-4 py-3 text-on-surface focus:border-primary outline-none transition-all rounded-lg" placeholder="e.g. Lagos Luxe Fashion" type="text" value="Lagos Luxe Fashion"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-mono uppercase text-on-surface-variant mb-2">Industry</label>
+<select class="w-full bg-surface border-b-2 border-outline-variant px-4 py-3 text-on-surface focus:border-primary outline-none transition-all rounded-lg">
+<option>E-Commerce &amp; Retail</option>
+<option>Real Estate &amp; PropTech</option>
+<option>Professional Services</option>
+<option>Health &amp; Wellness</option>
+<option>Fintech &amp; Financial Services</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-on-surface-variant mb-2">Target Audience</label>
+<input class="w-full bg-surface border-b-2 border-outline-variant px-4 py-3 text-on-surface focus:border-primary outline-none transition-all rounded-lg" placeholder="e.g. Urban professionals, ages 25-45" type="text" value="Affluent urban shoppers in Lagos &amp; Abuja"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-on-surface-variant mb-2">Business Description</label>
+<textarea class="w-full bg-surface border-b-2 border-outline-variant px-4 py-3 text-on-surface focus:border-primary outline-none transition-all rounded-lg resize-none" placeholder="Describe what you sell, your unique value proposition..." rows="3">Premium ready-to-wear African contemporary fashion designed for modern professionals who value bespoke tailoring and sustainable fabrics.</textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="wizard-step-content hidden" id="step-2-content">
+<div class="max-w-2xl">
+<h2 class="text-xl font-headline font-semibold text-on-surface mb-2">Core Products &amp; Services</h2>
+<p class="text-sm text-on-surface-variant mb-6">Add your primary offers that will be featured in the hero and catalog sections.</p>
+<div class="space-y-4">
+<div class="p-4 bg-surface rounded-xl space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-mono uppercase text-on-surface-variant mb-1">Product Name</label>
+<input class="w-full bg-surface-variant px-3 py-2 rounded text-sm text-on-surface outline-none" type="text" value="Adire Silk Executive Kaftan"/>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-on-surface-variant mb-1">Pricing (₦)</label>
+<input class="w-full bg-surface-variant px-3 py-2 rounded text-sm text-on-surface outline-none" type="text" value="45,000"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-on-surface-variant mb-1">Description &amp; Key Benefits</label>
+<input class="w-full bg-surface-variant px-3 py-2 rounded text-sm text-on-surface outline-none" type="text" value="Hand-dyed pure silk, lightweight comfort, perfect for corporate events and owambe specials."/>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-medium text-sm py-2 px-3 hover:bg-primary-container/30 rounded-lg transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span> Add Another Product
+          </button>
+</div>
+</div>
+</div>
+<div class="wizard-step-content hidden" id="step-3-content">
+<div class="max-w-3xl">
+<h2 class="text-xl font-headline font-semibold text-on-surface mb-2">Branding &amp; Visual Identity</h2>
+<p class="text-sm text-on-surface-variant mb-6">Define the look and feel of your AI-generated website.</p>
+<div class="grid grid-cols-3 gap-6">
+<div class="col-span-1 space-y-4">
+<label class="block text-xs font-mono uppercase text-on-surface-variant">Brand Logo</label>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-6 text-center bg-surface hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">cloud_upload</span>
+<p class="text-xs text-on-surface font-medium">Click to upload logo</p>
+<p class="text-[10px] text-on-surface-variant mt-1">SVG, PNG, JPG (max 2MB)</p>
+</div>
+</div>
+<div class="col-span-2 space-y-6">
+<div>
+<label class="block text-xs font-mono uppercase text-on-surface-variant mb-3">Color Palette</label>
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded-full bg-primary ring-2 ring-offset-2 ring-primary cursor-pointer"></div>
+<div class="w-10 h-10 rounded-full bg-slate-900 cursor-pointer"></div>
+<div class="w-10 h-10 rounded-full bg-amber-600 cursor-pointer"></div>
+<div class="w-10 h-10 rounded-full bg-emerald-700 cursor-pointer"></div>
+<div class="w-10 h-10 rounded-full bg-rose-800 cursor-pointer"></div>
+</div>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-on-surface-variant mb-3">Visual Style</label>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-primary-container text-on-primary-container rounded-xl font-medium text-sm cursor-pointer border border-primary">Modern &amp; Clean</div>
+<div class="p-3 bg-surface text-on-surface rounded-xl font-medium text-sm cursor-pointer border border-outline-variant hover:border-primary">Luxurious &amp; Elegant</div>
+<div class="p-3 bg-surface text-on-surface rounded-xl font-medium text-sm cursor-pointer border border-outline-variant hover:border-primary">Minimalist</div>
+<div class="p-3 bg-surface text-on-surface rounded-xl font-medium text-sm cursor-pointer border border-outline-variant hover:border-primary">Bold &amp; Vibrant</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="wizard-step-content hidden" id="step-4-content">
+<div class="max-w-3xl">
+<h2 class="text-xl font-headline font-semibold text-on-surface mb-2">Primary Conversion Goal</h2>
+<p class="text-sm text-on-surface-variant mb-6">What action do you want your website visitors to take most?</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-5 bg-surface rounded-xl border-2 border-primary cursor-pointer relative shadow-sm">
+<span class="material-symbols-outlined text-primary text-2xl mb-3">chat</span>
+<h3 class="font-headline font-semibold text-on-surface mb-1">WhatsApp Enquiries</h3>
+<p class="text-xs text-on-surface-variant">Direct customers straight to your WhatsApp chat with pre-filled product queries.</p>
+<span class="absolute top-4 right-4 material-symbols-outlined text-primary">check_circle</span>
+</div>
+<div class="p-5 bg-surface rounded-xl border border-outline-variant cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-secondary text-2xl mb-3">person_add</span>
+<h3 class="font-headline font-semibold text-on-surface mb-1">Lead Generation</h3>
+<p class="text-xs text-on-surface-variant">Capture emails and phone numbers via high-converting lead magnets.</p>
+</div>
+<div class="p-5 bg-surface rounded-xl border border-outline-variant cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-secondary text-2xl mb-3">shopping_bag</span>
+<h3 class="font-headline font-semibold text-on-surface mb-1">Product Orders</h3>
+<p class="text-xs text-on-surface-variant">Accept direct orders with integrated payment and delivery instructions.</p>
+</div>
+<div class="p-5 bg-surface rounded-xl border border-outline-variant cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-secondary text-2xl mb-3">calendar_month</span>
+<h3 class="font-headline font-semibold text-on-surface mb-1">Appointment Booking</h3>
+<p class="text-xs text-on-surface-variant">Let clients schedule consultations or physical store visits instantly.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="wizard-step-content hidden" id="step-5-content">
+<div class="max-w-4xl">
+<h2 class="text-xl font-headline font-semibold text-on-surface mb-2">Recommended Template Selection</h2>
+<p class="text-sm text-on-surface-variant mb-6">AI matched these layouts based on your E-Commerce &amp; Retail profile.</p>
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-surface rounded-xl overflow-hidden border-2 border-primary cursor-pointer group">
+<div class="h-36 bg-cover bg-center" data-alt="High-end fashion e-commerce storefront template preview showcasing minimalist grid and sleek typography" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALJ2x3cbsHq6sFnX_N3B7cpSlm-Xvs2lC_jrwqugoDUgdMNcz84LxY6-g7n-DrZljH9W5yAgfnSIC0gQoGohQDFq_PEUKHT4rCmMAvyCeBEFSwYIfUd132Zskovh7-h16FSQyeP0YNG8s15hgyQwApsWjOkrcoa4IABWtOHVZ4j070zDshBecE2h8zAYfciC19EHS8rjv40WVeVQShr7PaSVLN9lNWXPUgk5A4UOxz8p5NJw5bQdEkZw')"></div>
+<div class="p-4">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-sm text-on-surface">EkoStore Pro</h3>
+<span class="text-xs bg-primary-container text-on-primary-container px-2 py-0.5 rounded font-mono">Best Match</span>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">Optimized for high mobile conversion with sticky WhatsApp CTA.</p>
+</div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden border border-outline-variant cursor-pointer hover:border-primary transition-all group">
+<div class="h-36 bg-cover bg-center" data-alt="Luxurious boutique landing page with dark backdrop and gold accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZPKbX0AjHZSxarlVDyKh-YaLVGNWRITNebmciexS8Z4eiAsZWBWf194WcHfnGLC7kY42hoN6B1gvcs-20vQR1XZlJFKQxnJYRvvyL6_f3IXiGooPP6pX3j8RmutDLe1WE6pGVMr7KC5vk7TinD09kMxXECU11KNWbl5QA1LaeTaeVK856MJfX4yh0uoztcYq9RTuCfY13JfFIjAqdjwNXN8vGIIfyqUUi7U5j6ezWoysaTCvyvzJrXA')"></div>
+<div class="p-4">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-sm text-on-surface">Vogue Luxe</h3>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">Immersive storytelling layout designed for premium designer brands.</p>
+</div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden border border-outline-variant cursor-pointer hover:border-primary transition-all group">
+<div class="h-36 bg-cover bg-center" data-alt="Modern minimalist storefront template with clean white space" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrH6L8Tk-16PrEvQtxsMMCyxm8wJvUd90RBkFvBFCh0yp7EfmPh5BlhyxzM5MY5Qyx6hY9YoLejVRTfl7omaqdX3kvwiQZWeSgmfUvo3YTzuzjkIf60sSCLqXyLdKTFMXUQc4Kd1wDn6Qn1b_XiqUX23PTSHij2EZruFmTlOigXvwMt4PuTtmwReSA08duFbj1gmg94w1thrF0bIYhbQNawsLxIsWLS38iVzLwJX2RFmeXZew4TMTF_Q')"></div>
+<div class="p-4">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-sm text-on-surface">Aura Minimal</h3>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">Clean minimalist grid layout highlighting product imagery.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="wizard-step-content hidden" id="step-6-content">
+<div class="max-w-xl mx-auto text-center py-8 space-y-6">
+<div class="w-16 h-16 rounded-full bg-primary-container text-primary flex items-center justify-center mx-auto animate-pulse">
+<span class="material-symbols-outlined text-3xl">auto_awesome</span>
+</div>
+<div>
+<h2 class="text-2xl font-headline font-semibold text-on-surface mb-2">Generating Your Funnel...</h2>
+<p class="text-sm text-on-surface-variant">Our autonomous agents are assembling your high-converting website.</p>
+</div>
+<div class="space-y-3 text-left bg-surface p-6 rounded-xl">
+<div class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>Analyzing business profile &amp; target audience</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>Writing persuasive high-converting copywriting</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">sync</span>
+<span class="animate-pulse">Generating high-converting responsive layouts</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-secondary">
+<span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span>
+<span>Compiling WhatsApp direct response hooks</span>
+</div>
+</div>
+</div>
+</div>
+<div class="wizard-step-content hidden" id="step-7-content">
+<div class="w-full h-full flex flex-col">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="text-lg font-headline font-semibold text-on-surface">Generated Website Preview</h2>
+<p class="text-xs text-on-surface-variant">Fully responsive layout with active WhatsApp integration.</p>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 bg-surface text-on-surface text-xs font-medium rounded border border-outline-variant hover:border-primary transition-all">Regenerate</button>
+<button class="px-3 py-1.5 bg-surface text-on-surface text-xs font-medium rounded border border-outline-variant hover:border-primary transition-all">Change Template</button>
+<button class="px-3 py-1.5 bg-primary text-on-primary text-xs font-medium rounded hover:bg-primary/90 transition-all">Open Editor</button>
+</div>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden border border-outline-variant flex-1 h-[320px] relative flex flex-col">
+<div class="bg-surface-container-high px-4 py-2 flex items-center gap-2 border-b border-outline-variant">
+<div class="flex gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+</div>
+<div class="bg-surface px-3 py-0.5 rounded text-[10px] text-on-surface-variant font-mono mx-auto">lagosluxefashion.funnelai.app</div>
+</div>
+<div class="flex-1 overflow-y-auto p-6 space-y-6">
+<div class="text-center max-w-lg mx-auto space-y-3 py-4">
+<span class="text-[10px] uppercase font-mono bg-primary-container text-on-primary-container px-2 py-0.5 rounded">New Collection 2025</span>
+<h1 class="text-2xl font-bold font-headline text-on-surface">Redefining Contemporary African Elegance</h1>
+<p class="text-xs text-on-surface-variant">Discover hand-dyed pure silk kaftans crafted for the modern professional.</p>
+<button class="px-4 py-2 bg-primary text-on-primary text-xs font-medium rounded-full shadow-sm flex items-center gap-2 mx-auto">
+<span class="material-symbols-outlined text-[16px]">chat</span> Chat on WhatsApp (₦45,000)
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-8 border-t border-outline-variant mt-8">
+<button class="px-5 py-2.5 rounded-xl border border-outline-variant text-on-surface text-sm font-medium hover:bg-surface-container-high transition-all" id="prev-btn">Back</button>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 rounded-xl bg-primary text-on-primary text-sm font-medium hover:bg-primary/90 transition-all flex items-center gap-2" id="next-btn">
+<span>Next Step</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    let currentStep = 1;
+    const totalSteps = 7;
+
+    function updateWizard() {
+      document.getElementById('current-step-num').textContent = currentStep;
+      
+      document.querySelectorAll('.wizard-step-content').forEach((el, idx) => {
+        if (idx + 1 === currentStep) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+
+      document.querySelectorAll('.step-indicator').forEach((el, idx) => {
+        const stepNum = idx + 1;
+        const badge = el.querySelector('span:first-child');
+        if (stepNum === currentStep) {
+          el.className = "flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator";
+          badge.className = "w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs font-mono";
+        } else if (stepNum < currentStep) {
+          el.className = "flex items-center gap-3 px-4 py-3 bg-surface-container-high text-on-surface rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator";
+          badge.className = "w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center text-xs font-mono";
+        } else {
+          el.className = "flex items-center gap-3 px-4 py-3 bg-surface-container-low text-on-surface-variant rounded-xl flex-1 min-w-[140px] transition-all cursor-pointer step-indicator";
+          badge.className = "w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center text-xs font-mono";
+        }
+      });
+
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+
+      if (currentStep === 1) {
+        prevBtn.style.visibility = 'hidden';
+      } else {
+        prevBtn.style.visibility = 'visible';
+      }
+
+      if (currentStep === totalSteps) {
+        nextBtn.textContent = 'Publish Website';
+      } else if (currentStep === 6) {
+        nextBtn.textContent = 'View Preview';
+      } else {
+        nextBtn.innerHTML = '<span>Next Step</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>';
+      }
+    }
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        updateWizard();
+      }
+    });
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      if (currentStep > 1) {
+        currentStep--;
+        updateWizard();
+      }
+    });
+
+    document.querySelectorAll('.step-indicator').forEach(el => {
+      el.addEventListener('click', () => {
+        currentStep = parseInt(el.getAttribute('data-step'));
+        updateWizard();
+      });
+    });
+
+    updateWizard();
+  </script>
+</div></main></div></body></html>

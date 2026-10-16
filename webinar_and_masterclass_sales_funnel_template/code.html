@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#044317", "primary-fixed": "#d0e2ff", "on-primary-fixed-variant": "#0043ce", "surface-container-high": "#e0e0e0", "on-secondary": "#ffffff", "inverse-surface": "#393939", "on-tertiary": "#ffffff", "surface-container-highest": "#c6c6c6", "tertiary-fixed-dim": "#42be65", "surface-container": "#f4f4f4", "on-tertiary-fixed": "#022d0d", "primary-fixed-dim": "#78a9ff", "surface-tint": "#0f62fe", "tertiary-fixed": "#a7f0ba", "on-error": "#ffffff", "inverse-on-surface": "#f4f4f4", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-dim": "#e0e0e0", "surface-variant": "#f4f4f4", "outline": "#8d8d8d", "inverse-primary": "#78a9ff", "on-secondary-fixed-variant": "#525252", "outline-variant": "#e0e0e0", "on-secondary-container": "#525252", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#161616", "on-primary": "#ffffff", "on-background": "#161616", "surface": "#ffffff", "secondary": "#6f6f6f", "secondary-container": "#e0e0e0", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-primary-container": "#161616", "on-primary-fixed": "#001d6c", "on-error-container": "#750e13", "error": "#da1e28", "tertiary": "#198038", "on-surface-variant": "#525252", "background": "#ffffff", "tertiary-container": "#a7f0ba", "error-container": "#fff1f1", "primary": "#0f62fe", "secondary-fixed-dim": "#c6c6c6", "primary-container": "#d0e2ff", "on-tertiary-fixed-variant": "#044317" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><span class="text-xl font-headline font-bold tracking-tight uppercase text-on-surface">FUNNELFLOW</span><nav class="hidden md:flex items-center gap-8" data-active-classes="bg-primary-container text-on-primary-container font-bold px-3 py-1 rounded"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Templates</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-4"><a class="bg-primary text-on-primary px-4 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full bg-surface text-on-surface">
+<!-- 1. Event announcement banner with live registration countdown -->
+<aside aria-label="Event announcement" class="w-full bg-inverse-surface text-inverse-on-surface py-3 px-6 flex flex-wrap items-center justify-between gap-4 text-xs tracking-wider uppercase font-semibold">
+<div class="flex items-center gap-3">
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded text-[10px]">LIVE NOW</span>
+<span>Q3 Masterclass Registration Closes Soon</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-on-surface-variant font-normal">Starts in:</span>
+<span class="font-mono text-primary-fixed-dim font-bold text-sm" id="countdown-timer">04 : 59 : 32</span>
+</div>
+</aside>
+<!-- 2. Hero section with bold navy background, electric blue accents, and compelling headline -->
+<!-- 3. Event date, time, and timezone badge indicator -->
+<!-- 4. Primary registration CTA button ("Reserve My Free Seat") -->
+<section class="relative w-full bg-inverse-surface text-inverse-on-surface py-24 px-6 lg:px-12 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col items-start gap-6">
+<div class="inline-flex items-center gap-2 bg-surface/10 backdrop-blur border border-white/10 px-3 py-1 rounded text-xs font-mono text-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+          Thursday, Oct 24 • 1:00 PM EST (10:00 AM PST)
+        </div>
+<h1 class="text-4xl sm:text-6xl font-headline font-bold tracking-tight leading-none text-white">
+          Scale Your Agency to 7 Figures: The Live Q3 Masterclass Blueprint
+        </h1>
+<p class="text-lg text-surface-container-highest max-w-2xl font-light">
+          Discover the exact operational frameworks and automated client acquisition systems used by top 1% agencies to scale past $1M ARR without burning out.
+        </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-4">
+<a class="bg-primary text-on-primary font-semibold px-8 py-4 text-center hover:bg-primary/90 transition-colors shadow-lg flex items-center justify-center gap-3" href="#register-form">
+<span>Reserve My Free Seat</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<div class="flex items-center gap-3 px-4 py-2 bg-surface/5 border border-white/10">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-xs font-bold text-white border border-inverse-surface">A</div>
+<div class="w-8 h-8 rounded-full bg-tertiary flex items-center justify-center text-xs font-bold text-white border border-inverse-surface">M</div>
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-xs font-bold text-white border border-inverse-surface">K</div>
+</div>
+<div class="text-xs text-surface-container-highest">
+<span class="font-bold text-white">1,420+</span> agency founders registered
+            </div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="bg-surface/5 border border-white/10 p-6 backdrop-blur flex flex-col gap-6">
+<div class="w-full h-72 bg-cover bg-center" data-alt="Professional portrait of a confident tech entrepreneur in a modern minimalist office setting with soft studio lighting and dark navy color tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVRQRSrET7BDk6c-uQFd8MkwEQ4XHcNM_P-nHKm0TOrr2hNiovdJ92q1AqERUkzlK3hCShVzt-FOvvLHuG5k-bv0ehdjJ9OhAA7sREg4z2WDkI-GwKstg4hmgi8yy7skj5-16L56CiHKX2xqVyJslsbUy782cjP3aB1YK0ivuFnxxVOk0AgWJKi3SLgbUtJXA0L2ae54nDndMXda5IRUvMld0h5nOCcnR0lo4ErD474J8TY7zTpdKJng')"></div>
+<div class="flex justify-between items-center border-b border-white/10 pb-4">
+<div>
+<div class="text-xs text-primary-fixed uppercase tracking-wider font-mono">Masterclass Host</div>
+<div class="text-lg font-bold text-white">Alex Vance</div>
+</div>
+<span class="text-xs px-2.5 py-1 bg-primary/20 text-primary-fixed rounded font-mono">Growth Architect</span>
+</div>
+<div class="text-xs text-surface-container-highest leading-relaxed">
+            "We've deconstructed 50+ seven-figure agency exits to bring you the ultimate repeatable growth blueprint for Q3 and beyond."
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Expert speaker introduction -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5">
+<div class="w-full h-96 bg-cover bg-center shadow-lg" data-alt="Alex Vance speaking on a large corporate stage with vivid blue spotlighting and large digital data visualizations in the background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCP0Sl9zLhDeGpOI8fQdmxfMwQgWGCHFRZVCQT-hCu4yECefJ2A7KmPVRAI5fG9rziDWyrtn9rUFdtK8Xd-YMQxPgUAcY3CqLKApiPicqGaM-U90yo5wBbKnp0wgGj4T04uitOCO9TtCFrQUNb1VTQMg0lJsnjTDSSbcxBY8kj0klIgq566Cndbk25k6JcANzgmg7AAw5mXEl7Cv6SMfdtMqkk59bdRFIoxQkF2bkgrQenCW42YJjMZsQ')"></div>
+</div>
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="text-xs font-mono uppercase text-primary tracking-widest">Masterclass Instructor</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface">Meet Alex Vance</h2>
+<p class="text-on-surface-variant leading-relaxed">
+          Alex Vance has spent the last decade scaling B2B agencies and SaaS ecosystems. As the founder of FunnelAI Growth Labs, he has personally advised over 120 agencies on optimizing their client acquisition pipelines, resulting in over $120M+ in verified client revenue.
+        </p>
+<div class="grid grid-cols-3 gap-6 pt-4 border-t border-outline-variant">
+<div>
+<div class="text-2xl lg:text-3xl font-bold font-mono text-primary">$120M+</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Client Revenue Generated</div>
+</div>
+<div>
+<div class="text-2xl lg:text-3xl font-bold font-mono text-primary">12+</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Years Scaling Agencies</div>
+</div>
+<div>
+<div class="text-2xl lg:text-3xl font-bold font-mono text-primary">50k+</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Founders Trained</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Audience challenges & pain points -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface-container">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="max-w-2xl">
+<div class="text-xs font-mono uppercase text-primary tracking-widest">The Reality Check</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface mt-2">Stuck trading time for dollars?</h2>
+<p class="text-on-surface-variant mt-3">Most agency owners hit an invisible revenue ceiling around $305K/mo because they rely entirely on outdated referral loops and manual prospecting.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-4">
+<div class="w-10 h-10 bg-error-container text-error flex items-center justify-center rounded">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Unpredictable Revenue</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Feast-or-famine client acquisition cycles make cash flow forecasting impossible and growth stressful.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-4">
+<div class="w-10 h-10 bg-error-container text-error flex items-center justify-center rounded">
+<span class="material-symbols-outlined">hourglass_empty</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Operational Bottlenecks</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">You are the chief bottleneck for delivery, sales, and strategy, leaving zero time for high-level scaling.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-4">
+<div class="w-10 h-10 bg-error-container text-error flex items-center justify-center rounded">
+<span class="material-symbols-outlined">money_off</span>
+</div>
+<h3 class="text-xl font-bold on-surface">Low Profit Margins</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Underpricing services and bloated contractor payroll keep your take-home pay stagnant despite high top-line revenue.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Core learning outcomes & transformation roadmap -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto">
+<div class="text-xs font-mono uppercase text-primary tracking-widest">Transformation Roadmap</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface mt-2">What You Will Master</h2>
+<p class="text-on-surface-variant mt-3">A proven step-by-step curriculum engineered specifically for modern agency leaders.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container p-6 flex flex-col gap-4 border-l-4 border-primary">
+<span class="font-mono text-xs text-primary">MODULE 01</span>
+<h3 class="text-lg font-bold text-on-surface">High-Ticket Positioning</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Shift away from commodity pricing and package your services into $10k+ recurring retainers.</p>
+</div>
+<div class="bg-surface-container p-6 flex flex-col gap-4 border-l-4 border-primary">
+<span class="font-mono text-xs text-primary">MODULE 02</span>
+<h3 class="text-lg font-bold text-on-surface">Automated Funnels</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Deploy AI-driven outbound and inbound systems that book qualified decision-makers on autopilot.</p>
+</div>
+<div class="bg-surface-container p-6 flex flex-col gap-4 border-l-4 border-primary">
+<span class="font-mono text-xs text-primary">MODULE 03</span>
+<h3 class="text-lg font-bold text-on-surface">Team &amp; Delegation</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Build a self-managing delivery tier so you can step out of day-to-day operations entirely.</p>
+</div>
+<div class="bg-surface-container p-6 flex flex-col gap-4 border-l-4 border-tertiary">
+<span class="font-mono text-xs text-tertiary">BONUS SESSION</span>
+<h3 class="text-lg font-bold text-on-surface">Live Q&amp;A Hotseats</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Get direct feedback on your pricing, funnel architecture, and scaling bottlenecks live.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Detailed session agenda -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface-container">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="max-w-2xl">
+<div class="text-xs font-mono uppercase text-primary tracking-widest">Detailed Schedule</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface mt-2">Masterclass Agenda</h2>
+<p class="text-on-surface-variant mt-3">90 minutes of high-impact, zero-pitch tactical training.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-sm">
+<div class="flex items-center gap-4">
+<span class="font-mono text-sm bg-primary-container text-on-primary-container px-3 py-1 font-bold">00 - 20 MIN</span>
+<div>
+<h3 class="font-bold text-on-surface text-lg">The 7-Figure Agency Blueprint Breakdown</h3>
+<p class="text-xs text-on-surface-variant">Uncovering the structural flaws keeping agencies under $1M and the exact blueprint to fix them.</p>
+</div>
+</div>
+<span class="text-xs font-mono text-primary bg-primary/10 px-3 py-1">Strategy</span>
+</div>
+<div class="bg-surface p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-sm">
+<div class="flex items-center gap-4">
+<span class="font-mono text-sm bg-primary-container text-on-primary-container px-3 py-1 font-bold">20 - 55 MIN</span>
+<div>
+<h3 class="font-bold text-on-surface text-lg">Automated Client Acquisition Systems</h3>
+<p class="text-xs text-on-surface-variant">Step-by-step teardown of our high-converting outbound funnel that generates 30+ qualified calls a month.</p>
+</div>
+</div>
+<span class="text-xs font-mono text-primary bg-primary/10 px-3 py-1">Systems</span>
+</div>
+<div class="bg-surface p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-sm">
+<div class="flex items-center gap-4">
+<span class="font-mono text-sm bg-primary-container text-on-primary-container px-3 py-1 font-bold">55 - 75 MIN</span>
+<div>
+<h3 class="font-bold text-on-surface text-lg">Margin Optimization &amp; Pricing Architecture</h3>
+<p class="text-xs text-on-surface-variant">How to transition from hourly billing to value-based retainers without losing a single client.</p>
+</div>
+</div>
+<span class="text-xs font-mono text-primary bg-primary/10 px-3 py-1">Pricing</span>
+</div>
+<div class="bg-surface p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-sm">
+<div class="flex items-center gap-4">
+<span class="font-mono text-sm bg-tertiary-container text-on-tertiary-container px-3 py-1 font-bold">75 - 90 MIN</span>
+<div>
+<h3 class="font-bold text-on-surface text-lg">Live Q&amp;A &amp; Custom Hotseats</h3>
+<p class="text-xs text-on-surface-variant">Direct answers to your most pressing agency scaling questions with Alex Vance.</p>
+</div>
+</div>
+<span class="text-xs font-mono text-tertiary bg-tertiary/10 px-3 py-1">Interactive</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Key topics covered with professional iconography -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto">
+<div class="text-xs font-mono uppercase text-primary tracking-widest">Deep Dive Topics</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface mt-2">What We Will Cover</h2>
+<p class="text-on-surface-variant mt-3">Advanced playbooks built for immediate implementation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">hub</span>
+<h3 class="text-xl font-bold text-on-surface">Omnichannel Lead Gen</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Integrating LinkedIn, targeted email sequences, and paid media into a unified client acquisition machine.</p>
+</div>
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">bolt</span>
+<h3 class="text-xl font-bold text-on-surface">AI Sales Automation</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Leveraging generative AI tools to qualify inbound leads and personalize outreach at massive scale.</p>
+</div>
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">analytics</span>
+<h3 class="text-xl font-bold text-on-surface">Unit Economics &amp; KPIs</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Tracking CAC, LTV, and team utilization metrics to ensure your agency remains highly profitable.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Ideal audience fit (Who should attend) -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface-container">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="text-xs font-mono uppercase text-primary tracking-widest">Target Attendees</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface">Who This Masterclass Is For</h2>
+<p class="text-on-surface-variant leading-relaxed">This is an advanced, no-fluff session tailored specifically for leaders ready to scale.</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-xl mt-0.5">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface">Agency Founders &amp; CEOs</h4>
+<p class="text-xs text-on-surface-variant">Currently doing $20k to $150k/mo looking to scale to 7 figures and beyond.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-xl mt-0.5">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface">Consultants &amp; Service Leaders</h4>
+<p class="text-xs text-on-surface-variant">Transitioning from freelancing to a scalable agency business model.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-xl mt-0.5">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface">Growth Directors &amp; CMOs</h4>
+<p class="text-xs text-on-surface-variant">Responsible for pipeline generation and predictable client acquisition.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-6">
+<div class="text-xs font-mono uppercase text-secondary">Not For Everyone</div>
+<h3 class="text-xl font-bold text-on-surface">Who Should NOT Attend</h3>
+<ul class="flex flex-col gap-3 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm">close</span> Absolute beginners with no existing service offering</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm">close</span> Anyone looking for "get-rich-quick" crypto or dropshipping gimmicks</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm">close</span> Founders unwilling to invest in automation and team building</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. Speaker credentials & verified enterprise track record -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto">
+<div class="text-xs font-mono uppercase text-primary tracking-widest">Verified Results</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface mt-2">Proven Enterprise Track Record</h2>
+<p class="text-on-surface-variant mt-3">The systems taught in this masterclass are backed by real-world case studies.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<div class="font-mono text-primary text-sm">CASE STUDY 01</div>
+<h3 class="text-xl font-bold text-on-surface">Scale from $30k to $110k/mo</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Apex Digital implemented our outbound funnel architecture and doubled their average retainer size within 90 days.</p>
+</div>
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<div class="font-mono text-primary text-sm">CASE STUDY 02</div>
+<h3 class="text-xl font-bold text-on-surface">From Founder-Led to Automated</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Vanguard Growth hired their first account director and automated client onboarding, saving 25 hours a week.</p>
+</div>
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<div class="font-mono text-primary text-sm">CASE STUDY 03</div>
+<h3 class="text-xl font-bold text-on-surface">Zero to $2.4M ARR Exit</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Nexus Media utilized our valuation framework to secure a major strategic acquisition offer in Q2.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. Previous-event participant proof & testimonials -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface-container">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto">
+<div class="text-xs font-mono uppercase text-primary tracking-widest">Attendee Feedback</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface mt-2">What Past Participants Say</h2>
+<p class="text-on-surface-variant mt-3">Hear from agency founders who attended our previous masterclasses.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-6">
+<p class="text-on-surface italic leading-relaxed">"Alex delivers more actionable value in 90 minutes than most consultants do in a 6-month retainer. The pricing framework alone added $40k in annual recurring revenue to our agency."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="Portrait of Sarah Jenkins, CEO of digital marketing agency." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvSK9gR2PzBjkAOT4tpwN_98Xmk6gSifs9WgknRighxvcczGeAXODLP_6rAfd00pAUVkUxxCYzgfHqAwCm2bhf9yyvXCEAwnaxKzSwCu2ztUKCapfYcNgYsFv5QDzo2YhnO3LXDk_T9u4dR8XNC5OZtzG89R7kFVnO1GvzkYdymTGC0USE4vrvab9MXHi1tDQ2kGHM0LMV0Dp2TXVj2gikq8Iz59zd4Jdr2qKhGzDFU2NnalXFhU3s_A')"></div>
+<div>
+<h4 class="font-bold text-on-surface">Sarah Jenkins</h4>
+<p class="text-xs text-on-surface-variant">CEO, Lumina Media</p>
+</div>
+</div>
+</div>
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-6">
+<p class="text-on-surface italic leading-relaxed">"The automated pipeline blueprint completely changed how we handle inbound leads. We've booked 14 qualified calls in the last week alone using these exact templates."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="Portrait of Marcus Thorne, founder of creative studio." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCqy3-9ypyYGT1hUv0yCt0EBO75DYERK6dMTVcidRuLWFNVe-JOzcCLDFIb0NqQJpb-P673xRtJ2YsEpiHqOVY0hSvSLotoQfjxHbwvO0mRIal2RfMmK8uOFyg_gUnge4GyELlV3iJl8VtbjL-Vi38KSj8-hW6QrTgrIl7XXAQIGUHq6mCVlWN0ZJ5C8wi9wVx6yIcS4nv9YCE0IEzaHUEp2teGiYLWk8EmB9tcOO9uEg3eLVHeh4sQw')"></div>
+<div>
+<h4 class="font-bold text-on-surface">Marcus Thorne</h4>
+<p class="text-xs text-on-surface-variant">Founder, Kinetic Studio</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 13. Exclusive attendee registration benefits & toolkit -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="text-xs font-mono uppercase text-tertiary tracking-widest">Attendee Perks</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface">Exclusive Attendee Toolkit</h2>
+<p class="text-on-surface-variant leading-relaxed">Everyone who attends live will receive our complete suite of agency scaling templates, valued at $497, absolutely free.</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="text-on-surface text-sm font-semibold">Full 90-Minute HD Masterclass Recording &amp; Transcripts</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="text-on-surface text-sm font-semibold">The 7-Figure Agency Financial Calculator (Excel/Notion)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="text-on-surface text-sm font-semibold">High-Converting Outbound Email &amp; LinkedIn Swipe Files</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="bg-primary-container p-8 text-on-primary-container flex flex-col gap-6 shadow-md">
+<div class="text-xs font-mono uppercase tracking-widest text-on-primary-fixed-variant">Limited Time Bonus Stack</div>
+<h3 class="text-2xl font-bold">Fast-Action Registration Bonus</h3>
+<p class="text-sm leading-relaxed">Register within the next 15 minutes and unlock immediate access to our exclusive "Agency Offer Architecture" mini-course before the live event.</p>
+<div class="bg-surface p-4 flex justify-between items-center text-xs font-mono">
+<span>BONUS VALUE: $297</span>
+<span class="text-tertiary font-bold">FREE WITH REGISTRATION</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 15. Seamless registration form -->
+<section class="w-full py-20 px-6 lg:px-12 bg-inverse-surface text-inverse-on-surface" id="register-form">
+<div class="max-w-4xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto">
+<div class="text-xs font-mono uppercase text-primary-fixed tracking-widest">Secure Your Spot</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-white mt-2">Reserve Your Free Seat Now</h2>
+<p class="text-surface-container-highest mt-3">Complete the form below to register for the live masterclass and claim your bonuses.</p>
+</div>
+<form class="bg-surface/5 border border-white/10 p-8 lg:p-12 backdrop-blur flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-mono uppercase text-surface-container-highest">Full Name</label>
+<input class="bg-surface/10 border-0 border-b border-white/20 h-10 px-3 text-white placeholder-white/30 focus:outline-none focus:border-primary-fixed text-sm" placeholder="Alex Vance" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-mono uppercase text-surface-container-highest">Business Email</label>
+<input class="bg-surface/10 border-0 border-b border-white/20 h-10 px-3 text-white placeholder-white/30 focus:outline-none focus:border-primary-fixed text-sm" placeholder="alex@agency.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-mono uppercase text-surface-container-highest">Phone Number</label>
+<input class="bg-surface/10 border-0 border-b border-white/20 h-10 px-3 text-white placeholder-white/30 focus:outline-none focus:border-primary-fixed text-sm" placeholder="+1 (555) 019-2834" type="tel"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-mono uppercase text-surface-container-highest">Primary Revenue Tier</label>
+<select class="bg-surface/10 border-0 border-b border-white/20 h-10 px-3 text-white focus:outline-none focus:border-primary-fixed text-sm [&amp;&gt;option]:bg-inverse-surface">
+<option>Under $10k / month</option>
+<option>$10k - $50k / month</option>
+<option>$50k - $150k / month</option>
+<option>$150k+ / month</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-semibold py-4 hover:bg-primary/90 transition-colors shadow-lg text-center text-sm uppercase tracking-wider mt-4" type="submit">
+          Reserve My Free Seat
+        </button>
+<p class="text-[11px] text-center text-surface-container-highest/60">By registering, you agree to receive masterclass access links and reminder notifications. We respect your privacy and never spam.</p>
+</form>
+</div>
+</section>
+<!-- 16. Comprehensive FAQ accordion -->
+<section class="w-full py-20 px-6 lg:px-12 bg-surface">
+<div class="max-w-4xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto">
+<div class="text-xs font-mono uppercase text-primary tracking-widest">Got Questions?</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface mt-2">Frequently Asked Questions</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container p-6 flex flex-col gap-2">
+<h3 class="font-bold text-on-surface text-lg">Will there be a replay available if I can't attend live?</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Yes! Everyone who registers will receive a full high-definition replay link within 2 hours after the live session concludes.</p>
+</div>
+<div class="bg-surface-container p-6 flex flex-col gap-2">
+<h3 class="font-bold text-on-surface text-lg">Is this masterclass really free?</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">100% free. There is no cost to attend the live training or access the bonus attendee toolkit.</p>
+</div>
+<div class="bg-surface-container p-6 flex flex-col gap-2">
+<h3 class="font-bold text-on-surface text-lg">How do I access the free bonuses?</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Your bonus templates and calculator will be emailed to you immediately upon registration, and additional swipe files will be unlocked during the live session.</p>
+</div>
+<div class="bg-surface-container p-6 flex flex-col gap-2">
+<h3 class="font-bold text-on-surface text-lg">Who is this masterclass best suited for?</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Agency founders, B2B consultants, and service business owners looking to scale past $1M ARR with automated client acquisition systems.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 17. Final urgent registration CTA banner -->
+<section class="w-full py-16 px-6 lg:px-12 bg-primary text-on-primary">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+<div class="flex flex-col gap-2">
+<span class="font-mono text-xs uppercase tracking-widest text-primary-fixed">Seats Are Filling Fast</span>
+<h2 class="text-2xl lg:text-3xl font-bold">Ready to Scale Your Agency to 7 Figures?</h2>
+</div>
+<a class="bg-surface text-on-surface font-semibold px-8 py-4 hover:bg-surface-bright transition-colors shadow-lg whitespace-nowrap" href="#register-form">
+        Reserve My Free Seat Now
+      </a>
+</div>
+</section>
+<!-- 18. Professional footer with copyright and legal links -->
+<footer class="w-full bg-inverse-surface text-inverse-on-surface py-16 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/10 pb-12">
+<div class="flex flex-col gap-2 text-center md:text-left">
+<span class="font-headline font-bold text-xl uppercase tracking-tight text-white">FunnelFlow AI</span>
+<p class="text-xs text-surface-container-highest max-w-sm">The industry-standard masterclass and sales funnel platform for high-growth agencies.</p>
+</div>
+<div class="flex flex-wrap gap-8 text-xs text-surface-container-highest">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Earnings Disclaimer</a>
+<a class="hover:text-white transition-colors" href="#">Support Center</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-surface-container-highest">
+<div>© 2024 FunnelFlow Inc. All rights reserved.</div>
+<div>Designed for high-converting masterclass funnels.</div>
+</div>
+</footer>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6"><div class="text-sm text-on-surface-variant">© 2024 FunnelFlow Inc. Inspired by high-converting design systems.</div><div class="flex gap-6 text-sm text-on-surface-variant"><a class="hover:text-on-surface" href="#">Privacy</a><a class="hover:text-on-surface" href="#">Terms</a><a class="hover:text-on-surface" href="#">Support</a></div></div></footer><script>
+  function startCountdown() {
+    let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+    setInterval(() => {
+      if (totalSeconds > 0) totalSeconds--;
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }, 1000);
+  }
+  document.addEventListener('DOMContentLoaded', startCountdown);
+</script></body></html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#044317", "primary-fixed": "#d0e2ff", "on-primary-fixed-variant": "#0043ce", "surface-container-high": "#e0e0e0", "on-secondary": "#ffffff", "inverse-surface": "#393939", "on-tertiary": "#ffffff", "surface-container-highest": "#c6c6c6", "tertiary-fixed-dim": "#42be65", "surface-container": "#f4f4f4", "on-tertiary-fixed": "#022d0d", "primary-fixed-dim": "#78a9ff", "surface-tint": "#0f62fe", "tertiary-fixed": "#a7f0ba", "on-error": "#ffffff", "inverse-on-surface": "#f4f4f4", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-dim": "#e0e0e0", "surface-variant": "#f4f4f4", "outline": "#8d8d8d", "inverse-primary": "#78a9ff", "on-secondary-fixed-variant": "#525252", "outline-variant": "#e0e0e0", "on-secondary-container": "#525252", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#161616", "on-primary": "#ffffff", "on-background": "#161616", "surface": "#ffffff", "secondary": "#6f6f6f", "secondary-container": "#e0e0e0", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-primary-container": "#161616", "on-primary-fixed": "#001d6c", "on-error-container": "#750e13", "error": "#da1e28", "tertiary": "#198038", "on-surface-variant": "#525252", "background": "#ffffff", "tertiary-container": "#a7f0ba", "error-container": "#fff1f1", "primary": "#0f62fe", "secondary-fixed-dim": "#c6c6c6", "primary-container": "#d0e2ff", "on-tertiary-fixed-variant": "#044317" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><span class="text-xl font-headline font-bold tracking-tight uppercase text-on-surface">FUNNELFLOW</span><nav class="hidden md:flex items-center gap-8" data-active-classes="bg-primary-container text-on-primary-container font-bold px-3 py-1 rounded"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Templates</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-4"><a class="bg-primary text-on-primary px-4 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full bg-surface text-on-surface">
+<!-- Announcement Bar -->
+<div class="w-full bg-primary-container text-on-primary-container py-2 px-6 text-center text-xs font-semibold tracking-wider uppercase flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Announcing FunnelAI Enterprise 4.0: Zero-Latency Cloud Orchestration</span>
+<a class="underline hover:opacity-80 transition-opacity ml-2" href="#pricing">Read Release Notes →</a>
+</div>
+<!-- Hero Section (Dark Mode, Bleeding underneath header via -mt-16 pt-24) -->
+<section class="relative bg-inverse-surface text-inverse-on-surface pt-28 pb-20 px-6 lg:px-12 overflow-hidden">
+<!-- Ambient animated background glow -->
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-1/4 w-80 h-80 bg-tertiary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface/10 rounded text-xs font-mono text-primary-fixed uppercase tracking-widest w-max">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Autonomous Enterprise Funnel Architecture
+        </div>
+<h1 class="text-4xl lg:text-6xl font-headline font-bold tracking-tight leading-tight">
+          Scale Enterprise Revenue With <span class="text-primary-fixed">Deterministic AI</span>
+</h1>
+<p class="text-lg text-surface-container-highest max-w-xl font-normal leading-relaxed">
+          Replace fractured marketing pipelines with high-velocity automated cloud funnels. Engineered for massive workloads, SOC2 compliance, and sub-millisecond conversion tracking.
+        </p>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="bg-primary text-on-primary px-8 py-4 font-semibold text-sm hover:bg-primary/90 transition-all shadow-lg flex items-center gap-2" href="#pricing">
+<span>Deploy Enterprise Cluster</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="bg-surface/10 text-inverse-on-surface px-8 py-4 font-semibold text-sm hover:bg-surface/20 transition-all flex items-center gap-2" href="#calculator">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span>Calculate ROI</span>
+</a>
+</div>
+<div class="grid grid-cols-3 gap-6 pt-8 border-t border-surface/10">
+<div>
+<div class="text-2xl font-bold font-mono text-primary-fixed">99.999%</div>
+<div class="text-xs text-surface-container-highest mt-1">SLA Uptime Guarantee</div>
+</div>
+<div>
+<div class="text-2xl font-bold font-mono text-primary-fixed">4.2x</div>
+<div class="text-xs text-surface-container-highest mt-1">Average Pipeline Velocity</div>
+</div>
+<div>
+<div class="text-2xl font-bold font-mono text-primary-fixed">&lt;12ms</div>
+<div class="text-xs text-surface-container-highest mt-1">Global Edge Latency</div>
+</div>
+</div>
+</div>
+<!-- Hero Visual: Live Metrics Card -->
+<div class="lg:col-span-5">
+<div class="bg-surface/5 backdrop-blur-xl p-6 rounded-xl shadow-2xl border border-surface/10 flex flex-col gap-6">
+<div class="flex items-center justify-between pb-4 border-b border-surface/10">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<div class="w-3 h-3 rounded-full bg-primary-fixed"></div>
+</div>
+<span class="text-xs font-mono text-surface-container-highest">us-east-1 // cluster-prod-09</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<div>
+<div class="text-xs text-surface-container-highest uppercase font-mono">Real-Time Ingestion Rate</div>
+<div class="text-3xl font-bold font-mono mt-1 text-primary-fixed">1,482,904 <span class="text-xs font-normal text-surface-container-highest">req/sec</span></div>
+</div>
+<span class="text-xs text-tertiary-fixed bg-tertiary/20 px-2 py-1 rounded font-mono">+18.4%</span>
+</div>
+<!-- Mini Sparkline SVG -->
+<div class="h-24 w-full flex items-end gap-1 pt-2">
+<div class="w-1/12 bg-primary/40 h-[40%] rounded-t"></div>
+<div class="w-1/12 bg-primary/50 h-[55%] rounded-t"></div>
+<div class="w-1/12 bg-primary/60 h-[45%] rounded-t"></div>
+<div class="w-1/12 bg-primary/70 h-[70%] rounded-t"></div>
+<div class="w-1/12 bg-primary/80 h-[85%] rounded-t"></div>
+<div class="w-1/12 bg-primary h-[60%] rounded-t"></div>
+<div class="w-1/12 bg-primary-fixed h-[95%] rounded-t"></div>
+<div class="w-1/12 bg-primary h-[80%] rounded-t"></div>
+<div class="w-1/12 bg-primary-fixed h-[100%] rounded-t"></div>
+<div class="w-1/12 bg-primary h-[90%] rounded-t"></div>
+</div>
+</div>
+<div class="bg-surface/5 p-4 rounded text-xs font-mono space-y-2">
+<div class="flex justify-between text-surface-container-highest">
+<span>Active Funnel Nodes</span>
+<span class="text-inverse-on-surface">1,024 / 1,024</span>
+</div>
+<div class="w-full bg-surface/20 h-1.5 rounded overflow-hidden">
+<div class="bg-primary-fixed h-full w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Modules & Architecture Grid -->
+<section class="py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto space-y-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-xs font-mono text-primary uppercase tracking-widest">Enterprise Architecture</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight mt-2">Built for Scale, Security, and Speed</h2>
+</div>
+<p class="text-on-surface-variant max-w-md text-sm">
+          Every module is containerized and independently scalable to handle unpredictable enterprise traffic spikes without degradation.
+        </p>
+</div>
+<!-- Feature Interactive Tabs -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Tab Selectors -->
+<div class="lg:col-span-4 flex flex-col gap-2">
+<button class="feature-tab text-left p-6 bg-primary-container text-on-primary-container font-semibold transition-all flex items-center justify-between" id="tab-btn-0" onclick="switchFeatureTab(0)">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">security</span>
+<span>Cloud Security &amp; Compliance</span>
+</div>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+<button class="feature-tab text-left p-6 bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold transition-all flex items-center justify-between" id="tab-btn-1" onclick="switchFeatureTab(1)">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span>Automated Analytics Engine</span>
+</div>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+<button class="feature-tab text-left p-6 bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold transition-all flex items-center justify-between" id="tab-btn-2" onclick="switchFeatureTab(2)">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+<span>Metered Usage Billing</span>
+</div>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+<button class="feature-tab text-left p-6 bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold transition-all flex items-center justify-between" id="tab-btn-3" onclick="switchFeatureTab(3)">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">account_tree</span>
+<span>Visual Workflow Designer</span>
+</div>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<!-- Tab Content Display -->
+<div class="lg:col-span-8 bg-surface-container p-8 lg:p-12 min-h-[420px] flex flex-col justify-between">
+<div class="feature-content space-y-6" id="feature-content-0">
+<div class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-mono uppercase">Module 01 // Security</div>
+<h3 class="text-2xl font-headline font-bold">Military-Grade Encryption &amp; SOC2 Type II Certified</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+              Your customer data is protected at rest with AES-256 and in transit via TLS 1.3. Role-based access control (RBAC), multi-factor authentication enforcement, and isolated tenant environments ensure absolute data integrity.
+            </p>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="bg-surface p-4">
+<div class="font-mono font-bold text-primary">ISO 27001</div>
+<div class="text-xs text-on-surface-variant mt-1">Global Information Security Standard</div>
+</div>
+<div class="bg-surface p-4">
+<div class="font-mono font-bold text-primary">GDPR &amp; HIPAA</div>
+<div class="text-xs text-on-surface-variant mt-1">Full Regulatory Compliance Suite</div>
+</div>
+</div>
+</div>
+<div class="feature-content space-y-6 hidden" id="feature-content-1">
+<div class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-mono uppercase">Module 02 // Analytics</div>
+<h3 class="text-2xl font-headline font-bold">Real-Time Attribution and Predictive Conversion Models</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+              Leverage machine learning algorithms trained on billions of enterprise touchpoints. Identify high-value accounts before they convert and automatically redirect marketing budget to top-performing funnel segments.
+            </p>
+<div class="bg-surface p-6 flex items-center justify-between">
+<div>
+<div class="text-xs font-mono text-on-surface-variant">Attribution Accuracy</div>
+<div class="text-2xl font-bold font-mono text-primary mt-1">99.4%</div>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary">monitoring</span>
+</div>
+</div>
+<div class="feature-content space-y-6 hidden" id="feature-content-2">
+<div class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-mono uppercase">Module 03 // Billing</div>
+<h3 class="text-2xl font-headline font-bold">Dynamic Metered Billing &amp; Usage-Based Infrastructure</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+              Scale revenue operations effortlessly with custom pricing matrices. Bill customers based on API calls, active seats, data throughput, or conversion volume with automated Stripe and enterprise ERP integrations.
+            </p>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="bg-surface p-4">
+<div class="font-mono font-bold text-primary">Stripe &amp; SAP</div>
+<div class="text-xs text-on-surface-variant mt-1">Native Bi-directional Sync</div>
+</div>
+<div class="bg-surface p-4">
+<div class="font-mono font-bold text-primary">Automated Dunning</div>
+<div class="text-xs text-on-surface-variant mt-1">94% Failed Payment Recovery</div>
+</div>
+</div>
+</div>
+<div class="feature-content space-y-6 hidden" id="feature-content-3">
+<div class="inline-block px-3 py-1 bg-primary text-on-primary text-xs font-mono uppercase">Module 04 // Workflows</div>
+<h3 class="text-2xl font-headline font-bold">Drag-and-Drop Visual Orchestration for Complex Funnels</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+              Build multi-step enterprise buyer journeys without writing custom routing code. Connect triggers, CRM events, email sequences, and webhook actions on an infinite canvas with instant deployment.
+            </p>
+<div class="bg-surface p-6 flex items-center justify-between">
+<div>
+<div class="text-xs font-mono text-on-surface-variant">Average Deployment Time</div>
+<div class="text-2xl font-bold font-mono text-primary mt-1">&lt; 15 Minutes</div>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary">account_tree</span>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant flex items-center justify-between text-xs font-mono text-on-surface-variant">
+<span>SYSTEM STATUS: OPERATIONAL</span>
+<span>LATENCY: 4.2ms</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive ROI Calculator -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container" id="calculator">
+<div class="max-w-7xl mx-auto space-y-16">
+<div class="text-center max-w-2xl mx-auto space-y-4">
+<span class="text-xs font-mono text-primary uppercase tracking-widest">Financial Impact Model</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight">Calculate Your Enterprise Return</h2>
+<p class="text-on-surface-variant text-sm">
+          Adjust your current monthly cloud spend and team size to see projected revenue multipliers using FunnelAI.
+        </p>
+</div>
+<div class="bg-surface p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center shadow-md">
+<!-- Controls -->
+<div class="lg:col-span-7 space-y-8">
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold">Monthly Cloud Spend / Ad Budget</label>
+<span class="font-mono font-bold text-primary text-lg" id="spend-val">$50,000</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" id="spend-slider" max="500000" min="10000" oninput="updateROI()" step="5000" type="range" value="50000"/>
+<div class="flex justify-between text-xs font-mono text-on-surface-variant">
+<span>$10,000</span>
+<span>$500,000+</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold">Sales &amp; Marketing Team Size</label>
+<span class="font-mono font-bold text-primary text-lg" id="team-val">25 seats</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" id="team-slider" max="250" min="5" oninput="updateROI()" step="5" type="range" value="25"/>
+<div class="flex justify-between text-xs font-mono text-on-surface-variant">
+<span>5 seats</span>
+<span>250+ seats</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container text-xs text-on-surface-variant font-mono">
+            Note: Calculations are based on audited enterprise cohort averages achieving a minimum 3.4x pipeline lift within 90 days.
+          </div>
+</div>
+<!-- Output Result Card -->
+<div class="lg:col-span-5 bg-primary-container text-on-primary-container p-8 lg:p-12 flex flex-col justify-between space-y-8">
+<div>
+<span class="text-xs font-mono uppercase tracking-wider opacity-80">Projected Annual Return</span>
+<div class="text-4xl lg:text-5xl font-headline font-bold font-mono mt-2" id="roi-result">$2,420,000</div>
+</div>
+<div class="space-y-3 pt-6 border-t border-primary/20">
+<div class="flex justify-between text-sm">
+<span>Estimated Pipeline Lift</span>
+<span class="font-mono font-bold">+340%</span>
+</div>
+<div class="flex justify-between text-sm">
+<span>Time Saved Annually</span>
+<span class="font-mono font-bold">4,800 hrs</span>
+</div>
+<div class="flex justify-between text-sm">
+<span>Payback Period</span>
+<span class="font-mono font-bold">14 Days</span>
+</div>
+</div>
+<a class="w-full bg-primary text-on-primary py-4 font-semibold text-center hover:bg-primary/90 transition-all block" href="#pricing">
+            Claim Your ROI Projection
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Tiers -->
+<section class="py-24 px-6 lg:px-12 bg-surface" id="pricing">
+<div class="max-w-7xl mx-auto space-y-16">
+<div class="text-center max-w-2xl mx-auto space-y-4">
+<span class="text-xs font-mono text-primary uppercase tracking-widest">Transparent Enterprise Tiers</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight">Deploy to Match Your Scale</h2>
+<p class="text-on-surface-variant text-sm">
+          All tiers include dedicated AWS/GCP cluster isolation, 24/7 SRE support, and automatic updates.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Starter Tier -->
+<div class="bg-surface-container p-8 flex flex-col justify-between space-y-8">
+<div class="space-y-6">
+<div>
+<span class="text-xs font-mono text-on-surface-variant uppercase">Starter Cluster</span>
+<h3 class="text-2xl font-headline font-bold mt-1">Growth</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold font-mono">$1,499</span>
+<span class="text-xs text-on-surface-variant font-mono">/month</span>
+</div>
+<p class="text-sm text-on-surface-variant">
+              Ideal for scaling tech companies automating mid-market conversion pipelines.
+            </p>
+<ul class="space-y-3 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span>Up to 500k monthly requests</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span>Standard analytics &amp; attribution</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span>10 team seats included</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span>Email &amp; Slack support (24hr SLA)</span>
+</li>
+</ul>
+</div>
+<a class="w-full bg-secondary-container text-on-secondary-container py-3 font-semibold text-center hover:bg-secondary/20 transition-all block text-sm" href="#">
+            Deploy Starter
+          </a>
+</div>
+<!-- Growth Tier (Highlighted) -->
+<div class="bg-primary-container text-on-primary-container p-8 flex flex-col justify-between space-y-8 relative shadow-xl">
+<div class="absolute -top-3 right-8 bg-primary text-on-primary px-3 py-1 text-xs font-mono uppercase tracking-widest">
+            Most Popular
+          </div>
+<div class="space-y-6">
+<div>
+<span class="text-xs font-mono opacity-80 uppercase">Enterprise Core</span>
+<h3 class="text-2xl font-headline font-bold mt-1">Scale</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold font-mono">$4,999</span>
+<span class="text-xs opacity-80 font-mono">/month</span>
+</div>
+<p class="text-sm opacity-90">
+              For high-growth enterprises requiring robust multi-region funnel routing and predictive AI.
+            </p>
+<ul class="space-y-3 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+<span>Up to 5M monthly requests</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+<span>Predictive AI attribution models</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+<span>50 team seats included</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+<span>Dedicated Customer Success Manager</span>
+</li>
+</ul>
+</div>
+<a class="w-full bg-primary text-on-primary py-3 font-semibold text-center hover:bg-primary/90 transition-all block text-sm shadow-md" href="#">
+            Deploy Scale Cluster
+          </a>
+</div>
+<!-- Scale Tier -->
+<div class="bg-surface-container p-8 flex flex-col justify-between space-y-8">
+<div class="space-y-6">
+<div>
+<span class="text-xs font-mono text-on-surface-variant uppercase">Global Infrastructure</span>
+<h3 class="text-2xl font-headline font-bold mt-1">Infinite</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold font-mono">Custom</span>
+</div>
+<p class="text-sm text-on-surface-variant">
+              Tailored architecture for Fortune 500 corporations with custom security and volume needs.
+            </p>
+<ul class="space-y-3 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span>Unlimited requests &amp; bandwidth</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span>Custom LLM fine-tuning on your data</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span>Unlimited seats with SSO &amp; SAML</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+<span>24/7/365 Phone &amp; Engineering SLA</span>
+</li>
+</ul>
+</div>
+<a class="w-full bg-secondary-container text-on-secondary-container py-3 font-semibold text-center hover:bg-secondary/20 transition-all block text-sm" href="#">
+            Contact Engineering
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Success & Testimonials -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container">
+<div class="max-w-7xl mx-auto space-y-16">
+<div class="text-center max-w-2xl mx-auto space-y-4">
+<span class="text-xs font-mono text-primary uppercase tracking-widest">Verified Engineering Leaders</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight">Trusted by Global Tech Teams</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-surface p-8 lg:p-12 flex flex-col justify-between space-y-8 shadow-sm">
+<p class="text-lg italic text-on-surface leading-relaxed">
+            “FunnelAI allowed us to replace three disparate marketing tools with a single unified cluster. Our pipeline velocity increased 310% within the first month of deployment.”
+          </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-cover bg-center rounded-full" data-alt="Portrait of Marcus Vance, Chief Technology Officer at CloudScale Systems, smiling in a modern corporate office with soft architectural lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzoajpwTzP_MHIhhyxz4eB8cbXn-OL8TLbKw2s3fnveAFA8c2MgdUGc9NYHBN3jTlGK20O2YXsPo8RO8KfAfJCKjqn4KQ2gvNOwXn_EPvybJCP2JPsc2KT_nF4A0Cb6hRUeDn22HIsrRMwLxa86DHkEjvXBSqA8E-pqOupwk2PxA_AIrBYG33Uxc9o8JSP5kIn75oWAw0uiBgEQjWnOGfBO5G-YTBaQUPCEdr0t_en6c35dE-zveyz_A')"></div>
+<div>
+<div class="font-bold">Marcus Vance</div>
+<div class="text-xs text-on-surface-variant font-mono">CTO @ CloudScale Systems</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface p-8 lg:p-12 flex flex-col justify-between space-y-8 shadow-sm">
+<p class="text-lg italic text-on-surface leading-relaxed">
+            “The SOC2 compliance and zero-latency routing were non-negotiable requirements for our fintech stack. FunnelAI delivered seamlessly with zero downtime during migration.”
+          </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-cover bg-center rounded-full" data-alt="Portrait of Sarah Lin, VP of Engineering at Apex Financial, in a sleek downtown studio with a neutral minimalist background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPYvBtJRWXmfi_UvbWABMUkiWkRMx4_pvHwici7ZDClvpqhhCSoJ4uV-qE9CCxxoScNlfd-JisoC8Uoz4Buw521hjXYFJqizbezNWixApzyemuXWPOk089xWWm1l4BXCEQQ9G-RYNLgQth57PtZRcgUjD3AwXvpFwOi51VKkf0X8CAvWn8lYvszTBIfyXWrm7iAIN2GNIfPODw4MThPcDBsWBTI1wvD0BNeQMTtcoueEjNhthqITOKcw')"></div>
+<div>
+<div class="font-bold">Sarah Lin</div>
+<div class="text-xs text-on-surface-variant font-mono">VP of Engineering @ Apex Financial</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-4xl mx-auto space-y-16">
+<div class="text-center space-y-4">
+<span class="text-xs font-mono text-primary uppercase tracking-widest">Knowledge Base</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container">
+<button class="w-full p-6 text-left font-semibold flex justify-between items-center" onclick="toggleFaq(0)">
+<span>How long does an enterprise cluster deployment take?</span>
+<span class="material-symbols-outlined transition-transform" id="faq-icon-0">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed" id="faq-ans-0">
+            Most standard clusters are automatically provisioned within 15 minutes. Custom architectures requiring dedicated AWS/GCP VPC peering or bespoke compliance measures typically take 2-3 business days with direct SRE assistance.
+          </div>
+</div>
+<div class="bg-surface-container">
+<button class="w-full p-6 text-left font-semibold flex justify-between items-center" onclick="toggleFaq(1)">
+<span>Can we migrate existing funnels without downtime?</span>
+<span class="material-symbols-outlined transition-transform" id="faq-icon-1">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed" id="faq-ans-1">
+            Yes. FunnelAI provides zero-downtime DNS routing and automated migration scripts compatible with WordPress, Webflow, custom React stacks, and major CRM databases.
+          </div>
+</div>
+<div class="bg-surface-container">
+<button class="w-full p-6 text-left font-semibold flex justify-between items-center" onclick="toggleFaq(2)">
+<span>What level of technical support is provided?</span>
+<span class="material-symbols-outlined transition-transform" id="faq-icon-2">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed" id="faq-ans-2">
+            All enterprise tiers include 24/7 access to our engineering support team via dedicated Slack channels and emergency phone routing, with a guaranteed 15-minute response SLA for critical incidents.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript -->
+<script>
+    function switchFeatureTab(index) {
+      for (let i = 0; i < 4; i++) {
+        const btn = document.getElementById(`tab-btn-${i}`);
+        const content = document.getElementById(`feature-content-${i}`);
+        if (i === index) {
+          btn.className = "feature-tab text-left p-6 bg-primary-container text-on-primary-container font-semibold transition-all flex items-center justify-between";
+          content.classList.remove("hidden");
+        } else {
+          btn.className = "feature-tab text-left p-6 bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold transition-all flex items-center justify-between";
+          content.classList.add("hidden");
+        }
+      }
+    }
+
+    function updateROI() {
+      const spend = parseInt(document.getElementById('spend-slider').value);
+      const team = parseInt(document.getElementById('team-slider').value);
+      
+      document.getElementById('spend-val').textContent = '$' + spend.toLocaleString();
+      document.getElementById('team-val').textContent = team + ' seats';
+
+      // Simple compounding formula for dynamic estimation
+      const calculatedReturn = Math.round((spend * 12 * 3.4) + (team * 15000));
+      document.getElementById('roi-result').textContent = '$' + calculatedReturn.toLocaleString();
+    }
+
+    function toggleFaq(index) {
+      const ans = document.getElementById(`faq-ans-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+      if (ans.classList.contains("hidden")) {
+        ans.classList.remove("hidden");
+        icon.style.transform = "rotate(180deg)";
+      } else {
+        ans.classList.add("hidden");
+        icon.style.transform = "rotate(0deg)";
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6"><div class="text-sm text-on-surface-variant">© 2024 FunnelFlow Inc. Inspired by high-converting design systems.</div><div class="flex gap-6 text-sm text-on-surface-variant"><a class="hover:text-on-surface" href="#">Privacy</a><a class="hover:text-on-surface" href="#">Terms</a><a class="hover:text-on-surface" href="#">Support</a></div></div></footer><script>
+  function startCountdown() {
+    let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+    setInterval(() => {
+      if (totalSeconds > 0) totalSeconds--;
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }, 1000);
+  }
+  document.addEventListener('DOMContentLoaded', startCountdown);
+</script></body></html>

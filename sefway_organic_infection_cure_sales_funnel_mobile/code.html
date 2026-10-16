@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#022d0d", "primary": "#0f62fe", "on-tertiary-container": "#044317", "outline-variant": "#e0e0e0", "inverse-primary": "#78a9ff", "surface-container": "#f4f4f4", "surface-dim": "#e0e0e0", "primary-fixed": "#d0e2ff", "on-tertiary": "#ffffff", "on-error-container": "#750e13", "on-primary": "#ffffff", "on-secondary-fixed": "#161616", "surface-container-high": "#e0e0e0", "on-tertiary-fixed-variant": "#044317", "inverse-on-surface": "#f4f4f4", "primary-fixed-dim": "#78a9ff", "tertiary": "#198038", "tertiary-fixed": "#a7f0ba", "on-secondary": "#ffffff", "on-error": "#ffffff", "surface-variant": "#f4f4f4", "surface-container-lowest": "#ffffff", "on-surface-variant": "#525252", "secondary-fixed-dim": "#c6c6c6", "on-surface": "#161616", "surface-container-highest": "#c6c6c6", "surface-tint": "#0f62fe", "tertiary-fixed-dim": "#42be65", "outline": "#8d8d8d", "inverse-surface": "#393939", "secondary-container": "#e0e0e0", "secondary": "#6f6f6f", "on-primary-fixed": "#001d6c", "surface-container-low": "#f4f4f4", "surface-bright": "#ffffff", "tertiary-container": "#a7f0ba", "background": "#ffffff", "surface": "#ffffff", "on-secondary-container": "#525252", "error": "#da1e28", "primary-container": "#d0e2ff", "on-primary-container": "#161616", "secondary-fixed": "#e0e0e0", "on-primary-fixed-variant": "#0043ce", "error-container": "#fff1f1", "on-secondary-fixed-variant": "#525252", "on-background": "#161616" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": {}, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }.</script><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body flex flex-col min-h-screen pt-safe"><main class="flex flex-col relative w-full bg-surface pb-28"><div class="flex flex-col w-full text-on-surface bg-surface font-body pb-16">
+<!-- 1. Hero Section -->
+<section class="flex flex-col p-4 bg-surface-container-low mb-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs font-semibold rounded-full self-start mb-3">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+      FDA &amp; Clinical Approved
+    </div>
+<h1 class="text-2xl font-semibold text-on-surface leading-tight mb-3">
+      Eradicate Stubborn Infections From The Root
+    </h1>
+<p class="text-sm text-on-surface-variant mb-4">
+      Stop wasting money on temporary antibiotics. Discover the 100% organic, clinically proven remedy for total internal cleansing.
+    </p>
+<div class="w-full h-64 rounded-xl overflow-hidden mb-4 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional product bottle of Sefway Organic Infection Cure standing upright on a clean minimalist white surface surrounded by fresh natural leaves of garlic and bitter leaf, studio lighting, high resolution, 4k." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmO66GMGxU2R4dQX94eQDa86-uv2Jjyz1Q5RsJu3CgcotASKbwkPlHNojQ-4jZK3pZMK0EjZshbi5gEs0feSGqTRjmxlHFooNWeP8hXGTlaNsTOnR4Cqjli0_pq7Mnr3FEdQ6Entjl2_zE9f2mgeH6cJpRWldg74NzgtwAe54iwZj06gQLSUe_EZcH7b-3_ehJKoaThMYdYd7or8b6may6PdGr1bdicRl773SquTtiRabSsQE-Wosnsg"/>
+</div>
+<button class="w-full h-12 bg-primary text-on-primary font-semibold rounded-xl flex items-center justify-center gap-2 shadow-md">
+<span>Claim Your Discounted Pack</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</section>
+<!-- Prominent Live Countdown Timer Announcement Bar right below the hero area -->
+<section class="flex flex-col p-4 bg-error-container text-on-error-container mb-2">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-error animate-pulse">local_fire_department</span>
+<h2 class="text-xs font-bold uppercase tracking-wider">Limited Time Promo Ends In:</h2>
+</div>
+<span class="px-2 py-0.5 bg-error text-on-error text-[10px] font-bold rounded-full uppercase tracking-widest animate-bounce">Urgent</span>
+</div>
+<div class="flex gap-2 justify-center py-3 bg-surface/90 rounded-xl text-on-surface font-bold text-lg shadow-inner border border-outline-variant">
+<div class="flex flex-col items-center"><span class="text-primary" id="hours">04</span><span class="text-[9px] font-normal text-on-surface-variant">HOURS</span></div>
+<span class="text-primary">:</span>
+<div class="flex flex-col items-center"><span class="text-primary" id="minutes">59</span><span class="text-[9px] font-normal text-on-surface-variant">MINS</span></div>
+<span class="text-primary">:</span>
+<div class="flex flex-col items-center"><span class="text-primary" id="seconds">32</span><span class="text-[9px] font-normal text-on-surface-variant">SECS</span></div>
+</div>
+</section>
+<script>
+  // Simple countdown logic
+  let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+  const hoursEl = document.getElementById('hours');
+  const minutesEl = document.getElementById('minutes');
+  const secondsEl = document.getElementById('seconds');
+
+  setInterval(() => {
+    if (totalSeconds > 0) {
+      totalSeconds--;
+      let h = Math.floor(totalSeconds / 3600);
+      let m = Math.floor((totalSeconds % 3600) / 60);
+      let s = totalSeconds % 60;
+
+      if(hoursEl) hoursEl.textContent = String(h).padStart(2, '0');
+      if(minutesEl) minutesEl.textContent = String(m).padStart(2, '0');
+      if(secondsEl) secondsEl.textContent = String(s).padStart(2, '0');
+    }
+  }, 1000);
+</script>
+<!-- 2. Video Introduction Player Container -->
+<section class="flex flex-col p-4 mb-2">
+<h2 class="text-lg font-semibold mb-2">Watch How Sefway Works</h2>
+<div class="relative w-full h-52 bg-surface-container rounded-xl overflow-hidden flex items-center justify-center shadow-sm" data-alt="Video thumbnail showing a medical expert in a white coat holding a bottle of herbal tonic in a modern laboratory setting, warm lighting, professional presentation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCjVzNCZXInl-Im9mduPadeS0xyeNZB9S3u8_n8XYsDTg-u4CaY78LbuebKrPKEkIcw3WsHDAP5FR0IGa-d3YQqKH-4ctytcNAZWisgSjLNQgOBn13y4w9i3uHBzUMt6gyiYvQQyfFzbEX1ROg2ctCtOlVEckDkrFlt1LEL2UdjWboxDBfF5a6KQP74v2vjgzbH71K96PLT4IuK1v8dEqYSsGZ_W6oYV_IrQ0a2Q_liux0k1xbUOoBvA')">
+<div class="absolute inset-0 bg-on-surface/30 flex items-center justify-center">
+<div class="w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Customer Problem Agitation -->
+<section class="flex flex-col p-4 bg-error-container text-on-error-container mb-2">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<h2 class="text-base font-semibold">Are You Tired Of This Endless Cycle?</h2>
+</div>
+<p class="text-sm opacity-90 leading-relaxed">
+      Itching, burning sensations, strange discharge, pelvic pain, and recurring watery symptoms that return immediately after finishing another expensive course of chemical antibiotics. You are not alone, but traditional drugs are failing you.
+    </p>
+</section>
+<!-- 4. Detailed Problem Explanation Cards -->
+<section class="flex flex-col p-4 gap-3 mb-2">
+<h2 class="text-lg font-semibold mb-1">Why Ordinary Drugs Fail</h2>
+<div class="p-4 bg-surface-container rounded-xl">
+<h3 class="font-semibold text-sm mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">cancel</span>
+        Antibiotic Resistance
+      </h3>
+<p class="text-xs text-on-surface-variant">Pathogens mutate and build immunity against synthetic chemical drugs over time.</p>
+</div>
+<div class="p-4 bg-surface-container rounded-xl">
+<h3 class="font-semibold text-sm mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">cancel</span>
+        Surface Treatment Only
+      </h3>
+<p class="text-xs text-on-surface-variant">Most medications suppress symptoms temporarily without flushing the root infection from deep tissues.</p>
+</div>
+</section>
+<!-- 5. Product Introduction -->
+<section class="flex flex-col p-4 bg-surface-container-low mb-2">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider mb-1">The Ultimate Solution</span>
+<h2 class="text-xl font-semibold mb-2">Sefway Organic Infection Cure</h2>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+      Formulated from rare potent roots and organic extracts, Sefway targets drug-resistant strains directly, purifying your blood and restoring optimal reproductive and urinary health without side effects.
+    </p>
+</section>
+<!-- 6. Product Image Gallery/Showcase -->
+<section class="flex flex-col p-4 mb-2">
+<h2 class="text-lg font-semibold mb-3">Product Gallery</h2>
+<div class="grid grid-cols-2 gap-3">
+<div class="h-36 rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up of Sefway Organic bottle label detailing natural ingredients and certification badges, crisp studio shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmo97F65cDY9dX-mpSJbNBqPEXSX26QhRCZuduYRWYuu9x8fuYZm6HE89sPuXmyfNbvvYyGALNRuzi1qyG4xDtr5xbMzfN7reJCt4cev9tEYl9XKuoGRNJjjsGx6tizY1Nnr4bZk9Q6ZknPPhPc2DtDUydpXvrXJiTU8eLG5ng-dHM_EfnvVyn462Ss_6PZz0VWjxL8RyYZBxkijmvcJ51SoV46o8YteC5tXzxma3luUEFr3uqnKKJdQ"/>
+</div>
+<div class="h-36 rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Sefway safety sealed package box with dropper and herbal extract liquid glass bottle, minimalist layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTAjeyH49kL7-Q7rzvwDlEUIE6nx_2SVr6g-pIPEXyqYc7eOiBZ3O2yr3w_vNvmg1HqVuEHZu8qgl1rTKMam3_xGM0Lo2QoGAfCJhRKXstIX_oyvwkExU5XRcG6fFrewYgGIMW6ADrGYQiOvrCB2g-hfjanF77czbwYuqHlxdmWvuuMDEzD6OaCHo0usCP1ThRrxBS14qdiPtFtF9wQwN--E9O2HKpjlqCZZfMfeMbZRTKCclezD6G9Q"/>
+</div>
+</div>
+</section>
+<!-- 7. Key Substantiated Benefits -->
+<section class="flex flex-col p-4 mb-2">
+<h2 class="text-lg font-semibold mb-3">Proven Clinical Benefits</h2>
+<div class="flex flex-col gap-3">
+<div class="p-4 bg-surface-container rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[24px]">check_circle</span>
+<div>
+<h3 class="font-semibold text-sm">Completely Eradicates Pathogens</h3>
+<p class="text-xs text-on-surface-variant mt-0.5">Destroys bacteria, fungi, and stubborn microbes at cellular depth.</p>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[24px]">check_circle</span>
+<div>
+<h3 class="font-semibold text-sm">Restores Natural pH Balance</h3>
+<p class="text-xs text-on-surface-variant mt-0.5">Rejuvenates healthy flora while flushing out toxic accumulations.</p>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[24px]">check_circle</span>
+<div>
+<h3 class="font-semibold text-sm">Boosts Immunity</h3>
+<p class="text-xs text-on-surface-variant mt-0.5">Strengthens body defense mechanisms to prevent future reinfection.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Product Demonstration Video -->
+<section class="flex flex-col p-4 bg-surface-container-low mb-2">
+<h2 class="text-lg font-semibold mb-2">See It In Action</h2>
+<div class="relative w-full h-48 bg-surface-container rounded-xl overflow-hidden flex items-center justify-center shadow-sm" data-alt="Laboratory scientist demonstrating quick dissolution of microbial cells under microscope after application of herbal formula." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2BsUDfJqegyuwKvvoOk-R4X-gJD0wjWC7UQjs28iMMC99tiwtQp2oh_-FSbMak-xX1a7wm6vncJN6xMDzLtlEBkXh3q0Q514uI4MsdWlmvAR_csqO_D91KpjFO1rTyO-dzZKM-LorwR2WYI4eqIykQdcryK5rMFowzGXBEb0m1sCfhiZX2xlPJmfhm6P3QPPwRM8BM9Hk0oIg1pMhHlqa3ubACwEqe_D1aWVWNNbk7Whnz1Hq50F5SQ')">
+<div class="absolute inset-0 bg-on-surface/30 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. How the Product Works -->
+<section class="flex flex-col p-4 mb-2">
+<h2 class="text-lg font-semibold mb-3">How Sefway Works In 3 Steps</h2>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-3 p-3 bg-surface-container rounded-xl">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-semibold flex items-center justify-center shrink-0">1</div>
+<div>
+<h3 class="font-semibold text-sm">Rapid Absorption</h3>
+<p class="text-xs text-on-surface-variant mt-0.5">Active herbal compounds enter the bloodstream rapidly, hunting down dormant infection pockets.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-surface-container rounded-xl">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-semibold flex items-center justify-center shrink-0">2</div>
+<div>
+<h3 class="font-semibold text-sm">Deep Detoxification</h3>
+<p class="text-xs text-on-surface-variant mt-0.5">Flushes out toxic waste, dead cells, and inflammatory fluids through natural elimination.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-surface-container rounded-xl">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-semibold flex items-center justify-center shrink-0">3</div>
+<div>
+<h3 class="font-semibold text-sm">Tissue Repair &amp; Shield</h3>
+<p class="text-xs text-on-surface-variant mt-0.5">Repairs damaged organ linings and builds a robust biological shield against future attacks.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Ingredients and Natural Formula Breakdown -->
+<section class="flex flex-col p-4 bg-surface-container-low mb-2">
+<h2 class="text-lg font-semibold mb-1">100% Natural Ingredients</h2>
+<p class="text-xs text-on-surface-variant mb-3">No synthetic additives, steroids, or harmful chemicals.</p>
+<div class="flex flex-col gap-3">
+<div class="p-3 bg-surface rounded-xl shadow-sm">
+<h3 class="font-semibold text-sm text-primary">Allium Sativum (Garlic Extract)</h3>
+<p class="text-xs text-on-surface-variant mt-1">Natural broad-spectrum antimicrobial agent that neutralizes resistant bacterial strains safely.</p>
+</div>
+<div class="p-3 bg-surface rounded-xl shadow-sm">
+<h3 class="font-semibold text-sm text-primary">Vernonia Amygdalina (Bitter Leaf)</h3>
+<p class="text-xs text-on-surface-variant mt-1">Powerful antioxidant and anti-inflammatory detoxifier that cleanses blood and internal organs.</p>
+</div>
+<div class="p-3 bg-surface rounded-xl shadow-sm">
+<h3 class="font-semibold text-sm text-primary">Zingiber Officinale (Ginger Root)</h3>
+<p class="text-xs text-on-surface-variant mt-1">Enhances circulation and accelerates cellular regeneration throughout the reproductive tract.</p>
+</div>
+</div>
+</section>
+<!-- 11. Why Choose This Product vs Antibiotics -->
+<section class="flex flex-col p-4 mb-2">
+<h2 class="text-lg font-semibold mb-3">Sefway vs. Conventional Antibiotics</h2>
+<div class="grid grid-cols-2 gap-2 text-xs">
+<div class="p-3 bg-surface-container rounded-xl">
+<h3 class="font-semibold text-primary mb-2">Sefway Organic</h3>
+<ul class="flex flex-col gap-1.5 text-on-surface-variant">
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-tertiary text-[14px]">check</span> Root eradication</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-tertiary text-[14px]">check</span> Zero side effects</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-tertiary text-[14px]">check</span> Permanent relief</li>
+</ul>
+</div>
+<div class="p-3 bg-surface-container rounded-xl opacity-75">
+<h3 class="font-semibold text-error mb-2">Standard Drugs</h3>
+<ul class="flex flex-col gap-1.5 text-on-surface-variant">
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-error text-[14px]">close</span> Temporary masking</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-error text-[14px]">close</span> Liver/kidney strain</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-error text-[14px]">close</span> Frequent relapse</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 12. Product Usage Instructions -->
+<section class="flex flex-col p-4 bg-surface-container-low mb-2">
+<h2 class="text-lg font-semibold mb-2">Simple Daily Usage</h2>
+<div class="p-4 bg-surface rounded-xl shadow-sm">
+<p class="text-sm text-on-surface leading-relaxed mb-3">
+        Take 2 tablespoons morning and evening before meals for 14 to 21 days depending on infection severity. Shake well before use.
+      </p>
+<div class="flex items-center gap-2 text-xs text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">info</span>
+        Detailed dosage guide included in every package delivery.
+      </div>
+</div>
+</section>
+<!-- 13. Long-Form Visual Storytelling & Clinical Narrative -->
+<section class="flex flex-col p-4 mb-2">
+<h2 class="text-lg font-semibold mb-2">The Clinical Breakthrough</h2>
+<div class="h-40 rounded-xl overflow-hidden mb-3 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Medical research team examining botanical charts in a bright research facility, professional and trustworthy atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM0JxckzrxX7daLujggiTPwmfXujj5SDVvrLoxZSMxQLRKhRCIDAu65ELglLFA7ZgyMTlKkr73oR8uf4JQS7xvuXY2MCFYydhStjURLzC_woz5HwxDkZYjfVvIKdhypUK8sfvEsqZmoeuz-q_o7OZTBjPW9HH66_03CUQArcdni1-MTDuxHH4tz7RlYVN3spYymKj9xoVmrLDsHWjmiIKPj5RNRwdivRntFvALR5g9pUZUIj_xOE7dVQ"/>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+      Developed after over 7 years of intensive botanical research in collaboration with herbal pharmacologists, Sefway bridges the gap between ancient African traditional medicine and modern pharmaceutical precision. Every batch undergoes rigorous microbiological testing to ensure absolute safety and efficacy.
+    </p>
+</section>
+<!-- 14. Customer Experience / Results Video -->
+<section class="flex flex-col p-4 bg-surface-container-low mb-2">
+<h2 class="text-lg font-semibold mb-2">Real Patient Success Story</h2>
+<div class="relative w-full h-48 bg-surface-container rounded-xl overflow-hidden flex items-center justify-center shadow-sm" data-alt="Smiling Nigerian woman sharing her testimony about regaining health and confidence after using Sefway Organic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWnFSDfwUW_BviLa371IIsuZuxxOxZcz2tyHiwtCjIYNB75FoNyson22lYQYYrJw-ZZWFcpaUx_OWFxsxGxlduCSakWpKsCe0fiTkBRMJ5-ddQZaxuCYcsEeAUr9UvwScS2magT0rbgNrwi9Vle_aks-BK0wzKeocSRcSGEHamGaIYvJIO7yvWttBxN89OZUAjGQ98lT1Pe1FeODvi6qJhci3jdljjzgSD2fomPEZMeQPxvpAWMcdmAg')">
+<div class="absolute inset-0 bg-on-surface/30 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 15. Verified Customer Testimonials -->
+<section class="flex flex-col p-4 mb-2">
+<h2 class="text-lg font-semibold mb-3">Verified Nigerian Success Stories</h2>
+<div class="flex flex-col gap-3">
+<div class="p-4 bg-surface-container rounded-xl">
+<div class="flex items-center justify-between mb-1">
+<span class="font-semibold text-sm">Mrs. Chioma Adeleke</span>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-xs text-on-surface-variant">"I battled stubborn staphylococcus for over 2 years. After just one therapy pack of Sefway, all abnormal discharge and itching vanished completely. Highly recommended!"</p>
+<span class="text-[10px] text-tertiary font-semibold mt-2 block">Verified Purchase - Lagos</span>
+</div>
+<div class="p-4 bg-surface-container rounded-xl">
+<div class="flex items-center justify-between mb-1">
+<span class="font-semibold text-sm">Ibrahim Musa</span>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-xs text-on-surface-variant">"Delivery was fast to Abuja and pay on delivery made it completely risk-free. My test results came back negative after completing the dosage."</p>
+<span class="text-[10px] text-tertiary font-semibold mt-2 block">Verified Purchase - Abuja</span>
+</div>
+</div>
+</section>
+<!-- 16. Product Comparison Table / Cards -->
+<section class="flex flex-col p-4 bg-surface-container-low mb-2">
+<h2 class="text-lg font-semibold mb-3">Why Sefway Stands Out</h2>
+<div class="p-4 bg-surface rounded-xl shadow-sm space-y-3 text-xs">
+<div class="flex justify-between items-center pb-2 border-b border-outline-variant">
+<span class="font-semibold">Natural Ingredients</span>
+<span class="text-tertiary font-semibold">100% Pure</span>
+</div>
+<div class="flex justify-between items-center pb-2 border-b border-outline-variant">
+<span class="font-semibold">Side Effects</span>
+<span class="text-tertiary font-semibold">None</span>
+</div>
+<div class="flex justify-between items-center pb-2 border-b border-outline-variant">
+<span class="font-semibold">Money-Back Guarantee</span>
+<span class="text-tertiary font-semibold">30 Days</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-semibold">Doctor Endorsed</span>
+<span class="text-tertiary font-semibold">Yes</span>
+</div>
+</div>
+</section>
+<!-- 17. Product Packages -->
+<section class="flex flex-col p-4 mb-2">
+<h2 class="text-lg font-semibold mb-3">Choose Your Package</h2>
+<div class="flex flex-col gap-3">
+<div class="p-4 bg-surface-container rounded-xl">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-semibold text-sm">Starter Pack</h3>
+<span class="text-sm font-semibold text-primary">₦18,500</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-2">1 Bottle of Sefway Organic for mild infections and maintenance.</p>
+<button class="w-full h-10 bg-surface-container-high text-on-surface font-semibold text-xs rounded-lg">Select Starter Pack</button>
+</div>
+<div class="p-4 bg-primary-container text-on-primary-container rounded-xl relative shadow-md">
+<div class="absolute -top-2.5 right-4 bg-primary text-on-primary text-[10px] font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Most Popular</div>
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-semibold text-sm">Complete Therapy Pack</h3>
+<span class="text-sm font-semibold text-primary">₦32,000</span>
+</div>
+<p class="text-xs opacity-90 mb-2">2 Bottles + 1 Free Bottle. Recommended for stubborn and chronic infections.</p>
+<button class="w-full h-10 bg-primary text-on-primary font-semibold text-xs rounded-lg shadow">Select Complete Pack</button>
+</div>
+<div class="p-4 bg-surface-container rounded-xl">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-semibold text-sm">Family &amp; Friends Pack</h3>
+<span class="text-sm font-semibold text-primary">₦45,000</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-2">4 Bottles for total household protection and deep cleansing.</p>
+<button class="w-full h-10 bg-surface-container-high text-on-surface font-semibold text-xs rounded-lg">Select Family Pack</button>
+</div>
+</div>
+</section>
+<!-- 18. Special Offer & Urgency Section -->
+<section class="flex flex-col p-4 bg-tertiary-container text-on-tertiary-container mb-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+<h2 class="text-base font-semibold">Limited Time Promo Ending Soon</h2>
+</div>
+<p class="text-xs opacity-90 leading-relaxed mb-3">
+      Order within the next <span class="font-bold underline">15 minutes</span> to lock in free nationwide delivery and free consultation with our medical herbalist.
+    </p>
+<div class="flex gap-2 justify-center py-2 bg-surface/80 rounded-lg text-on-surface font-semibold text-sm">
+<span>04</span> : <span>59</span> : <span>32</span>
+</div>
+</section>
+<!-- 19. Delivery Information -->
+<section class="flex flex-col p-4 bg-surface-container-low mb-2">
+<h2 class="text-lg font-semibold mb-2">Fast &amp; Secure Delivery</h2>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-surface rounded-xl shadow-sm flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+<div>
+<h3 class="font-semibold text-xs">Nationwide Delivery</h3>
+<p class="text-[10px] text-on-surface-variant mt-0.5">Delivery within 2-4 business days.</p>
+</div>
+</div>
+<div class="p-3 bg-surface rounded-xl shadow-sm flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified_user</span>
+<div>
+<h3 class="font-semibold text-xs">Pay on Delivery</h3>
+<p class="text-[10px] text-on-surface-variant mt-0.5">Inspect your package before payment.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 20. Frequently Asked Questions Interactive Accordion -->
+<section class="flex flex-col p-4 mb-2">
+<h2 class="text-lg font-semibold mb-3">Frequently Asked Questions</h2>
+<div class="flex flex-col gap-2">
+<details class="p-3 bg-surface-container rounded-xl group">
+<summary class="font-semibold text-xs flex justify-between items-center cursor-pointer">
+          Are there any side effects?
+          <span class="material-symbols-outlined text-[16px] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="text-xs text-on-surface-variant mt-2">No. Sefway is 100% organic with zero chemical additives or preservatives, making it completely safe for adults of all ages.</p>
+</details>
+<details class="p-3 bg-surface-container rounded-xl group">
+<summary class="font-semibold text-xs flex justify-between items-center cursor-pointer">
+          How long does delivery take?
+          <span class="material-symbols-outlined text-[16px] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="text-xs text-on-surface-variant mt-2">Delivery takes 1-3 days within Lagos and Abuja, and 3-5 days for other Nigerian states.</p>
+</details>
+<details class="p-3 bg-surface-container rounded-xl group">
+<summary class="font-semibold text-xs flex justify-between items-center cursor-pointer">
+          Do I pay before delivery?
+          <span class="material-symbols-outlined text-[16px] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="text-xs text-on-surface-variant mt-2">No payment is required upfront. You only pay cash or transfer to our dispatch rider upon receiving your package.</p>
+</details>
+</div>
+</section>
+<!-- 21. Final Product Video & CTA -->
+<section class="flex flex-col p-4 bg-surface-container-low mb-2">
+<h2 class="text-lg font-semibold mb-2">Take Control Of Your Health Today</h2>
+<div class="relative w-full h-44 bg-surface-container rounded-xl overflow-hidden mb-3 flex items-center justify-center shadow-sm" data-alt="Satisfied customer holding Sefway bottle smiling outdoors in sunshine, vibrant natural scenery." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAeJDqeo8-IOZ5im90hpV3VptrJ6THnvcK09FN_BSc1QfyIQfVESJV228UaLu0B956nJ9JlJ5JHiqjdbYaWNyEKpGvNMKD5iU8uBH2cOMIjNGeo9JWVGoWU-qu2Nmwf2ijY7E--tl2XJMASgo8-NLfBLcK3r2oslLNK2DOUYR8QSU8Yl8Nu7RGIgOigjkpQ3gmFfK0hzUFOtHrH0MwcKpSNl1lZBlDYf_up5kIRZ-hUYpgRr_xHnDx-dg')">
+<div class="absolute inset-0 bg-on-surface/30 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<button class="w-full h-12 bg-primary text-on-primary font-semibold rounded-xl flex items-center justify-center gap-2 shadow-md">
+<span>Order Your Pack Now</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</section>
+<!-- 22. Secure Order Form -->
+<section class="flex flex-col p-4 bg-surface-container mb-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+<h2 class="text-base font-semibold">Secure Express Order Form</h2>
+</div>
+<p class="text-xs text-on-surface-variant mb-4">Fill the short form below to book your delivery instantly.</p>
+<form class="flex flex-col gap-3">
+<div>
+<label class="block text-xs font-semibold mb-1">Full Name</label>
+<input class="w-full h-10 px-3 bg-surface rounded-lg text-sm border-0 focus:ring-1 focus:ring-primary outline-none" placeholder="e.g. Oluwaseun Okafor" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold mb-1">Phone Number</label>
+<input class="w-full h-10 px-3 bg-surface rounded-lg text-sm border-0 focus:ring-1 focus:ring-primary outline-none" placeholder="e.g. 08012345678" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-semibold mb-1">Delivery State</label>
+<select class="w-full h-10 px-3 bg-surface rounded-lg text-sm border-0 focus:ring-1 focus:ring-primary outline-none text-on-surface">
+<option>Select State</option>
+<option>Lagos State</option>
+<option>Abuja FCT</option>
+<option>Rivers State</option>
+<option>Oyo State</option>
+<option>Other State</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-semibold mb-1">Selected Package</label>
+<select class="w-full h-10 px-3 bg-surface rounded-lg text-sm border-0 focus:ring-1 focus:ring-primary outline-none text-on-surface">
+<option>Complete Therapy Pack (₦32,000)</option>
+<option>Starter Pack (₦18,500)</option>
+<option>Family &amp; Friends Pack (₦45,000)</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-semibold mb-1">Delivery Address</label>
+<textarea class="w-full p-3 bg-surface rounded-lg text-sm border-0 focus:ring-1 focus:ring-primary outline-none resize-none" placeholder="House number, street name, bus stop, city..." rows="2"></textarea>
+</div>
+<div class="flex items-center gap-2 p-2.5 bg-tertiary-container text-on-tertiary-container rounded-lg text-xs mt-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Pay on Delivery Badge Active - No Prepayment Required</span>
+</div>
+<button class="w-full h-12 bg-primary text-on-primary font-semibold rounded-xl flex items-center justify-center gap-2 shadow-md mt-2" type="button">
+<span>Complete Secure Order</span>
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+</form>
+</section>
+<!-- 23. Final Call-to-Action & WhatsApp Ordering Button -->
+<section class="flex flex-col p-4 items-center text-center mb-2">
+<h2 class="text-base font-semibold mb-2">Need Quick Assistance?</h2>
+<p class="text-xs text-on-surface-variant mb-4">Chat directly with our customer pharmacist on WhatsApp for instant support.</p>
+<button class="w-full h-12 bg-tertiary text-on-tertiary font-semibold rounded-xl flex items-center justify-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Order via WhatsApp Now</span>
+</button>
+</section>
+<!-- 24. Minimal Footer -->
+<footer class="flex flex-col p-4 bg-surface-container-high text-on-surface-variant text-center text-xs gap-2">
+<p class="font-semibold text-on-surface">Sefway Organic Health Nigeria</p>
+<p class="text-[11px] leading-relaxed">
+      Disclaimer: Statements regarding natural health products have not been evaluated by regulatory agencies. This product is not intended to diagnose, treat, cure, or prevent any disease.
+    </p>
+<p class="text-[10px] mt-2 text-outline">© 2025 Sefway Organic. All Rights Reserved. Privacy Policy | Terms of Service</p>
+</footer>
+<!-- Sticky Bottom CTA Bar -->
+<div class="fixed bottom-0 inset-x-0 z-50 bg-surface/95 backdrop-blur-xl p-3 shadow-lg border-t border-outline-variant flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Special Promo Price</span>
+<span class="text-base font-semibold text-primary">₦32,000</span>
+</div>
+<button class="flex-1 h-11 bg-primary text-on-primary font-semibold rounded-xl flex items-center justify-center gap-2 shadow-sm text-sm">
+<span>Order Now - Pay on Delivery</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div></main><div class="fixed bottom-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pb-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between p-4 gap-4"><button class="w-full h-12 bg-primary text-on-primary font-semibold rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors"><span class="text-sm">Continue</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button></div></div></body></html>

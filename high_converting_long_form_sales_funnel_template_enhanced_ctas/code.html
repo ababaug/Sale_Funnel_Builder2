@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"on-tertiary-fixed-variant": "#044317", "on-primary": "#ffffff", "on-primary-container": "#161616", "tertiary-fixed-dim": "#42be65", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#c6c6c6", "on-tertiary-fixed": "#022d0d", "surface": "#ffffff", "surface-container-high": "#e0e0e0", "secondary-container": "#e0e0e0", "outline": "#8d8d8d", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#0043ce", "on-secondary-container": "#525252", "on-primary-fixed": "#001d6c", "tertiary": "#198038", "primary-fixed": "#d0e2ff", "on-error-container": "#750e13", "secondary": "#6f6f6f", "on-secondary-fixed": "#161616", "on-error": "#ffffff", "surface-variant": "#f4f4f4", "primary-container": "#d0e2ff", "surface-container": "#f4f4f4", "inverse-on-surface": "#f4f4f4", "surface-bright": "#ffffff", "inverse-primary": "#78a9ff", "inverse-surface": "#393939", "on-surface": "#161616", "tertiary-container": "#a7f0ba", "surface-dim": "#e0e0e0", "on-tertiary-container": "#044317", "primary-fixed-dim": "#78a9ff", "on-secondary-fixed-variant": "#525252", "error-container": "#fff1f1", "surface-container-highest": "#c6c6c6", "secondary-fixed": "#e0e0e0", "tertiary-fixed": "#a7f0ba", "background": "#ffffff", "on-background": "#161616", "surface-tint": "#0f62fe", "error": "#da1e28", "primary": "#0f62fe", "outline-variant": "#e0e0e0", "on-surface-variant": "#525252", "surface-container-lowest": "#ffffff", "surface-container-low": "#f4f4f4"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {}, "fontFamily": {"headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"]}, "fontSize": {}}}};</script><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><main class="w-full bg-surface min-h-screen"><div class="flex flex-col w-full bg-surface text-on-surface"><div class="fixed bottom-6 right-6 z-50 md:flex hidden animate-bounce"><a class="bg-error text-on-error font-bold px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:bg-error/90 transition" href="#order-form"><span class="material-symbols-outlined">flash_on</span> Quick Order</a></div>
+<!-- 1. Attention-Grabbing Hero -->
+<section class="relative w-full bg-surface-container-low py-16 px-4 md:px-16 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded text-xs font-semibold uppercase tracking-wider w-max">
+<span class="material-symbols-outlined text-sm">verified</span> Verified Organic Solution
+        </div>
+<h1 class="text-3xl md:text-5xl font-bold tracking-tight text-on-surface leading-tight">
+          Eliminate Stubborn Infections Completely &amp; Permanently With This 100% Organic Formula
+        </h1>
+<p class="text-lg text-on-surface-variant font-light">
+          No harsh chemical side effects. Clinically tested, certified natural ingredients that target the root cause of recurrent bacterial &amp; fungal challenges in just 14 days.
+        </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-primary text-on-primary font-semibold px-8 py-4 rounded text-center shadow-md hover:bg-primary/90 transition flex items-center justify-center gap-2" href="#packages">
+<span>Order Now &amp; Claim Discount</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-outline text-on-surface font-semibold px-6 py-4 rounded text-center hover:bg-surface-container transition flex items-center justify-center gap-2" href="#video-intro">
+<span class="material-symbols-outlined">play_circle</span> Watch Quick Overview
+          </a>
+</div>
+<div class="flex items-center gap-4 pt-2 text-xs text-on-surface-variant">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-surface object-cover" data-alt="Customer avatar thumbnail 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoqK_eHjs0XBNj3JvsPUBzHZ3cbieBKikcRRaTogaNZ-DKFKwdYTzndIwV8kl9z3aIm7R__q1Sd61Lf-VzYlXu5M93d6ZJsFNWzX--uRB7XPFdlp1rbkrE_18SMMpi80aItacgiMIeXeOgYeBBVlBvXVbmLMIqz1DTl9kaXWfyx1GuwBOI-gh_f2Fa9xUsv02PtIQqHVVmDChPbZOSAxLfDuNB-CvB3xTFy7Xccq0K"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface object-cover" data-alt="Customer avatar thumbnail 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsfHSLpDF7MKmOIgAjiVZc6Cx4wXLGD-f9NMzYqQRPBCxfJrQRoIQvC20yRpLKjxnDFKg9n6hrVAsvk7ZDmmWWM7OPrxpJIXr3osYZhD_ivVOnHCaDgVSTLAgqp9MdaqJsn6JV_ZiZsnEHlt6BqN8EwExho8F0pzQHHEMlKWPEoNpmkgLMqgzyr5aqcFFXoVepA9vN9FdV4kw6DEm5L4GvoopSgyyJIAtI8lFS5Rwy"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface object-cover" data-alt="Customer avatar thumbnail 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm9GyUyzX8QHOgyhk4zO1TldqQZ_sWu70SVfbSbaHFddp219373JX7Ry63J-747LWy2ku1o4h06gm_rH8tz1PnJ0YD5T7oQKGB79HBKK34VeoVf-g20JZsvzkO2dsuXbfwZudq1QPmMt6Y3c5Nrl5UwKTt63yMjJQJNW0RhZZoJKT4TXqNz5EScT6gMW4B0rFoRpNZ-amKzihAdQorDRtlNVNxjmtyYwqxLjVMBBg9"/>
+</div>
+<span>Joined by over <strong>14,230+</strong> satisfied customers nationwide</span>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="absolute -inset-4 bg-primary/5 rounded-2xl filter blur-xl"></div>
+<img class="relative w-full h-[450px] object-cover rounded shadow-lg" data-alt="Professional product bottle mockup of organic infection cleanser with green leaf accents against a clean minimalist studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvlgK1aix_B-EWEvTLO4WSlmshm89bLNXPjHTH2CU8TunMr-VVRWpWSSlRTsALGZRMLBVOHoqIoxqpSfm7SbKUVoDGxwJfX1goDaveNDRLyaqMP-vLnNPjkPisCnF_lJCCN3ru6p7AU9Wh6SjEgpr8muiItypizJJQQ6CZWiueMzYEYNyghC910oZzjyzPX5jgDKtxyH74jgAu8Zppp7jmcLEkVT_VUR2MePwDQ-ec"/>
+</div>
+</div>
+</section>
+<!-- 2. Product Video Introduction -->
+<section class="py-16 px-4 md:px-16 bg-surface" id="video-intro">
+<div class="max-w-4xl mx-auto text-center flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Visual Demonstration</span>
+<h2 class="text-2xl md:text-3xl font-bold">See How This Breakthrough Formula Works in Real-Time</h2>
+</div>
+<div class="relative w-full aspect-video bg-surface-container-high rounded shadow-xl overflow-hidden group cursor-pointer" onclick="alert('Playing introduction video...')">
+<div class="absolute inset-0 bg-cover bg-center filter brightness-90" data-alt="Video poster frame showing medical expert holding the organic product bottle in a modern clinical laboratory setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCw56QvDqCxP4aUC7Vr1Ebl1VMvqYdowJWpos3LgU1pyI_oyAUz-EbGAxc3CtoqTrl1vs2aBNo1eJ06HpAEOhpsDA6m0gv2BdbYHLKCWSzeBBhdz850o78Bbj4z48nVIakDzHOY2sv26mRdpDH9A8AQaMqPX1aNEj0QzE1xLIUKtSwRxG54oeFPsEFlr-Q5_zCJRrDUVVnrE40zSbuMOnG5pMf-oopjDUSB4BEtU5_v')"></div>
+<div class="absolute inset-0 bg-on-surface/30 flex items-center justify-center group-hover:bg-on-surface/20 transition">
+<div class="w-20 h-20 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4 text-left text-on-primary flex justify-between items-end">
+<div>
+<p class="font-bold text-sm">Official Product Documentary</p>
+<p class="text-xs opacity-80">Duration: 02:45</p>
+</div>
+<span class="bg-on-surface/60 backdrop-blur px-2 py-1 rounded text-xs">HD 1080p</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Customer Problem -->
+<section class="py-16 px-4 md:px-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-6">
+<span class="text-error text-xs font-semibold uppercase tracking-widest">Are You Suffering From These?</span>
+<h2 class="text-2xl md:text-4xl font-bold">The Frustration of Recurrent Infections That Never Truly Go Away</h2>
+<p class="text-on-surface-variant">
+          You take antibiotics, the symptoms clear for a week, and then they return with a vengeance. The itching, unusual discharge, embarrassing odors, and persistent pelvic discomfort drain your confidence and energy.
+        </p>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-3 bg-surface p-4 rounded shadow-sm">
+<span class="material-symbols-outlined text-error mt-0.5">cancel</span>
+<div>
+<h4 class="font-semibold text-sm">Constant Itching &amp; Irritation</h4>
+<p class="text-xs text-on-surface-variant">Uncomfortable sensations that disrupt your daily work and sleep quality.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 bg-surface p-4 rounded shadow-sm">
+<span class="material-symbols-outlined text-error mt-0.5">cancel</span>
+<div>
+<h4 class="font-semibold text-sm">Embarrassing Odors &amp; Discharge</h4>
+<p class="text-xs text-on-surface-variant">Loss of personal confidence during intimate moments or social gatherings.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 bg-surface p-4 rounded shadow-sm">
+<span class="material-symbols-outlined text-error mt-0.5">cancel</span>
+<div>
+<h4 class="font-semibold text-sm">Endless Cycle of Expensive Drugs</h4>
+<p class="text-xs text-on-surface-variant">Wasting money on temporary fixes that damage your liver and gut flora.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<img class="w-full h-[480px] object-cover rounded shadow-lg" data-alt="Close up conceptual image representing stress and discomfort caused by health issues, soft warm lighting, professional photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCosl8A1NYdImR-TEcdLG6IDyKJGft9LbsbddCxkMXAOeMxlI0hQCeNpd5EZvLIOgR_vlVTUgwxKgq-4qofDcbwYNx7VeqmXUWopE_fldjEHwVVGjbXfLS4V0M1ev7VdkM_6vjRhZZTDsQcVpOCppHfBISw-jOVsq2wFCm01kokPWL_ltcf8OPoP_6VnSDWnY-qCGjdu3HpvY-jhWPHrSNXTDQCArkGQyUrGoiO0Kwq"/>
+</div>
+</div>
+</section>
+<!-- 4. Problem Explanation -->
+<section class="py-16 px-4 md:px-16 bg-surface">
+<div class="max-w-5xl mx-auto flex flex-col gap-8">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Root Cause Analysis</span>
+<h2 class="text-2xl md:text-3xl font-bold">Why Standard Treatments Keep Failing You</h2>
+<p class="text-on-surface-variant text-sm">Most over-the-counter medications only suppress surface symptoms while leaving dormant pathogens deep within tissue membranes.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4 shadow-sm">
+<div class="w-12 h-12 bg-surface-container-high rounded flex items-center justify-center text-primary font-bold">01</div>
+<h3 class="font-bold text-lg">Surface Masking</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Chemical creams numb the sensation temporarily without flushing out the toxic bacterial biofilms anchoring the infection.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4 shadow-sm">
+<div class="w-12 h-12 bg-surface-container-high rounded flex items-center justify-center text-primary font-bold">02</div>
+<h3 class="font-bold text-lg">Immune Suppression</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Synthetic antibiotics wipe out your good bacteria, leaving your natural defense system completely vulnerable to reinfection.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4 shadow-sm">
+<div class="w-12 h-12 bg-surface-container-high rounded flex items-center justify-center text-primary font-bold">03</div>
+<h3 class="font-bold text-lg">Pathogen Resistance</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Harmful microbes mutate and build immunity against standard pharmacy antibiotics, rendering them useless over time.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Product Introduction -->
+<section class="py-16 px-4 md:px-16 bg-primary-container/20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5">
+<img class="w-full h-[400px] object-cover rounded shadow-md" data-alt="Pristine product packaging of organic herbal infection formula set against a minimalist clean surface with green leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiLUa00InnCrf8m0QeZQZnYTltTwfqeaGnFgurta8fermpP0ZPbNsztAB9Pu89HqDVYAB3UJ201TjGfEEuncwv89a-eiUxVrD1DDpstVL6FKfWgr4goMER3jjnxg_e_2xKz3cDVAjkhMMzLfD9wBYTj5ADjYja5OjTXbT1WLq6BaM65-UlLIw1sRBrohs4uq4m4vm0NtB1lce_wzyr7-DRWVuGVzfenv71kfmKUUys"/>
+</div>
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded text-xs font-semibold uppercase tracking-wider w-max">
+<span class="material-symbols-outlined text-sm">local_florist</span> 100% Herbal Extract
+        </div>
+<h2 class="text-2xl md:text-4xl font-bold">Introducing The Advanced Organic Shield Formula</h2>
+<p class="text-on-surface-variant">
+          Formulated by leading botanical researchers, this proprietary blend penetrates cellular barriers, eradicates stubborn microbial colonies, and permanently restores your natural pH balance without side effects.
+        </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="text-xs font-semibold">100% Natural Ingredients</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="text-xs font-semibold">Zero Chemical Additives</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="text-xs font-semibold">Fast Results in 7 Days</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="text-xs font-semibold">NAFDAC Certified Safe</span>
+</div>
+</div>
+<div>
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary font-semibold px-8 py-4 rounded shadow hover:bg-primary/90 transition" href="#packages">
+<span>Claim Your Treatment Package</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Product Image Showcase -->
+<section class="py-16 px-4 md:px-16 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-8">
+<div class="text-center max-w-xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Gallery</span>
+<h2 class="text-2xl md:text-3xl font-bold">Quality Packaging &amp; Premium Formulation</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="relative overflow-hidden rounded group">
+<img class="w-full h-72 object-cover group-hover:scale-105 transition duration-500" data-alt="Product bottle angle view showcasing label details and herbal certification seal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDRAI3Y1ueL9znFfcEaFVGzl4eH9wceD1pIHT-_Pomlz4xBXodhGa8kLRUKgdUp6nRKwzxR76F8R99nuDOPI1-i_84S1iPGSWQfENmxlZ4yOGn2pjtWPs74_ZIIL2U5TGubA1lyIABU9skX7EWlHTSAzeskaDBgifImG9gywI3_8FIh-bPQG2MVvSX0oWo0Lx4eJlNDrlDEqfI9W7nuBk8ATdKdg1kKA91Ez_veY3c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 to-transparent flex items-end p-6">
+<p class="text-on-primary font-semibold text-sm">Sealed For Maximum Freshness</p>
+</div>
+</div>
+<div class="relative overflow-hidden rounded group">
+<img class="w-full h-72 object-cover group-hover:scale-105 transition duration-500" data-alt="Macro shot of natural botanical herbs used in the proprietary blend laid out cleanly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNSKKdWNT9qvPlxTD5k8P_OsoSYYRHOqvMXbFGxaDVgU-Qyni5Qrxuse_wf9UL-uN6xkMXk6sdbqjrpJ3tq3nZ92GRF6R6DON9XnwceMCGtG65dQEdIW8RYI-lgvOMstZJhzxJRoaMT7OLHbOyGQ3y97XpU9ZddMoo55BTjvaIhiutz-Et4Cb5Vc83GQeP6e3zX-kMkCYQyEoRmrahRsyxhq8go07tp4a7siiuLaIK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 to-transparent flex items-end p-6">
+<p class="text-on-primary font-semibold text-sm">Pure Organic Ingredients</p>
+</div>
+</div>
+<div class="relative overflow-hidden rounded group">
+<img class="w-full h-72 object-cover group-hover:scale-105 transition duration-500" data-alt="Happy healthy customer holding product package smiling in bright natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq_qwG-A7h4pcd7Pi7dzGFSofoE5cVoquAl805cBk9vnt1vrYzZkDgqHz5kftMwWosGHgWmbROL8gCa4QOkhjOWI2Ism2PCY0CGY3VuMwYOrfzIzhkla3mmFfovJiaO4bTKdYK6ABjnq_Km_Rz_RQ_TjUhqYVaUQU1a4X3Kf801q_1hC5ghM2sGMgtGgThSxV3WnwNm-XrUpaiR_9nWI3e2XF27TepXPomF9T5o5Ul"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 to-transparent flex items-end p-6">
+<p class="text-on-primary font-semibold text-sm">Trusted By Thousands</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Key Benefits -->
+<section class="py-16 px-4 md:px-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Transformative Results</span>
+<h2 class="text-2xl md:text-3xl font-bold">What You Will Experience Within Your First 14 Days</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface p-6 rounded shadow-sm flex flex-col gap-4">
+<div class="w-12 h-12 bg-tertiary-container text-on-tertiary-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h3 class="font-bold">Instant Relief</h3>
+<p class="text-xs text-on-surface-variant">Stops embarrassing itching and burning sensations within the first 48 hours of use.</p>
+</div>
+<div class="bg-surface p-6 rounded shadow-sm flex flex-col gap-4">
+<div class="w-12 h-12 bg-tertiary-container text-on-tertiary-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<h3 class="font-bold">Deep Cleansing</h3>
+<p class="text-xs text-on-surface-variant">Flushes out deep-seated bacterial biofilms and fungal spores completely.</p>
+</div>
+<div class="bg-surface p-6 rounded shadow-sm flex flex-col gap-4">
+<div class="w-12 h-12 bg-tertiary-container text-on-tertiary-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined">balance</span>
+</div>
+<h3 class="font-bold">pH Balance Restoration</h3>
+<p class="text-xs text-on-surface-variant">Restores optimal acidity levels to prevent future microbial overgrowth.</p>
+</div>
+<div class="bg-surface p-6 rounded shadow-sm flex flex-col gap-4">
+<div class="w-12 h-12 bg-tertiary-container text-on-tertiary-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<h3 class="font-bold">Renewed Confidence</h3>
+<p class="text-xs text-on-surface-variant">Enjoy intimate relationships and daily life free from worry and discomfort.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Product Demonstration Video -->
+<section class="py-16 px-4 md:px-16 bg-surface">
+<div class="max-w-4xl mx-auto text-center flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Expert Walkthrough</span>
+<h2 class="text-2xl md:text-3xl font-bold">Watch How Easily It Fits Into Your Daily Routine</h2>
+</div>
+<div class="relative w-full aspect-video bg-surface-container-high rounded shadow-xl overflow-hidden group cursor-pointer" onclick="alert('Playing demonstration video...')">
+<div class="absolute inset-0 bg-cover bg-center filter brightness-90" data-alt="Pharmacist demonstrating proper usage and dosage of the organic liquid extract in a clean professional setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNYgi8IrAVIdYOOqqngNtJX85_ZqDcaZsBycwUQU2K4sTw1pMvCWgMjhte38ZrquETENf-cEHPLSTDK27vRY_n5qJtURhUtjZF-R_0HYJs7wUQvGFPzifOLJp7q1JJyThuJT9bvx9WuwavOS8MXxwqfJL_lDrTRIznIePNkWhueCg58o_fC13T8mptdFrrdaasaRPKiw8iq4UXi6mnQ78J7Sg9QnBhzQmpZc9gzryS')"></div>
+<div class="absolute inset-0 bg-on-surface/30 flex items-center justify-center group-hover:bg-on-surface/20 transition">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. How the Product Works -->
+<section class="py-16 px-4 md:px-16 bg-surface-container-low">
+<div class="max-w-5xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Mechanism of Action</span>
+<h2 class="text-2xl md:text-3xl font-bold">3 Simple Steps to Complete Internal Restoration</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 rounded shadow-sm flex flex-col gap-4 relative">
+<span class="absolute top-4 right-4 text-4xl font-bold text-surface-container-high">01</span>
+<h3 class="font-bold text-lg mt-2">Target &amp; Penetrate</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Active herbal compounds instantly cross cellular membranes to locate hidden bacterial pockets.</p>
+</div>
+<div class="bg-surface p-8 rounded shadow-sm flex flex-col gap-4 relative">
+<span class="absolute top-4 right-4 text-4xl font-bold text-surface-container-high">02</span>
+<h3 class="font-bold text-lg mt-2">Neutralize &amp; Flush</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Pathogens are dislodged from tissue walls and safely flushed out of your system naturally.</p>
+</div>
+<div class="bg-surface p-8 rounded shadow-sm flex flex-col gap-4 relative">
+<span class="absolute top-4 right-4 text-4xl font-bold text-surface-container-high">03</span>
+<h3 class="font-bold text-lg mt-2">Protect &amp; Rebuild</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Fortifies mucosal linings and establishes an impenetrable shield against future microbial attacks.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Ingredients or Product Features -->
+<section class="py-16 px-4 md:px-16 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Nature's Pharmacy</span>
+<h2 class="text-2xl md:text-3xl font-bold">Powered by Rare Medicinal Botanicals</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4">
+<img class="w-full h-48 object-cover rounded" data-alt="Macro photography of organic green tea leaf and herbal extracts in clean laboratory glassware" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuNSOUTiif0-cdCR5UuEMCIklUUUca-kugjPmiz5NYGODsFH4uJnHFFbAA7zpfn8fNlky8aOtjDtYQiamjGHVnJtHcyxkfKfRfTt_u0gCE7D05nCx8VWcvjXjzIZij56TBs1oVUd8uk6a1Lts6GEoloRD-wQyhtrzDoWs16lzjYDf3EktdjGRZUpJ2a4cqftMSapRwW3l7PsWAJWonOnTuK720q7izLz_Y6_RdzOy4"/>
+<h3 class="font-bold text-lg">Berberis Aristata Extract</h3>
+<p class="text-xs text-on-surface-variant">Renowned for its powerful antimicrobial properties that inhibit harmful bacterial reproduction.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4">
+<img class="w-full h-48 object-cover rounded" data-alt="Fresh organic aloe vera slices and botanical extracts on a clean white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtMakJDh9ERIFHNlxu676WDcVTloAK3E6ugZNF1jA3lEzKw---5Oj2_FgxQVmHVf1sUtfrNRaAyiLm4foUU5KQ3ZyCI29m3VYRcQ003pOZEk6JGvbP1l5rD2KkJ_OFAW7HsRigWkIoPDPqgKBsx4hEOjG2ZASFIYdUKuTa_oWnYl7EbVcC9rCEEi2_Muzetoj9AxL0uM6ashkM0QwulHoKV4b9ijNqk4yEu9VeU3kI"/>
+<h3 class="font-bold text-lg">Aloe Barbadensis Gel</h3>
+<p class="text-xs text-on-surface-variant">Soothes inflamed mucous membranes and accelerates tissue healing and regeneration.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4">
+<img class="w-full h-48 object-cover rounded" data-alt="Pure organic garlic bulbs and herbal oil droplets on a minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyFj1b4aGO201x4X0rJHpOrO5nevW8EPgijwq46s5BpcscxCPmt1vNv8dAqZ__1Wl3owsFqfQnFrVe5F3kYzFwxiqkaJAW-1YgAvKfg1VZwSsW3E-8748ZLQrH-A3KgZtkZMvyxRXmGe7tA-8PfC28J55Dq8T58s4J1cINz_VWGTAhxszDKyZhmbLvbi7YnY3F5S7Pe7WjrDnXOJ4oiilyIWTJXUEDFJZLAgX-FMm8"/>
+<h3 class="font-bold text-lg">Allium Sativum Compound</h3>
+<p class="text-xs text-on-surface-variant">Acts as a natural broad-spectrum antibiotic targeting stubborn fungal and yeast strains.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. Why Choose This Product -->
+<section class="py-16 px-4 md:px-16 bg-surface-container-low">
+<div class="max-w-5xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Comparison</span>
+<h2 class="text-2xl md:text-3xl font-bold">Why Our Organic Formula Outperforms Alternatives</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface p-8 rounded shadow-sm flex flex-col gap-6">
+<h3 class="font-bold text-lg text-error flex items-center gap-2">
+<span class="material-symbols-outlined">cancel</span> Standard Pharmacy Drugs
+          </h3>
+<ul class="flex flex-col gap-3 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm">close</span> Temporary relief lasting only a few days</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm">close</span> Severe side effects including nausea and fatigue</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm">close</span> Destroys beneficial gut flora and immunity</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm">close</span> High ongoing monthly financial cost</li>
+</ul>
+</div>
+<div class="bg-primary-container/30 p-8 rounded shadow-sm flex flex-col gap-6 border-2 border-primary">
+<h3 class="font-bold text-lg text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">check_circle</span> Advanced Organic Shield
+          </h3>
+<ul class="flex flex-col gap-3 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Permanent root-cause elimination</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> 100% natural with zero adverse side effects</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Strengthens natural immunity and flora</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> One-time investment for lifelong freedom</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. Product Usage -->
+<section class="py-16 px-4 md:px-16 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 flex flex-col gap-6">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Simple Application</span>
+<h2 class="text-2xl md:text-3xl font-bold">How to Use for Maximum Effectiveness</h2>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-4 bg-surface-container-low p-4 rounded">
+<div class="w-8 h-8 bg-primary text-on-primary rounded flex items-center justify-center font-bold shrink-0">1</div>
+<div>
+<h4 class="font-semibold text-sm">Morning Dose</h4>
+<p class="text-xs text-on-surface-variant">Take 5ml (one teaspoon) diluted in half a glass of warm water 30 minutes before breakfast.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-surface-container-low p-4 rounded">
+<div class="w-8 h-8 bg-primary text-on-primary rounded flex items-center justify-center font-bold shrink-0">2</div>
+<div>
+<h4 class="font-semibold text-sm">Evening Dose</h4>
+<p class="text-xs text-on-surface-variant">Repeat 5ml dosage in the evening before dinner to maintain steady active botanical levels.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-surface-container-low p-4 rounded">
+<div class="w-8 h-8 bg-primary text-on-primary rounded flex items-center justify-center font-bold shrink-0">3</div>
+<div>
+<h4 class="font-semibold text-sm">Complete Course</h4>
+<p class="text-xs text-on-surface-variant">Maintain daily intake consistently for 14 to 30 days depending on infection severity.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6">
+<img class="w-full h-[420px] object-cover rounded shadow-lg" data-alt="Person measuring liquid herbal extract with dropper into a glass of pure water in a bright kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMQQOsW6P9grPRwgDnDeB6W3JoNXJobMuSImUqZAT4d1JqjRUjPQtGxSVq_5CSHQM4TjQxjvprBTMx58xrA5pvqZCwAhHO_6pi-YLkHswtrmHgXCrKWDTAgtMbcy6C91XCY6piyjwcZSMGuPBJsOCVOcIZ-s41cucSJWduiQc0aWLWlEWOKwZl6chDLEtdBc6f9ZzEp6ZVjsOAvTh_yJNZWTPnuAM5GH-OtlYb47RD"/>
+</div>
+</div>
+</section>
+<!-- 13. Visual Storytelling -->
+<section class="py-16 px-4 md:px-16 bg-surface-container-low">
+<div class="max-w-5xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Real Transformations</span>
+<h2 class="text-2xl md:text-3xl font-bold">From Years of Despair to Complete Freedom</h2>
+</div>
+<div class="bg-surface p-8 md:p-12 rounded shadow-sm flex flex-col md:flex-row gap-8 items-center">
+<img class="w-48 h-48 rounded-full object-cover shrink-0 shadow-md" data-alt="Portrait of a smiling confident woman in her 30s enjoying outdoor sunshine in a park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxg8Vol3HP9T_Rq6yOytzbJ6jpXvRZ9ZlWdcJDr8kYaGbebZDt6z81A3PvsSXxRzzr2p-Eg6Ls0iHL1u_2rX7MTNZWKz0mCHRIjZkgbhnaJ4EQ2vCxLV9OymNX-MS4UN_0Bewbn3W3VNC-PsTCiv8IfWRBYBuMZH4n2__sz0mmSL_AjYsfkjZ85keAeH4W5muhvun-UwDohAFlKeum_lOoSykrkAXLMc9HfSHGYi4x"/>
+<div class="flex flex-col gap-4">
+<blockquote class="text-lg italic font-light text-on-surface">
+            "I battled recurrent infections for over 4 years. I spent hundreds of dollars on hospital visits and drugs that only worked temporarily. Within 5 days of using this organic formula, the itching stopped completely. It has been 6 months now and I am completely free!"
+          </blockquote>
+<div>
+<p class="font-bold text-sm">Grace Adebayo</p>
+<p class="text-xs text-on-surface-variant">Lagos, Nigeria</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 14. Customer Experience Video -->
+<section class="py-16 px-4 md:px-16 bg-surface">
+<div class="max-w-4xl mx-auto text-center flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Video Testimony</span>
+<h2 class="text-2xl md:text-3xl font-bold">Listen to Dr. Sarah Share Her Patient Success Stories</h2>
+</div>
+<div class="relative w-full aspect-video bg-surface-container-high rounded shadow-xl overflow-hidden group cursor-pointer" onclick="alert('Playing testimonial video...')">
+<div class="absolute inset-0 bg-cover bg-center filter brightness-90" data-alt="Female medical practitioner talking warmly to camera in a modern clinic office environment" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALehUIOVZUIXG2gdVgNIzdiuaq8vuZ5z1rnWOC3Rv5vc0auQToB2DVvjcjPKSXzxD_9k0yALEd1EqvEjT7EuIUh6_t7glVmMbLZR8p9FRW-G5qK1mynX3vo7rQUjOr1trlf_1wp6RONDvKKuBquPUCPwMbqpJfvUyZBYmXHJ7le2clPr4jayyrR7I_QY2ChKMYsx-AXu5MhpJdpkCmJQCUAocDk4-voM6UAoyC6sKe')"></div>
+<div class="absolute inset-0 bg-on-surface/30 flex items-center justify-center group-hover:bg-on-surface/20 transition">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 15. Authentic Testimonials -->
+<section class="py-16 px-4 md:px-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Verified Reviews</span>
+<h2 class="text-2xl md:text-3xl font-bold">Trusted by Thousands Across the Country</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface p-6 rounded shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            "At first I was skeptical because I've tried so many things. But this organic cleanser completely cleared my infection in less than 2 weeks. Amazing product!"
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of adult female customer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCkVdQRXl4gIvpkj-jYJdt4fBiHUFo6u_X3IJuYqN12SXd36v4oThXVMGlHJdr8AjwePYFx7oVMRq4LZiYbp2FafgLYfyUgdz3wDkMZu9LGTO5GW3aJSTF0UA1mYSm1yzUZChnQ5RjhWXd8GC9-9R6kCpyOOPuAFQisx34APPK4L7nbHmTETYYOdQpeMfyVpUh-uaktSYFqYwByoKYxn4r5Wq85LdDfn4yRF0DVemF"/>
+<div>
+<p class="font-bold text-xs">Chioma Okoro</p>
+<p class="text-[10px] text-on-surface-variant">Abuja</p>
+</div>
+</div>
+</div>
+<div class="bg-surface p-6 rounded shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            "Prompt delivery and discreet packaging. The results started showing within 3 days. No more itching or abnormal discharge. Highly recommended."
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of adult male customer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb3AG3ilB1VV3kCas6i_bwPL4oEqz4LFIIRLFk1apzwapanPVU3sGaovjShVyoTBXi-J95H3vrKaaW6254Jdyx4UxA9tp5_VeISIZEUR-Txc1rPxnheZBBaZ7A0JUf8bNBZv5zL3s1kv0GosutMvNvATEwGLdtNnW8y0kXeZG34VpCidtAl3DxoDW2cVh4TKEaJKqEJciPa4L1KfkthMZYcWa-PtZoh3-9yILMnePS"/>
+<div>
+<p class="font-bold text-xs">Ibrahim Musa</p>
+<p class="text-[10px] text-on-surface-variant">Kano</p>
+</div>
+</div>
+</div>
+<div class="bg-surface p-6 rounded shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            "Worth every penny. Customer support was very helpful in guiding me on the dosage. My confidence is fully restored."
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of professional female customer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDCrcWHUVRxri6u-j1uU2DH6jQLFGiHXaOGqBT15zLFleKadJHfHVo4IXC7j2dt7bMUAxUQqXpwBpDwhuBmIOQi3tS9QucF8HjUOqbs6AscvbdLDi0iwlSMW6_Qh1BWiN2qRx55JHvRZSGUI2WmMypmOjfa9a0Q5MATxEnpXEhVwDclWXRVEu4g-FiuKHw1ezp_dnwRLoKaLYxcZk5mda0aGYCUBETrKv1X6GW83Mu"/>
+<div>
+<p class="font-bold text-xs">Folake Oin</p>
+<p class="text-[10px] text-on-surface-variant">Ibadan</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 16. Product Comparison -->
+<section class="py-16 px-4 md:px-16 bg-surface">
+<div class="max-w-5xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Side-by-Side</span>
+<h2 class="text-2xl md:text-3xl font-bold">Detailed Feature Matrix</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4">
+<h3 class="font-bold text-base">Chemical Antibiotics</h3>
+<p class="text-xs text-on-surface-variant">Standard prescription pills from conventional pharmacies.</p>
+<hr class="border-outline-variant my-2"/>
+<ul class="flex flex-col gap-2 text-xs text-on-surface-variant">
+<li>Speed: 2 Days (Temporary)</li>
+<li>Safety: Liver Strain Risk</li>
+<li>Recurrence: High (65%)</li>
+<li>Cost: High Ongoing</li>
+</ul>
+</div>
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4">
+<h3 class="font-bold text-base">Herbal Teas / Mixed Herbs</h3>
+<p class="text-xs text-on-surface-variant">Unregulated local concoctions sold in open markets.</p>
+<hr class="border-outline-variant my-2"/>
+<ul class="flex flex-col gap-2 text-xs text-on-surface-variant">
+<li>Speed: Unknown</li>
+<li>Safety: Unverified</li>
+<li>Recurrence: Moderate</li>
+<li>Cost: Cheap but risky</li>
+</ul>
+</div>
+<div class="bg-primary-container/30 p-6 rounded flex flex-col gap-4 border-2 border-primary shadow-sm">
+<div class="inline-block bg-primary text-on-primary text-[10px] px-2 py-0.5 rounded font-bold uppercase w-max">Best Choice</div>
+<h3 class="font-bold text-base text-primary">Advanced Organic Shield</h3>
+<p class="text-xs text-on-surface-variant">Clinically formulated botanical extract.</p>
+<hr class="border-outline-variant my-2"/>
+<ul class="flex flex-col gap-2 text-xs text-on-surface-variant">
+<li>Speed: 3-5 Days (Permanent)</li>
+<li>Safety: 100% Natural / NAFDAC</li>
+<li>Recurrence: Zero (&lt; 1%)</li>
+<li>Cost: One-time value</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 17. Product Packages -->
+<section class="py-16 px-4 md:px-16 bg-surface-container-low" id="packages">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Select Your Package</span>
+<h2 class="text-2xl md:text-3xl font-bold">Choose the Treatment Plan That Fits Your Needs</h2>
+<p class="text-on-surface-variant text-sm">All packages include free nationwide delivery and a 30-day money-back guarantee.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<div class="bg-surface p-8 rounded shadow-sm flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase text-on-surface-variant">Starter Package</span>
+<h3 class="text-xl font-bold">1 Bottle (14 Days)</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold">₦22,500</span>
+<span class="text-xs text-on-surface-variant line-through">₦30,000</span>
+</div>
+<p class="text-xs text-on-surface-variant">Ideal for mild or newly detected infections.</p>
+<ul class="flex flex-col gap-2 text-xs text-on-surface-variant pt-2">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> 1 Bottle Organic Formula</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Free Delivery</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Dosage Guide Included</li>
+</ul>
+</div>
+<a class="border border-primary text-primary font-semibold py-3 rounded text-center hover:bg-primary-container/20 transition" href="#order-form">Select Starter</a>
+</div>
+<div class="bg-surface p-8 rounded shadow-xl flex flex-col justify-between gap-6 border-2 border-primary relative">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-on-primary text-[10px] px-3 py-1 rounded font-bold uppercase">Most Popular &amp; Best Value</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase text-primary">Complete Treatment</span>
+<h3 class="text-xl font-bold">2 Bottles (30 Days)</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold">₦38,000</span>
+<span class="text-xs text-on-surface-variant line-through">₦55,000</span>
+</div>
+<p class="text-xs text-on-surface-variant">Recommended for stubborn or recurrent infections.</p>
+<ul class="flex flex-col gap-2 text-xs text-on-surface-variant pt-2">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> 2 Bottles Organic Formula</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Free Express Delivery</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Free pH Balance E-Book</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Dedicated Support Expert</li>
+</ul>
+</div>
+<a class="bg-primary text-on-primary font-semibold py-3 rounded text-center hover:bg-primary/90 transition shadow" href="#order-form">Select Complete Plan</a>
+</div>
+<div class="bg-surface p-8 rounded shadow-sm flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase text-on-surface-variant">Family &amp; Friends Pack</span>
+<h3 class="text-xl font-bold">4 Bottles (60 Days)</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold">₦68,000</span>
+<span class="text-xs text-on-surface-variant line-through">₦100,000</span>
+</div>
+<p class="text-xs text-on-surface-variant">Maximum savings for households or sharing.</p>
+<ul class="flex flex-col gap-2 text-xs text-on-surface-variant pt-2">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> 4 Bottles Organic Formula</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Free VIP Express Delivery</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Priority Customer Support</li>
+</ul>
+</div>
+<a class="border border-primary text-primary font-semibold py-3 rounded text-center hover:bg-primary-container/20 transition" href="#order-form">Select Family Pack</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 18. Special Offer -->
+<section class="py-16 px-4 md:px-16 bg-error-container/20">
+<div class="max-w-5xl mx-auto bg-surface p-8 md:p-12 rounded shadow-lg flex flex-col md:flex-row gap-8 items-center border border-error/30">
+<div class="flex-1 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 bg-error text-on-error px-3 py-1 rounded text-xs font-semibold uppercase tracking-wider w-max">
+<span class="material-symbols-outlined text-sm">timer</span> Limited Time Flash Sale
+        </div>
+<h2 class="text-2xl md:text-3xl font-bold">Save 35% Off Today + Get Free Shipping Nationwide</h2>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+          This promotional batch is selling out fast. Order within the next <strong>15 minutes</strong> to secure your discounted pricing and free express delivery right to your doorstep.
+        </p>
+<div class="flex items-center gap-4 pt-2">
+<a class="bg-error text-on-error font-semibold px-8 py-3 rounded shadow hover:bg-error/90 transition flex items-center gap-2" href="#order-form">
+<span>Claim Discount Now</span>
+<span class="material-symbols-outlined">local_fire_department</span>
+</a>
+</div>
+</div>
+<div>
+<img alt="Flash sale promotional badge with discount percentage over clean background" class="w-64 h-64 object-cover rounded shadow" data-alt="Promotional sale graphic showing product bundle with discount tag in red and gold tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW6STgftNqHL11kV6fqNzb6mrxhKpQ0JoIFkV3jA1UdFdBHm6m1xyMnEC-aeFPgagx0KEBxM85kl-1kGxhanP8XZAP0Z_mwVun-DqlpzbtEZWSJtHdrU0xfqEIdVezdjWOnIrfs4GcgRos_VcF_lgq_u4S7BNpPQ2biUF_HBDcmS3gAg_oy6Q3m_D3F3Wb949EJ3Z6c45YZr25NI_-aIsYP0rp9gHHt4__wSRjx5aH"/>
+</div>
+</div>
+</section>
+<!-- 19. Delivery Information -->
+<section class="py-16 px-4 md:px-16 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Seamless Logistics</span>
+<h2 class="text-2xl md:text-3xl font-bold">Fast, Safe &amp; Discreet Delivery Nationwide</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface rounded flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<h3 class="font-bold">Nationwide Shipping</h3>
+<p class="text-xs text-on-surface-variant">We deliver to all 36 states in Nigeria through trusted courier partners.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface rounded flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">visibility_off</span>
+</div>
+<h3 class="font-bold">Discreet Packaging</h3>
+<p class="text-xs text-on-surface-variant">Shipped in plain, unmarked boxes with zero product branding for your privacy.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface rounded flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h3 class="font-bold">Pay on Delivery</h3>
+<p class="text-xs text-on-surface-variant">Inspect your package and pay cash or transfer upon physical delivery in major cities.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded flex flex-col gap-4">
+<div class="w-12 h-12 bg-surface rounded flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<h3 class="font-bold">24/7 Support</h3>
+<p class="text-xs text-on-surface-variant">Our customer care team is available via phone and WhatsApp anytime.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 20. Frequently Asked Questions -->
+<section class="py-16 px-4 md:px-16 bg-surface-container-low">
+<div class="max-w-4xl mx-auto flex flex-col gap-8">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Got Questions?</span>
+<h2 class="text-2xl md:text-3xl font-bold">Frequently Asked Questions</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface p-6 rounded shadow-sm cursor-pointer faq-item">
+<div class="flex justify-between items-center font-bold text-sm">
+<span>How soon will I see results?</span>
+<span class="material-symbols-outlined transition-transform">expand_more</span>
+</div>
+<p class="text-xs text-on-surface-variant pt-3 hidden">Most users report noticeable relief from itching and odor within 48 to 72 hours. For complete root-cause eradication, consistent use for 14 to 30 days is recommended.</p>
+</div>
+<div class="bg-surface p-6 rounded shadow-sm cursor-pointer faq-item">
+<div class="flex justify-between items-center font-bold text-sm">
+<span>Are there any side effects?</span>
+<span class="material-symbols-outlined transition-transform">expand_more</span>
+</div>
+<p class="text-xs text-on-surface-variant pt-3 hidden">No. The formula is 100% natural with certified organic botanical ingredients. It has zero harsh chemical additives and does not interfere with other normal medications.</p>
+</div>
+<div class="bg-surface p-6 rounded shadow-sm cursor-pointer faq-item">
+<div class="flex justify-between items-center font-bold text-sm">
+<span>How is the package delivered?</span>
+<span class="material-symbols-outlined transition-transform">expand_more</span>
+</div>
+<p class="text-xs text-on-surface-variant pt-3 hidden">All deliveries are packed in discreet, plain courier bags or boxes. Nobody except you knows what is inside.</p>
+</div>
+<div class="bg-surface p-6 rounded shadow-sm cursor-pointer faq-item">
+<div class="flex justify-between items-center font-bold text-sm">
+<span>Do I pay online or upon delivery?</span>
+<span class="material-symbols-outlined transition-transform">expand_more</span>
+</div>
+<p class="text-xs text-on-surface-variant pt-3 hidden">You can choose Pay on Delivery (available in Lagos, Abuja, Port Harcourt, Ibadan, and major cities) or prepay with a discount.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 21. Final Product Video -->
+<section class="py-16 px-4 md:px-16 bg-surface">
+<div class="max-w-4xl mx-auto text-center flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Final Reminder</span>
+<h2 class="text-2xl md:text-3xl font-bold">Watch This Summary Before Placing Your Order</h2>
+</div>
+<div class="relative w-full aspect-video bg-surface-container-high rounded shadow-xl overflow-hidden group cursor-pointer" onclick="alert('Playing final summary video...')">
+<div class="absolute inset-0 bg-cover bg-center filter brightness-90" data-alt="Summary video poster frame showing product bottles and smiling customer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUJZfCucnRLZ4NFLBwv5vN7NoGEN8lp1yGWEFt-dXH8YA3Zv013IpAeI9Q3kI3i8aKO1xqZET-1udJWCpF1zl9wlDNWu3OF3QWsBErlg95ZdukNx76yMIcrYsEibo0uT59yFl0_wFt8g7cwi2O7Pvb8z2ps-2sLLkgAzlonbmJzSZG2DAe3T8n90p6ev98rRgNoGgUNqFR_Q-Lt_ve4d4A4mqJKQGs1nImBWxDN64P')"></div>
+<div class="absolute inset-0 bg-on-surface/30 flex items-center justify-center group-hover:bg-on-surface/20 transition">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 22. Order Form -->
+<section class="py-16 px-4 md:px-16 bg-surface-container-low" id="order-form">
+<div class="max-w-3xl mx-auto bg-surface p-8 md:p-12 rounded shadow-lg flex flex-col gap-8">
+<div class="text-center flex flex-col gap-2">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Secure Checkout</span>
+<h2 class="text-2xl md:text-3xl font-bold">Place Your Order Now</h2>
+<p class="text-xs text-on-surface-variant">Fill out the simple form below. Our agent will call you shortly to confirm your delivery address.</p>
+</div>
+<form class="flex flex-col gap-6" onsubmit="event.preventDefault(); alert('Order submitted successfully! Our agent will contact you within 15 minutes.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">Full Name *</label>
+<input class="bg-surface-container-low border-b border-outline h-10 px-3 text-sm focus:outline-none focus:border-primary" placeholder="e.g. Oluwaseun Johnson" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">Phone Number (WhatsApp) *</label>
+<input class="bg-surface-container-low border-b border-outline h-10 px-3 text-sm focus:outline-none focus:border-primary" placeholder="e.g. 08012345678" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">Select Package *</label>
+<select class="bg-surface-container-low border-b border-outline h-10 px-3 text-sm focus:outline-none focus:border-primary">
+<option>Starter Package - 1 Bottle (₦22,500)</option>
+<option selected="">Complete Treatment - 2 Bottles (₦38,000)</option>
+<option>Family &amp; Friends Pack - 4 Bottles (₦68,000)</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">State / Location *</label>
+<select class="bg-surface-container-low border-b border-outline h-10 px-3 text-sm focus:outline-none focus:border-primary">
+<option>Lagos State</option>
+<option>Abuja (FCT)</option>
+<option>Rivers State</option>
+<option>Oyo State</option>
+<option>Other States (Nationwide)</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">Delivery Address (Street &amp; Nearest Landmark) *</label>
+<textarea class="bg-surface-container-low border border-outline p-3 text-sm focus:outline-none focus:border-primary rounded" placeholder="e.g. No 15 Allen Avenue, Ikeja, Lagos" required="" rows="3"></textarea>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">Additional Delivery Instructions (Optional)</label>
+<input class="bg-surface-container-low border-b border-outline h-10 px-3 text-sm focus:outline-none focus:border-primary" placeholder="e.g. Call before arrival" type="text"/>
+</div>
+<button class="bg-error text-on-error font-bold py-4 rounded text-center shadow-md hover:bg-error/90 transition flex items-center justify-center gap-2 text-base" type="submit">
+<span>Complete Secure Order</span>
+<span class="material-symbols-outlined">lock</span>
+</button>
+<p class="text-[11px] text-center text-on-surface-variant">🔒 Your information is 100% confidential and secure. We never share your data.</p>
+</form>
+</div>
+</section>
+<!-- 23. Final Call to Action -->
+<section class="py-16 px-4 md:px-16 bg-primary text-on-primary">
+<div class="max-w-4xl mx-auto text-center flex flex-col gap-8">
+<h2 class="text-3xl md:text-4xl font-bold">Take Control of Your Health Today</h2>
+<p class="text-sm opacity-90 max-w-2xl mx-auto">
+        Join over 14,000+ satisfied individuals who have permanently reclaimed their comfort, confidence, and intimate wellness.
+      </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-surface text-on-surface font-semibold px-8 py-4 rounded text-center shadow hover:bg-surface-container transition" href="#order-form">
+          Order Now &amp; Save 35%
+        </a>
+<a class="border border-on-primary text-on-primary font-semibold px-8 py-4 rounded text-center hover:bg-on-primary/10 transition flex items-center justify-center gap-2" href="https://whatsapp.com" target="_blank">
+<span class="material-symbols-outlined">chat</span> Order via WhatsApp
+        </a>
+</div>
+</div>
+</section>
+<!-- 24. Minimal Footer -->
+<footer class="py-12 px-4 md:px-16 bg-surface-container-high text-on-surface-variant text-xs">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8 items-center text-center md:text-left">
+<div class="flex flex-col gap-2">
+<p class="font-bold text-on-surface text-sm">Advanced Organic Shield Health Inc.</p>
+<p>© 2025 All Rights Reserved. Certified Organic Formula.</p>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-bold text-on-surface text-sm">Disclaimer</p>
+<p class="max-w-md">Statements on this page have not been evaluated by regulatory authorities. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-bold text-on-surface text-sm">Contact Support</p>
+<p>Email: support@organicshield.ng | Tel: +234 800 000 0000</p>
+</div>
+</div>
+</footer>
+<!-- Sticky Bottom Mobile CTA Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-surface/95 backdrop-blur border-t border-outline-variant p-3 md:hidden z-50 flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Special Discount</span>
+<span class="font-bold text-sm text-primary">₦38,000 <span class="text-xs text-on-surface-variant line-through font-normal">₦55,000</span></span>
+</div>
+<a class="bg-error text-on-error font-bold px-6 py-2.5 rounded text-xs shadow flex items-center gap-1" href="#order-form">
+<span>Order Now</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<script>
+    // Accordion interaction for FAQ items
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const p = item.querySelector('p');
+        const icon = item.querySelector('.material-symbols-outlined');
+        p.classList.toggle('hidden');
+        icon.style.transform = p.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+    });
+  </script>
+</div></main></body></html>

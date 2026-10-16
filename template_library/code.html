@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#f4f4f4", "on-surface": "#161616", "primary-fixed-dim": "#78a9ff", "surface": "#ffffff", "on-secondary-fixed": "#161616", "tertiary-fixed-dim": "#42be65", "secondary-fixed-dim": "#c6c6c6", "on-secondary": "#ffffff", "surface-container-high": "#e0e0e0", "tertiary-fixed": "#a7f0ba", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-background": "#161616", "on-error-container": "#750e13", "inverse-primary": "#78a9ff", "on-primary": "#ffffff", "secondary": "#6f6f6f", "on-secondary-fixed-variant": "#525252", "on-primary-fixed": "#001d6c", "error": "#da1e28", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-surface-variant": "#525252", "on-tertiary-container": "#044317", "surface-tint": "#0f62fe", "primary-container": "#d0e2ff", "on-tertiary-fixed": "#022d0d", "primary": "#0f62fe", "primary-fixed": "#d0e2ff", "secondary-container": "#e0e0e0", "inverse-on-surface": "#f4f4f4", "outline": "#8d8d8d", "surface-dim": "#e0e0e0", "outline-variant": "#e0e0e0", "tertiary": "#198038", "on-primary-fixed-variant": "#0043ce", "surface-container-highest": "#c6c6c6", "inverse-surface": "#393939", "on-tertiary-fixed-variant": "#044317", "surface-container-lowest": "#ffffff", "tertiary-container": "#a7f0ba", "secondary-fixed": "#e0e0e0", "background": "#ffffff", "error-container": "#fff1f1", "on-primary-container": "#161616", "on-secondary-container": "#525252", "surface-container": "#f4f4f4" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": {}, "fontFamily": { "headline": [ "IBM Plex Sans" ], "display": [ "IBM Plex Sans" ], "body": [ "IBM Plex Sans" ], "label": [ "IBM Plex Sans" ] }, "fontSize": {} } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col py-6"><div class="px-6 mb-8 text-xl font-headline font-bold tracking-tight text-primary">FUNNELAI</div><nav class="flex-1 px-4 space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="visual-editor" href="#"><span class="material-symbols-outlined mr-3">edit_note</span>Website Editor</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="template-library" href="#"><span class="material-symbols-outlined mr-3">grid_view</span>Templates</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="leads" href="#"><span class="material-symbols-outlined mr-3">contacts</span>Leads</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined mr-3">analytics</span>Analytics</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="subscription" href="#"><span class="material-symbols-outlined mr-3">credit_card</span>Subscription</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="admin" href="#"><span class="material-symbols-outlined mr-3">admin_panel_settings</span>Admin Panel</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="text-sm text-on-surface-variant">Enterprise Tier Active (₦50,000/yr)</div><div class="flex items-center gap-4"><span class="material-symbols-outlined text-on-surface-variant cursor-pointer">notifications</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Top Banner / Header Section -->
+<div class="px-8 pt-8 pb-6 bg-surface-container-low flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h1 class="text-2xl font-headline font-semibold text-on-surface tracking-tight">Sales Funnel Templates</h1>
+<p class="text-sm text-on-surface-variant mt-1">Choose from 15+ high-converting, conversion-optimized template designs built for African &amp; global markets.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2.5 bg-surface text-on-surface text-sm font-medium rounded-xl hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]">upload</span>
+          Import Custom
+        </button>
+<button class="flex items-center gap-2 px-4 py-2.5 bg-primary text-on-primary text-sm font-medium rounded-xl hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          Request Custom Build
+        </button>
+</div>
+</div>
+<!-- Search & Filters -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-2">
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-4 bg-surface text-on-surface text-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-primary transition-all" placeholder="Search templates by name, industry, or feature..." type="text"/>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none">
+<button class="px-4 py-2 bg-primary text-on-primary text-xs font-semibold rounded-xl whitespace-nowrap">All Industries</button>
+<button class="px-4 py-2 bg-surface text-on-surface-variant hover:text-on-surface text-xs font-medium rounded-xl whitespace-nowrap hover:bg-surface-container-high transition-all">Skincare &amp; Beauty</button>
+<button class="px-4 py-2 bg-surface text-on-surface-variant hover:text-on-surface text-xs font-medium rounded-xl whitespace-nowrap hover:bg-surface-container-high transition-all">Fashion &amp; Apparel</button>
+<button class="px-4 py-2 bg-surface text-on-surface-variant hover:text-on-surface text-xs font-medium rounded-xl whitespace-nowrap hover:bg-surface-container-high transition-all">Real Estate</button>
+<button class="px-4 py-2 bg-surface text-on-surface-variant hover:text-on-surface text-xs font-medium rounded-xl whitespace-nowrap hover:bg-surface-container-high transition-all">Professional Services</button>
+<button class="px-4 py-2 bg-surface text-on-surface-variant hover:text-on-surface text-xs font-medium rounded-xl whitespace-nowrap hover:bg-surface-container-high transition-all">Coaching</button>
+<button class="px-4 py-2 bg-surface text-on-surface-variant hover:text-on-surface text-xs font-medium rounded-xl whitespace-nowrap hover:bg-surface-container-high transition-all">Fitness</button>
+<button class="px-4 py-2 bg-surface text-on-surface-variant hover:text-on-surface text-xs font-medium rounded-xl whitespace-nowrap hover:bg-surface-container-high transition-all">Restaurant</button>
+</div>
+</div>
+</div>
+<!-- Template Grid Content -->
+<div class="px-8 py-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Card 1: GlowRadiance Skincare -->
+<div class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+<div class="relative h-48 bg-cover bg-center overflow-hidden" data-alt="A clean minimalist aesthetic skincare flatlay featuring pastel peach and cream tones, organic serum bottles, and soft morning lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdmJRSeMx8OfANl-1-S8iffeaMf8ZaFJJhO8dzmJOgs2QWKLKdhEcaUQ9j-vDjNOk7h-G02GCSSp6WfzsFr0I8OF7zGdZLbPRTRD_cVtejudPpq38zdkfPv2rHz9Clh8279z6Max-Xdwzz_4h10a2d7_FqpAXorya_zFxoCjapuxb2oI-WYGAD3zl4Ab7K7vus_UHEZr_j8AKkod3yMmvgCgmNyYj79PzXgerhezFUT2HUD15QUQNxpg')">
+<div class="absolute inset-0 bg-on-surface/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-[11px] font-semibold text-on-surface">
+            Skin Care &amp; Beauty
+          </div>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary px-2.5 py-1 rounded-lg text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            8.4% Conv.
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-on-surface text-base">GlowRadiance Skincare</h3>
+<span class="text-xs font-medium text-primary">₦12,500</span>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">High-converting e-commerce funnel with integrated WhatsApp direct checkout &amp; glowing review ticker.</p>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 py-2 px-3 bg-surface text-on-surface text-xs font-medium rounded-xl hover:bg-surface-container-high transition-all text-center" onclick="openPreview('GlowRadiance Skincare')">Preview</button>
+<button class="flex-1 py-2 px-3 bg-primary text-on-primary text-xs font-medium rounded-xl hover:bg-primary/90 transition-all text-center" onclick="launchWizard('GlowRadiance Skincare')">Use Template</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Lekki Luxury Apartments -->
+<div class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+<div class="relative h-48 bg-cover bg-center overflow-hidden" data-alt="A modern high-rise luxury apartment exterior in Lagos with glass balconies, warm ambient lighting, and high-end real estate presentation style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUoOYuQYaRvByTocMtVXbDFMZKgKQlItkjYJCH-jbEwBL6iMcxjyghdXgB_qXBsytAuzns7EcMCeLg-7_BIcNl61YKFn9SWoCOn9hxJFbS6ievIvjViiW_sLh5Ys6HDNIV0AeRUmM-6S1rNaymoYHNpbT3XAyevGmmYdBJlTug_CQFTm6sn1iLqwwMBmRPT46X5jXZi5BNX01CFXXIKZg_eG56oW81b7nGVBtZ0oPQBdHvyiR0-dziqQ')">
+<div class="absolute inset-0 bg-on-surface/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-[11px] font-semibold text-on-surface">
+            Real Estate
+          </div>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary px-2.5 py-1 rounded-lg text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            11.2% Conv.
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-on-surface text-base">Lekki Luxury Apartments</h3>
+<span class="text-xs font-medium text-primary">High-Ticket</span>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">High-ticket lead capture template with embedded virtual tour booking and elite dark navy/gold palette.</p>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 py-2 px-3 bg-surface text-on-surface text-xs font-medium rounded-xl hover:bg-surface-container-high transition-all text-center" onclick="openPreview('Lekki Luxury Apartments')">Preview</button>
+<button class="flex-1 py-2 px-3 bg-primary text-on-primary text-xs font-medium rounded-xl hover:bg-primary/90 transition-all text-center" onclick="launchWizard('Lekki Luxury Apartments')">Use Template</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Masterclass Launch -->
+<div class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+<div class="relative h-48 bg-cover bg-center overflow-hidden" data-alt="A dynamic corporate webinar setup with professional lighting, a digital countdown timer overlay, and high-energy coaching presentation aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxzTx86lE16ElpTHio7BXL69tBCpKYP5VcHsY-bVidhp96INR-S3nwmjW3pFVUKU_ZfOS5jjTCnqRFYi5l4BQH6Vg1QY-1ANEg_Yv2kuBXdz8Iwa4UIumLSS2qRoQ38fyl721qFhApI4PeWHMtUi1MO_K1HiT4YhxnPawG85irke411C7x3lT_ytCaLBnUVqDJvxerywz-3snUae-9ImEs59kMFxQ7AXboAtQ8dRs9Q6WewbRbTZhJow')">
+<div class="absolute inset-0 bg-on-surface/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-[11px] font-semibold text-on-surface">
+            Coaching &amp; Consulting
+          </div>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary px-2.5 py-1 rounded-lg text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            14.5% Conv.
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-on-surface text-base">Masterclass Launch</h3>
+<span class="text-xs font-medium text-primary">Webinar VSL</span>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">Video sales letter layout featuring live countdown timers, speaker credibility markers, and instant seat reservation.</p>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 py-2 px-3 bg-surface text-on-surface text-xs font-medium rounded-xl hover:bg-surface-container-high transition-all text-center" onclick="openPreview('Masterclass Launch')">Preview</button>
+<button class="flex-1 py-2 px-3 bg-primary text-on-primary text-xs font-medium rounded-xl hover:bg-primary/90 transition-all text-center" onclick="launchWizard('Masterclass Launch')">Use Template</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Urban Luxe Fashion -->
+<div class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+<div class="relative h-48 bg-cover bg-center overflow-hidden" data-alt="High-fashion streetwear lookbook shoot in an urban African city setting with striking contrast, edgy typography, and modern editorial styling." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGfPbv7XV2n3EnBXw_IgGGrkjCMXDwzSfehdCrS48v2Hmp9PTjvjGE7lBv9UmxIZhxPNdaRiGndoPT62qGAjoQUz6Zq4W-bxJhn5hrWD_kuwklsfdqUnGpMX87dAt9iwIddBrmWA-G8CcE4msVbkUmjTtDngEl-67pJLHf4Snyko0PFDPyhyUdzm8y4izE3CwcFUtPESLt570h2Oj8UIFq7N_hamGbjOEuhOa0VvBpHwvwQ53_N7D8MQ')">
+<div class="absolute inset-0 bg-on-surface/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-[11px] font-semibold text-on-surface">
+            Fashion &amp; Apparel
+          </div>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary px-2.5 py-1 rounded-lg text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            9.1% Conv.
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-on-surface text-base">Urban Luxe Fashion</h3>
+<span class="text-xs font-medium text-primary">Lookbook</span>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">Interactive lookbook grid with instant size selectors and direct WhatsApp buy button integration.</p>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 py-2 px-3 bg-surface text-on-surface text-xs font-medium rounded-xl hover:bg-surface-container-high transition-all text-center" onclick="openPreview('Urban Luxe Fashion')">Preview</button>
+<button class="flex-1 py-2 px-3 bg-primary text-on-primary text-xs font-medium rounded-xl hover:bg-primary/90 transition-all text-center" onclick="launchWizard('Urban Luxe Fashion')">Use Template</button>
+</div>
+</div>
+</div>
+<!-- Card 5: FitPro Elite Coaching -->
+<div class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+<div class="relative h-48 bg-cover bg-center overflow-hidden" data-alt="An energetic modern gym setting with fitness equipment, personal trainers, and high-contrast motivational lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZujI2qF9E03uLzLEJo5M4yAwese8H4GW1XUylaSngjLf9tFEYtcc6AWh5fJK3nbJXIPAwcAUYCMLJyp7HBGw2dwxaTCopFrsWY3hrrCtlsHafj4Fgqm-2Z297pcg5Ea7QAHHzP8ERkgS0Eel5FvJyQvNyo0-LyicB0Ex56YthjcqYhJAdJZgZNkRTKj86PT62SA3SupQjfbzQv8jcS4qgbeoD7IrFoCsmzJYyIorvdYLQcLrcnLTIcw')">
+<div class="absolute inset-0 bg-on-surface/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-[11px] font-semibold text-on-surface">
+            Fitness &amp; Wellness
+          </div>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary px-2.5 py-1 rounded-lg text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            12.0% Conv.
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-on-surface text-base">FitPro Elite Coaching</h3>
+<span class="text-xs font-medium text-primary">Membership</span>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">Transformation gallery layout with built-in booking calendar widget and tiered membership plans.</p>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 py-2 px-3 bg-surface text-on-surface text-xs font-medium rounded-xl hover:bg-surface-container-high transition-all text-center" onclick="openPreview('FitPro Elite Coaching')">Preview</button>
+<button class="flex-1 py-2 px-3 bg-primary text-on-primary text-xs font-medium rounded-xl hover:bg-primary/90 transition-all text-center" onclick="launchWizard('FitPro Elite Coaching')">Use Template</button>
+</div>
+</div>
+</div>
+<!-- Card 6: AfroBites Catering & Restaurant -->
+<div class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+<div class="relative h-48 bg-cover bg-center overflow-hidden" data-alt="A sumptuous spread of West African culinary dishes including jollof rice, grilled plantains, and traditional garnish under warm ambient restaurant lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxCXkYDk3Cpb6F9yo5pmOEoTd2P2SiU-y9Qoz9BCWvnzn7ghWdVwEopuJKbD17kmDsqo4XmIQDvfY-jnVvBr1mkTIPyN2dMkjEoJmEO7Bmnzrt_MYF13BoJlwslS1hJ0EYB3_rF-JCndCzV-V6VCbs5rNeRdpzH93j0A4pls39F2_AiD23KlbdH7-aovzCdjo5RO_yOXmRHy9wYhq4lqHfosLmdP_I7_AgQa1YW5JzBa8rUZ3N4RIHMw')">
+<div class="absolute inset-0 bg-on-surface/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-[11px] font-semibold text-on-surface">
+            Restaurant &amp; Food
+          </div>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary px-2.5 py-1 rounded-lg text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            15.8% Conv.
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-on-surface text-base">AfroBites Catering</h3>
+<span class="text-xs font-medium text-primary">Orders &amp; Tables</span>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">Interactive menu preview, online table reservation system, and instant WhatsApp order trigger.</p>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 py-2 px-3 bg-surface text-on-surface text-xs font-medium rounded-xl hover:bg-surface-container-high transition-all text-center" onclick="openPreview('AfroBites Catering')">Preview</button>
+<button class="flex-1 py-2 px-3 bg-primary text-on-primary text-xs font-medium rounded-xl hover:bg-primary/90 transition-all text-center" onclick="launchWizard('AfroBites Catering')">Use Template</button>
+</div>
+</div>
+</div>
+<!-- Card 7: Prime Digital E-Book & Course -->
+<div class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+<div class="relative h-48 bg-cover bg-center overflow-hidden" data-alt="A sleek digital mock-up of an e-book and online learning portal on tablet devices with professional modern SaaS styling." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKZIbCoO0PXgkTgAtUgNn1kp8ZVFUN0eOsmgTFAhU8869nzVVJcHM6HOStU3p_1bfKNjJWhK1JGuxmafv7OjsSrb2r8XK0TZ0FQBzewyr1WEoTlTdhBpG39PRwKo0SdbFKQppnfvKgtDndi6Q33pUhF_6jb1REhWlDkgB-uqYFN1vu97uIfCNeCNnfwHJ9bAK-t627Bug8C3Z6cN695sALUfV7LpQEmLvyYkyuWI1XoLXUVqAzhuV2xA')">
+<div class="absolute inset-0 bg-on-surface/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-[11px] font-semibold text-on-surface">
+            Digital Products
+          </div>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary px-2.5 py-1 rounded-lg text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            13.3% Conv.
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-on-surface text-base">Prime Digital E-Book</h3>
+<span class="text-xs font-medium text-primary">Instant Download</span>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">Instant download sales page with trust badges, secure payment gateway integrations, and verified student reviews.</p>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 py-2 px-3 bg-surface text-on-surface text-xs font-medium rounded-xl hover:bg-surface-container-high transition-all text-center" onclick="openPreview('Prime Digital E-Book')">Preview</button>
+<button class="flex-1 py-2 px-3 bg-primary text-on-primary text-xs font-medium rounded-xl hover:bg-primary/90 transition-all text-center" onclick="launchWizard('Prime Digital E-Book')">Use Template</button>
+</div>
+</div>
+</div>
+<!-- Card 8: Enterprise B2B Lead Gen -->
+<div class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+<div class="relative h-48 bg-cover bg-center overflow-hidden" data-alt="A modern glass-walled corporate boardroom meeting in a bustling financial district with professional enterprise layout." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATNzDxQDwWDyFSoJ1y8MnLuHDnwKzpcfA6XylCoViKH9rRnW35mQ9lqHH9-YSR3ukoiH8HjisswtCoCeFG_kfE94ciD_FviseA-O0jisfl_bJnl68VsJwihvSEAjMNJ8_n1t1sEPdwvLKu9H78kGUqfxHVTKQ27qTdHAuF46RaRPTic8L1ZbjnVISqvihv2q3EFaOISjbJU8Q8b9Vyndnb22GEOlumSzK6ZegUrZG3iHhiYrnANBKwYA')">
+<div class="absolute inset-0 bg-on-surface/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-[11px] font-semibold text-on-surface">
+            Professional Services
+          </div>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary px-2.5 py-1 rounded-lg text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            10.4% Conv.
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline font-semibold text-on-surface text-base">Enterprise B2B Lead Gen</h3>
+<span class="text-xs font-medium text-primary">Consultation</span>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-2">Consultation scheduler, comprehensive case studies display, and corporate trust signals for high-value services.</p>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 py-2 px-3 bg-surface text-on-surface text-xs font-medium rounded-xl hover:bg-surface-container-high transition-all text-center" onclick="openPreview('Enterprise B2B Lead Gen')">Preview</button>
+<button class="flex-1 py-2 px-3 bg-primary text-on-primary text-xs font-medium rounded-xl hover:bg-primary/90 transition-all text-center" onclick="launchWizard('Enterprise B2B Lead Gen')">Use Template</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional Categories Summary Section -->
+<div class="mt-12 p-8 bg-surface-container-low rounded-xl flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col gap-2">
+<h4 class="text-lg font-headline font-semibold text-on-surface">Looking for more specialized industry templates?</h4>
+<p class="text-sm text-on-surface-variant">We also provide pre-configured funnels for Events &amp; Tickets, Logistics &amp; Delivery, Agribusiness, Solar Energy, and FinTech startups.</p>
+</div>
+<button class="px-6 py-3 bg-surface text-on-surface text-sm font-semibold rounded-xl hover:bg-surface-container-high transition-all whitespace-nowrap" onclick="alert('Exploring full catalog of 15+ templates.')">
+        Browse All 15+ Templates
+      </button>
+</div>
+</div>
+<!-- Interactive Modal Mockup for Wizard / Preview -->
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="template-modal">
+<div class="bg-surface w-full max-w-xl rounded-xl shadow-2xl overflow-hidden flex flex-col">
+<div class="px-6 py-4 bg-surface-container-low flex items-center justify-between">
+<h3 class="font-headline font-semibold text-on-surface text-base" id="modal-title">Template AI Wizard</h3>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-on-surface cursor-pointer" onclick="closeModal()">close</button>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<p class="text-sm text-on-surface-variant">You selected <span class="font-semibold text-on-surface" id="modal-template-name">Template</span>. FunnelAI's AI engine will now generate customized copy, brand colors, and payment hooks tailored to your business.</p>
+<div class="p-4 bg-surface-container-low rounded-xl flex flex-col gap-3">
+<label class="text-xs font-semibold text-on-surface uppercase tracking-wider">Business Name</label>
+<input class="w-full h-10 px-3 bg-surface text-on-surface text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" placeholder="e.g. Acme Innovations Ltd." type="text"/>
+<label class="text-xs font-semibold text-on-surface uppercase tracking-wider mt-2">Primary Currency / Market</label>
+<select class="w-full h-10 px-3 bg-surface text-on-surface text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Nigerian Naira (₦ - NGN)</option>
+<option>US Dollar ($ - USD)</option>
+<option>Kenyan Shilling (KSh - KES)</option>
+<option>Ghanaian Cedi (₵ - GHS)</option>
+</select>
+</div>
+</div>
+<div class="px-6 py-4 bg-surface-container-low flex items-center justify-end gap-3">
+<button class="px-4 py-2 bg-surface text-on-surface text-sm font-medium rounded-xl hover:bg-surface-container-high transition-all" onclick="closeModal()">Cancel</button>
+<button class="px-4 py-2 bg-primary text-on-primary text-sm font-medium rounded-xl hover:bg-primary/90 transition-all" onclick="completeWizard()">Generate Funnel</button>
+</div>
+</div>
+</div>
+<script>
+    function launchWizard(templateName) {
+      document.getElementById('modal-template-name').innerText = templateName;
+      document.getElementById('modal-title').innerText = 'AI Funnel Builder Wizard';
+      document.getElementById('template-modal').classList.remove('hidden');
+    }
+
+    function openPreview(templateName) {
+      document.getElementById('modal-template-name').innerText = templateName;
+      document.getElementById('modal-title').innerText = 'Live Template Preview';
+      document.getElementById('template-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('template-modal').classList.add('hidden');
+    }
+
+    function completeWizard() {
+      alert('Funnel successfully generated and loaded into the Visual Editor!');
+      closeModal();
+    }
+  </script>
+</div></main></div></body></html>

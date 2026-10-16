@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#f4f4f4", "on-surface": "#161616", "primary-fixed-dim": "#78a9ff", "surface": "#ffffff", "on-secondary-fixed": "#161616", "tertiary-fixed-dim": "#42be65", "secondary-fixed-dim": "#c6c6c6", "on-secondary": "#ffffff", "surface-container-high": "#e0e0e0", "tertiary-fixed": "#a7f0ba", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-background": "#161616", "on-error-container": "#750e13", "inverse-primary": "#78a9ff", "on-primary": "#ffffff", "secondary": "#6f6f6f", "on-secondary-fixed-variant": "#525252", "on-primary-fixed": "#001d6c", "error": "#da1e28", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-surface-variant": "#525252", "on-tertiary-container": "#044317", "surface-tint": "#0f62fe", "primary-container": "#d0e2ff", "on-tertiary-fixed": "#022d0d", "primary": "#0f62fe", "primary-fixed": "#d0e2ff", "secondary-container": "#e0e0e0", "inverse-on-surface": "#f4f4f4", "outline": "#8d8d8d", "surface-dim": "#e0e0e0", "outline-variant": "#e0e0e0", "tertiary": "#198038", "on-primary-fixed-variant": "#0043ce", "surface-container-highest": "#c6c6c6", "inverse-surface": "#393939", "on-tertiary-fixed-variant": "#044317", "surface-container-lowest": "#ffffff", "tertiary-container": "#a7f0ba", "secondary-fixed": "#e0e0e0", "background": "#ffffff", "error-container": "#fff1f1", "on-primary-container": "#161616", "on-secondary-container": "#525252", "surface-container": "#f4f4f4" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": {}, "fontFamily": { "headline": [ "IBM Plex Sans" ], "display": [ "IBM Plex Sans" ], "body": [ "IBM Plex Sans" ], "label": [ "IBM Plex Sans" ] }, "fontSize": {} } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col py-6"><div class="px-6 mb-8 text-xl font-headline font-bold tracking-tight text-primary">FUNNELAI</div><nav class="flex-1 px-4 space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a><a aria-current="page" class="flex items-center px-4 py-3 transition-all bg-primary-container text-on-primary-container font-bold rounded-xl" data-path="visual-editor" href="#"><span class="material-symbols-outlined mr-3">edit_note</span>Website Editor</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="template-library" href="#"><span class="material-symbols-outlined mr-3">grid_view</span>Templates</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="leads" href="#"><span class="material-symbols-outlined mr-3">contacts</span>Leads</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined mr-3">analytics</span>Analytics</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="subscription" href="#"><span class="material-symbols-outlined mr-3">credit_card</span>Subscription</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="admin" href="#"><span class="material-symbols-outlined mr-3">admin_panel_settings</span>Admin Panel</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="text-sm text-on-surface-variant">Enterprise Tier Active (₦50,000/yr)</div><div class="flex items-center gap-4"><span class="material-symbols-outlined text-on-surface-variant cursor-pointer">notifications</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface"><div class="flex flex-col w-full h-[calc(100vh-4rem)] overflow-hidden bg-surface-container-low text-on-surface">
+<header class="h-14 bg-surface flex items-center justify-between px-6 z-30 shadow-[0_1px_4px_rgba(0,0,0,0.04)]">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">web</span>
+<span class="font-headline font-semibold text-sm tracking-tight">My High-Converting Funnel</span>
+</div>
+<div class="h-4 w-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Saved</span>
+</div>
+<div class="flex items-center gap-1 ml-4">
+<button class="p-1.5 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-on-surface transition-colors" title="Undo">
+<span class="material-symbols-outlined text-lg">undo</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-on-surface transition-colors opacity-50 cursor-not-allowed" title="Redo">
+<span class="material-symbols-outlined text-lg">redo</span>
+</button>
+</div>
+</div>
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1 bg-surface shadow-sm rounded text-xs font-medium text-on-surface flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-sm">desktop_windows</span>
+        Desktop
+      </button>
+<button class="px-3 py-1 hover:text-on-surface rounded text-xs font-medium text-on-surface-variant flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-sm">tablet_mac</span>
+        Tablet
+      </button>
+<button class="px-3 py-1 hover:text-on-surface rounded text-xs font-medium text-on-surface-variant flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-sm">smartphone</span>
+        Mobile
+      </button>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 hover:bg-surface-container-high text-xs font-medium rounded text-on-surface transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">visibility</span>
+        Preview
+      </button>
+<button class="px-4 py-2 bg-primary hover:bg-primary/90 text-on-primary text-xs font-medium rounded transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-sm">publish</span>
+        Publish
+      </button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<aside class="w-72 bg-surface flex flex-col z-20 shadow-[1px_0_4px_rgba(0,0,0,0.02)]">
+<div class="flex border-b border-outline-variant">
+<button class="flex-1 py-3 text-xs font-semibold text-primary border-b-2 border-primary flex items-center justify-center gap-1.5 bg-surface-container-low/50">
+<span class="material-symbols-outlined text-base">widgets</span>
+          Add
+        </button>
+<button class="flex-1 py-3 text-xs font-medium text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-base">layers</span>
+          Layers
+        </button>
+<button class="flex-1 py-3 text-xs font-medium text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-base">palette</span>
+          Theme
+        </button>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<div class="space-y-1">
+<button class="w-full flex items-center justify-between p-2.5 bg-surface-container-low rounded-lg text-xs font-semibold text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">grid_view</span>
+              Layout Elements
+            </span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="grid grid-cols-2 gap-2 pt-2 px-1">
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">view_agenda</span>
+<span class="text-[11px] font-medium text-on-surface">Section</span>
+</div>
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">check_box_outline_blank</span>
+<span class="text-[11px] font-medium text-on-surface">Container</span>
+</div>
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">view_column</span>
+<span class="text-[11px] font-medium text-on-surface">Columns</span>
+</div>
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">grid_view</span>
+<span class="text-[11px] font-medium text-on-surface">Grid</span>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<button class="w-full flex items-center justify-between p-2.5 bg-surface-container-low rounded-lg text-xs font-semibold text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">text_fields</span>
+              Content Elements
+            </span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="grid grid-cols-2 gap-2 pt-2 px-1">
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">title</span>
+<span class="text-[11px] font-medium text-on-surface">Heading</span>
+</div>
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">notes</span>
+<span class="text-[11px] font-medium text-on-surface">Paragraph</span>
+</div>
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">image</span>
+<span class="text-[11px] font-medium text-on-surface">Image</span>
+</div>
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">play_circle</span>
+<span class="text-[11px] font-medium text-on-surface">Video</span>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<button class="w-full flex items-center justify-between p-2.5 bg-surface-container-low rounded-lg text-xs font-semibold text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">bolt</span>
+              Conversion Elements
+            </span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="grid grid-cols-2 gap-2 pt-2 px-1">
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">smart_button</span>
+<span class="text-[11px] font-medium text-on-surface">Button</span>
+</div>
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">chat</span>
+<span class="text-[11px] font-medium text-on-surface">WhatsApp</span>
+</div>
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">contact_mail</span>
+<span class="text-[11px] font-medium text-on-surface">Lead Form</span>
+</div>
+<div class="p-3 bg-surface-container-low hover:bg-surface-container-high rounded cursor-grab active:cursor-grabbing border border-transparent hover:border-primary/50 transition-all flex flex-col items-center text-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant">timer</span>
+<span class="text-[11px] font-medium text-on-surface">Countdown</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1 bg-surface-variant overflow-auto p-8 flex items-center justify-center relative">
+<div class="absolute top-4 left-6 text-xs text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">info</span>
+<span>Canvas Viewport: 1440px (Desktop)</span>
+</div>
+<div class="w-full max-w-5xl bg-surface shadow-2xl rounded-lg overflow-hidden min-h-[700px] flex flex-col relative ring-2 ring-primary">
+<div class="absolute top-3 right-3 bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1 z-20 shadow">
+<span class="material-symbols-outlined text-xs">near_me</span> H1 Selected
+        </div>
+<nav class="flex items-center justify-between px-8 py-4 border-b border-outline-variant bg-surface">
+<div class="font-headline font-bold text-lg tracking-tight text-primary">BrandFlow</div>
+<div class="flex items-center gap-6 text-xs font-medium text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Features</a>
+<a class="hover:text-primary transition-colors" href="#">Solutions</a>
+<a class="hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="hover:text-primary transition-colors" href="#">Testimonials</a>
+</div>
+<button class="px-4 py-2 bg-primary text-on-primary text-xs font-medium rounded hover:bg-primary/90 transition-colors">Get Started</button>
+</nav>
+<section class="px-8 py-20 flex flex-col items-center text-center relative bg-gradient-to-b from-primary-container/20 to-transparent">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-xs font-medium mb-6">
+<span class="material-symbols-outlined text-sm">verified</span>
+            Trusted by 4,000+ high-growth enterprises
+          </div>
+<div class="relative group">
+<div class="absolute -inset-2 border-2 border-primary border-dashed rounded-lg pointer-events-none animate-pulse"></div>
+<div class="absolute -top-7 right-0 bg-primary text-on-primary text-[10px] font-semibold px-2 py-0.5 rounded shadow flex items-center gap-1">
+              Heading 1 <span class="material-symbols-outlined text-[12px]">edit</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-headline font-bold text-on-surface max-w-2xl tracking-tight leading-tight">
+              Scale Your High-Converting Sales Funnel With AI Precision
+            </h1>
+</div>
+<p class="mt-6 text-sm text-on-surface-variant max-w-xl leading-relaxed">
+            Automate lead capture, optimize conversions in real-time, and deploy gorgeous landing pages in minutes without writing a single line of code.
+          </p>
+<div class="mt-8 flex items-center gap-4">
+<button class="px-6 py-3 bg-primary text-on-primary font-medium text-sm rounded shadow-sm hover:bg-primary/90 transition-colors flex items-center gap-2">
+              Start Free Trial
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+<button class="px-6 py-3 bg-surface-container-low text-on-surface font-medium text-sm rounded hover:bg-surface-container-high transition-colors">
+              Watch Demo
+            </button>
+</div>
+<div class="mt-12 w-full max-w-3xl rounded-xl overflow-hidden shadow-lg border border-outline-variant bg-surface-container-low">
+<div class="w-full h-80 bg-cover bg-center" data-alt="A clean enterprise SaaS dashboard screenshot displaying high-contrast charts, analytics metrics, and funnel conversion rates in a light minimal UI with IBM blue accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGfgVIHM0Bhl4FbIAEko5BUjGj4TSl-Gtn0JK7E5Rq5Rg2i_xPPVERLteKpVIXLbIHsko11u69qEqsimZZ45DjykUKA0Zp3Te-dAvx338NjHLK_7GBsZWGKyQ8GJBiyQVJSI6xWN-EkHGOiQPkGknD3hLpa_zx5Yz-5no_kyL4VdfcjmWu-CERiGuCctTEoVlyDK97kFTIQUBBA3kXLbYlbn85WmRXnT5yPds_HAigOUvHAkwfF8mEuQ')"></div>
+</div>
+</section>
+<section class="px-8 py-16 bg-surface-container-low/50">
+<div class="text-center mb-12">
+<h2 class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Capabilities</h2>
+<h3 class="text-2xl font-headline font-bold text-on-surface">Everything you need to convert traffic</h3>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div class="p-6 bg-surface rounded-lg shadow-sm">
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h4 class="font-headline font-semibold text-sm mb-2 text-on-surface">Instant Deployment</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Push live updates instantly across global edge servers with zero downtime.</p>
+</div>
+<div class="p-6 bg-surface rounded-lg shadow-sm">
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h4 class="font-headline font-semibold text-sm mb-2 text-on-surface">Deep Analytics</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Track user sessions, drop-off points, and conversion triggers with high fidelity.</p>
+</div>
+<div class="p-6 bg-surface rounded-lg shadow-sm">
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">security</span>
+</div>
+<h4 class="font-headline font-semibold text-sm mb-2 text-on-surface">Enterprise Security</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">SOC2 Type II certified with encrypted data flows and role-based access control.</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<aside class="w-80 bg-surface flex flex-col z-20 shadow-[-1px_0_4px_rgba(0,0,0,0.02)]">
+<div class="flex border-b border-outline-variant overflow-x-auto">
+<button class="px-3 py-3 text-[11px] font-semibold text-primary border-b-2 border-primary bg-surface-container-low/50 whitespace-nowrap">Content</button>
+<button class="px-3 py-3 text-[11px] font-medium text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Style</button>
+<button class="px-3 py-3 text-[11px] font-medium text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Layout</button>
+<button class="px-3 py-3 text-[11px] font-medium text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Animation</button>
+<button class="px-3 py-3 text-[11px] font-medium text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Responsive</button>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-6">
+<div class="space-y-3">
+<div class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Selected Element</div>
+<div class="flex items-center justify-between p-2.5 bg-surface-container-low rounded-lg text-xs font-medium text-on-surface">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">title</span>
+              Heading 1 (H1)
+            </span>
+<span class="text-[10px] bg-primary-container text-on-primary-container px-2 py-0.5 rounded font-bold">Active</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Text Content</div>
+<textarea class="w-full p-2.5 bg-surface-container-low text-xs text-on-surface rounded border-0 focus:ring-1 focus:ring-primary outline-none resize-none" rows="3">Scale Your High-Converting Sales Funnel With AI Precision</textarea>
+</div>
+<div class="space-y-3">
+<div class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Typography</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="text-[10px] text-on-surface-variant mb-1 block">Font Family</label>
+<select class="w-full p-2 bg-surface-container-low text-xs text-on-surface rounded border-0 outline-none">
+<option>IBM Plex Sans</option>
+<option>Inter</option>
+<option>Roboto</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] text-on-surface-variant mb-1 block">Weight</label>
+<select class="w-full p-2 bg-surface-container-low text-xs text-on-surface rounded border-0 outline-none">
+<option>Bold (700)</option>
+<option>SemiBold (600)</option>
+<option>Medium (500)</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div>
+<label class="text-[10px] text-on-surface-variant mb-1 block">Size (px)</label>
+<input class="w-full p-2 bg-surface-container-low text-xs text-on-surface rounded border-0 outline-none" type="text" value="48px"/>
+</div>
+<div>
+<label class="text-[10px] text-on-surface-variant mb-1 block">Line Height</label>
+<input class="w-full p-2 bg-surface-container-low text-xs text-on-surface rounded border-0 outline-none" type="text" value="1.15"/>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Colors</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-[#161616] border border-outline-variant cursor-pointer"></div>
+<div class="flex-1">
+<label class="text-[10px] text-on-surface-variant block">Text Color</label>
+<span class="text-xs font-mono text-on-surface">#161616 (on-surface)</span>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Spacing &amp; Margins</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="text-[10px] text-on-surface-variant mb-1 block">Margin Top</label>
+<input class="w-full p-2 bg-surface-container-low text-xs text-on-surface rounded border-0 outline-none" type="text" value="0px"/>
+</div>
+<div>
+<label class="text-[10px] text-on-surface-variant mb-1 block">Margin Bottom</label>
+<input class="w-full p-2 bg-surface-container-low text-xs text-on-surface rounded border-0 outline-none" type="text" value="24px"/>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Fade Animation</div>
+<div class="space-y-2">
+<div>
+<label class="text-[10px] text-on-surface-variant mb-1 block">Animation Type</label>
+<select class="w-full p-2 bg-surface-container-low text-xs text-on-surface rounded border-0 outline-none">
+<option>Fade In Up</option>
+<option>Fade In</option>
+<option>Zoom In</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="text-[10px] text-on-surface-variant mb-1 block">Duration</label>
+<input class="w-full p-2 bg-surface-container-low text-xs text-on-surface rounded border-0 outline-none" type="text" value="600ms"/>
+</div>
+<div>
+<label class="text-[10px] text-on-surface-variant mb-1 block">Delay</label>
+<input class="w-full p-2 bg-surface-container-low text-xs text-on-surface rounded border-0 outline-none" type="text" value="100ms"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div></main></div></body></html>

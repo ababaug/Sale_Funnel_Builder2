@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#dfe2f1","on-surface-variant":"#464555","surface-tint":"#4d44e3","surface":"#faf8ff","primary":"#3525cd","surface-container-low":"#f2f3ff","on-primary":"#ffffff","outline-variant":"#c7c4d8","inverse-surface":"#2c303b","on-primary-fixed":"#0f0069","outline":"#777587","on-tertiary":"#ffffff","surface-container-highest":"#dfe2f1","on-primary-container":"#dad7ff","on-surface":"#171b26","tertiary-fixed":"#6ffbbe","on-background":"#171b26","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#4edea3","primary-fixed":"#e2dfff","error-container":"#ffdad6","on-tertiary-fixed":"#002113","primary-fixed-dim":"#c3c0ff","on-tertiary-container":"#67f4b7","surface-dim":"#d7d9e8","tertiary":"#005338","on-secondary-fixed-variant":"#003ea8","on-primary-fixed-variant":"#3323cc","inverse-on-surface":"#eef0ff","on-error":"#ffffff","tertiary-container":"#006e4b","secondary-container":"#316bf3","surface-bright":"#faf8ff","on-tertiary-fixed-variant":"#005236","inverse-primary":"#c3c0ff","secondary-fixed-dim":"#b4c5ff","surface-container-high":"#e5e7f6","secondary":"#0051d5","on-secondary-fixed":"#00174b","surface-container":"#ebedfc","on-error-container":"#93000a","on-secondary-container":"#fefcff","background":"#faf8ff","on-secondary":"#ffffff","error":"#ba1a1a","primary-container":"#4f46e5","secondary-fixed":"#dbe1ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter":"1rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-tablet":"1.5rem","margin-desktop":"2rem","space-md":"1rem","margin":"1rem","space-xl":"2.5rem"},fontFamily:{"body-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"metric-display":["Plus Jakarta Sans"],"title-sm":["Inter"],"title-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"body-md":["0.9375rem",{lineHeight:"1.55",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-lg-mobile":["1.625rem",{lineHeight:"1.25",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["2rem",{lineHeight:"1.2",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-xl":["3rem",{lineHeight:"1.15",letterSpacing:"-0.03em",fontWeight:"700"}],"label-md":["0.8125rem",{lineHeight:"1",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["0.8125rem",{lineHeight:"1.5",letterSpacing:"0em",fontWeight:"400"}],"metric-display":["1.875rem",{lineHeight:"1.1",letterSpacing:"-0.03em",fontWeight:"700"}],"title-sm":["0.875rem",{lineHeight:"1.4",letterSpacing:"-0.005em",fontWeight:"600"}],"title-md":["1rem",{lineHeight:"1.4",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.35",letterSpacing:"-0.015em",fontWeight:"600"}],"body-lg":["1.125rem",{lineHeight:"1.6",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-lg":["2.25rem",{lineHeight:"1.2",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-md":["1.5rem",{lineHeight:"1.3",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["0.6875rem",{lineHeight:"1",letterSpacing:"0.04em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-xs"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[18px]">neurology</span></div><span class="font-title-md text-title-md text-on-surface tracking-tight">FunnelCraft<span class="text-primary-container">.ai</span></span></div></div><div class="overflow-y-auto flex-1 px-space-sm py-space-sm space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Funnel Builder</div><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span>Dashboard Overview</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-funnels" href="#"><span class="material-symbols-outlined text-[18px]">filter_alt</span>My Funnels</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="funnel-studio-wizard" href="#"><span class="material-symbols-outlined text-[18px]">auto_fix_high</span>Funnel Studio &amp; Wizard</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="visual-schema-editor" href="#"><span class="material-symbols-outlined text-[18px]">account_tree</span>Visual Schema Editor</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="template-library" href="#"><span class="material-symbols-outlined text-[18px]">widgets</span>12+ Template Library</a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Conversion &amp; Commerce</div><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="live-orders-cod" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span>Live Orders &amp; COD</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="lead-crm-whatsapp" href="#"><span class="material-symbols-outlined text-[18px]">contact_page</span>Lead CRM &amp; WhatsApp</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="checkout-gateways" href="#"><span class="material-symbols-outlined text-[18px]">payments</span>Checkout &amp; Gateways</a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Intelligence</div><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-optimizer-ab-engine" href="#"><span class="material-symbols-outlined text-[18px]">psychology</span>AI Optimizer &amp; A/B Engine</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="real-time-analytics-events" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span>Real-time Analytics &amp; Events</a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Platform</div><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="custom-domains-dns" href="#"><span class="material-symbols-outlined text-[18px]">language</span>Custom Domains &amp; DNS</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="subscriptions-limits" href="#"><span class="material-symbols-outlined text-[18px]">credit_card</span>Subscriptions &amp; Limits</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="global-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span>Global Settings</a></div></nav></div></div><div class="p-space-sm bg-surface-container-low"><div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(11,15,25,0.04)] space-y-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase">Monthly Bandwidth</span><span class="font-label-sm text-label-sm font-bold text-primary-container">78%</span></div><div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="bg-primary-container h-full rounded-full" style="width: 78%;"></div></div><div class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">780k / 1.0M events tracked</div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer transition-colors"><span class="material-symbols-outlined text-primary-container text-[18px]">domain</span><span class="font-title-sm text-title-sm">AcroHealth Bio-Lab (NGN)</span><span class="material-symbols-outlined text-outline text-[16px]">unfold_more</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-primary-container font-label-sm text-label-sm font-semibold tracking-wider uppercase"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>PRO TIER - ACTIVE</div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><div class="flex items-center gap-space-xs w-64 h-9 px-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(11,15,25,0.04)] text-outline cursor-text"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-body-sm text-body-sm flex-1 text-outline">Search funnels, nodes...</span><kbd class="px-1.5 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-outline">⌘K</kbd></div></div><button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" type="button"><span class="material-symbols-outlined text-[16px]">add</span>+ Create New Funnel</button><div class="relative flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-gutter-desktop space-y-space-lg max-w-[1720px] mx-auto w-full">
+<!-- Top Command & Title Header -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            EXPERIMENTATION ENGINE
+          </span>
+<span class="font-body-sm text-body-sm text-outline">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Automated Conversion Maximizer</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">AI Optimizer &amp; A/B Experimentation Engine</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Multi-armed bandit traffic routing, Bayesian statistical significance, autonomous copy variants, and margin uplift models across Nigerian &amp; West African funnels.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm">
+<!-- Auto-Promote Toggle Badge -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low shadow-sm">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-outline">Auto-Promote</span>
+<button aria-checked="true" class="relative inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full bg-primary-container transition-colors duration-200 ease-in-out focus:outline-none" id="bandit-toggle-btn" onclick="toggleAutoBandit()" role="switch">
+<span class="translate-x-4 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out mt-0.5 ml-0.5" id="bandit-toggle-knob"></span>
+</button>
+<span class="font-label-md text-label-md font-semibold text-primary" id="bandit-toggle-label">ON (MAB)</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container shadow-sm transition-all">
+<span class="material-symbols-outlined text-[17px] text-primary">download</span>
+          Significance Report
+        </button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest shadow-sm transition-all">
+<span class="material-symbols-outlined text-[17px] text-primary-container">psychology</span>
+          Run Heuristic Audit
+        </button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary shadow-sm transition-all font-semibold">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+          + Create Experiment
+        </button>
+</div>
+</div>
+<!-- Top Telemetry KPI Cards (4 cards grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-xs relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-primary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold tracking-wider">Active Experiments</span>
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">8 Running</span>
+<span class="font-label-md text-label-md text-on-surface-variant">(+3 queued)</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span class="font-body-sm text-body-sm text-tertiary-container font-semibold">99.4% Highest Confidence</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-xs relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-tertiary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold tracking-wider">AI Blended CVR Uplift</span>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">trending_up</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-metric-display text-metric-display text-tertiary-container tracking-tight">+24.8%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs 6.92% baseline</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">₦1,860,000 Extra GMV</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-primary font-bold">8.64% CVR</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-xs relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold tracking-wider">RTS &amp; Risk Avoidance</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">shield</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">₦540,000</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">Preserved</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dynamic WhatsApp qualify gate</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-xs relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-primary-container/5 rounded-full pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold tracking-wider">Bayesian Engine State</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">calculate</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">MCMC Balanced</span>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Threshold: <strong class="text-on-surface">95%</strong></span>
+<span>Avg: <strong class="text-on-surface">3.8 days</strong></span>
+</div>
+</div>
+</div>
+<!-- Main Workspace (70 / 30 Two Column Split) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT SECTION (8 Cols): In-Flight Experiments & Visual Comparison -->
+<div class="lg:col-span-8 space-y-space-md">
+<!-- Tabs Navigation -->
+<div class="p-1 rounded-xl bg-surface-container-low flex flex-wrap gap-1 shadow-sm">
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all" data-tab="all" onclick="switchTab(this)">
+            All Active (8)
+          </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="hero" onclick="switchTab(this)">
+            Hero &amp; Headline (3)
+          </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="checkout" onclick="switchTab(this)">
+            Checkout &amp; COD Friction (2)
+          </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="pricing" onclick="switchTab(this)">
+            Pricing &amp; Bundles (2)
+          </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="whatsapp" onclick="switchTab(this)">
+            WhatsApp vs Form (1)
+          </button>
+</div>
+<!-- FEATURED DEEP DIVE EXPERIMENT CARD (EXP-204) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm space-y-space-md relative">
+<!-- Top Tag & Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-primary font-mono font-bold text-[11px]">EXP-204</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">1-Click COD Form vs WhatsApp AI Closer Routing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">filter_alt</span>
+                Funnel: <span class="font-medium text-on-surface">Sefway Bio-Cleanse Pro (Lagos &amp; Abuja Traffic)</span>
+<span class="text-outline">·</span>
+<span class="text-outline">Running 4 days 6 hrs</span>
+</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-tertiary-container shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+                99.4% Probability to Beat Control
+              </span>
+</div>
+</div>
+<!-- Bandit Dynamic Traffic Bar -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[16px] text-primary-container">alt_route</span>
+                Thompson Sampling (MAB) Live Traffic Split
+              </div>
+<div class="flex items-center gap-4 text-body-sm">
+<span class="text-on-surface-variant">Variant A (Control): <strong class="text-on-surface">22%</strong></span>
+<span class="text-primary font-bold">Variant B (Challenger): 78% (AI Shifted)</span>
+</div>
+</div>
+<!-- Dual colored progress track -->
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex shadow-inner">
+<div class="bg-outline-variant h-full transition-all duration-700" style="width: 22%;" title="Variant A: 22%"></div>
+<div class="bg-primary-container h-full transition-all duration-700 relative" style="width: 78%;" title="Variant B: 78%">
+<div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Side-by-Side Variant Comparison -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- VARIANT A (CONTROL) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-md bg-surface-container flex items-center justify-center font-label-sm text-label-sm font-bold text-on-surface">A</span>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block">Standard 1-Page COD Form</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">Baseline Control</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container text-on-surface-variant">Losing (-18.4%)</span>
+</div>
+<!-- Preview thumbnail simulation -->
+<div class="relative h-32 rounded-lg bg-surface-container-low overflow-hidden flex flex-col p-2 space-y-1.5 shadow-inner">
+<div class="h-2 w-1/3 bg-outline-variant/60 rounded"></div>
+<div class="h-2 w-2/3 bg-outline-variant/40 rounded"></div>
+<div class="mt-2 grid grid-cols-2 gap-1.5">
+<div class="h-6 bg-surface-container-lowest rounded flex items-center px-1 text-[9px] text-outline">Full Name...</div>
+<div class="h-6 bg-surface-container-lowest rounded flex items-center px-1 text-[9px] text-outline">Phone (WhatsApp)...</div>
+</div>
+<div class="h-6 bg-surface-container-lowest rounded flex items-center px-1 text-[9px] text-outline">Delivery Address (State &amp; LGA)...</div>
+<div class="h-6 bg-primary/40 rounded flex items-center justify-center text-[10px] text-on-primary font-bold">SUBMIT COD ORDER (PAY ON DELIVERY)</div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-2 gap-2 pt-1 font-body-sm text-body-sm">
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline text-[11px] block uppercase font-medium">Impressions</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">12,420</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline text-[11px] block uppercase font-medium">Conversion Rate</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">7.12%</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline text-[11px] block uppercase font-medium">Delivered (Non-RTS)</span>
+<span class="font-title-sm text-title-sm text-error font-semibold">84.2%</span>
+<span class="text-[10px] text-outline">(15.8% RTS return)</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline text-[11px] block uppercase font-medium">Net Profit Margin</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">₦18,200 <span class="text-[10px] text-outline">/ order</span></span>
+</div>
+</div>
+</div>
+<!-- VARIANT B (CHALLENGER - WINNER) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-md space-y-space-sm relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-md bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">B</span>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block font-bold">2-Step WhatsApp Qualification + Voice Trigger</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">AI Challenger Variant</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-surface-container text-tertiary-container shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">trophy</span>
+                  WINNER (+25.3%)
+                </span>
+</div>
+<!-- Preview thumbnail simulation -->
+<div class="relative h-32 rounded-lg bg-surface-container-low overflow-hidden flex flex-col p-2 space-y-1.5 shadow-inner">
+<div class="flex items-center justify-between">
+<div class="h-2 w-1/2 bg-primary/40 rounded"></div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary text-[9px] font-bold">Step 1 of 2</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest p-1.5 rounded">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">chat</span>
+<span class="text-[10px] text-on-surface font-medium">Quick WhatsApp Voice Check (Prevents Fake Orders)</span>
+</div>
+<div class="h-6 bg-surface-container-lowest rounded flex items-center px-1 text-[9px] text-outline">Enter phone for instant agent dispatch confirmation...</div>
+<div class="h-6 bg-tertiary-container rounded flex items-center justify-center text-[10px] text-on-tertiary font-bold gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+                  CONFIRM DELIVERY VIA WHATSAPP (₦2,000 SAVINGS)
+                </div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-2 gap-2 pt-1 font-body-sm text-body-sm">
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline text-[11px] block uppercase font-medium">Impressions</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">19,850</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline text-[11px] block uppercase font-medium">Conversion Rate</span>
+<span class="font-title-sm text-title-sm text-primary font-bold">8.94% <span class="text-[11px] text-tertiary-container">(+25.5%)</span></span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline text-[11px] block uppercase font-medium">Delivered (Non-RTS)</span>
+<span class="font-title-sm text-title-sm text-tertiary-container font-bold">93.6%</span>
+<span class="text-[10px] text-tertiary-container font-semibold">(+9.4% RTS reduction)</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="text-outline text-[11px] block uppercase font-medium">Net Profit Margin</span>
+<span class="font-title-sm text-title-sm text-on-surface font-bold">₦22,800 <span class="text-[10px] text-tertiary-container">+₦4,600/ord</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Action Controls -->
+<div class="flex flex-wrap items-center justify-between pt-space-xs gap-space-sm">
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary/90 shadow-md transition-all font-semibold" id="promote-btn" onclick="simulatePromote()">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                Promote Variant B to 100% Traffic
+              </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container shadow-sm transition-all">
+<span class="material-symbols-outlined text-[17px] text-outline">content_copy</span>
+                Clone to Other 3 Bio-Lab Funnels
+              </button>
+</div>
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md font-semibold transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              View Granular Raw Logs &amp; Events (1,492 telemetry points)
+            </button>
+</div>
+</div>
+<!-- SECONDARY EXPERIMENTS LIST -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Other Live Bayesian Splits</span>
+<span class="font-label-sm text-label-sm text-primary font-medium cursor-pointer hover:underline">Manage All 8 Experiments →</span>
+</div>
+<!-- EXP-205 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-mono text-[10px] text-on-surface font-bold">EXP-205</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">NAFDAC Reg Authority Badge vs Doctor Video Hero Testimonial</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                  Funnel: <em>Prostate Defense Tonic</em> • Traffic: 50/50 Split • Sample: 8,490 visitors
+                </div>
+</div>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0">
+<div class="text-right">
+<span class="font-title-sm text-title-sm text-tertiary-container font-bold">+14.2% CVR</span>
+<span class="block text-[11px] text-outline">92.1% confidence (2 days left)</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Converging</span>
+<button class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- EXP-206 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-tertiary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-mono text-[10px] text-on-surface font-bold">EXP-206</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Single Bottle (₦18.5k) vs 2-Bottle + Free Herbal Tea Bundle (₦32k)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                  Funnel: <em>CardioShield Natural Tea</em> • Pricing Block • Sample: 14,200 visitors
+                </div>
+</div>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0">
+<div class="text-right">
+<span class="font-title-sm text-title-sm text-tertiary-container font-bold">+38% AOV Uplift</span>
+<span class="block text-[11px] text-outline">98.7% confidence (Ready to lock)</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-tertiary-container font-label-sm text-label-sm font-semibold">Ready</span>
+<button class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- EXP-207 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-mono text-[10px] text-on-surface font-bold">EXP-207</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Paystack 5% Instant Prepayment Discount Incentive on COD Step</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                  Funnel: <em>AcroSlim Detox Cleanse</em> • Checkout Gateway • 420 orders sampled
+                </div>
+</div>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0">
+<div class="text-right">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">+32% Prepayment</span>
+<span class="block text-[11px] text-outline">88.4% confidence (Sampling)</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Gathering</span>
+<button class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT SECTION (4 Cols): Autonomous AI Copilot & Bayesian Curves -->
+<div class="lg:col-span-4 space-y-space-md">
+<!-- CARD 1: GEMINI PRO DIRECT RESPONSE SUGGESTION FEED -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-bold">AI CRO Copilot Feed</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+              Gemini Pro
+            </span>
+</div>
+<!-- Alert / Finding Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-2">
+<div class="flex items-center gap-1.5 text-error font-title-sm text-title-sm font-semibold">
+<span class="material-symbols-outlined text-[17px]">warning</span>
+              High Dropoff: Lagos Island Traffic
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong>38% form abandonment</strong> detected specifically at the freeform delivery address step on mobile devices originating from Eti-Osa &amp; Lekki IPs.
+            </p>
+</div>
+<!-- AI Actionable Hypothesis -->
+<div class="space-y-1.5 bg-surface-container-lowest p-2.5 rounded-lg">
+<div class="flex items-center gap-1 text-primary-container font-label-sm text-label-sm uppercase font-bold tracking-wider">
+<span class="material-symbols-outlined text-[15px]">auto_awesome</span>
+              Generated Fix Hypothesis
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Switch delivery location from a freeform input to a <strong>dynamic LGA drop-down</strong> with landmark quick-tags (e.g. "Chevron Tollgate", "Jakande", "Admiralty Way").
+            </p>
+<div class="pt-1 flex items-center justify-between text-outline text-[11px]">
+<span>Projected Impact: <strong class="text-tertiary-container">+4.2% Form CVR</strong></span>
+<span>Sample needed: ~1,100</span>
+</div>
+</div>
+<!-- Trigger CTA -->
+<button class="w-full py-2.5 px-3 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center justify-center gap-1.5" onclick="deployVariantC(this)">
+<span class="material-symbols-outlined text-[17px]">rocket_launch</span>
+            Deploy Variant C (Auto-LGA Select)
+          </button>
+</div>
+<!-- CARD 2: BAYESIAN DISTRIBUTION VISUALIZER -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Bayesian Posterior Density</span>
+<span class="font-label-sm text-label-sm text-outline">EXP-204</span>
+</div>
+<!-- Visual SVG Probability Density Curves -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col items-center">
+<svg class="w-full h-36 overflow-visible" fill="none" viewbox="0 0 320 140" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveA" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#777587" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#777587" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="curveB" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4f46e5" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#4f46e5" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid reference lines -->
+<line stroke="#c7c4d8" stroke-width="1" x1="20" x2="300" y1="120" y2="120"></line>
+<line stroke="#dfe2f1" stroke-dasharray="2 2" x1="100" x2="100" y1="20" y2="120"></line>
+<line stroke="#dfe2f1" stroke-dasharray="2 2" x1="210" x2="210" y1="20" y2="120"></line>
+<!-- Baseline Variant A Bell Curve (Center ~100px, Peak at y=45) -->
+<path d="M 40 120 C 70 120, 85 45, 100 45 C 115 45, 130 120, 160 120 Z" fill="url(#curveA)"></path>
+<path d="M 40 120 C 70 120, 85 45, 100 45 C 115 45, 130 120, 160 120" stroke="#777587" stroke-width="2"></path>
+<!-- Challenger Variant B Bell Curve (Center ~210px, Peak at y=25) -->
+<path d="M 140 120 C 180 120, 195 25, 210 25 C 225 25, 245 120, 280 120 Z" fill="url(#curveB)"></path>
+<path d="M 140 120 C 180 120, 195 25, 210 25 C 225 25, 245 120, 280 120" stroke="#4f46e5" stroke-width="2.5"></path>
+<!-- Markers & Labels -->
+<circle cx="100" cy="45" fill="#777587" r="3.5"></circle>
+<circle cx="210" cy="25" fill="#4f46e5" r="4"></circle>
+<text fill="#777587" font-family="Inter" font-size="10" font-weight="600" x="75" y="38">Variant A (7.1%)</text>
+<text fill="#4f46e5" font-family="Inter" font-size="10" font-weight="700" x="185" y="18">Variant B (8.9%)</text>
+<text fill="#777587" font-family="Inter" font-size="9" x="25" y="134">5% CVR</text>
+<text fill="#777587" font-family="Inter" font-size="9" x="150" y="134">8%</text>
+<text fill="#777587" font-family="Inter" font-size="9" x="270" y="134">12% CVR</text>
+</svg>
+<div class="w-full flex items-center justify-between px-2 pt-1 font-body-sm text-body-sm">
+<span class="text-[11px] text-outline">Zero Overlap in 95% CrI</span>
+<span class="text-[11px] font-bold text-tertiary-container">Delta: +25.5% Uplift</span>
+</div>
+</div>
+<!-- Statistical Power Specs -->
+<div class="space-y-1.5 pt-1 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Statistical Power (1 - β):</span>
+<span class="font-mono font-bold text-on-surface">0.94 (Optimal)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">False Positive Risk (α):</span>
+<span class="font-mono font-bold text-tertiary-container">&lt; 0.006 (Very Low)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Expected Loss:</span>
+<span class="font-mono font-semibold text-on-surface">0.0012% GMV</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: GUARDRAILS & SAFETY THRESHOLDS -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">security</span>
+<span class="font-title-sm text-title-sm text-on-surface font-bold">COD Guardrails &amp; Safety</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary-container font-label-sm text-label-sm font-bold">Active</span>
+</div>
+<div class="space-y-2.5 font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="space-y-0.5">
+<span class="font-medium text-on-surface block">Min Sample Size</span>
+<span class="text-[11px] text-outline">Before AI auto-allocation shifts</span>
+</div>
+<span class="font-mono font-bold text-on-surface bg-surface-container-lowest px-2 py-1 rounded">2,000 visits</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="space-y-0.5">
+<span class="font-medium text-on-surface block">Max RTS Loss Threshold</span>
+<span class="text-[11px] text-outline">Auto-shutoff variant if refusal rate peaks</span>
+</div>
+<span class="font-mono font-bold text-error bg-surface-container-lowest px-2 py-1 rounded">&gt; 15% RTS</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="space-y-0.5">
+<span class="font-medium text-on-surface block">Bot &amp; Fraud Order Truncation</span>
+<span class="text-[11px] text-outline">Suppresses duplicate phone numbers</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold bg-surface-container-lowest px-2 py-1 rounded">ENABLED</span>
+</div>
+</div>
+</div>
+<!-- CARD 4: RECENT AUTONOMOUS ACTIONS LOG -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold block">Autonomous Actions History</span>
+<div class="space-y-2 pt-1 font-body-sm text-body-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container mt-0.5">check_circle</span>
+<div class="text-[12px] leading-tight text-on-surface-variant">
+<strong class="text-on-surface">MAB shifted traffic</strong> to 78% on Variant B after 15,000 impressions crossed significance.
+                <span class="text-outline block text-[10px]">2 hours ago</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[15px] text-primary mt-0.5">auto_fix_high</span>
+<div class="text-[12px] leading-tight text-on-surface-variant">
+<strong class="text-on-surface">Auto-generated copy test</strong> for NAFDAC proof headline on Sefway Cleanse.
+                <span class="text-outline block text-[10px]">6 hours ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchTab(btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      b.classList.add('text-on-surface-variant');
+    });
+    btn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+    btn.classList.remove('text-on-surface-variant');
+  }
+
+  function toggleAutoBandit() {
+    const btn = document.getElementById('bandit-toggle-btn');
+    const knob = document.getElementById('bandit-toggle-knob');
+    const label = document.getElementById('bandit-toggle-label');
+    const isChecked = btn.getAttribute('aria-checked') === 'true';
+
+    if (isChecked) {
+      btn.setAttribute('aria-checked', 'false');
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-surface-container-high');
+      knob.classList.remove('translate-x-4');
+      knob.classList.add('translate-x-0');
+      label.textContent = 'OFF (Manual)';
+      label.classList.remove('text-primary');
+      label.classList.add('text-outline');
+    } else {
+      btn.setAttribute('aria-checked', 'true');
+      btn.classList.add('bg-primary-container');
+      btn.classList.remove('bg-surface-container-high');
+      knob.classList.add('translate-x-4');
+      knob.classList.remove('translate-x-0');
+      label.textContent = 'ON (MAB)';
+      label.classList.add('text-primary');
+      label.classList.remove('text-outline');
+    }
+  }
+
+  function simulatePromote() {
+    const promoteBtn = document.getElementById('promote-btn');
+    promoteBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span> Variant B Set to 100%';
+    promoteBtn.classList.remove('bg-primary');
+    promoteBtn.classList.add('bg-tertiary-container');
+  }
+
+  function deployVariantC(btn) {
+    btn.innerHTML = '<span class="material-symbols-outlined text-[17px] animate-spin">sync</span> Deploying to Edge CDN...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[17px]">check</span> Deployed &amp; Testing in Lagos';
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-tertiary-container');
+    }, 1200);
+  }
+</script></main></div></body></html>

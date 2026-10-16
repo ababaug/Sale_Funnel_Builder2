@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#044317", "primary-fixed": "#d0e2ff", "on-primary-fixed-variant": "#0043ce", "surface-container-high": "#e0e0e0", "on-secondary": "#ffffff", "inverse-surface": "#393939", "on-tertiary": "#ffffff", "surface-container-highest": "#c6c6c6", "tertiary-fixed-dim": "#42be65", "surface-container": "#f4f4f4", "on-tertiary-fixed": "#022d0d", "primary-fixed-dim": "#78a9ff", "surface-tint": "#0f62fe", "tertiary-fixed": "#a7f0ba", "on-error": "#ffffff", "inverse-on-surface": "#f4f4f4", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-dim": "#e0e0e0", "surface-variant": "#f4f4f4", "outline": "#8d8d8d", "inverse-primary": "#78a9ff", "on-secondary-fixed-variant": "#525252", "outline-variant": "#e0e0e0", "on-secondary-container": "#525252", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#161616", "on-primary": "#ffffff", "on-background": "#161616", "surface": "#ffffff", "secondary": "#6f6f6f", "secondary-container": "#e0e0e0", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-primary-container": "#161616", "on-primary-fixed": "#001d6c", "on-error-container": "#750e13", "error": "#da1e28", "tertiary": "#198038", "on-surface-variant": "#525252", "background": "#ffffff", "tertiary-container": "#a7f0ba", "error-container": "#fff1f1", "primary": "#0f62fe", "secondary-fixed-dim": "#c6c6c6", "primary-container": "#d0e2ff", "on-tertiary-fixed-variant": "#044317" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><span class="text-xl font-headline font-bold tracking-tight uppercase text-on-surface">FUNNELFLOW</span><nav class="hidden md:flex items-center gap-8" data-active-classes="bg-primary-container text-on-primary-container font-bold px-3 py-1 rounded"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Templates</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-4"><a class="bg-primary text-on-primary px-4 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full bg-surface text-on-surface">
+<!-- 1. Hero with video preview and enrollment CTA -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-primary-container/20 to-surface py-20 lg:py-32">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-3 py-1 rounded text-xs font-semibold tracking-wider uppercase w-fit">
+<span class="material-symbols-outlined text-sm">bolt</span> Next Cohort Closes Soon
+        </div>
+<h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight text-on-surface leading-tight">
+          Master Modern High-Converting Funnels &amp; Digital Architecture
+        </h1>
+<p class="text-lg text-on-surface-variant max-w-xl">
+          A masterclass designed for senior marketers and entrepreneurs who want to build sophisticated, automated sales ecosystems that scale predictably.
+        </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+<a class="bg-primary text-on-primary px-8 py-4 font-bold text-center hover:bg-primary/90 transition-all shadow-md" href="#pricing">
+            Enroll Now — $997
+          </a>
+<div class="flex items-center gap-3 px-4 py-2 bg-surface-container">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary text-xs font-bold">JD</div>
+<div class="w-8 h-8 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary text-xs font-bold">AS</div>
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary text-xs font-bold">MK</div>
+</div>
+<span class="text-xs text-on-surface-variant">Join 1,420+ active students</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative bg-surface-container p-2 shadow-xl rounded-xl overflow-hidden group">
+<div class="w-full h-72 bg-cover bg-center rounded-lg flex items-center justify-center relative" data-alt="A cinematic widescreen preview frame of a masterclass video course showing a professional digital marketer presenting advanced funnel architecture diagrams on a sleek minimalist dark screen, vibrant blue and purple neon lighting accents, crisp modern aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1ryjJ7N5a0IxAC6-wNRcIF_tf3KtQZBpIGDt-0YFa_8zCjfUYEL1ST9R3hU_g7kI1dhgBb2s0pvjcpuM693w8gDFRgSspnn6f3j8e6wtmc9r8QQIPqMXIneRlN5ILjCOnGRFzaPzPLo4bjjWr9IBsWnbH5ueGz6-ofigRpIS-PscN15kafYdvJIWV1D3V08Bc8VeOrYeCJXNgspUxblIrfo85133jwDtK49R4C2x7P5G9yizzdJtJYg')">
+<div class="absolute inset-0 bg-on-surface/30"></div>
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg relative z-10 group-hover:scale-110 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between text-xs text-on-surface-variant">
+<span>Preview: Module 1 Overview (14:20)</span>
+<span class="text-primary font-bold uppercase">Watch Free</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Instructor Introduction -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-4">
+<div class="w-full h-96 bg-cover bg-center rounded-xl shadow-lg" data-alt="Professional studio portrait of an expert digital growth architect and online course instructor, wearing a sharp minimal black turtleneck, confident expression, soft dramatic studio lighting with subtle blue tint on a neutral grey background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHEPC7xm6o6aWgS25NR44sR3loxXSh30ZTZnaT948MxtmnPPToSyI3WIlkD6KZT7BR5XXEzCmXIKmV9Rl4QfVUMvMd3dZ8b9LDxjozt0eTLs2bDHMc8ahd9z3Y5YEAbZ1HwcGjse49FhkqryJOqcOGjUIzVStP07KF9SrlDb0uyk9Bri1lVmPcI83seYxq4mjtPQryaFCSTzSE9uD3y01nldlONco_re6eHqhkHG6Wv9xHhCvIHX7XtA')"></div>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-6">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Your Lead Instructor</span>
+<h2 class="text-3xl font-bold text-on-surface">Alex Vance — Growth Architect &amp; Scale Advisor</h2>
+<p class="text-on-surface-variant leading-relaxed">
+          Over the past decade, Alex has architected acquisition systems that generated over $120M in verified revenue for tech startups and digital education brands. He is the former Head of Growth at ScaleFlow and has consulted for Fortune 500 digital initiatives.
+        </p>
+<div class="grid grid-cols-3 gap-6 pt-4">
+<div class="bg-surface p-4 shadow-sm">
+<span class="text-3xl font-extrabold text-primary block">$120M+</span>
+<span class="text-xs text-on-surface-variant">Generated For Clients</span>
+</div>
+<div class="bg-surface p-4 shadow-sm">
+<span class="text-3xl font-extrabold text-primary block">10+</span>
+<span class="text-xs text-on-surface-variant">Years Experience</span>
+</div>
+<div class="bg-surface p-4 shadow-sm">
+<span class="text-3xl font-extrabold text-primary block">15K+</span>
+<span class="text-xs text-on-surface-variant">Global Alumni</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Target Audience Problems -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest text-error uppercase">Are You Facing These Roadblocks?</span>
+<h2 class="text-3xl font-bold text-on-surface mt-2">Why Most Funnels Fail to Convert</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<div class="w-12 h-12 bg-error-container text-error flex items-center justify-center rounded">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Traffic Without Conversion</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">You are spending hours driving traffic to landing pages, but bounce rates are high and checkout completions remain painfully low.</p>
+</div>
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<div class="w-12 h-12 bg-error-container text-error flex items-center justify-center rounded">
+<span class="material-symbols-outlined">psychology_alt</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Overcomplicated Tech Stacks</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Wrestling with a dozen disconnected software tools that break every time you try to launch a new upsell or automated email sequence.</p>
+</div>
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<div class="w-12 h-12 bg-error-container text-error flex items-center justify-center rounded">
+<span class="material-symbols-outlined">hourglass_disabled</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Inconsistent Monthly Revenue</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Living on a financial roller coaster where every month starts from zero because you lack a reliable, evergreen customer acquisition engine.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Learning Outcomes -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 flex flex-col gap-6">
+<span class="text-xs font-bold tracking-widest text-tertiary uppercase">Tangible Results</span>
+<h2 class="text-3xl font-bold text-on-surface">What You Will Be Able to Execute By Sunday</h2>
+<p class="text-on-surface-variant">This isn't theory. By the end of this program, you will have built, tested, and launched production-ready digital assets.</p>
+<div class="flex flex-col gap-4 pt-2">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+<p class="text-sm text-on-surface">Architect a multi-tier value ladder that instantly increases average cart value by at least 45%.</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+<p class="text-sm text-on-surface">Write high-converting direct response copy tailored to cold buyer psychology.</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+<p class="text-sm text-on-surface">Deploy automated behavioral email sequences that rescue abandoned carts and drive repeat purchases.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="bg-surface p-8 shadow-xl flex flex-col gap-6">
+<h3 class="text-lg font-bold text-on-surface">Expected Metric Improvements</h3>
+<div class="flex flex-col gap-4">
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span>Conversion Rate Optimization</span>
+<span class="text-primary">+315%</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-primary h-2 w-[85%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span>Average Order Value (AOV)</span>
+<span class="text-primary">+54%</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-primary h-2 w-[65%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span>Customer Lifetime Value (LTV)</span>
+<span class="text-primary">+210%</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-primary h-2 w-[90%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Course Benefits -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Unmatched Advantage</span>
+<h2 class="text-3xl font-bold text-on-surface mt-2">Why FunnelFlow Is Different</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container p-6 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+<h3 class="font-bold text-on-surface">Zero Fluff Guarantee</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">No 40-minute introductions or filler content. Every lesson gets straight to actionable implementation.</p>
+</div>
+<div class="bg-surface-container p-6 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">update</span>
+<h3 class="font-bold text-on-surface">Lifetime Updates</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Digital marketing changes fast. Get free lifetime access to all future module updates and algorithm shifts.</p>
+</div>
+<div class="bg-surface-container p-6 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">groups</span>
+<h3 class="font-bold text-on-surface">Private Mastermind</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Join an exclusive Discord community of 7-figure founders and senior marketers sharing live tear-downs.</p>
+</div>
+<div class="bg-surface-container p-6 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+<h3 class="font-bold text-on-surface">Direct Q&amp;A Access</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Submit your landing pages and funnel maps for direct critique during our bi-weekly live coaching calls.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Comprehensive Curriculum (Modules 1-8) -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-5xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Complete Roadmap</span>
+<h2 class="text-3xl font-bold text-on-surface mt-2">8 Comprehensive Modules</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase">Module 01</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">Funnel Architecture &amp; Value Ladders</h3>
+<p class="text-xs text-on-surface-variant mt-1">Mapping out high-margin offers and structuring your customer journey from cold click to high-ticket retainer.</p>
+</div>
+<span class="text-xs font-semibold px-3 py-1 bg-surface-container text-on-surface-variant whitespace-nowrap">6 Lessons • 45m</span>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase">Module 02</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">Psychology-Driven Direct Response Copy</h3>
+<p class="text-xs text-on-surface-variant mt-1">Mastering the art of emotional triggers, objection handling hooks, and persuasive headline formulas.</p>
+</div>
+<span class="text-xs font-semibold px-3 py-1 bg-surface-container text-on-surface-variant whitespace-nowrap">8 Lessons • 1h 20m</span>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase">Module 03</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">High-Converting Landing Page Wireframing</h3>
+<p class="text-xs text-on-surface-variant mt-1">Designing frictionless layouts optimized for mobile attention spans and immediate trust validation.</p>
+</div>
+<span class="text-xs font-semibold px-3 py-1 bg-surface-container text-on-surface-variant whitespace-nowrap">7 Lessons • 1h 10m</span>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase">Module 04</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">Tripwire &amp; Order Bump Mastery</h3>
+<p class="text-xs text-on-surface-variant mt-1">Turning ad-spend loss into immediate profit on day zero with frictionless micro-offers.</p>
+</div>
+<span class="text-xs font-semibold px-3 py-1 bg-surface-container text-on-surface-variant whitespace-nowrap">5 Lessons • 50m</span>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase">Module 05</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">Automated Email Seeding &amp; Nurture Sequences</h3>
+<p class="text-xs text-on-surface-variant mt-1">Writing 14-day automated behavioral email loops that convert lukewarm leads into rabid buyers.</p>
+</div>
+<span class="text-xs font-semibold px-3 py-1 bg-surface-container text-on-surface-variant whitespace-nowrap">9 Lessons • 2h 15m</span>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase">Module 06</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">Traffic Acquisition &amp; Media Buying Frameworks</h3>
+<p class="text-xs text-on-surface-variant mt-1">Scaling paid campaigns on Meta and Google without burning your budget on vanity metrics.</p>
+</div>
+<span class="text-xs font-semibold px-3 py-1 bg-surface-container text-on-surface-variant whitespace-nowrap">10 Lessons • 2h 40m</span>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase">Module 07</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">Data Analytics &amp; Multivariate Split Testing</h3>
+<p class="text-xs text-on-surface-variant mt-1">Reading cohort reports, attribution models, and setting up statistically significant A/B split tests.</p>
+</div>
+<span class="text-xs font-semibold px-3 py-1 bg-surface-container text-on-surface-variant whitespace-nowrap">6 Lessons • 1h 05m</span>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase">Module 08</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">Scaling to 7 Figures &amp; Team Delegation</h3>
+<p class="text-xs text-on-surface-variant mt-1">Hiring media buyers, copywriters, and setting up operational dashboards for enterprise scale.</p>
+</div>
+<span class="text-xs font-semibold px-3 py-1 bg-surface-container text-on-surface-variant whitespace-nowrap">5 Lessons • 55m</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Practical Exercises & Assignments -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 flex flex-col gap-6">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Active Learning</span>
+<h2 class="text-3xl font-bold text-on-surface">Build As You Learn With Guided Sprints</h2>
+<p class="text-on-surface-variant">Every module concludes with an actionable milestone assignment. You won't just watch videos; you'll finish the course with a complete live funnel ready for deployment.</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 bg-surface-container p-4">
+<span class="material-symbols-outlined text-primary">assignment</span>
+<span class="text-sm font-semibold text-on-surface">Interactive Figma &amp; Notion Funnel Blueprints</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container p-4">
+<span class="material-symbols-outlined text-primary">code</span>
+<span class="text-sm font-semibold text-on-surface">Plug-and-Play Email Swipe Files &amp; Copy Templates</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container p-4">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="text-sm font-semibold text-on-surface">Automated ROI &amp; CAC Calculator Spreadsheets</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="w-full h-96 bg-cover bg-center rounded-xl shadow-lg" data-alt="A clean modern designer workspace showing dual monitors displaying complex interactive digital funnel wireframes in Figma alongside a Notion project management board, minimalist desk setup with warm ambient lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBLhf6-YuKnitQJMjJZcPXr-jeaRl-oZk3nvLbWXnRhyiZs2yN9PzdnUHENkL8353H4fkjWiDfVtW93dcAPV7D4q10lurx3Xzv3VI7quPDhYK2WzfSKLpx1pqsD5NHv5tFJQB-VPCgUBCaC7k6omEDins4jhrp0x22zUW1wxarsfccXvPrzTdQ0Ad7htPREdMwDRr-ElSosl_aFo-soUbUjGx2S6Sdc204-65Q3L4aY0J9A7OflCIWxw')"></div>
+</div>
+</div>
+</section>
+<!-- 8. Course Materials & Resources -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Exclusive Toolkits</span>
+<h2 class="text-3xl font-bold text-on-surface mt-2">Everything Included in Your Vault</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">folder_zip</span>
+<h3 class="text-xl font-bold text-on-surface">Steal-My-Funnel Templates</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Direct JSON imports for all major funnel builders including ClickFunnels, GoHighLevel, and Webflow.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">library_books</span>
+<h3 class="text-xl font-bold text-on-surface">The Direct Response Swipe Vault</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Over 200 verified high-performing landing page headlines, email sequences, and ad creatives.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+<h3 class="text-xl font-bold text-on-surface">SOP &amp; Team Handbooks</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Standard operating procedures to hand off media buying and copywriting to junior contractors.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Instructor Credentials & Student Success -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6">
+<div class="w-full h-96 bg-cover bg-center rounded-xl shadow-lg" data-alt="A modern tech conference auditorium where a diverse audience of professionals are engaged in a keynote presentation on digital growth, large cinematic projection screen in the background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRFf8hTqxG-6GUi4Y8WkSRyDjQlpCR0DiiHq4WnG1NGEi4n_s4MLs6haF4N02ilihCInhih5BMYUKHGUX3t1_B3LYlo5IVpGXnFbb2_BM5IUHuhYHvvkUO3ZcEBW7nO3kWURPlhqafNFammnswF9S7yYFDn3lrOzUDXBF-u-Bj73x0RHGg3RujJW2AakyFyUzGQwhZRj8QnGPHdhtaJXGPIucTeSJs2DTDtV2qFgyblA7YBxrtIT_-vQ')"></div>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-6">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Proven Track Record</span>
+<h2 class="text-3xl font-bold text-on-surface">Trusted by Industry Leaders and Fast-Growing Startups</h2>
+<p class="text-on-surface-variant">Our alumni include founders scaling bootstrapped SaaS products, agency owners expanding their service offerings, and marketing directors at enterprise brands.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container p-4">
+<span class="text-2xl font-bold text-primary block">4.9 / 5.0</span>
+<span class="text-xs text-on-surface-variant">Average Student Rating</span>
+</div>
+<div class="bg-surface-container p-4">
+<span class="text-2xl font-bold text-primary block">94%</span>
+<span class="text-xs text-on-surface-variant">Completion Rate</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Learning Format & Drip Schedule -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-5xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Flexible Access</span>
+<h2 class="text-3xl font-bold text-on-surface mt-2">How You Will Learn</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-4">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container flex items-center justify-center font-bold">01</div>
+<h3 class="font-bold text-on-surface">Instant Full Access</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">All core modules and swipe vaults are unlocked immediately upon enrollment so you can move at your own pace.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-4">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container flex items-center justify-center font-bold">02</div>
+<h3 class="font-bold text-on-surface">Bi-Weekly Live Labs</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Join Alex live every second Tuesday for cohort teardowns, Q&amp;A sessions, and real-time funnel audits.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm flex flex-col gap-4">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container flex items-center justify-center font-bold">03</div>
+<h3 class="text-lg font-bold text-on-surface">Self-Paced or Cohort</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Choose whether to rush through in a weekend intensive or study alongside peers in the structured 8-week track.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. Authentic Student Testimonials -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Verified Reviews</span>
+<h2 class="text-3xl font-bold text-on-surface mt-2">What Our Graduates Say</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8 flex flex-col justify-between gap-6">
+<p class="text-sm text-on-surface-variant leading-relaxed">"Implementing the tripwire strategies from Module 4 added an extra $24k in monthly recurring revenue within 30 days. This course paid for itself 20x over."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-sm">MR</div>
+<div>
+<h4 class="text-xs font-bold text-on-surface">Marcus Reynolds</h4>
+<span class="text-[10px] text-on-surface-variant">Founder, SaaS Metrics</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between gap-6">
+<p class="text-sm text-on-surface-variant leading-relaxed">"The copy templates alone are worth ten times the price. I completely overhauled our landing page and saw our conversion jump from 1.8% to 6.4%."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary font-bold text-sm">SL</div>
+<div>
+<h4 class="text-xs font-bold text-on-surface">Sarah Lin</h4>
+<span class="text-[10px] text-on-surface-variant">Head of Growth, EduTech Global</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between gap-6">
+<p class="text-sm text-on-surface-variant leading-relaxed">"Alex explains complex attribution and media buying models in a way that is immediately actionable. No fluff, just pure high-end execution."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-sm">DK</div>
+<div>
+<h4 class="text-xs font-bold text-on-surface">David Kincaid</h4>
+<span class="text-[10px] text-on-surface-variant">Agency Owner, Kinetic Digital</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. Bonuses (Worth value breakdown) -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-5xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Limited Time Extras</span>
+<h2 class="text-3xl font-bold text-on-surface mt-2">Fast-Action Enrollment Bonuses</h2>
+</div>
+<div class="flex flex-col gap-6">
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-tertiary uppercase">Bonus 1</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">The $100M Email Swipe Library</h3>
+<p class="text-xs text-on-surface-variant mt-1">Over 150 battle-tested email campaigns for launches, webinars, and evergreen sequences.</p>
+</div>
+<span class="text-sm font-bold text-on-surface bg-surface-container px-4 py-2 whitespace-nowrap">Value: $497 (Free Today)</span>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-tertiary uppercase">Bonus 2</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">Private Discord Mastermind VIP Access</h3>
+<p class="text-xs text-on-surface-variant mt-1">Lifetime admission to our invite-only community of 7-figure founders and media buyers.</p>
+</div>
+<span class="text-sm font-bold text-on-surface bg-surface-container px-4 py-2 whitespace-nowrap">Value: $997 (Free Today)</span>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<span class="text-xs font-bold text-tertiary uppercase">Bonus 3</span>
+<h3 class="text-lg font-bold text-on-surface mt-1">Quarterly Live Funnel Teardown Recordings</h3>
+<p class="text-xs text-on-surface-variant mt-1">Access to our private archive of over 24+ live teardown sessions of student funnels.</p>
+</div>
+<span class="text-sm font-bold text-on-surface bg-surface-container px-4 py-2 whitespace-nowrap">Value: $697 (Free Today)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 13. Enrollment Packages (Basic, Pro, VIP with pricing & CTA) -->
+<section class="py-20 bg-surface" id="pricing">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Choose Your Tier</span>
+<h2 class="text-3xl font-bold text-on-surface mt-2">Select Your Enrollment Package</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div class="flex flex-col gap-6">
+<div>
+<span class="text-xs font-bold text-secondary uppercase">Basic Access</span>
+<h3 class="text-2xl font-bold text-on-surface mt-1">Standard Track</h3>
+<p class="text-xs text-on-surface-variant mt-1">Essential self-paced modules for solo entrepreneurs.</p>
+</div>
+<div class="text-4xl font-extrabold text-on-surface">$497</div>
+<ul class="flex flex-col gap-3 text-xs text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> All 8 Core Modules</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Basic Swipe Vault</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Lifetime Course Updates</li>
+</ul>
+</div>
+<a class="mt-8 bg-surface text-on-surface border border-outline px-6 py-3 text-center font-bold hover:bg-surface-container-high transition-colors" href="#">Select Basic</a>
+</div>
+<div class="bg-primary text-on-primary p-8 flex flex-col justify-between shadow-xl relative scale-105">
+<div class="absolute -top-3 right-8 bg-tertiary text-on-tertiary px-3 py-1 text-xs font-bold uppercase tracking-wider">Most Popular</div>
+<div class="flex flex-col gap-6">
+<div>
+<span class="text-xs font-bold text-primary-fixed uppercase">Pro Masterclass</span>
+<h3 class="text-2xl font-bold text-on-primary mt-1">Growth Pro</h3>
+<p class="text-xs text-primary-fixed/80 mt-1">Complete framework with bonuses and live lab access.</p>
+</div>
+<div class="text-4xl font-extrabold text-on-primary">$997</div>
+<ul class="flex flex-col gap-3 text-xs text-on-primary">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed text-sm">check</span> Everything in Standard</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed text-sm">check</span> Bi-Weekly Live Lab Access</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed text-sm">check</span> $100M Email Swipe Library</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed text-sm">check</span> Private Discord Mastermind</li>
+</ul>
+</div>
+<a class="mt-8 bg-surface text-on-surface px-6 py-3 text-center font-bold hover:bg-surface-container transition-colors" href="#">Enroll in Pro</a>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div class="flex flex-col gap-6">
+<div>
+<span class="text-xs font-bold text-secondary uppercase">VIP Accelerator</span>
+<h3 class="text-2xl font-bold text-on-surface mt-1">Enterprise VIP</h3>
+<p class="text-xs text-on-surface-variant mt-1">Includes 1-on-1 monthly strategy audits with Alex.</p>
+</div>
+<div class="text-4xl font-extrabold text-on-surface">$2,497</div>
+<ul class="flex flex-col gap-3 text-xs text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Everything in Growth Pro</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Monthly 1-on-1 Funnel Audit with Alex</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Custom Copy Review &amp; Rewrite</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check</span> Direct Telegram Access</li>
+</ul>
+</div>
+<a class="mt-8 bg-surface text-on-surface border border-outline px-6 py-3 text-center font-bold hover:bg-surface-container-high transition-colors" href="#">Select VIP</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 14. FAQ & Objections -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-4xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Got Questions?</span>
+<h2 class="text-3xl font-bold text-on-surface mt-2">Frequently Asked Questions</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface p-6 shadow-sm flex flex-col gap-2">
+<h3 class="font-bold text-on-surface">How much time do I need to commit each week?</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Most students dedicate 3 to 5 hours per week watching the lessons and completing the milestone assignments. You can easily complete the program over 8 weeks or binge it in a weekend.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col gap-2">
+<h3 class="font-bold text-on-surface">What if I am a complete beginner?</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Modules 1 and 2 cover all foundational concepts from scratch. While designed for intermediate marketers, absolute beginners will find the step-by-step wireframes easy to follow.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col gap-2">
+<h3 class="font-bold text-on-surface">Which funnel builders do you teach?</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">We provide JSON templates and tutorials for ClickFunnels, GoHighLevel, Webflow, and Kajabi. The principles apply universally regardless of your tech stack.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col gap-2">
+<h3 class="font-bold text-on-surface">Is there a refund policy?</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Yes. We offer an ironclad 30-day risk-free guarantee. If you complete the assignments and don't feel you've gained at least 10x your investment in actionable value, email us for a full refund.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 15. Risk-Free Guarantee -->
+<section class="py-20 bg-surface">
+<div class="max-w-4xl mx-auto px-6 lg:px-12 text-center bg-surface-container p-12 shadow-sm flex flex-col items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<h2 class="text-3xl font-bold text-on-surface">Our 30-Day 100% Risk-Free Guarantee</h2>
+<p class="text-sm text-on-surface-variant max-w-2xl leading-relaxed">
+        Enroll today, test the strategies, build your funnel, and attend the live labs. If you aren't completely blown away by the depth of the material, simply drop us an email within 30 days for an immediate, hassle-free refund. You have zero risk.
+      </p>
+<a class="bg-primary text-on-primary px-8 py-3 font-bold text-sm hover:bg-primary/90 transition-colors" href="#pricing">Claim Your Risk-Free Spot</a>
+</div>
+</section>
+<!-- 16. Final Enrollment CTA with countdown -->
+<section class="py-20 bg-gradient-to-b from-surface to-primary-container/20 text-center">
+<div class="max-w-4xl mx-auto px-6 lg:px-12 flex flex-col items-center gap-8">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">Registration Closing Soon</span>
+<h2 class="text-4xl font-extrabold text-on-surface">Secure Your Spot Before Cohort #12 Closes</h2>
+<p class="text-sm text-on-surface-variant max-w-xl">Join over 1,400 ambitious marketers and entrepreneurs scaling their acquisition systems today.</p>
+<div class="flex items-center gap-6 bg-surface p-4 shadow-md rounded">
+<span class="text-xs font-bold text-on-surface uppercase">Cohort Closes In:</span>
+<span class="text-2xl font-mono font-bold text-primary" id="countdown-timer">04 : 59 : 32</span>
+</div>
+<a class="bg-primary text-on-primary px-10 py-4 font-bold text-lg hover:bg-primary/90 transition-all shadow-lg" href="#pricing">
+        Enroll in FunnelFlow Now — $997
+      </a>
+</div>
+</section>
+<!-- 17. Minimal Footer -->
+<footer class="py-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-on-surface-variant">
+<div>© 2024 FunnelFlow Inc. All rights reserved.</div>
+<div class="flex gap-6">
+<a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-on-surface transition-colors" href="#">Support Desk</a>
+</div>
+</div>
+</footer>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6"><div class="text-sm text-on-surface-variant">© 2024 FunnelFlow Inc. Inspired by high-converting design systems.</div><div class="flex gap-6 text-sm text-on-surface-variant"><a class="hover:text-on-surface" href="#">Privacy</a><a class="hover:text-on-surface" href="#">Terms</a><a class="hover:text-on-surface" href="#">Support</a></div></div></footer><script>
+  // Countdown timer logic
+  function startCountdown() {
+    let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+    
+    setInterval(() => {
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      }
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }, 1000);
+  }
+  document.addEventListener('DOMContentLoaded', startCountdown);
+</script></body></html>

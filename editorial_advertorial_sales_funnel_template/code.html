@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#044317", "primary-fixed": "#d0e2ff", "on-primary-fixed-variant": "#0043ce", "surface-container-high": "#e0e0e0", "on-secondary": "#ffffff", "inverse-surface": "#393939", "on-tertiary": "#ffffff", "surface-container-highest": "#c6c6c6", "tertiary-fixed-dim": "#42be65", "surface-container": "#f4f4f4", "on-tertiary-fixed": "#022d0d", "primary-fixed-dim": "#78a9ff", "surface-tint": "#0f62fe", "tertiary-fixed": "#a7f0ba", "on-error": "#ffffff", "inverse-on-surface": "#f4f4f4", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-dim": "#e0e0e0", "surface-variant": "#f4f4f4", "outline": "#8d8d8d", "inverse-primary": "#78a9ff", "on-secondary-fixed-variant": "#525252", "outline-variant": "#e0e0e0", "on-secondary-container": "#525252", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#161616", "on-primary": "#ffffff", "on-background": "#161616", "surface": "#ffffff", "secondary": "#6f6f6f", "secondary-container": "#e0e0e0", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-primary-container": "#161616", "on-primary-fixed": "#001d6c", "on-error-container": "#750e13", "error": "#da1e28", "tertiary": "#198038", "on-surface-variant": "#525252", "background": "#ffffff", "tertiary-container": "#a7f0ba", "error-container": "#fff1f1", "primary": "#0f62fe", "secondary-fixed-dim": "#c6c6c6", "primary-container": "#d0e2ff", "on-tertiary-fixed-variant": "#044317" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><span class="text-xl font-headline font-bold tracking-tight uppercase text-on-surface">FUNNELFLOW</span><nav class="hidden md:flex items-center gap-8" data-active-classes="bg-primary-container text-on-primary-container font-bold px-3 py-1 rounded"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Templates</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-4"><a class="bg-primary text-on-primary px-4 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full bg-surface text-on-surface">
+<!-- 1. Top Native Publication Bar -->
+<div class="w-full bg-surface-container-low border-b border-outline-variant py-2 px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between text-xs text-on-surface-variant gap-2">
+<div class="flex items-center gap-4">
+<span class="font-bold tracking-widest text-on-surface uppercase">THE GLOBAL CHRONICLE</span>
+<span class="hidden md:inline">•</span>
+<span class="hidden md:inline" id="current-date">October 24, 2024</span>
+<span class="inline-block bg-error-container text-on-error-container font-semibold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase">Advertorial / Sponsored Content</span>
+</div>
+<div class="flex items-center gap-4 overflow-x-auto">
+<span class="text-on-surface font-semibold">Trending:</span>
+<a class="hover:underline" href="#">AI Wealth Shift</a>
+<a class="hover:underline" href="#">FunnelAI Leak</a>
+<a class="hover:underline" href="#">Silicon Valley Secret</a>
+</div>
+</div>
+<!-- 2. Magazine-Style Editorial Hero -->
+<section class="max-w-4xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+<div class="flex items-center gap-3 text-xs font-semibold text-primary uppercase tracking-widest mb-4">
+<span>Special Investigative Report</span>
+<span>/</span>
+<span>Technology &amp; Business</span>
+</div>
+<h1 class="text-3xl sm:text-5xl lg:text-6xl font-headline font-bold leading-tight tracking-tight text-on-surface mb-6">
+      The $4.2B Algorithm They Tried to Suppress: How Ordinary Marketers Are Generating Elite-Level Sales Without Ad Spend
+    </h1>
+<p class="text-lg sm:text-xl text-on-surface-variant font-light leading-relaxed mb-8">
+      A leaked internal memo from a stealth AI laboratory reveals a radical autonomous framework that is systematically bypassing traditional conversion bottlenecks—and traditional agencies are furious.
+    </p>
+<!-- Byline & Metadata Bar -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between py-6 border-y border-outline-variant gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up portrait of Dr. Marcus Vance, a distinguished senior investigative journalist in his late 40s wearing glasses and a smart dark blazer against a blurred newsroom background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjNVfY192c5YQ2xHQzpRmMM3eZQlttObLcAb_bwMGZAMqBkFzrefvAPBZPbHY2sEo897T-RKUspdkgZMCTnnFvfd41Z_OSMgox2syKTDaeBxmMC2GiQnGMtgQ6_FksF93La8guFBjF8hmvGQg7DxJFLJezziqloRD1qV2leROHNiOH7Zpm0AsoNK5f3q0-ClpK5LEWM3Ztq3ConbQPuRasbgOHjaDyk-cZR62qxE6KVIfNjKmnNWPxFQ"/>
+</div>
+<div>
+<div class="font-bold text-sm text-on-surface">Dr. Marcus Vance</div>
+<div class="text-xs text-on-surface-variant">Senior Health &amp; Wealth Editor • 12 Min Read</div>
+</div>
+</div>
+<div class="flex items-center gap-3 text-xs text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">visibility</span> 142,890 Views</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Updated 2 hrs ago</span>
+</div>
+</div>
+</section>
+<!-- Hero Banner Image -->
+<div class="max-w-5xl mx-auto px-6 lg:px-12 mb-16">
+<div class="w-full h-[400px] sm:h-[500px] bg-cover bg-center rounded-xl relative overflow-hidden shadow-xl" data-alt="Cinematic high-contrast editorial photograph of modern minimalist server room with glowing blue fiber optic lights and digital data stream overlays representing automated marketing funnels." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC87cw92N83J7p-QV_Ny8XaXBSDWaMFmnUIOCBqHLskLovAOR0jPMTvOvp06aXDY7KhYNvBipyjErJNecquTAKt5Ne-Qk1ppLX-lIXtRvM_M48Y6fQs_leEIdLFPlvlb6a3IIxw-qWY08AxPsYk3Wn1L5K-88HN_53OQJbokiXNPVr0hL3UCWzOUCp8hAfw8MGqvH_8tUmwaZ6iB7aGM8APATG4oYBTbMvASlQ9gpZhXWm4yKdPO66NFA')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+<p class="text-white text-sm font-light max-w-xl">
+          Data visualization from the central node showing real-time autonomous funnel adjustments across 45,000 active campaigns.
+        </p>
+</div>
+</div>
+</div>
+<!-- 3. Engaging Narrative Body / Problem Agitation -->
+<article class="max-w-3xl mx-auto px-6 lg:px-12 text-on-surface text-base sm:text-lg leading-relaxed space-y-8 mb-20">
+<p class="first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-primary">
+      For decades, the digital marketing landscape has operated on a strict, unwritten feudal system. If you wanted high-converting sales funnels, hyper-targeted copywriting, and predictable customer acquisition, you had two choices: burn thousands of dollars testing ads on opaque algorithms, or hire high-priced San Francisco agencies that demand retainer fees larger than most small business budgets.
+    </p>
+<p>
+      That system is currently experiencing a catastrophic structural collapse.
+    </p>
+<p>
+      Last month, an anonymous whistleblower from an elite venture-backed AI incubator leaked a series of encrypted documents outlining <strong class="font-semibold text-on-surface">FunnelAI</strong>—a self-optimizing ecosystem designed to completely automate the architecture, design, and conversion mechanics of multi-step sales funnels without human intervention.
+    </p>
+<!-- Pull Quote -->
+<div class="my-12 p-8 bg-surface-container-low border-l-4 border-primary rounded-r-xl">
+<p class="text-xl sm:text-2xl font-headline font-semibold text-on-surface italic mb-4">
+        "We are no longer looking at an incremental software upgrade. This is the complete commodification of direct-response copywriting and conversion architecture."
+      </p>
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">— Dr. Aris Thorne, Autonomous Systems Researcher</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-headline font-bold text-on-surface pt-6">The Broken Promise of Traditional Funnels</h2>
+<p>
+      To understand why this breakthrough is causing panic in corporate boardrooms, we must look at the staggering failure rate of traditional DIY funnel builders. Industry metrics show that over 92% of new funnels fail to break even on their first traffic blitz. Why? Because human intuition cannot compete with real-time neural behavioral analysis.
+    </p>
+<!-- Inline Data Chart Visualisation -->
+<div class="my-10 p-6 bg-surface-container rounded-xl">
+<div class="flex justify-between items-center mb-6">
+<span class="text-sm font-bold uppercase tracking-wider text-on-surface">Conversion Efficiency Index (Traditional vs. FunnelAI)</span>
+<span class="text-xs bg-primary-container text-on-primary-container px-2.5 py-1 rounded font-semibold">Live Telemetry</span>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-xs text-on-surface-variant mb-1">
+<span>Traditional Agency Funnel (Average ROI)</span>
+<span class="font-bold text-error">1.8x ROAS</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 28%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs text-on-surface-variant mb-1">
+<span>FunnelAI Autonomous Engine (Verified Average)</span>
+<span class="font-bold text-tertiary">7.4x ROAS</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-tertiary h-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<p>
+      As the data illustrates, the discrepancy isn't marginal—it's exponential. While human marketers guess at headlines, color psychology, and checkout friction points, autonomous neural models analyze millions of micro-interactions per second to construct bespoke customer journeys.
+    </p>
+</article>
+<!-- 4. The Discovery / Breakthrough Solution Section -->
+<section class="w-full bg-surface-container-low py-20 mb-20">
+<div class="max-w-4xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold text-primary uppercase tracking-widest bg-primary-container px-3 py-1 rounded">The Breakthrough</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface mt-4 mb-4">Enter FunnelAI: The Self-Building Conversion Machine</h2>
+<p class="text-on-surface-variant">Here is how the underlying architecture works to generate high-converting funnels in under 60 seconds.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mb-6 font-bold text-xl">01</div>
+<h3 class="text-lg font-bold text-on-surface mb-3">Intent Ingestion</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Input your target niche or product link. The engine scans top-performing competitor vectors across 14 global markets instantly.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs font-semibold text-primary flex items-center gap-1">
+<span>Automated Analysis</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mb-6 font-bold text-xl">02</div>
+<h3 class="text-lg font-bold text-on-surface mb-3">Neural Copywriting</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Advanced language models synthesize high-converting hooks, persuasive body copy, and psychological urgency triggers.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs font-semibold text-primary flex items-center gap-1">
+<span>Sub-second Synthesis</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mb-6 font-bold text-xl">03</div>
+<h3 class="text-lg font-bold text-on-surface mb-3">Instant Deployment</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">With one click, your responsive, conversion-optimized funnel goes live with lightning-fast hosting and built-in tracking.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs font-semibold text-primary flex items-center gap-1">
+<span>One-Click Launch</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. High-Impact Call to Action Box -->
+<section class="max-w-4xl mx-auto px-6 lg:px-12 mb-20">
+<div class="bg-surface-container border-2 border-primary rounded-xl p-8 sm:p-12 relative overflow-hidden shadow-xl">
+<div class="absolute top-0 right-0 bg-primary text-on-primary px-6 py-2 text-xs font-bold uppercase tracking-wider rounded-bl-xl">
+        Verified Reader Exclusive
+      </div>
+<div class="max-w-2xl">
+<span class="text-xs font-bold text-tertiary uppercase tracking-wider">Limited Time Allocation</span>
+<h2 class="text-2xl sm:text-4xl font-headline font-bold text-on-surface mt-2 mb-4">
+          Claim Your Early Access License to FunnelAI Today
+        </h2>
+<p class="text-on-surface-variant mb-8">
+          Due to server capacity limitations imposed by rapid adoption, public registration closes soon. Readers of this investigative report retain access to the founding member discount.
+        </p>
+<!-- Countdown Timer -->
+<div class="bg-surface p-6 rounded-lg mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Special Pricing Expires In:</div>
+<div class="text-2xl font-mono font-bold text-primary mt-1" id="countdown-timer">04 : 59 : 32</div>
+</div>
+<div class="text-right sm:text-right text-xs text-on-surface-variant">
+<div><span class="font-bold text-on-surface">347</span> licenses claimed today</div>
+<div class="text-error font-semibold">Only 12 slots remaining in your region</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4">
+<a class="w-full sm:w-auto flex-1 bg-primary text-on-primary px-8 py-4 rounded font-bold text-center text-lg hover:bg-primary/90 transition-colors shadow-lg flex items-center justify-center gap-2" href="#checkout">
+<span>Claim FunnelAI Founder Pass</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<div class="text-xs text-on-surface-variant text-center sm:text-left">
+<div class="flex items-center gap-1 justify-center sm:justify-start font-semibold text-tertiary">
+<span class="material-symbols-outlined text-[16px]">verified</span> 30-Day Money-Back Guarantee
+            </div>
+<div>No questions asked refund policy.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Comprehensive FAQ Accordion -->
+<section class="max-w-3xl mx-auto px-6 lg:px-12 mb-20">
+<div class="text-center mb-12">
+<h2 class="text-2xl sm:text-3xl font-headline font-bold text-on-surface">Frequently Answered Questions</h2>
+<p class="text-on-surface-variant mt-2">Everything you need to know about the FunnelAI architecture.</p>
+</div>
+<div class="space-y-4">
+<details class="group bg-surface-container-low p-6 rounded-xl cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-on-surface list-none">
+<span>Do I need prior copywriting or design experience?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-sm text-on-surface-variant mt-4 leading-relaxed">
+          Not at all. FunnelAI is specifically engineered for non-technical entrepreneurs, coaches, and local business owners. The autonomous engine handles 100% of the visual layout, color harmonies, and high-converting copy synthesis based on real-time market data.
+        </p>
+</details>
+<details class="group bg-surface-container-low p-6 rounded-xl cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-on-surface list-none">
+<span>How is this different from traditional page builders?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-sm text-on-surface-variant mt-4 leading-relaxed">
+          Traditional builders are blank canvases that require you to do all the heavy lifting. FunnelAI is an active intelligence layer that diagnoses your offer, writes the copy, builds the structure, and continuously optimizes conversion rates automatically.
+        </p>
+</details>
+<details class="group bg-surface-container-low p-6 rounded-xl cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-on-surface list-none">
+<span>What if I am not satisfied with the results?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-sm text-on-surface-variant mt-4 leading-relaxed">
+          Every founder pass is backed by our ironclad 30-day, no-questions-asked money-back guarantee. If FunnelAI does not dramatically reduce your funnel creation time and improve conversion metrics, simply email support for an immediate refund.
+        </p>
+</details>
+</div>
+</section>
+<!-- 5. Interactive Reader Poll & Comments Section -->
+<section class="max-w-3xl mx-auto px-6 lg:px-12 mb-20">
+<div class="bg-surface-container-low p-8 rounded-xl mb-12">
+<h3 class="text-lg font-headline font-bold text-on-surface mb-2">Reader Poll: Have you used AI tools for marketing before?</h3>
+<p class="text-xs text-on-surface-variant mb-6">Cast your vote to see real-time community results.</p>
+<div class="space-y-3" id="poll-options">
+<button class="w-full text-left p-4 bg-surface hover:bg-primary-container/40 transition-colors rounded flex justify-between items-center text-sm font-semibold" onclick="castVote(this)">
+<span>Yes, but results were inconsistent</span>
+<span class="text-xs text-on-surface-variant">54%</span>
+</button>
+<button class="w-full text-left p-4 bg-surface hover:bg-primary-container/40 transition-colors rounded flex justify-between items-center text-sm font-semibold" onclick="castVote(this)">
+<span>No, this is my first time exploring AI funnels</span>
+<span class="text-xs text-on-surface-variant">38%</span>
+</button>
+<button class="w-full text-left p-4 bg-surface hover:bg-primary-container/40 transition-colors rounded flex justify-between items-center text-sm font-semibold" onclick="castVote(this)">
+<span>I currently run an agency and use automated tools</span>
+<span class="text-xs text-on-surface-variant">8%</span>
+</button>
+</div>
+</div>
+<!-- Comments Section -->
+<div>
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-headline font-bold text-on-surface">Verified Discussion (148 Comments)</h3>
+<span class="text-xs text-on-surface-variant">Sorted by: <strong class="text-on-surface">Most Relevant</strong></span>
+</div>
+<div class="space-y-6">
+<!-- Comment 1 -->
+<div class="bg-surface-container-low p-6 rounded-xl">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container font-bold flex items-center justify-center text-sm">
+                JS
+              </div>
+<div>
+<div class="font-bold text-sm text-on-surface">Jonathan Sterling</div>
+<div class="text-xs text-on-surface-variant">Verified Buyer • 3 hours ago</div>
+</div>
+</div>
+<span class="flex items-center gap-1 text-xs text-tertiary font-semibold"><span class="material-symbols-outlined text-[14px]">verified</span> Verified User</span>
+</div>
+<p class="text-sm text-on-surface leading-relaxed">
+            I was extremely skeptical when I read this article this morning. Decided to test the founder pass anyway because of the guarantee. Built my first lead gen funnel in about 45 seconds. The copy quality genuinely shocked me—it reads like an elite copywriter penned it.
+          </p>
+<div class="flex items-center gap-4 mt-4 text-xs text-on-surface-variant">
+<button class="flex items-center gap-1 hover:text-primary"><span class="material-symbols-outlined text-[16px]">thumb_up</span> 42</button>
+<button class="hover:text-primary">Reply</button>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="bg-surface-container-low p-6 rounded-xl">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-bold flex items-center justify-center text-sm">
+                AM
+              </div>
+<div>
+<div class="font-bold text-sm text-on-surface">Amanda Morales</div>
+<div class="text-xs text-on-surface-variant">Digital Consultant • 5 hours ago</div>
+</div>
+</div>
+</div>
+<p class="text-sm text-on-surface leading-relaxed">
+            As someone who used to charge clients $5k+ for funnel architecture, seeing this level of automation is both terrifying and incredible. The market is shifting permanently.
+          </p>
+<div class="flex items-center gap-4 mt-4 text-xs text-on-surface-variant">
+<button class="flex items-center gap-1 hover:text-primary"><span class="material-symbols-outlined text-[16px]">thumb_up</span> 19</button>
+<button class="hover:text-primary">Reply</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Standard Footer -->
+<footer class="w-full bg-surface-container-low py-16 border-t border-outline-variant">
+<div class="max-w-5xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="max-w-md">
+<span class="text-lg font-headline font-bold uppercase tracking-tight text-on-surface">THE GLOBAL CHRONICLE</span>
+<p class="text-xs text-on-surface-variant mt-4 leading-relaxed">
+          Disclaimer: This publication is an independent digital news site and native advertising partner. The story depicted here is an advertorial review based on verified product performance. Results may vary based on individual effort, industry dynamics, and market conditions.
+        </p>
+</div>
+<div class="flex flex-col gap-3 text-xs text-on-surface-variant">
+<span class="font-bold text-on-surface uppercase tracking-wider">Editorial Guidelines</span>
+<a class="hover:underline" href="#">Privacy Policy</a>
+<a class="hover:underline" href="#">Terms of Service</a>
+<a class="hover:underline" href="#">Advertising Disclosures</a>
+<a class="hover:underline" href="#">Contact Newsroom</a>
+</div>
+</div>
+</footer>
+<script>
+    function castVote(button) {
+      const container = document.getElementById('poll-options');
+      const buttons = container.getElementsByTagName('button');
+      for (let btn of buttons) {
+        btn.classList.add('opacity-75');
+        btn.disabled = true;
+      }
+      button.classList.remove('opacity-75');
+      button.classList.add('bg-primary-container', 'border-2', 'border-primary');
+      // subtle visual feedback
+      const notice = document.createElement('div');
+      notice.className = 'text-xs text-tertiary font-semibold mt-4 text-center';
+      notice.textContent = 'Thank you for voting! Results updated in real-time.';
+      container.appendChild(notice);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6"><div class="text-sm text-on-surface-variant">© 2024 FunnelFlow Inc. Inspired by high-converting design systems.</div><div class="flex gap-6 text-sm text-on-surface-variant"><a class="hover:text-on-surface" href="#">Privacy</a><a class="hover:text-on-surface" href="#">Terms</a><a class="hover:text-on-surface" href="#">Support</a></div></div></footer><script>
+  function startCountdown() {
+    let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+    setInterval(() => {
+      if (totalSeconds > 0) totalSeconds--;
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }, 1000);
+  }
+  document.addEventListener('DOMContentLoaded', startCountdown);
+</script></body></html>

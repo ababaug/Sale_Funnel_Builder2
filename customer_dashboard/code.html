@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#f4f4f4", "on-surface": "#161616", "primary-fixed-dim": "#78a9ff", "surface": "#ffffff", "on-secondary-fixed": "#161616", "tertiary-fixed-dim": "#42be65", "secondary-fixed-dim": "#c6c6c6", "on-secondary": "#ffffff", "surface-container-high": "#e0e0e0", "tertiary-fixed": "#a7f0ba", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-background": "#161616", "on-error-container": "#750e13", "inverse-primary": "#78a9ff", "on-primary": "#ffffff", "secondary": "#6f6f6f", "on-secondary-fixed-variant": "#525252", "on-primary-fixed": "#001d6c", "error": "#da1e28", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-surface-variant": "#525252", "on-tertiary-container": "#044317", "surface-tint": "#0f62fe", "primary-container": "#d0e2ff", "on-tertiary-fixed": "#022d0d", "primary": "#0f62fe", "primary-fixed": "#d0e2ff", "secondary-container": "#e0e0e0", "inverse-on-surface": "#f4f4f4", "outline": "#8d8d8d", "surface-dim": "#e0e0e0", "outline-variant": "#e0e0e0", "tertiary": "#198038", "on-primary-fixed-variant": "#0043ce", "surface-container-highest": "#c6c6c6", "inverse-surface": "#393939", "on-tertiary-fixed-variant": "#044317", "surface-container-lowest": "#ffffff", "tertiary-container": "#a7f0ba", "secondary-fixed": "#e0e0e0", "background": "#ffffff", "error-container": "#fff1f1", "on-primary-container": "#161616", "on-secondary-container": "#525252", "surface-container": "#f4f4f4" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": {}, "fontFamily": { "headline": [ "IBM Plex Sans" ], "display": [ "IBM Plex Sans" ], "body": [ "IBM Plex Sans" ], "label": [ "IBM Plex Sans" ] }, "fontSize": {} } } }</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col py-6"><div class="px-6 mb-8 text-xl font-headline font-bold tracking-tight text-primary">FUNNELAI</div><nav class="flex-1 px-4 space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a><a aria-current="page" class="flex items-center px-4 py-3 transition-all bg-primary-container text-on-primary-container font-bold rounded-xl" data-path="visual-editor" href="#"><span class="material-symbols-outlined mr-3">edit_note</span>Website Editor</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="template-library" href="#"><span class="material-symbols-outlined mr-3">grid_view</span>Templates</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="leads" href="#"><span class="material-symbols-outlined mr-3">contacts</span>Leads</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined mr-3">analytics</span>Analytics</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="subscription" href="#"><span class="material-symbols-outlined mr-3">credit_card</span>Subscription</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="admin" href="#"><span class="material-symbols-outlined mr-3">admin_panel_settings</span>Admin Panel</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="text-sm text-on-surface-variant">Enterprise Tier Active (₦50,000/yr)</div><div class="flex items-center gap-4"><span class="material-symbols-outlined text-on-surface-variant cursor-pointer">notifications</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface"><div class="flex flex-col w-full pb-16">
+<!-- Hero / Welcome Banner -->
+<section class="px-8 pt-8 pb-12 bg-surface-container-low flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="max-w-2xl">
+<div class="text-xs font-semibold tracking-wider text-primary uppercase mb-2">Enterprise Analytics Suite</div>
+<h1 class="text-3xl md:text-4xl font-bold tracking-tight text-on-background mb-3">
+        Welcome back, Adebayo! Here's how your sales funnels are converting today.
+      </h1>
+<p class="text-on-surface-variant text-sm md:text-base">
+        Your active campaigns across Lagos and Abuja are outperforming last month's benchmarks by 18.4%.
+      </p>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-primary hover:bg-primary/90 text-on-primary font-medium px-6 py-3 rounded-lg flex items-center gap-2 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">add</span>
+        Create New Funnel
+      </button>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-medium px-5 py-3 rounded-lg flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+        AI Optimizer
+      </button>
+</div>
+</section>
+<!-- Key Metrics 4-Column Grid -->
+<section class="px-8 -mt-6 z-10">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Metric 1 -->
+<div class="bg-surface p-6 shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<span class="text-xs uppercase tracking-wider text-secondary font-semibold">Total Views</span>
+<span class="material-symbols-outlined text-primary text-[20px]">visibility</span>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-3xl font-bold text-on-surface">124,592</span>
+</div>
+<div class="flex items-center gap-1 text-xs text-tertiary font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+14.2% this month</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface p-6 shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<span class="text-xs uppercase tracking-wider text-secondary font-semibold">Conversion Rate</span>
+<span class="material-symbols-outlined text-primary text-[20px]">pie_chart</span>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-3xl font-bold text-on-surface">4.8%</span>
+</div>
+<div class="flex items-center gap-1 text-xs text-tertiary font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+0.8% vs last week</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface p-6 shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<span class="text-xs uppercase tracking-wider text-secondary font-semibold">WhatsApp Enquiries</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">chat</span>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-3xl font-bold text-on-surface">1,842</span>
+</div>
+<div class="flex items-center gap-1 text-xs text-tertiary font-medium">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>High intent traffic</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface p-6 shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<span class="text-xs uppercase tracking-wider text-secondary font-semibold">Active Funnels</span>
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-3xl font-bold text-on-surface">3 <span class="text-lg font-normal text-secondary">/ 1 draft</span></span>
+</div>
+<div class="flex items-center gap-1 text-xs text-on-surface-variant">
+<span>All endpoints operational</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Websites Section -->
+<section class="px-8 mt-12">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h2 class="text-xl font-bold text-on-surface tracking-tight">Recent Websites &amp; Funnels</h2>
+<p class="text-sm text-on-surface-variant">Manage your deployed landing pages and AI-generated funnels.</p>
+</div>
+<a class="text-primary text-sm font-medium hover:underline flex items-center gap-1" href="#">
+        View all funnels
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Funnel Card 1 -->
+<div class="bg-surface-container-low flex flex-col overflow-hidden shadow-sm group hover:shadow-md transition-all">
+<div class="h-40 w-full bg-cover bg-center relative" data-alt="A modern minimalist skincare ecommerce landing page layout featuring high end serum bottles, clean typography, and a soft neutral background palette with primary blue accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDt_3swtUaSaGJPwi5Zi4zh5-WOytHLKuZIrI5MMMOTQ6O9l1vfKpeqMKQO6HyY_xjaxt9FGukynCwRnbtMrnQadn5QXLU2GItOZn38TYEFGhT-8EWmWG8zhyKRwW-RDHCQbQyzWiaw5aql8DPMi_QefAinoHzr3YvtlzMcBjCZaSdkjCg-kk-6o9rHsYrTkgJSUZodqgS616i9skjkKalrm8-ROrjALKjmPvqSZpm5PH_LL97pE6EZAQ')">
+<div class="absolute top-3 left-3 bg-surface text-on-surface text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+            Published
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg text-on-surface">GlowRadiance Skincare</h3>
+</div>
+<p class="text-xs text-primary font-mono mb-3">glow.funnelai.ng</p>
+<div class="text-xs text-secondary flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+              Edited 2 hours ago • 842 leads
+            </div>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 bg-surface hover:bg-surface-container-high text-on-surface text-xs font-medium py-2 rounded transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit</span> Edit
+            </button>
+<button class="flex-1 bg-surface hover:bg-surface-container-high text-on-surface text-xs font-medium py-2 rounded transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Preview
+            </button>
+<button class="p-2 bg-surface hover:bg-surface-container-high text-on-surface rounded transition-all" title="Settings">
+<span class="material-symbols-outlined text-[16px]">settings</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Funnel Card 2 -->
+<div class="bg-surface-container-low flex flex-col overflow-hidden shadow-sm group hover:shadow-md transition-all">
+<div class="h-40 w-full bg-cover bg-center relative" data-alt="Luxury real estate development landing page showing contemporary apartment buildings in Lekki Lagos with pools, high ceilings, and sophisticated architectural lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxeZtRUFVlYvbsUyqKd68WJgaeVJpks8NTEjdmPNFklOJ0X-j5EX7ZPK7nnOpSV0ikAOWWYkVXeKNfNmuHopLUHxQ13RnhM32HD0kUPxao3M963QJuI5zB4yF4P-bNDNuong3wafnM-6_yjWe6Q_zNxCSY7Clw9tVqZ1K_Xl1R2ZIewhZqbm8HIqs9R9qZ81aES387WKuVxWNgUWSeLcnWkrQMi1S4M940ZmE30bd24QrB1oju5N3RWA')">
+<div class="absolute top-3 left-3 bg-surface text-on-surface text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+            Published
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg text-on-surface">Lekki Luxury Apartments</h3>
+</div>
+<p class="text-xs text-primary font-mono mb-3">lekki.funnelai.ng</p>
+<div class="text-xs text-secondary flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+              Edited yesterday • 312 leads
+            </div>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 bg-surface hover:bg-surface-container-high text-on-surface text-xs font-medium py-2 rounded transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit</span> Edit
+            </button>
+<button class="flex-1 bg-surface hover:bg-surface-container-high text-on-surface text-xs font-medium py-2 rounded transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Preview
+            </button>
+<button class="p-2 bg-surface hover:bg-surface-container-high text-on-surface rounded transition-all" title="Settings">
+<span class="material-symbols-outlined text-[16px]">settings</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Funnel Card 3 -->
+<div class="bg-surface-container-low flex flex-col overflow-hidden shadow-sm group hover:shadow-md transition-all">
+<div class="h-40 w-full bg-cover bg-center relative" data-alt="High-converting professional business masterclass landing page with speaker headshot, countdown timer, syllabus breakdown, and bold call to action buttons." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAO1bdnm08cIY1FWuOV_j3EKeltRwQk3mZd0XPJ6rn5KA3CfggCyC6U15dGmllQ8HBJ8Zs3DSAT9CEcqdUT8oqyQZ65N9b1NLZxhjCh4pLw0hPnaZZ-GW4WS6w6WR5MA1OEvU-1-aesoZIrrpwE0SRB5YjkN95_nRC7ElY6glY7FclCxKWG9zbeVAxFlUItfV-6CoKWYr-TV1iGsNSs3AmsSO11SORVpjfn1sRAM_QDxTNnsYKWbN8N0w')">
+<div class="absolute top-3 left-3 bg-surface-container-highest text-on-surface text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+            Draft
+          </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-lg text-on-surface">Masterclass Launch</h3>
+</div>
+<p class="text-xs text-secondary font-mono mb-3">masterclass.funnelai.ng</p>
+<div class="text-xs text-secondary flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+              Edited 3 days ago • 0 leads
+            </div>
+</div>
+<div class="flex items-center gap-2 pt-3 border-t border-surface-container-high">
+<button class="flex-1 bg-primary text-on-primary text-xs font-medium py-2 rounded transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">publish</span> Publish
+            </button>
+<button class="flex-1 bg-surface hover:bg-surface-container-high text-on-surface text-xs font-medium py-2 rounded transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit</span> Edit
+            </button>
+<button class="p-2 bg-surface hover:bg-surface-container-high text-on-surface rounded transition-all" title="Settings">
+<span class="material-symbols-outlined text-[16px]">settings</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Leads Table Section -->
+<section class="px-8 mt-12">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h2 class="text-xl font-bold text-on-surface tracking-tight">Recent Leads &amp; WhatsApp Triggers</h2>
+<p class="text-sm text-on-surface-variant">Real-time incoming submissions and direct messenger hooks.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface text-xs font-medium px-3 py-2 rounded flex items-center gap-1 transition-all">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> Filter
+        </button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface text-xs font-medium px-3 py-2 rounded flex items-center gap-1 transition-all">
+<span class="material-symbols-outlined text-[16px]">download</span> Export CSV
+        </button>
+</div>
+</div>
+<div class="bg-surface shadow-sm overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-xs uppercase text-secondary font-semibold">
+<th class="py-3 px-4">Customer Name</th>
+<th class="py-3 px-4">Phone / Email</th>
+<th class="py-3 px-4">Funnel Source</th>
+<th class="py-3 px-4">Submission Date</th>
+<th class="py-3 px-4">Status</th>
+<th class="py-3 px-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-surface-container-low">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-all">
+<td class="py-4 px-4 font-medium text-on-surface flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container font-bold flex items-center justify-center text-xs">
+                CO
+              </div>
+              Chukwuemeka Okafor
+            </td>
+<td class="py-4 px-4 text-on-surface-variant font-mono text-xs">+234 803 456 7890</td>
+<td class="py-4 px-4 text-on-surface">GlowRadiance Skincare</td>
+<td class="py-4 px-4 text-secondary text-xs">Today, 14:22</td>
+<td class="py-4 px-4">
+<span class="bg-tertiary-container text-on-tertiary-container text-xs font-semibold px-2.5 py-1 rounded">New</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-primary hover:underline text-xs font-medium mr-3">WhatsApp</button>
+<button class="text-secondary hover:text-on-surface text-xs">Details</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low/50 transition-all">
+<td class="py-4 px-4 font-medium text-on-surface flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-bold flex items-center justify-center text-xs">
+                FA
+              </div>
+              Fatima Aliyu
+            </td>
+<td class="py-4 px-4 text-on-surface-variant font-mono text-xs">fatima.a@enterprise.ng</td>
+<td class="py-4 px-4 text-on-surface">Lekki Luxury Apartments</td>
+<td class="py-4 px-4 text-secondary text-xs">Today, 11:05</td>
+<td class="py-4 px-4">
+<span class="bg-primary-container text-on-primary-container text-xs font-semibold px-2.5 py-1 rounded">Contacted</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-primary hover:underline text-xs font-medium mr-3">WhatsApp</button>
+<button class="text-secondary hover:text-on-surface text-xs">Details</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-all">
+<td class="py-4 px-4 font-medium text-on-surface flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container font-bold flex items-center justify-center text-xs">
+                OE
+              </div>
+              Oluwaseun Edet
+            </td>
+<td class="py-4 px-4 text-on-surface-variant font-mono text-xs">+234 812 998 1122</td>
+<td class="py-4 px-4 text-on-surface">GlowRadiance Skincare</td>
+<td class="py-4 px-4 text-secondary text-xs">Yesterday, 19:40</td>
+<td class="py-4 px-4">
+<span class="bg-tertiary text-on-tertiary text-xs font-semibold px-2.5 py-1 rounded">Converted</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-primary hover:underline text-xs font-medium mr-3">WhatsApp</button>
+<button class="text-secondary hover:text-on-surface text-xs">Details</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low/50 transition-all">
+<td class="py-4 px-4 font-medium text-on-surface flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-bold flex items-center justify-center text-xs">
+                IN
+              </div>
+              Ifeanyi Nnamdi
+            </td>
+<td class="py-4 px-4 text-on-surface-variant font-mono text-xs">+234 905 678 1234</td>
+<td class="py-4 px-4 text-on-surface">Masterclass Launch</td>
+<td class="py-4 px-4 text-secondary text-xs">2 days ago</td>
+<td class="py-4 px-4">
+<span class="bg-tertiary-container text-on-tertiary-container text-xs font-semibold px-2.5 py-1 rounded">New</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-primary hover:underline text-xs font-medium mr-3">WhatsApp</button>
+<button class="text-secondary hover:text-on-surface text-xs">Details</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Quick Actions Bar -->
+<section class="px-8 mt-12">
+<div class="bg-surface-container-low p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[28px]">rocket_launch</span>
+<div>
+<h4 class="font-bold text-on-surface">Need a high-converting landing page instantly?</h4>
+<p class="text-xs text-on-surface-variant">Let FunnelAI generate custom copywriting, images, and WhatsApp triggers in seconds.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto">
+<button class="w-full md:w-auto bg-primary hover:bg-primary/90 text-on-primary text-xs font-semibold px-5 py-3 rounded transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+          Generate with AI Prompt
+        </button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

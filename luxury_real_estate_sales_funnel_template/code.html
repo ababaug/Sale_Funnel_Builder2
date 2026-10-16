@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#044317", "primary-fixed": "#d0e2ff", "on-primary-fixed-variant": "#0043ce", "surface-container-high": "#e0e0e0", "on-secondary": "#ffffff", "inverse-surface": "#393939", "on-tertiary": "#ffffff", "surface-container-highest": "#c6c6c6", "tertiary-fixed-dim": "#42be65", "surface-container": "#f4f4f4", "on-tertiary-fixed": "#022d0d", "primary-fixed-dim": "#78a9ff", "surface-tint": "#0f62fe", "tertiary-fixed": "#a7f0ba", "on-error": "#ffffff", "inverse-on-surface": "#f4f4f4", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-dim": "#e0e0e0", "surface-variant": "#f4f4f4", "outline": "#8d8d8d", "inverse-primary": "#78a9ff", "on-secondary-fixed-variant": "#525252", "outline-variant": "#e0e0e0", "on-secondary-container": "#525252", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#161616", "on-primary": "#ffffff", "on-background": "#161616", "surface": "#ffffff", "secondary": "#6f6f6f", "secondary-container": "#e0e0e0", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-primary-container": "#161616", "on-primary-fixed": "#001d6c", "on-error-container": "#750e13", "error": "#da1e28", "tertiary": "#198038", "on-surface-variant": "#525252", "background": "#ffffff", "tertiary-container": "#a7f0ba", "error-container": "#fff1f1", "primary": "#0f62fe", "secondary-fixed-dim": "#c6c6c6", "primary-container": "#d0e2ff", "on-tertiary-fixed-variant": "#044317" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><span class="text-xl font-headline font-bold tracking-tight uppercase text-on-surface">FUNNELFLOW</span><nav class="hidden md:flex items-center gap-8" data-active-classes="bg-primary-container text-on-primary-container font-bold px-3 py-1 rounded"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Templates</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-4"><a class="bg-primary text-on-primary px-4 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full bg-surface text-on-surface">
+<!-- 1. Promotional Banner -->
+<div class="w-full bg-on-surface text-surface py-2.5 px-4 text-xs font-medium tracking-widest flex items-center justify-between uppercase z-40">
+<div class="flex items-center gap-2 mx-auto">
+<span class="material-symbols-outlined text-sm text-[#d4af37]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span>Exclusive VIP Property Release &amp; Private Open House — <span class="font-bold text-[#d4af37]" id="countdown-timer">04 : 59 : 32</span></span>
+<a class="underline ml-4 text-[#d4af37] font-bold" href="#enquiry">Secure Invitation</a>
+</div>
+</div>
+<!-- 2. Hero Section -->
+<section class="relative w-full h-[921px] -mt-16 flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Stunning cinematic architectural photography of a 40-story ultra-luxury glass residential tower against a crisp blue twilight sky, warm interior illumination glowing through floor-to-ceiling windows, high-contrast crisp white and charcoal aesthetic with subtle warm gold highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqmJB_qNGrUiwPLPndU0TYbXe6cHWdyYl8037gpcx1Q6URiw7xuiXYyVMyxttQuwaRet6veAjarpBt_VR44jqh7S_h23vfWIXIkc_1BxN_5ky4zTMOS1_-4UWz5gbLeQ9_o16aUX9ZMYK5xqSX9ainN6f_fOgvQr9q4AKGXGGKPAK6KbmLx4CVcE76WW_9lL5nDFJvGGnky_7bcbzlsMIzS57_abPke6q5Y9FRverfN8nM4nHfMA5ejQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-on-surface/40 to-transparent"></div>
+<div class="relative max-w-7xl mx-auto px-6 lg:px-12 w-full text-surface pt-20">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface/10 backdrop-blur-md border border-surface/20 text-xs font-semibold tracking-widest uppercase mb-6 text-[#d4af37]">
+<span class="w-2 h-2 rounded-full bg-[#d4af37]"></span>
+        The Grand Horizon Residences
+      </div>
+<h1 class="text-5xl md:text-7xl font-light tracking-tight max-w-4xl mb-6 leading-none">
+        The Pinnacle of <span class="font-normal text-[#d4af37]">Luxury Urban Living</span>
+</h1>
+<p class="text-lg md:text-xl text-surface-container font-light max-w-2xl mb-10 leading-relaxed">
+        An architectural masterpiece rising 40 stories above the city core. Uncompromising design, world-class amenities, and private sanctuary.
+      </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-[#d4af37] text-on-surface font-semibold px-8 py-4 text-sm tracking-wider uppercase hover:bg-[#c29d31] transition-colors text-center" href="#enquiry">
+          Schedule Private Viewing
+        </a>
+<a class="bg-surface/10 backdrop-blur-md text-surface border border-surface/20 px-8 py-4 text-sm font-semibold tracking-wider uppercase hover:bg-surface/20 transition-colors text-center" href="#brochure">
+          Download Brochure
+        </a>
+</div>
+</div>
+</section>
+<!-- 3. Property Introduction -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Executive Summary</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-6">A Masterpiece of Form, Function, and Exclusivity</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+          The Grand Horizon Residences redefine high-end vertical living. Crafted for the global elite, this 40-story tower combines cutting-edge structural engineering with timeless interior articulation. Every residence is meticulously orientated to capture sweeping panoramic views of the skyline and horizon.
+        </p>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+          Featuring private elevator foyers, integrated smart-home automation, and sustainable LEED Gold certified architecture, Grand Horizon offers a refined living experience without parallel.
+        </p>
+<div class="grid grid-cols-3 gap-6 pt-6 border-t border-surface-dim">
+<div>
+<div class="text-3xl font-light text-on-surface mb-1">40</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider">Storeys</div>
+</div>
+<div>
+<div class="text-3xl font-light text-on-surface mb-1">45</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider">Exclusive Units</div>
+</div>
+<div>
+<div class="text-3xl font-light text-on-surface mb-1">14ft</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider">Ceiling Heights</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="w-full h-[500px] bg-cover bg-center shadow-xl" data-alt="Interior view of a luxury penthouse living room with double-height floor-to-ceiling windows framing an expansive metropolitan skyline, minimalist designer furniture in charcoal and cream tones, polished Italian marble floors, and warm accent lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfqZ3Pn15hkTeknIRsrqKsd81uk7LijIutnIOuBGSAhiRB0EptHCM7q_6rXzgzWk891piKdaLIgnSSOnblklWDJhqfrdb14Prxn46PBQ_U3nSfJpk0ap2t3r2Wi-aA2mhFi_R5LvFQq8ey8xKZz2vHKXxBpyydX_cz_-vOmbGnDEkSrgVNGHYN-mAkmc77E9txAMhmeL1FxdvnL0uccop5Y1MZI0Wcspm3WTu4AVDntxozvzBLP--Ppw')"></div>
+<div class="absolute -bottom-6 -left-6 bg-on-surface text-surface p-8 max-w-xs shadow-2xl hidden md:block">
+<span class="text-xs uppercase tracking-widest text-[#d4af37] block mb-2">Architectural Vision</span>
+<p class="text-sm font-light text-surface-container">Designed to harmonize with the urban fabric while establishing an uncompromising standard of modern opulence.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Location Highlights -->
+<section class="bg-surface-container py-24 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+<div>
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Prime Coordinates</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight">Unrivaled Downtown Positioning</h2>
+</div>
+<p class="text-on-surface-variant max-w-md mt-4 md:mt-0 text-sm">
+          Situated at the absolute epicentre of commerce, culture, and high society. Direct access to elite private aviation hubs and financial powerhouses.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">location_city</span>
+<h3 class="text-xl font-medium mb-2">Financial District Core</h3>
+<p class="text-sm text-on-surface-variant">Minutes from major corporate headquarters, private banking institutions, and diplomatic missions.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">flight</span>
+<h3 class="text-xl font-medium mb-2">Private Aviation Hubs</h3>
+<p class="text-sm text-on-surface-variant">Exclusive helicopter pad access and direct transit lanes to international private jet terminals.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<h3 class="text-xl font-medium mb-2">Michelin Dining &amp; Arts</h3>
+<p class="text-sm text-on-surface-variant">Surrounded by world-renowned culinary establishments, private members' clubs, and luxury boutiques.</p>
+</div>
+</div>
+<div class="mt-12 w-full h-96 bg-cover bg-center shadow-lg" data-location="Downtown Metropolitan Center, Luxury District" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAR7SSX-NHKvdmX0WLR2ssHqNebzxYmFt_0i8WXoeTYU-uQIU4vL63X2ePApQf3XYSND1YWtFNH9JILPrGbJQzWfnK5-Op2POU0uBmcrsn25c8sbg81Io5szeJGUmPBzeJ2FnDGYadjGZ8H_SItcrnr_eCsi6XXkg94xd5vPrTOIqscghTG9Pj2iqecyWo3jIVDv4LQTacWjaSjlo7cvZrKI3wH0LCaW5Prko1s16rSkjKK4jr1h7zlCw')"></div>
+</div>
+</section>
+<!-- 5. Image Gallery -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Visual Portfolio</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">An Immersion in Refined Aesthetics</h2>
+<p class="text-on-surface-variant text-sm">Explore the meticulous craftsmanship, expansive layouts, and bespoke finishes defining every square meter.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="h-96 bg-cover bg-center shadow-md relative group overflow-hidden" data-alt="Grand double-height marble lobby with a custom cascading crystal chandelier, concierge desk in dark charcoal veneer with warm brass trim, and polished porcelain flooring reflecting natural light." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZcUlt3VKX5rkgTtXJ94k-sYfUijosqQHVfLIpMMnJknMZWD-1EgIP5GyBhKuU9tQEDt8klJ7Yedm_qgMOd3m51pzwKgFxHMsBCwns3AG2VS16E9A53lNseBXRIrIn8P2cf2FlSAOWU_vgV-s5EaqMgAADVvOirbrpheRVEdws49QtRJOz2vb53uFe1D2RiOxl4U9jrLsZMduM82IYFJnQJaqEVwbRvu-t-ng3iLu_i2Aq7KiXh6DR7A')">
+<div class="absolute inset-0 bg-on-surface/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-surface text-sm font-medium tracking-wide">Grand Arrival Lobby</span>
+</div>
+</div>
+<div class="h-96 bg-cover bg-center shadow-md relative group overflow-hidden md:-mt-8" data-alt="Infinity edge rooftop swimming pool overlooking the glittering metropolitan skyline at dusk, surrounded by teak loungers and private cabanas with warm ambient lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBygXZ3B6ys217YSSQKHNo0KdTn5c9GwiqLICwMiVlr8C7J_dK37o9kygfRMAZwyMtG7GAsf59A0CV58_IjGg_YwWjy7Gf1DxudQCz895GP4lHEHjqfarnxTf_R8p1WejgJ_-9Y1nygSHJutc6S5RqqZUUKD-376o8CgIGtUZilznapWWkFKnwhXHHzheVWTb_NmUB20oUS5tXIksOtF3W8Fcs-oBWJm-kO6zQ5QB0XNN-xyOeJXMjzpg')">
+<div class="absolute inset-0 bg-on-surface/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-surface text-sm font-medium tracking-wide">Rooftop Infinity Pool</span>
+</div>
+</div>
+<div class="h-96 bg-cover bg-center shadow-md relative group overflow-hidden" data-alt="Custom Italian gourmet kitchen featuring matte charcoal cabinetry, Calacatta gold marble waterfall island, integrated Miele appliances, and designer pendant lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwvNBhmQmSUMpcLDoEDlkfSlAmJd9EXzCOaMKcjnMp6Rfu0uQUNSxb8OZbkjrSQiG1sGh07MlnmX-UwCKG6nNO-mWkIj_wpxe36G7y9ltJd_40UMYurvq3hfZRRMR5IdvKAKru7rTqjxXuXd92j6Rn62lfIaFzbmEdL2xUXKELBjetx5g8EdGLd4KeeFge-Jx5UuranptThgI_uuGiOjPQuCamPl9lv7iNF1Us84tg_jv-jHdjIdRXcw')">
+<div class="absolute inset-0 bg-on-surface/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-surface text-sm font-medium tracking-wide">Bespoke Italian Kitchen</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Cinematic Video Tour -->
+<section class="bg-on-surface text-surface py-24 px-6 lg:px-12">
+<div class="max-w-5xl mx-auto text-center">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Cinematic Experience</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-8">Take a Virtual Walkthrough</h2>
+<div class="relative w-full aspect-video bg-surface-dim shadow-2xl flex items-center justify-center bg-cover bg-center" data-alt="Cinematic still from property video showing smooth drone glide past the glass facade of The Grand Horizon Residences at sunrise, transitioning into an opulent penthouse interior tour." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCK9k4juX9wd1j6GirW69a-f3aibsCcLRD3hRmlF5GlCJW_F06qsp3n9WIXa98zfqfbpZxJEGoi0FDoaC6s4lRp8QYNRV2wCuHD7xONBa2klaYqJDD-w6Aix32Cp94w5cCnVhHa-ukfWmYfb-YPbBbZnXepkUzmU27hzCg__h61j6nzHghVvso7q-pZy0yTiFI5uLoh4cqcSuGxwOb3Rl59XbLIxeZGhitdU5T6qXokfSiE1Umu4adfIg')">
+<div class="absolute inset-0 bg-on-surface/40 flex items-center justify-center">
+<button class="w-20 h-20 rounded-full bg-[#d4af37] text-on-surface flex items-center justify-center shadow-2xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl ml-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Property Overview -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Specifications</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">Engineering &amp; Design Metrics</h2>
+<p class="text-on-surface-variant text-sm">Built to rigorous international standards with sustainable innovations and elite structural integrity.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-surface-container p-8">
+<span class="text-xs text-on-surface-variant uppercase tracking-wider block mb-2">Square Footage</span>
+<div class="text-3xl font-light mb-4">3,200 – 8,500 <span class="text-sm font-normal text-on-surface-variant">sq ft</span></div>
+<p class="text-sm text-on-surface-variant">Expansive floor plates designed for maximum spatial flexibility and natural lighting.</p>
+</div>
+<div class="bg-surface-container p-8">
+<span class="text-xs text-on-surface-variant uppercase tracking-wider block mb-2">Ceiling Heights</span>
+<div class="text-3xl font-light mb-4">14 Feet <span class="text-sm font-normal text-on-surface-variant">clearance</span></div>
+<p class="text-sm text-on-surface-variant">Floor-to-ceiling acoustic glass amplifying volume and unobstructed horizons.</p>
+</div>
+<div class="bg-surface-container p-8">
+<span class="text-xs text-on-surface-variant uppercase tracking-wider block mb-2">Smart Integration</span>
+<div class="text-3xl font-light mb-4">Fully Automated</div>
+<p class="text-sm text-on-surface-variant">Integrated climate, lighting, security, and audio-visual control via encrypted touch panels.</p>
+</div>
+<div class="bg-surface-container p-8">
+<span class="text-xs text-on-surface-variant uppercase tracking-wider block mb-2">Sustainability</span>
+<div class="text-3xl font-light mb-4">LEED Gold</div>
+<p class="text-sm text-on-surface-variant">Advanced energy recovery systems, solar glass facades, and rain-water harvesting.</p>
+</div>
+</div>
+</section>
+<!-- 8. World-Class Amenities -->
+<section class="bg-surface-container py-24 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+<div>
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Exclusive Lifestyle</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight">World-Class Resident Amenities</h2>
+</div>
+<p class="text-on-surface-variant max-w-md mt-4 md:mt-0 text-sm">
+          Curated private facilities designed to cater to every facet of wellness, leisure, and professional discretion.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">airline_seat_recline_extra</span>
+<h3 class="text-xl font-medium mb-2">Rooftop Helipad</h3>
+<p class="text-sm text-on-surface-variant">On-demand private aviation transfer directly from the crown of the building.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">spa</span>
+<h3 class="text-xl font-medium mb-2">Private Wellness &amp; Spa</h3>
+<p class="text-sm text-on-surface-variant">Hydrotherapy pools, sauna suites, and private treatment rooms staffed by holistic therapists.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">room_service</span>
+<h3 class="text-xl font-medium mb-2">24/7 White-Glove Concierge</h3>
+<p class="text-sm text-on-surface-variant">Dedicated butler service, private dining reservations, and personal asset management.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">wine_bar</span>
+<h3 class="text-xl font-medium mb-2">Private Wine Cellar</h3>
+<p class="text-sm text-on-surface-variant">Climate-controlled individual storage lockers and private reserve tasting salon.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<h3 class="text-xl font-medium mb-2">Technogym Fitness Suite</h3>
+<p class="text-sm text-on-surface-variant">State-of-the-art cardiovascular and strength training equipment with private yoga studios.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">local_parking</span>
+<h3 class="text-xl font-medium mb-2">Underground Valet Parking</h3>
+<p class="text-sm text-on-surface-variant">Secure, subterranean parking with automated charging stations and vehicle detailing bay.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Floor Plans & Residences -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Residency Tiers</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">Floor Plans &amp; Availability</h2>
+<p class="text-on-surface-variant text-sm">Select from ultra-exclusive penthouse collections, executive suites, and expansive duplex townhomes.</p>
+</div>
+<div class="flex justify-center gap-4 mb-12">
+<button class="px-6 py-3 text-sm font-semibold tracking-wider uppercase bg-primary text-on-primary transition-colors" id="btn-penthouse" onclick="switchTab('penthouse')">3-Bed Penthouses</button>
+<button class="px-6 py-3 text-sm font-semibold tracking-wider uppercase bg-surface-container text-on-surface hover:bg-surface-dim transition-colors" id="btn-executive" onclick="switchTab('executive')">2-Bed Executive</button>
+<button class="px-6 py-3 text-sm font-semibold tracking-wider uppercase bg-surface-container text-on-surface hover:bg-surface-dim transition-colors" id="btn-duplex" onclick="switchTab('duplex')">Duplex Townhomes</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-surface-container p-8 lg:p-12" id="tab-penthouse">
+<div>
+<span class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] text-xs font-bold uppercase tracking-widest inline-block mb-4">Only 2 Units Remaining</span>
+<h3 class="text-3xl font-light mb-4">The Crown Penthouse Collection</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+          Spanning the top 3 levels, featuring private rooftop sky terraces, personal infinity plunge pools, double-height living galleries, and 360-degree panoramic views.
+        </p>
+<ul class="space-y-3 mb-8 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#d4af37]">check</span> 8,500 sq ft interior + 2,000 sq ft terrace</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#d4af37]">check</span> Private glass elevator &amp; subterranean 4-car garage</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#d4af37]">check</span> Custom Italian Poliform kitchen &amp; Gaggenau appliances</li>
+</ul>
+<div class="text-3xl font-light mb-6">$14,500,000 <span class="text-xs text-on-surface-variant uppercase">Starting Price</span></div>
+<a class="inline-block bg-primary text-on-primary px-8 py-4 text-sm font-semibold tracking-wider uppercase hover:bg-primary/90 transition-colors" href="#enquiry">Reserve Penthouse</a>
+</div>
+<div class="h-[400px] bg-cover bg-center shadow-lg" data-alt="Architectural floor plan schematic overlay on a luxury penthouse living room showing open-concept layout, expansive terrace, and master suite wing." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzWG5reHnuoh3Uz4aa4Lj0iPAvfbFk8Wo2Oton5R6Zf5hiDFtGDpJMvCONzItBQmbaTsqDlFYb79CzArK6WXqQ0VkUAEH9UO982qHbolwq1yLTEA6jlVuP7cb2YwTi9HWa1MwzAD186xQfwOmg974wbvcctuKqSPt5AwK6r5lnGfP1NwvmjzAT0eMUze82_VTQiH2Bz9zMAw-FmiA6Y92TEGIjPkPF7A1uXnBjoh5yRcOMasrpwfIweA')"></div>
+</div>
+<div class="hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-surface-container p-8 lg:p-12" id="tab-executive">
+<div>
+<span class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] text-xs font-bold uppercase tracking-widest inline-block mb-4">4 Units Available</span>
+<h3 class="text-3xl font-light mb-4">Executive Corner Suites</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+          Designed for the discerning professional or pied-à-terre owner. Dual master suites, expansive corner living area, and refined custom millwork throughout.
+        </p>
+<ul class="space-y-3 mb-8 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#d4af37]">check</span> 3,200 sq ft refined living space</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#d4af37]">check</span> Floor-to-ceiling soundproof acoustic glass</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#d4af37]">check</span> Direct access to wellness spa &amp; concierge</li>
+</ul>
+<div class="text-3xl font-light mb-6">$5,800,000 <span class="text-xs text-on-surface-variant uppercase">Starting Price</span></div>
+<a class="inline-block bg-primary text-on-primary px-8 py-4 text-sm font-semibold tracking-wider uppercase hover:bg-primary/90 transition-colors" href="#enquiry">Reserve Executive Suite</a>
+</div>
+<div class="h-[400px] bg-cover bg-center shadow-lg" data-alt="Sophisticated 2-bedroom executive suite interior floor plan rendering with minimalist furnishings and panoramic city window views." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJVGbJqk158XZH_9WDugzUiGboQ1bp4X4zHD1MhJMGebqj5pP3HGEd7-beAfQ-yEqE6Ex-RJ0EYY10cf7YMGxK1OQM1bNja6cwZ5absJZc_Vh0Z7B-UBtbF-_Hxv_yH7mZv09sd8EAT1lPT2H1SsZSmyPGbXi2qh_4JjrFoO5tZeRrFdExV0yfAEQS7Ft1LHj7rQ1ob-yqnWfh9SKtLjwmX2Cmn6tTp4T2JNhO0VTIToaI1pIJnkrflw')"></div>
+</div>
+<div class="hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-surface-container p-8 lg:p-12" id="tab-duplex">
+<div>
+<span class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] text-xs font-bold uppercase tracking-widest inline-block mb-4">2 Units Available</span>
+<h3 class="text-3xl font-light mb-4">Garden Duplex Townhomes</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+          Offering the feel of a private estate with the security and services of a luxury high-rise. Includes private sunken courtyard gardens and double-height entertaining spaces.
+        </p>
+<ul class="space-y-3 mb-8 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#d4af37]">check</span> 5,400 sq ft interior + private landscaped garden</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#d4af37]">check</span> Direct street and lobby access</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#d4af37]">check</span> Integrated smart home automation &amp; wine vault</li>
+</ul>
+<div class="text-3xl font-light mb-6">$8,900,000 <span class="text-xs text-on-surface-variant uppercase">Starting Price</span></div>
+<a class="inline-block bg-primary text-on-primary px-8 py-4 text-sm font-semibold tracking-wider uppercase hover:bg-primary/90 transition-colors" href="#enquiry">Reserve Townhome</a>
+</div>
+<div class="h-[400px] bg-cover bg-center shadow-lg" data-alt="Duplex townhome floor plan rendering featuring a private garden courtyard and double-height interior volumes." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMkRtEDw2RZGLAT9_lLy2-KFd7A8YnJs15dj-n2bdT8SUacNxbLiGRKnvcMpIjr4UkMyxTW7TXv2Fbl338beK_sZjfoM5z9tCPtuh63dqbuuD4VOHBdNXXqQW1eNABSIgyQWZ40WdIAjD6TijGFKpQ13eTVhl--1wDn33u5FRtPxcy7hmVRV1aQzCMCYS2sFm5zNcP-C1nhn-K0CvcP4kv-xum20pMs7_PBAgpMe6ND-glEQxU3cPt2g')"></div>
+</div>
+</section>
+<!-- 10. Architectural Specifications -->
+<section class="bg-surface-container py-24 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Uncompromising Quality</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">Elite Architectural Specifications</h2>
+<p class="text-on-surface-variant text-sm">Sourced globally from the finest artisans, fabricators, and design houses.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">texture</span>
+<h3 class="text-xl font-medium mb-2">Premium Italian Marble</h3>
+<p class="text-sm text-on-surface-variant">Book-matched Calacatta and Nero Marquina slab marble featured throughout bathrooms and foyer floors.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">kitchen</span>
+<h3 class="text-xl font-medium mb-2">German Miele Appliances</h3>
+<p class="text-sm text-on-surface-variant">State-of-the-art integrated induction cooktops, steam ovens, professional wine climate cabinets, and dishwashers.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">shield</span>
+<h3 class="text-xl font-medium mb-2">Triple-Glazed Acoustic Glass</h3>
+<p class="text-sm text-on-surface-variant">Custom german-engineered laminated glass ensuring complete thermal insulation and acoustic serenity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. Neighborhood Benefits -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">The Surroundings</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-6">Culture, Commerce, and Prestige</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+          The Grand Horizon is anchored in the city's most coveted neighborhood. Residents enjoy immediate proximity to exclusive private galleries, high-end haute couture flagships, and world-class performing arts centers.
+        </p>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#d4af37]"></span> 3 minutes to Private Members Social Clubs</li>
+<li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#d4af37]"></span> 5 minutes to High-End Designer Flagships (Hermès, Cartier, Chanel)</li>
+<li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#d4af37]"></span> 10 minutes to International Yacht Marina &amp; Harbour</li>
+</ul>
+</div>
+<div class="h-[450px] bg-cover bg-center shadow-xl" data-alt="Vibrant upscale metropolitan street scene outside a luxury district with high-end boutiques, elegant landscaping, and pedestrians in smart attire." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrYAzs2lO6zJj1j9hueY4nUJIILyW8gouVUIKTn2_gSOPJ6IERxqlGrH1LuY9wkQ47vRYGZ0oXKofzhxoBOP8OSyDGG4Qom7TnjsBrSgYw4H_Ya1FpaeVnIniqXv-K01UTMK9ppGEfU_gSG5DhQUiHw2iQELbX9c8_2_kK1APR4_MoGeJrGPSFGPqVrOmV6Jomr9NI7g_Y8BmTbUvkaMIHS_BMnPfMLLb2xg8uiiRqXUJm-lbzcgTKPg')"></div>
+</div>
+</section>
+<!-- 12. Transport Accessibility -->
+<section class="bg-surface-container py-24 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto text-center max-w-3xl mb-16">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Seamless Transit</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">Effortless Global Connectivity</h2>
+<p class="text-on-surface-variant text-sm">Whether by air, land, or private chauffeur, arrival and departure are engineered for absolute discretion and ease.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+<div class="bg-surface p-8 shadow-sm text-center">
+<span class="material-symbols-outlined text-4xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">timer</span>
+<h3 class="text-xl font-medium mb-2">15 Mins to Airport</h3>
+<p class="text-sm text-on-surface-variant">Direct express transit corridor connecting directly to international private aviation hubs.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm text-center">
+<span class="material-symbols-outlined text-4xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">directions_car</span>
+<h3 class="text-xl font-medium mb-2">Private Chauffeur Fleet</h3>
+<p class="text-sm text-on-surface-variant">On-demand house-managed luxury vehicles for downtown executive appointments.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm text-center">
+<span class="material-symbols-outlined text-4xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">local_parking</span>
+<h3 class="text-xl font-medium mb-2">Underground Valet</h3>
+<p class="text-sm text-on-surface-variant">Secure biometric-secured subterranean arrival bay with instant vehicle retrieval.</p>
+</div>
+</div>
+</section>
+<!-- 13. Developer & Architect Credentials -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="h-[450px] bg-cover bg-center shadow-xl" data-alt="Portrait architectural shot of world-renowned award-winning chief architect standing in a minimalist concrete and glass design studio overlooking a skyscraper model." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbmIUaPtNlR-MHAWSVzqSXZafa6f1rSN4p3m47z2xF_QEfcTmSxd3gI-vuGGtqYIt9dtydJiJT4cA0Wk6ShkC6K1ojp2i4S099GpH8bNRvI-tlZoLq-d_YQFHS8Fe55Nky3vFHIMJYF6To6B9ehVPpc-xHQOOuhRc5J9G74FLzBclgka3zkRgqQ5GKJ6t0h2EXM2EZnJ4OOLMxxifj7cXZcMyyI7H9FjjXxTVEjxSjcBGxMsbWv5AlpQ')"></div>
+<div>
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Legacy of Excellence</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-6">Visionary Development &amp; Design Team</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+          Developed by Horizon Capital Group in collaboration with award-winning Pritzker Prize-winning architects. With over three decades of landmark urban projects across London, New York, Tokyo, and Singapore.
+        </p>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+          Every project represents an uncompromising commitment to structural longevity, avant-garde spatial aesthetics, and enduring capital value.
+        </p>
+<div class="grid grid-cols-2 gap-6">
+<div>
+<div class="text-2xl font-light mb-1">30+ Years</div>
+<div class="text-xs text-on-surface-variant uppercase">Industry Leadership</div>
+</div>
+<div>
+<div class="text-2xl font-light mb-1">$4.2B+</div>
+<div class="text-xs text-on-surface-variant uppercase">Delivered Assets</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 14. Documentation & Title Details -->
+<section class="bg-surface-container py-24 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Absolute Security</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">Verified Legal &amp; Title Documentation</h2>
+<p class="text-on-surface-variant text-sm">Full legal transparency and institutional escrow protection for every acquisition.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">verified</span>
+<h3 class="text-xl font-medium mb-2">Governor's Consent</h3>
+<p class="text-sm text-on-surface-variant">Fully ratified land title documentation cleared by state ministry of lands.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">description</span>
+<h3 class="text-xl font-medium mb-2">Certificate of Occupancy</h3>
+<p class="text-sm text-on-surface-variant">Unencumbered master C of O held directly by development holding entity.</p>
+</div>
+<div class="bg-surface p-8 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-[#d4af37] mb-4" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<h3 class="text-xl font-medium mb-2">Secure Escrow Structure</h3>
+<p class="text-sm text-on-surface-variant">All deposits held in Tier-1 international escrow accounts pending milestone completion.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 15. Flexible Payment Plans -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Acquisition Structure</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">Flexible Payment Structures</h2>
+<p class="text-on-surface-variant text-sm">Tailored financial structuring designed in partnership with premier private banking institutions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8 border-t-2 border-[#d4af37]">
+<span class="text-xs font-bold uppercase tracking-widest text-[#d4af37] block mb-2">Phase One</span>
+<div class="text-3xl font-light mb-4">30% Deposit</div>
+<p class="text-sm text-on-surface-variant mb-6">Initial reservation and exchange of contracts held securely in escrow.</p>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li>• Immediate allocation</li>
+<li>• Legal contract execution</li>
+</ul>
+</div>
+<div class="bg-surface-container p-8 border-t-2 border-[#d4af37]">
+<span class="text-xs font-bold uppercase tracking-widest text-[#d4af37] block mb-2">Phase Two</span>
+<div class="text-3xl font-light mb-4">24 Months</div>
+<p class="text-sm text-on-surface-variant mb-6">Spread balance across structured quarterly construction milestones.</p>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li>• Zero interest installments</li>
+<li>• Milestone-linked releases</li>
+</ul>
+</div>
+<div class="bg-surface-container p-8 border-t-2 border-[#d4af37]">
+<span class="text-xs font-bold uppercase tracking-widest text-[#d4af37] block mb-2">Phase Three</span>
+<div class="text-3xl font-light mb-4">Private Mortgage</div>
+<p class="text-sm text-on-surface-variant mb-6">Exclusive private banking mortgage partnerships with preferential interest rates.</p>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li>• Up to 70% LTV financing</li>
+<li>• Dedicated private banker</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 16. Available Units Status -->
+<section class="bg-on-surface text-surface py-20 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-2 block">Real-Time Inventory</span>
+<h2 class="text-3xl font-light">Limited Availability Status</h2>
+<p class="text-surface-container text-sm mt-2">Due to high demand from international private funds, inventory is strictly limited.</p>
+</div>
+<div class="flex items-center gap-8 bg-surface/10 backdrop-blur-md px-8 py-6 border border-surface/20">
+<div>
+<div class="text-4xl font-light text-[#d4af37]">08</div>
+<div class="text-xs uppercase tracking-wider text-surface-container">Units Remaining</div>
+</div>
+<div class="h-10 w-px bg-surface/20"></div>
+<div>
+<div class="text-4xl font-light text-surface">45</div>
+<div class="text-xs uppercase tracking-wider text-surface-container">Total Residences</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 17. Exclusive Viewing Process -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Confidential Protocol</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">The 4-Step Private Viewing Procedure</h2>
+<p class="text-on-surface-variant text-sm">To ensure absolute discretion and security for all prospective buyers, our viewing protocol is strictly confidential.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="bg-surface-container p-8">
+<div class="text-2xl font-light text-[#d4af37] mb-4">01</div>
+<h3 class="text-lg font-medium mb-2">Initial Inquiry</h3>
+<p class="text-sm text-on-surface-variant">Submit your credentials and preferred consultation window via our secure portal.</p>
+</div>
+<div class="bg-surface-container p-8">
+<div class="text-2xl font-light text-[#d4af37] mb-4">02</div>
+<h3 class="text-lg font-medium mb-2">Verification</h3>
+<p class="text-sm text-on-surface-variant">Our private client director conducts a brief preliminary qualification call.</p>
+</div>
+<div class="bg-surface-container p-8">
+<div class="text-2xl font-light text-[#d4af37] mb-4">03</div>
+<h3 class="text-lg font-medium mb-2">Private Itinerary</h3>
+<p class="text-sm text-on-surface-variant">Receive a bespoke private viewing itinerary and chauffeur dispatch details.</p>
+</div>
+<div class="bg-surface-container p-8">
+<div class="text-2xl font-light text-[#d4af37] mb-4">04</div>
+<h3 class="text-lg font-medium mb-2">Private Tour</h3>
+<p class="text-sm text-on-surface-variant">Experience the scale and views first-hand at the private sales gallery.</p>
+</div>
+</div>
+</section>
+<!-- 18. Enquiry & Reservation Form -->
+<section class="bg-surface-container py-24 px-6 lg:px-12" id="enquiry">
+<div class="max-w-4xl mx-auto bg-surface p-8 lg:p-16 shadow-xl">
+<div class="text-center max-w-xl mx-auto mb-12">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Private Consultation</span>
+<h2 class="text-3xl font-light tracking-tight mb-4">Schedule Your Private Viewing</h2>
+<p class="text-on-surface-variant text-sm">Complete the confidential form below and our Senior Director of Sales will contact you within 2 hours.</p>
+</div>
+<form class="space-y-6" onsubmit="handleFormSubmit(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-2">Full Name</label>
+<input class="w-full h-12 bg-surface-container px-4 text-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Lord / Lady / Mr. John Doe" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-2">Email Address</label>
+<input class="w-full h-12 bg-surface-container px-4 text-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="john.doe@familyoffice.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-2">Phone Number</label>
+<input class="w-full h-12 bg-surface-container px-4 text-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="+1 (555) 019-2834" required="" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-2">Budget Tier</label>
+<select class="w-full h-12 bg-surface-container px-4 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Executive Suites ($5.8M+)</option>
+<option>Duplex Townhomes ($8.9M+)</option>
+<option>Crown Penthouses ($14.5M+)</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-2">Preferred Viewing Date</label>
+<input class="w-full h-12 bg-surface-container px-4 text-sm focus:outline-none focus:ring-1 focus:ring-primary" required="" type="date"/>
+</div>
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-2">Preferred Time</label>
+<select class="w-full h-12 bg-surface-container px-4 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Morning (10:00 AM - 12:00 PM)</option>
+<option>Afternoon (02:00 PM - 04:00 PM)</option>
+<option>Evening Sunset Tour (05:00 PM - 07:00 PM)</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary h-14 text-sm font-semibold tracking-wider uppercase hover:bg-primary/90 transition-colors" type="submit">
+          Secure Private Consultation
+        </button>
+<div class="hidden text-center text-tertiary font-medium text-sm pt-4" id="form-success">
+          Thank you. Your confidential consultation request has been received. Our Director of Sales will reach out shortly.
+        </div>
+</form>
+</div>
+</section>
+<!-- 19. WhatsApp Instant CTA -->
+<div class="fixed bottom-8 right-8 z-50">
+<a class="flex items-center gap-3 bg-[#198038] text-on-tertiary px-6 py-4 shadow-2xl hover:scale-105 transition-transform rounded-full" href="https://wa.me/" target="_blank">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="text-sm font-semibold tracking-wider uppercase">WhatsApp Concierge</span>
+</a>
+</div>
+<!-- 20. FAQ & Closing Footer -->
+<section class="py-24 px-6 lg:px-12 max-w-5xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold tracking-widest text-[#d4af37] uppercase mb-3 block">Client Inquiries</span>
+<h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-6">
+<div class="bg-surface-container p-6">
+<h3 class="text-lg font-medium mb-2">What are the estimated monthly service charges?</h3>
+<p class="text-sm text-on-surface-variant">Service charges are calculated at $1.85 per square foot, covering 24/7 concierge, valet, security, structural maintenance, and amenity upkeep.</p>
+</div>
+<div class="bg-surface-container p-6">
+<h3 class="text-lg font-medium mb-2">Are pets permitted within the residences?</h3>
+<p class="text-sm text-on-surface-variant">Yes, The Grand Horizon Residences maintain a pet-friendly policy with dedicated grooming and walking facilities on-site.</p>
+</div>
+<div class="bg-surface-container p-6">
+<h3 class="text-lg font-medium mb-2">Can residences be managed for rental yields when vacant?</h3>
+<p class="text-sm text-on-surface-variant">Owners may opt into our exclusive white-glove rental management program catering to visiting corporate executives and diplomats.</p>
+</div>
+</div>
+</section>
+<script>
+    function switchTab(type) {
+      document.getElementById('tab-penthouse').classList.add('hidden');
+      document.getElementById('tab-executive').classList.add('hidden');
+      document.getElementById('tab-duplex').classList.add('hidden');
+      
+      document.getElementById('btn-penthouse').className = 'px-6 py-3 text-sm font-semibold tracking-wider uppercase bg-surface-container text-on-surface hover:bg-surface-dim transition-colors';
+      document.getElementById('btn-executive').className = 'px-6 py-3 text-sm font-semibold tracking-wider uppercase bg-surface-container text-on-surface hover:bg-surface-dim transition-colors';
+      document.getElementById('btn-duplex').className = 'px-6 py-3 text-sm font-semibold tracking-wider uppercase bg-surface-container text-on-surface hover:bg-surface-dim transition-colors';
+
+      document.getElementById('tab-' + type).classList.remove('hidden');
+      document.getElementById('btn-' + type).className = 'px-6 py-3 text-sm font-semibold tracking-wider uppercase bg-primary text-on-primary transition-colors';
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      document.getElementById('form-success').classList.remove('hidden');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6"><div class="text-sm text-on-surface-variant">© 2024 FunnelFlow Inc. Inspired by high-converting design systems.</div><div class="flex gap-6 text-sm text-on-surface-variant"><a class="hover:text-on-surface" href="#">Privacy</a><a class="hover:text-on-surface" href="#">Terms</a><a class="hover:text-on-surface" href="#">Support</a></div></div></footer><script>
+  function startCountdown() {
+    let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+    setInterval(() => {
+      if (totalSeconds > 0) totalSeconds--;
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }, 1000);
+  }
+  document.addEventListener('DOMContentLoaded', startCountdown);
+</script></body></html>

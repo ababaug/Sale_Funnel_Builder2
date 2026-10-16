@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#044317", "primary-fixed": "#d0e2ff", "on-primary-fixed-variant": "#0043ce", "surface-container-high": "#e0e0e0", "on-secondary": "#ffffff", "inverse-surface": "#393939", "on-tertiary": "#ffffff", "surface-container-highest": "#c6c6c6", "tertiary-fixed-dim": "#42be65", "surface-container": "#f4f4f4", "on-tertiary-fixed": "#022d0d", "primary-fixed-dim": "#78a9ff", "surface-tint": "#0f62fe", "tertiary-fixed": "#a7f0ba", "on-error": "#ffffff", "inverse-on-surface": "#f4f4f4", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-dim": "#e0e0e0", "surface-variant": "#f4f4f4", "outline": "#8d8d8d", "inverse-primary": "#78a9ff", "on-secondary-fixed-variant": "#525252", "outline-variant": "#e0e0e0", "on-secondary-container": "#525252", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#161616", "on-primary": "#ffffff", "on-background": "#161616", "surface": "#ffffff", "secondary": "#6f6f6f", "secondary-container": "#e0e0e0", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-primary-container": "#161616", "on-primary-fixed": "#001d6c", "on-error-container": "#750e13", "error": "#da1e28", "tertiary": "#198038", "on-surface-variant": "#525252", "background": "#ffffff", "tertiary-container": "#a7f0ba", "error-container": "#fff1f1", "primary": "#0f62fe", "secondary-fixed-dim": "#c6c6c6", "primary-container": "#d0e2ff", "on-tertiary-fixed-variant": "#044317" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><span class="text-xl font-headline font-bold tracking-tight uppercase text-on-surface">FUNNELFLOW</span><nav class="hidden md:flex items-center gap-8" data-active-classes="bg-primary-container text-on-primary-container font-bold px-3 py-1 rounded"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Templates</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-4"><a class="bg-primary text-on-primary px-4 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full bg-surface text-on-surface">
+<!-- Top Announcement Bar -->
+<div class="bg-surface-container-high py-2.5 px-4 text-center text-xs text-on-surface-variant flex items-center justify-center gap-3">
+<span class="bg-primary text-on-primary px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase">New Release</span>
+<span>FunnelAI Core v4.2 introduces zero-latency edge deployment and deterministic LLM guardrails.</span>
+<a class="text-primary font-semibold hover:underline flex items-center gap-1" href="#release-notes">Read release notes <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
+</div>
+<!-- Hero Section (Dark Mode theme override per Carbon Enterprise System) -->
+<section class="bg-inverse-surface text-inverse-on-surface py-24 px-6 lg:px-12 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#78a9ff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 bg-surface-container-high/20 px-3 py-1 rounded text-xs tracking-widest text-inverse-primary uppercase font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Enterprise Infrastructure Intelligence
+        </div>
+<h1 class="text-4xl lg:text-6xl font-headline font-bold tracking-tight text-white leading-tight">
+          Autonomous Cloud Infrastructure &amp; <span class="text-primary-fixed">Deterministic AI</span>
+</h1>
+<p class="text-lg text-surface-container-highest max-w-2xl font-light">
+          Scale enterprise workloads with self-healing Kubernetes clusters, predictive cost optimization, and enterprise-grade multi-region security out of the box.
+        </p>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="bg-primary text-on-primary px-6 py-3.5 text-sm font-semibold hover:bg-primary/90 transition-colors shadow-lg flex items-center gap-2" href="#deploy">
+            Deploy Enterprise Cluster <span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+<a class="bg-surface-container-high text-on-surface px-6 py-3.5 text-sm font-semibold hover:bg-surface-container-highest transition-colors flex items-center gap-2" href="#roi-calculator">
+            Calculate ROI <span class="material-symbols-outlined text-[18px]">monitoring</span>
+</a>
+</div>
+<div class="grid grid-cols-3 gap-6 pt-8 border-t border-outline/20">
+<div>
+<div class="text-2xl font-bold text-white">99.999%</div>
+<div class="text-xs text-surface-container-highest">Uptime SLA Guaranteed</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-white">&lt; 4ms</div>
+<div class="text-xs text-surface-container-highest">Global Edge Latency</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-white">SOC 2 Type II</div>
+<div class="text-xs text-surface-container-highest">Certified Security</div>
+</div>
+</div>
+</div>
+<!-- Live Throughput Telemetry Chart Widget -->
+<div class="lg:col-span-5 bg-inverse-surface border border-outline/30 p-6 shadow-2xl flex flex-col gap-6">
+<div class="flex items-center justify-between pb-4 border-b border-outline/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+<span class="text-sm font-bold text-white uppercase tracking-wider">Live Telemetry &amp; Throughput</span>
+</div>
+<span class="text-xs bg-tertiary/20 text-tertiary-fixed px-2 py-0.5 font-mono">NODE_ACTIVE</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs text-surface-container-highest">
+<span>Cluster CPU Load</span>
+<span class="font-mono text-white" id="cpu-load-val">42.8%</span>
+</div>
+<div class="w-full bg-surface-container-high/30 h-2 overflow-hidden">
+<div class="bg-primary h-full transition-all duration-500" id="cpu-bar" style="width: 42.8%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs text-surface-container-highest">
+<span>Memory Allocation (TB)</span>
+<span class="font-mono text-white">128.4 / 256 TB</span>
+</div>
+<div class="w-full bg-surface-container-high/30 h-2 overflow-hidden">
+<div class="bg-tertiary-fixed h-full" style="width: 52%;"></div>
+</div>
+</div>
+<!-- Inline SVG Mini Chart -->
+<div class="pt-2">
+<div class="text-xs text-surface-container-highest mb-2">Request Velocity (req/sec)</div>
+<svg class="w-full h-24 overflow-visible" viewbox="0 0 300 100">
+<path d="M 0,80 Q 50,20 100,50 T 200,30 T 300,10" fill="none" stroke="#78a9ff" stroke-width="2"></path>
+<path d="M 0,80 Q 50,20 100,50 T 200,30 T 300,10 L 300,100 L 0,100 Z" fill="#0f62fe" opacity="0.1"></path>
+</svg>
+</div>
+<div class="bg-surface-container-high/10 p-4 text-xs font-mono text-surface-container-highest flex items-center justify-between">
+<span>REGION: us-east-1 (Primary)</span>
+<span class="text-tertiary-fixed flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-ping"></span> Synchronized</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Enterprise Architecture & Security Modules (Tabs) -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto w-full">
+<div class="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-4">
+<h2 class="text-3xl font-headline font-bold text-on-surface">Unified Enterprise Architecture</h2>
+<p class="text-on-surface-variant text-sm">Modular infrastructure components engineered for extreme scale, automated governance, and granular auditing.</p>
+</div>
+<!-- Interactive Tab Navigation -->
+<div class="flex flex-wrap justify-center gap-2 mb-12 border-b border-outline-variant pb-4" id="arch-tabs">
+<button class="arch-tab px-6 py-3 text-sm font-semibold transition-all bg-primary text-on-primary" data-target="security" onclick="switchTab('security')">Cloud Security</button>
+<button class="arch-tab px-6 py-3 text-sm font-semibold transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-target="analytics" onclick="switchTab('analytics')">Automated Analytics</button>
+<button class="arch-tab px-6 py-3 text-sm font-semibold transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-target="billing" onclick="switchTab('billing')">Metered Billing</button>
+<button class="arch-tab px-6 py-3 text-sm font-semibold transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-target="workflow" onclick="switchTab('workflow')">Visual Workflow Designer</button>
+</div>
+<!-- Tab Content Panels -->
+<div class="bg-surface-container p-8 lg:p-12 transition-all">
+<div class="arch-panel grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="panel-security">
+<div class="flex flex-col gap-6">
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Module 01 / Security</span>
+<h3 class="text-2xl font-bold text-on-surface">Zero-Trust Network Architecture &amp; Continuous Auditing</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+            Protect mission-critical environments with hardware-enforced micro-segmentation, automated secret rotation, and real-time anomaly detection powered by deterministic machine learning models.
+          </p>
+<ul class="flex flex-col gap-3 text-sm text-on-surface">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Automated RBAC and Least-Privilege Provisioning</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> End-to-End Encryption (AES-256 at rest, TLS 1.3 in transit)</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Immutable Audit Logs for SOC 2, HIPAA, and GDPR compliance</li>
+</ul>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center text-xs font-mono text-on-surface-variant">
+<span>THREAT_MONITOR_STATUS</span>
+<span class="text-tertiary font-bold">SECURE (0 VIOLATIONS)</span>
+</div>
+<div class="w-full h-64 bg-cover bg-center rounded" data-alt="A high tech visualization of enterprise cloud security nodes and cryptographic verification keys glowing in blue and white on a dark interface background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDP9M1F6Oc2ujaD2hYER1f5wezZZeeBzPkqnxVdomGzGu8sjm-spMW8yUtZrqn0ogQg4e7Ceq_c0Iw-sthKLAHdMNxQFhQ9nslumLII2lV0XBPIuZza-Avr9YvCMaWeROKwD6P6Iorn2m0tTn38tZGrINA7E3r1KiqXJwL_2T8DBV13NiyGxyIDD_PRejD6IayrTBuD6P1cxIrJdQ0FrVQ1ZwRR2dBKqGO5KPzU0VRXxxbI5c97dDue9Q')"></div>
+</div>
+</div>
+<div class="arch-panel hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="panel-analytics">
+<div class="flex flex-col gap-6">
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Module 02 / Analytics</span>
+<h3 class="text-2xl font-bold text-on-surface">Real-Time Telemetry &amp; Predictive Resource Scaling</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+            Eliminate infrastructure bottlenecks with predictive autoscaling algorithms that analyze request patterns and provision compute instances milliseconds before traffic spikes occur.
+          </p>
+<ul class="flex flex-col gap-3 text-sm text-on-surface">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Sub-second metrics ingestion across multi-cloud clusters</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Custom alerting thresholds with PagerDuty &amp; Slack webhooks</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Cost attribution down to individual microservice containers</li>
+</ul>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center text-xs font-mono text-on-surface-variant">
+<span>PREDICTIVE_MODEL_ACCURACY</span>
+<span class="text-primary font-bold">99.4%</span>
+</div>
+<div class="w-full h-64 bg-cover bg-center rounded" data-alt="An advanced data analytics dashboard displaying interactive charts, throughput curves, and predictive scaling graphs in clean enterprise blue." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuConBypkGTlMebCdEddVtk3LBCcKf-RcZ70TEjhurO7nUwQfTR5DEasPOhgXnFEUVPHEjNFSr1w-vsJ5syGN344d95G3pQGlTAteGqmlKW9FUONT6zSkK-pWbM-m9rwT69v_ee9UPMuD3p-rdTUhzriEZGVJ5wAB9As_uGjMUh7bkClT_jscxs6Yv92nVkRmUIy5Iv7oGvbg7-uT8z17MTHpI30bOB-H1Tye3vFFTCtjN_nhY98z3Cy6Q')"></div>
+</div>
+</div>
+<div class="arch-panel hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="panel-billing">
+<div class="flex flex-col gap-6">
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Module 03 / Billing</span>
+<h3 class="text-2xl font-bold text-on-surface">Granular Metered Billing &amp; Usage Attribution</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+            Monetize your APIs and SaaS offerings with event-driven metered billing engines capable of processing millions of transactions per second with zero discrepancy.
+          </p>
+<ul class="flex flex-col gap-3 text-sm text-on-surface">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Dynamic pricing tiers and custom tiered volume discounts</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Automated invoicing and Stripe Enterprise synchronization</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Real-time usage portals for end customers</li>
+</ul>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center text-xs font-mono text-on-surface-variant">
+<span>BILLING_ENGINE_THROUGHPUT</span>
+<span class="text-tertiary font-bold">1.2M OPS / SEC</span>
+</div>
+<div class="w-full h-64 bg-cover bg-center rounded" data-alt="A modern enterprise billing and invoice breakdown interface showing transparent financial reconciliation charts." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBw_7O26Kj1uFHz9o-VudnCw9vbe4NG1zDSze4fwUmtza_bGyUbOeISciaMyTFl_sT_9h5plTnd1z8TpP_9cxkV5XOOcTvi65UhLrTFsJa2jZkhN2grpuVNmsY7i1bWElEjDKnXI3AC-9GmupPyn57ILyAwJnD4csXC_Xbl17hrZ-aP7m5L8ZDS8uHTi9OR_x9KRU3X4zwyxvVCj4kUBRuR9nYh6-sNDCcyCK-l10ivEz35EfqcvheWQ')"></div>
+</div>
+</div>
+<div class="arch-panel hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="panel-workflow">
+<div class="flex flex-col gap-6">
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Module 04 / Workflow</span>
+<h3 class="text-2xl font-bold text-on-surface">Visual Workflow Designer &amp; CI/CD Pipeline Automation</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+            Orchestrate complex cloud operations using our drag-and-drop visual canvas or declarative YAML configurations with built-in rollback capabilities.
+          </p>
+<ul class="flex flex-col gap-3 text-sm text-on-surface">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Drag-and-drop node logic with integrated error handling</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Native GitHub, GitLab, and Bitbucket webhooks</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> Automated staging preview environments per pull request</li>
+</ul>
+</div>
+<div class="bg-surface p-6 shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center text-xs font-mono text-on-surface-variant">
+<span>PIPELINE_STATUS</span>
+<span class="text-primary font-bold">ALL SYSTEMS OPERATIONAL</span>
+</div>
+<div class="w-full h-64 bg-cover bg-center rounded" data-alt="A node-based visual workflow designer canvas showing interconnected automation steps and pipeline nodes." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjI0rGbac1C3yTlpJCdQPupbrf3vvc7TicRUfJoNCVqTtS36d9KB-g6FV1DiG7r3ipe3UzHjO421voOsihVXAbPUYq58i4ZSgxd9GOEElW72grywAvh8c9ecK5UdHGVvpNSKomHt9_axoax7rChBw0l6Ru762FcrDEexhvSvrBvFa9GUCWsP492qOPaeGG4S_k655OPQcg2JtXxFW1xPEWR_IMA0SQ2gRVq7tEKjeu8GUefw4X4j7whw')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Financial Impact Model & ROI Calculator -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low w-full" id="roi-calculator">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 flex flex-col gap-6">
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Financial Impact Model</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface">Calculate Your Infrastructure ROI</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+          See how much your organization can save through automated resource provisioning, reduced cloud wastage, and accelerated developer velocity.
+        </p>
+<div class="flex flex-col gap-6 bg-surface p-8 shadow-sm">
+<!-- Slider 1 -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<span class="font-semibold text-on-surface">Monthly Cloud Spend</span>
+<span class="font-mono font-bold text-primary" id="spend-display">$50,000</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" id="spend-slider" max="500000" min="10000" oninput="updateROI()" step="5000" type="range" value="50000"/>
+</div>
+<!-- Slider 2 -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm">
+<span class="font-semibold text-on-surface">Engineering Team Size</span>
+<span class="font-mono font-bold text-primary" id="team-display">45 Engineers</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" id="team-slider" max="300" min="5" oninput="updateROI()" step="5" type="range" value="45"/>
+</div>
+</div>
+</div>
+<!-- ROI Output Box -->
+<div class="lg:col-span-6 bg-inverse-surface text-inverse-on-surface p-8 lg:p-12 shadow-2xl flex flex-col gap-8">
+<div class="flex items-center justify-between border-b border-outline/20 pb-4">
+<span class="text-xs font-mono text-surface-container-highest uppercase">Estimated Annual Impact</span>
+<span class="text-xs bg-tertiary/20 text-tertiary-fixed px-2 py-0.5 font-mono">VERIFIED MODEL</span>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="text-xs text-surface-container-highest mb-1">Projected Annual Savings</div>
+<div class="text-3xl lg:text-4xl font-bold text-primary-fixed font-mono" id="savings-output">$186,000</div>
+</div>
+<div>
+<div class="text-xs text-surface-container-highest mb-1">Efficiency Gain</div>
+<div class="text-3xl lg:text-4xl font-bold text-tertiary-fixed font-mono" id="efficiency-output">34.5%</div>
+</div>
+</div>
+<div class="bg-surface-container-high/10 p-4 text-xs text-surface-container-highest leading-relaxed">
+          *Calculated based on average 31% cloud infrastructure wastage reduction and 18 hours saved per engineer monthly through automated CI/CD pipelines.
+        </div>
+<a class="bg-primary text-on-primary py-4 text-center font-semibold text-sm hover:bg-primary/90 transition-colors" href="#demo">
+          Schedule Custom Financial Audit
+        </a>
+</div>
+</div>
+</section>
+<!-- Transparent Enterprise Tiers Pricing Section -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto w-full">
+<div class="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-4">
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Enterprise Pricing</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface">Transparent, Predictable Tiers</h2>
+<p class="text-on-surface-variant text-sm">Scale your infrastructure without unexpected data transfer fees or per-seat penalties.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<!-- Growth Tier -->
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div class="flex flex-col gap-6">
+<div>
+<div class="text-xs font-mono text-on-surface-variant uppercase mb-1">Growth</div>
+<h3 class="text-2xl font-bold text-on-surface">For Fast-Scaling Teams</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold font-mono text-on-surface">$1,499</span>
+<span class="text-xs text-on-surface-variant">/ month</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Essential autonomous scaling and security for growing cloud workloads.</p>
+<ul class="flex flex-col gap-3 text-sm text-on-surface pt-4 border-t border-outline-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-[18px]">check</span> Up to 50 Kubernetes Clusters</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-[18px]">check</span> Standard Security &amp; RBAC</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-[18px]">check</span> 99.9% Uptime SLA</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-[18px]">check</span> Email &amp; Slack Support</li>
+</ul>
+</div>
+<a class="mt-8 bg-surface text-on-surface border border-outline py-3 text-center text-sm font-semibold hover:bg-surface-container-high transition-colors" href="#growth">
+          Start Growth Trial
+        </a>
+</div>
+<!-- Scale Tier (Most Popular) -->
+<div class="bg-inverse-surface text-inverse-on-surface p-8 flex flex-col justify-between relative shadow-2xl scale-105 z-10">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+          Most Popular
+        </div>
+<div class="flex flex-col gap-6">
+<div>
+<div class="text-xs font-mono text-inverse-primary uppercase mb-1">Scale</div>
+<h3 class="text-2xl font-bold text-white">For Mission-Critical Ops</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold font-mono text-white">$3,999</span>
+<span class="text-xs text-surface-container-highest">/ month</span>
+</div>
+<p class="text-xs text-surface-container-highest leading-relaxed">Advanced deterministic AI analytics, multi-region failover, and dedicated support.</p>
+<ul class="flex flex-col gap-3 text-sm text-white pt-4 border-t border-outline/20">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check</span> Unlimited Kubernetes Clusters</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check</span> Advanced Zero-Trust Security</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check</span> 99.999% Uptime SLA Guaranteed</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check</span> Dedicated Solutions Architect</li>
+</ul>
+</div>
+<a class="mt-8 bg-primary text-on-primary py-3 text-center text-sm font-semibold hover:bg-primary/90 transition-colors" href="#scale">
+          Deploy Scale Tier
+        </a>
+</div>
+<!-- Infinite Tier -->
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div class="flex flex-col gap-6">
+<div>
+<div class="text-xs font-mono text-on-surface-variant uppercase mb-1">Infinite</div>
+<h3 class="text-2xl font-bold text-on-surface">For Global Enterprises</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold font-mono text-on-surface">Custom</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Tailored infrastructure, custom compliance certifications, and on-premise deployment options.</p>
+<ul class="flex flex-col gap-3 text-sm text-on-surface pt-4 border-t border-outline-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-[18px]">check</span> Custom Multi-Cloud Infrastructure</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-[18px]">check</span> Dedicated On-Premise Air-Gapped Nodes</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-[18px]">check</span> Custom SLA &amp; 24/7 Phone Support</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-[18px]">check</span> Executive Business Reviews</li>
+</ul>
+</div>
+<a class="mt-8 bg-surface text-on-surface border border-outline py-3 text-center text-sm font-semibold hover:bg-surface-container-high transition-colors" href="#contact">
+          Contact Enterprise Sales
+        </a>
+</div>
+</div>
+</section>
+<!-- Verified Engineering Leaders Testimonial Grid -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low w-full">
+<div class="max-w-7xl mx-auto flex flex-col gap-16">
+<div class="text-center max-w-3xl mx-auto flex flex-col gap-4">
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Social Proof</span>
+<h2 class="text-3xl font-headline font-bold text-on-surface">Trusted by Engineering Leaders</h2>
+<p class="text-on-surface-variant text-sm">See how CTOs and VP of Engineering teams rely on FunnelAI for mission-critical reliability.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-surface p-8 shadow-sm flex flex-col justify-between gap-6">
+<p class="text-sm text-on-surface leading-relaxed">
+            "FunnelAI cut our cloud infrastructure costs by 34% within the first month while simultaneously eliminating our on-call paging fatigue."
+          </p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Portrait of an enterprise technology executive in a modern corporate office." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0L4hvOdIPEdN7X6TTSrC1GK7tR0vU4_LYXtmvUzcxApMC64BUjVqx5EbL-teDnWn2-U6b1wOFn64GpniQjKSLGY8wvLEPt_5EryrUs-oW40yIlXd8hgHmLEryb0JqmJnxOBAYd0s4vASqm-xszxOn8R1A6TKmbLcgdlsKnEpQJBmCKKoJaXMsqvpop8yaz7RcpwYP030ordxRCTKEKKVojXAVvaHgRKYDYZUGAJwr3t0rrjo5rQZxtA')"></div>
+<div>
+<div class="text-sm font-bold text-on-surface">Dr. Marcus Vance</div>
+<div class="text-xs text-on-surface-variant">CTO, Apex Financial Systems</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface p-8 shadow-sm flex flex-col justify-between gap-6">
+<p class="text-sm text-on-surface leading-relaxed">
+            "The deterministic AI guardrails give us absolute confidence in automated scaling. We haven't had a single unhandled traffic spike since migration."
+          </p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Portrait of a female engineering director smiling in front of server racks." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClclVaU8cqS-mqD7shxbKJGGhyfkn7qAjAh53ZuL6SyJkQXbZIv-mm7oefG1WwyB5KnlGOdkM9xweDPZAr24qJFNkZ0yNOgHj9Xe5DMSp8c6_XbXerhX2PptBVxRlK_Wb-EJQb1jmH7eDR7UYUAIOi72j8AkuPaZLpwTVnKlK4jvOG05OqdxG0bW4lyP3xs0PO_DhdjgR_OkL7m5cyJR6VCVLssnbw5x9W2Uef-SIBscF6Y175AsWPtQ')"></div>
+<div>
+<div class="text-sm font-bold text-on-surface">Elena Rostova</div>
+<div class="text-xs text-on-surface-variant">VP of Infrastructure, CloudScale</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface p-8 shadow-sm flex flex-col justify-between gap-6">
+<p class="text-sm text-on-surface leading-relaxed">
+            "Deployment velocity increased by 400%. Our developers push straight to production knowing the automated CI/CD pipeline catches anomalies instantly."
+          </p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Portrait of a software architect in a tech startup workspace." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkH7Xxs3r-vzNmyQKHfBwPDZ1BWzofVAa2usf295h5yK1FYIjMHC3mp7jU9qzktbusvpk46_RpoLLFVQ_Ou59EqkZ4RPbVS8z8bX8vQg_RdoQEACgn913Rv_SoIzpE80KdKt6Ui7Lme39iEL1cgz76hCanXyWN0w1JZBuewOkpkugaDM_0PxpBCArNedEqicpnsAXk86XgcPWxAUr5QkL6bwZ8FjykFEMaPrf3RR5wJ33I_RHvrwcxUA')"></div>
+<div>
+<div class="text-sm font-bold text-on-surface">Liam Chen</div>
+<div class="text-xs text-on-surface-variant">Head of Platform, NexaTech</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comprehensive FAQ Accordion for Enterprise Buyers -->
+<section class="py-24 px-6 lg:px-12 max-w-4xl mx-auto w-full">
+<div class="text-center mb-16 flex flex-col gap-4">
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">FAQ</span>
+<h2 class="text-3xl font-headline font-bold text-on-surface">Frequently Asked Questions</h2>
+<p class="text-on-surface-variant text-sm">Everything you need to know about security, migration, and enterprise deployment.</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container overflow-hidden">
+<button class="w-full p-6 text-left flex justify-between items-center font-semibold text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleFaq(this)">
+<span>How long does a typical enterprise migration take?</span>
+<span class="material-symbols-outlined transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+          Most enterprise migrations are completed within 5 to 10 business days. Our dedicated Solutions Architects work alongside your platform engineering team to ensure zero downtime during cluster transition.
+        </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container overflow-hidden">
+<button class="w-full p-6 text-left flex justify-between items-center font-semibold text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleFaq(this)">
+<span>What compliance certifications does FunnelAI hold?</span>
+<span class="material-symbols-outlined transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+          FunnelAI is fully SOC 2 Type II certified, HIPAA compliant, and GDPR ready. All data is encrypted at rest using AES-256 and in transit via TLS 1.3 with customer-managed encryption keys (CMEK) available.
+        </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container overflow-hidden">
+<button class="w-full p-6 text-left flex justify-between items-center font-semibold text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleFaq(this)">
+<span>Can FunnelAI be deployed on-premise or in air-gapped environments?</span>
+<span class="material-symbols-outlined transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+          Yes. Our Infinite Enterprise tier supports custom on-premise deployments, hybrid cloud architectures, and fully air-gapped environments with localized LLM inference engines.
+        </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-surface-container overflow-hidden">
+<button class="w-full p-6 text-left flex justify-between items-center font-semibold text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleFaq(this)">
+<span>How does the predictive autoscaling algorithm work?</span>
+<span class="material-symbols-outlined transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+          Our deterministic AI models analyze historical traffic patterns, time-series metrics, and real-time request velocity to forecast load surges and proactively provision compute resources up to 300ms before traffic hits your endpoints.
+        </div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript Scripts -->
+<script>
+    // Tab switching functionality
+    function switchTab(target) {
+      document.querySelectorAll('.arch-tab').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      document.querySelector(`[data-target="${target}"]`).classList.remove('bg-surface-container', 'text-on-surface');
+      document.querySelector(`[data-target="${target}"]`).classList.add('bg-primary', 'text-on-primary');
+
+      document.querySelectorAll('.arch-panel').forEach(panel => panel.classList.add('hidden'));
+      document.getElementById(`panel-${target}`).classList.remove('hidden');
+    }
+
+    // ROI Calculator logic
+    function updateROI() {
+      const spend = parseInt(document.getElementById('spend-slider').value);
+      const team = parseInt(document.getElementById('team-slider').value);
+      
+      document.getElementById('spend-display').textContent = '$' + spend.toLocaleString();
+      document.getElementById('team-display').textContent = team + ' Engineers';
+
+      // Estimated savings calculation formula
+      const annualSpend = spend * 12;
+      const savings = Math.round(annualSpend * 0.31);
+      const efficiency = (25 + (team * 0.2)).toFixed(1);
+
+      document.getElementById('savings-output').textContent = '$' + savings.toLocaleString();
+      document.getElementById('efficiency-output').textContent = efficiency + '%';
+    }
+
+    // FAQ Accordion toggle
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.material-symbols-outlined');
+      
+      content.classList.toggle('hidden');
+      icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+
+    // Simulated live telemetry updates
+    setInterval(() => {
+      const randomLoad = (40 + Math.random() * 15).toFixed(1);
+      const cpuVal = document.getElementById('cpu-load-val');
+      const cpuBar = document.getElementById('cpu-bar');
+      if (cpuVal && cpuBar) {
+        cpuVal.textContent = randomLoad + '%';
+        cpuBar.style.width = randomLoad + '%';
+      }
+    }, 3000);
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6"><div class="text-sm text-on-surface-variant">© 2024 FunnelFlow Inc. Inspired by high-converting design systems.</div><div class="flex gap-6 text-sm text-on-surface-variant"><a class="hover:text-on-surface" href="#">Privacy</a><a class="hover:text-on-surface" href="#">Terms</a><a class="hover:text-on-surface" href="#">Support</a></div></div></footer><script>
+  function startCountdown() {
+    let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+    setInterval(() => {
+      if (totalSeconds > 0) totalSeconds--;
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }, 1000);
+  }
+  document.addEventListener('DOMContentLoaded', startCountdown);
+</script></body></html>

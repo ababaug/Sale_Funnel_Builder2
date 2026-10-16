@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-background": "#171b26", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#005236", "surface-dim": "#d7d9e8", "secondary-fixed-dim": "#b4c5ff", "on-tertiary-fixed": "#002113", "primary-fixed-dim": "#c3c0ff", "on-error": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed-variant": "#3323cc", "on-surface": "#171b26", "on-secondary": "#ffffff", "tertiary-container": "#006e4b", "on-surface-variant": "#464555", "on-tertiary-container": "#67f4b7", "on-secondary-fixed": "#00174b", "surface-container": "#ebedfc", "outline-variant": "#c7c4d8", "secondary-container": "#316bf3", "outline": "#777587", "surface-bright": "#faf8ff", "on-tertiary": "#ffffff", "error": "#ba1a1a", "on-secondary-container": "#fefcff", "surface-tint": "#4d44e3", "secondary": "#0051d5", "surface-container-low": "#f2f3ff", "inverse-on-surface": "#eef0ff", "tertiary-fixed": "#6ffbbe", "primary-container": "#4f46e5", "surface": "#faf8ff", "tertiary": "#005338", "primary-fixed": "#e2dfff", "background": "#faf8ff", "inverse-primary": "#c3c0ff", "secondary-fixed": "#dbe1ff", "on-secondary-fixed-variant": "#003ea8", "surface-variant": "#dfe2f1", "surface-container-lowest": "#ffffff", "inverse-surface": "#2c303b", "surface-container-highest": "#dfe2f1", "primary": "#3525cd", "on-primary-fixed": "#0f0069", "tertiary-fixed-dim": "#4edea3", "on-primary-container": "#dad7ff", "on-primary": "#ffffff", "surface-container-high": "#e5e7f6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-desktop": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "margin-tablet": "1.5rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "margin": "1rem" }, "fontFamily": { "headline-xl-mobile": [ "Plus Jakarta Sans" ], "body-lg": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "title-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "label-md": [ "Inter" ], "metric-display": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "title-sm": [ "Inter" ], "label-sm": [ "Inter" ] }, "fontSize": { "headline-xl-mobile": [ "2rem", { "lineHeight": "1.2", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-md": [ "1.5rem", { "lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-xl": [ "3rem", { "lineHeight": "1.15", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "body-md": [ "0.9375rem", { "lineHeight": "1.55", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "title-md": [ "1rem", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "0.8125rem", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-lg-mobile": [ "1.625rem", { "lineHeight": "1.25", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "1.25rem", { "lineHeight": "1.35", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "label-md": [ "0.8125rem", { "lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500" } ], "metric-display": [ "1.875rem", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-lg": [ "2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "title-sm": [ "0.875rem", { "lineHeight": "1.4", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "label-sm": [ "0.6875rem", { "lineHeight": "1", "letterSpacing": "0.04em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50"><div class="w-full h-16 px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="FunnelCraft AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WgOPlLogJzSL4FLt7-k0F8RSuFLSlTlIbIhRrp8IecXs0EsnXkhQd6uj30f2gfsuPAMts1oiGSXHvVLM1wOulPrLuTH4E8ti4JLpybJB2In4u1_BBQ0DPBV4FQwO_e0jjsIk-WKyQ_5JI5tlXa3bt2RYMHuu2LKG6svkTaMbTT56dTpEhPub_DgciClppaLsPyeLJv4bvXReh8S-40GcDkRn2_N1Ya5yxUrauWan68Hm-bn2aAPQHv328"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">FunnelCraft<span class="text-primary">.ai</span></span></div><div class="h-5 w-px bg-surface-variant hidden md:block"></div><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors"><span class="material-symbols-outlined text-outline text-lg">storefront</span><span class="font-title-sm text-title-sm">AcroHealth Bio-Lab (NGN)</span><span class="material-symbols-outlined text-outline text-base">expand_more</span></button><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wide">Pro Tier - Active</span></div></div><div class="flex items-center gap-space-md flex-1 max-w-xl mx-space-md hidden lg:flex"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span><input class="w-full h-10 pl-10 pr-16 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" placeholder="Search funnels, transactions, telemetry..." type="text"/><div class="absolute right-2.5 top-1/2 -translate-y-1/2 flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><kbd class="font-sans">⌘</kbd><kbd class="font-sans">K</kbd></div></div></div><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-xs px-space-md py-2 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary transition-all shadow-sm" data-path="funnel-studio-&amp;-wizard" href="#"><span class="material-symbols-outlined text-base">add</span><span class="hidden sm:inline">Create New Funnel</span></a><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="h-5 w-px bg-surface-variant hidden sm:block"></div><button class="flex items-center gap-space-xs p-1 rounded-full hover:bg-surface-container-low transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl6qCQcwpsCoMxtNP83LWwpO_Gw4u8N6KoTYvWtTX2knMe9SgIzXehL4nVZ7lxkrAbk9rXEBB8hgbj3zRaIujsUpV-WJCJY_ijeihkS7az2eDBmEBz0JM6OeWNVunvM4AcDU2G3smqvg5c77uCIkcnnWgg-oA_ZdivAtBQGAZVibqd4TF5wv5ESu0Pr4S5oQeUddZFKHBrFr9oKVCBpFVbjQJIIBmlaek5eFasJYZ7emcgTqnUgUyogQ"/><span class="material-symbols-outlined text-outline text-base hidden md:block">keyboard_arrow_down</span></button></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md space-y-space-lg"><nav class="space-y-space-lg" data-active-classes="bg-primary-container text-on-primary font-title-sm shadow-sm"><div class="space-y-1"><div class="px-space-sm pb-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Funnel Builder</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-lg">dashboard</span><span>Dashboard Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-funnels" href="#"><span class="material-symbols-outlined text-lg">filter_alt</span><span>My Funnels</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="funnel-studio-&amp;-wizard" href="#"><span class="material-symbols-outlined text-lg">auto_fix_high</span><span>Funnel Studio &amp; Wizard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="visual-schema-editor" href="#"><span class="material-symbols-outlined text-lg">account_tree</span><span>Visual Schema Editor</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="template-library" href="#"><span class="material-symbols-outlined text-lg">grid_view</span><span>12+ Template Library</span></a></div><div class="space-y-1"><div class="px-space-sm pb-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Conversion &amp; Commerce</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-orders-&amp;-cod" href="#"><span class="material-symbols-outlined text-lg">local_shipping</span><span>Live Orders &amp; COD</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="lead-crm-&amp;-whatsapp" href="#"><span class="material-symbols-outlined text-lg">forum</span><span>Lead CRM &amp; WhatsApp</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="checkout-&amp;-gateways" href="#"><span class="material-symbols-outlined text-lg">payments</span><span>Checkout &amp; Gateways</span></a></div><div class="space-y-1"><div class="px-space-sm pb-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Intelligence</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="ai-optimizer-&amp;-a/b-engine" href="#"><span class="material-symbols-outlined text-lg">psychology</span><span>AI Optimizer &amp; A/B Engine</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="real-time-analytics-&amp;-events" href="#"><span class="material-symbols-outlined text-lg">query_stats</span><span>Real-time Analytics &amp; Events</span></a></div><div class="space-y-1"><div class="px-space-sm pb-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Platform</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="custom-domains-&amp;-dns" href="#"><span class="material-symbols-outlined text-lg">dns</span><span>Custom Domains &amp; DNS</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="subscriptions-&amp;-limits" href="#"><span class="material-symbols-outlined text-lg">credit_card</span><span>Subscriptions &amp; Limits</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="global-settings" href="#"><span class="material-symbols-outlined text-lg">settings</span><span>Global Settings</span></a></div></nav></div><div class="p-space-md bg-surface-container-low m-space-sm rounded-xl space-y-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase">Monthly Bandwidth</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">78%</span></div><div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full w-[78%]"></div></div><div class="font-label-sm text-label-sm text-on-surface-variant">780k / 1.0M events tracked</div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Top Action / Live Meta Status Strip -->
+<div class="w-full px-gutter-desktop py-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm font-semibold tracking-wide shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span>⚡ CLOUD API CONNECTED • META VERIFIED WABA</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Instance: <strong class="text-on-surface font-title-sm">+234 814 000 8899</strong></span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-tertiary font-semibold">
+<span class="material-symbols-outlined text-sm">verified</span>
+        Tier 2 Unlimited (100k/day)
+      </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-base text-primary">sync</span>
+<span>Sync Meta Leads</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-base text-secondary">alt_route</span>
+<span>Workflows <span class="px-1.5 py-0.2 bg-primary-fixed text-on-primary-fixed rounded-full text-label-sm">6 Active</span></span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-base">campaign</span>
+<span>New Broadcast Campaign</span>
+</button>
+</div>
+</div>
+<div class="w-full px-gutter-desktop py-space-md space-y-space-md">
+<!-- Screen Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Enterprise Direct Response</span>
+<span class="text-outline-variant">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Nigeria &amp; West Africa COD Engine</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-0.5">Lead CRM &amp; WhatsApp Sales Automation</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Autonomous AI lead qualification, abandoned order recovery, WhatsApp interactive catalog flows, and dispatch desk.</p>
+</div>
+<!-- Quick Action Pill Group -->
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-lowest p-1 rounded-lg shadow-sm">
+<button class="px-space-sm py-1 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span>AI Copilot: ON</span>
+</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Agent Mode</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Split Dispatch</button>
+</div>
+</div>
+</div>
+<!-- 4 KPI Telemetry Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Total Leads Captured</span>
+<div class="font-metric-display text-metric-display text-on-surface mt-1">2,418</div>
+</div>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+            +18.4%
+          </span>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low/60 rounded-lg p-2 space-y-1">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> WhatsApp Native Forms
+            </span>
+<span class="font-semibold text-on-surface">1,520 (63%)</span>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Mobile Web Funnels
+            </span>
+<span class="font-semibold text-on-surface">898 (37%)</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">AI Qualification Rate</span>
+<div class="font-metric-display text-metric-display text-on-surface mt-1">78.5%</div>
+</div>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm font-semibold">
+            Target: 75%
+          </span>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low/60 rounded-lg p-2 space-y-1">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Autonomous Objection Closes:</span>
+<span class="font-semibold text-primary">1,142 chats</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[78.5%]"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Chat COD GMV Closed</span>
+<div class="font-metric-display text-metric-display text-on-surface mt-1">₦4,120,000</div>
+</div>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">payments</span>
+            Live
+          </span>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low/60 rounded-lg p-2">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Recovered Abandoned Carts:</span>
+<span class="font-semibold text-tertiary">₦1,280,000</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block mt-0.5">310 Paystack &amp; COD recovery pings</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Meta WABA Health</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-metric-display text-metric-display text-on-surface">Tier 2</span>
+<span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-semibold">
+            Quality: High
+          </span>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low/60 rounded-lg p-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Delivery: 99.4%</span>
+<span class="font-semibold text-on-surface">$0.0075 / outbound msg</span>
+</div>
+</div>
+</div>
+<!-- 3-Column Split Desk Workspace -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md min-h-[720px] items-start">
+<!-- LEFT PANEL: Conversation Queues & Filter List (~340px / 3 cols) -->
+<div class="xl:col-span-3 bg-surface-container-lowest rounded-xl shadow-sm p-space-sm flex flex-col h-full space-y-space-sm">
+<!-- Header & Controls -->
+<div class="px-space-xs pt-space-xs flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">inbox</span>
+            Lead Conversations
+          </span>
+<span class="px-2 py-0.5 bg-surface-container-high rounded-full font-label-sm text-label-sm text-on-surface font-medium">84 Queued</span>
+</div>
+<!-- Filter Sub-tabs -->
+<div class="grid grid-cols-2 gap-1 p-1 bg-surface-container-low rounded-lg text-label-sm font-label-sm">
+<button class="py-1 px-2 rounded bg-surface-container-lowest text-primary font-semibold shadow-sm text-center">All Chats (84)</button>
+<button class="py-1 px-2 rounded text-on-surface-variant hover:text-on-surface text-center">AI Closing (52)</button>
+<button class="py-1 px-2 rounded text-on-surface-variant hover:text-on-surface text-center">Needs Agent (14)</button>
+<button class="py-1 px-2 rounded text-on-surface-variant hover:text-on-surface text-center">Order Active (18)</button>
+</div>
+<!-- Search Input -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-base">search</span>
+<input class="w-full h-8 pl-8 pr-3 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Search phone (+234), lead name..." type="text"/>
+</div>
+<!-- Conversation Item List -->
+<div class="space-y-space-xs overflow-y-auto max-h-[580px] pr-1">
+<!-- Item 1: Selected Active Lead -->
+<div class="p-space-sm bg-surface-container-low rounded-lg shadow-sm cursor-pointer transition-all space-y-1.5">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Hajiya Amina Bello</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2m ago</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-on-surface-variant">
+<span>+234 803 441 9920</span>
+<span>•</span>
+<span class="text-on-surface font-medium">Abuja Garki</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-semibold">Score: 94 (Hot)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2">"Can I pay on delivery? Reserve 2 bottles for House 14, 21 Crescent..."</p>
+<div class="flex flex-wrap items-center gap-1 pt-1">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm font-semibold">Sefway Bio-Cleanse</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm font-semibold">AI Suggestion Ready</span>
+</div>
+</div>
+<!-- Item 2: Abandoned COD -->
+<div class="p-space-sm bg-surface-container-lowest hover:bg-surface-container-low/60 rounded-lg cursor-pointer transition-all space-y-1.5">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Chief Emeka Okonkwo</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">14m ago</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-on-surface-variant">
+<span>+234 802 119 4432</span>
+<span>•</span>
+<span>Lekki Ph 1, Lagos</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-medium">Score: 88</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Abandoned COD form at Step 2 (Delivery Address). Auto drip node fired.</p>
+<div class="flex items-center gap-1 pt-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm">Payment Skeptic</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">Recovery Sent</span>
+</div>
+</div>
+<!-- Item 3: Converted Buyer -->
+<div class="p-space-sm bg-surface-container-lowest hover:bg-surface-container-low/60 rounded-lg cursor-pointer transition-all space-y-1.5">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Dr. Kemi Adeleke</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">32m ago</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-on-surface-variant">
+<span>+234 818 900 2311</span>
+<span>•</span>
+<span>Bodija, Ibadan</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">Score: 98</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Confirmed COD order for 2 packs. Dispatch ticket generated.</p>
+<div class="flex items-center gap-1 pt-1">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm font-semibold">Converted ₦32,000</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">Order #FC-9848</span>
+</div>
+</div>
+<!-- Item 4: Cold objection -->
+<div class="p-space-sm bg-surface-container-lowest hover:bg-surface-container-low/60 rounded-lg cursor-pointer transition-all space-y-1.5">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Tunde Balogun</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1h ago</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-on-surface-variant">
+<span>+234 701 555 8890</span>
+<span>•</span>
+<span>Ikeja, Lagos</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface">Score: 45</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Inquired about free delivery to Ikorodu. AI dispatched shipping terms.</p>
+<div class="flex items-center gap-1 pt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">Delivery Objection</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">AI Handled</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MIDDLE PANEL: Live WhatsApp Chat & AI Closer Desk (6 cols) -->
+<div class="xl:col-span-6 bg-surface-container-lowest rounded-xl shadow-sm flex flex-col h-full overflow-hidden">
+<!-- Live Chat Header Bar -->
+<div class="p-space-md bg-surface-container-low/80 flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-headline-sm font-bold shadow-sm">
+                AB
+              </div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Hajiya Amina Bello</span>
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Abuja FCT</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm font-semibold">Sefway Bio-Cleanse</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm font-semibold">VIP Prospect</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface text-label-sm font-label-sm">COD Preferred</span>
+</div>
+</div>
+</div>
+<!-- Desk Action Shortcuts -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 bg-surface-container-lowest hover:bg-surface-container text-on-surface text-label-md font-label-md rounded-lg flex items-center gap-1 shadow-sm transition-all">
+<span class="material-symbols-outlined text-base text-outline">support_agent</span>
+<span class="hidden sm:inline">Transfer Agent</span>
+</button>
+<button class="px-space-sm py-1.5 bg-tertiary-container hover:bg-tertiary text-on-tertiary text-label-md font-label-md rounded-lg flex items-center gap-1 shadow-sm transition-all">
+<span class="material-symbols-outlined text-base">local_shipping</span>
+<span>1-Click COD Order</span>
+</button>
+</div>
+</div>
+<!-- Chat Conversation Messages Window -->
+<div class="p-space-md space-y-space-md overflow-y-auto max-h-[500px] bg-surface flex-1">
+<div class="flex justify-center">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-outline text-label-sm font-label-sm font-medium">
+              Today • Lead Generated via Facebook Click-to-WhatsApp (Ad ID #FC-FB-291)
+            </span>
+</div>
+<!-- Incoming Customer Message -->
+<div class="flex items-start gap-space-xs max-w-[85%]">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant text-label-sm font-bold flex-shrink-0">
+              AB
+            </div>
+<div class="bg-surface-container-lowest p-space-sm rounded-2xl rounded-tl-none shadow-sm space-y-1">
+<p class="font-body-md text-body-md text-on-surface">
+                Good afternoon, I saw your ad on Facebook for the Sefway Bio-Cleanse infection formula. Do you deliver to Garki Area 2 Abuja before Saturday?
+              </p>
+<div class="flex items-center justify-end gap-1 text-label-sm font-label-sm text-outline">
+<span>1:42 PM</span>
+</div>
+</div>
+</div>
+<!-- Outgoing AI Auto-Closer Message -->
+<div class="flex items-start justify-end gap-space-xs ml-auto max-w-[85%]">
+<div class="bg-primary text-on-primary p-space-sm rounded-2xl rounded-tr-none shadow-sm space-y-1">
+<div class="flex items-center gap-1.5 pb-0.5 border-b border-on-primary/10">
+<span class="material-symbols-outlined text-xs text-on-primary-container">psychology</span>
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">FunnelCraft AI Closer (Fast-Delivery Node)</span>
+</div>
+<p class="font-body-md text-body-md text-on-primary">
+                Good afternoon Hajiya Amina! Yes, we have our dispatch hub directly in Abuja Central. Orders confirmed today arrive within 24–48 hours via our dedicated GIG rider. Pay on delivery is 100% available. Would you like the 2-Bottle Value Pack (₦32,000 with free delivery) or the 1-Bottle starter?
+              </p>
+<div class="flex items-center justify-end gap-1 text-label-sm font-label-sm text-on-primary/80">
+<span>1:43 PM</span>
+<span class="material-symbols-outlined text-xs">done_all</span>
+</div>
+</div>
+</div>
+<!-- Customer Objection -->
+<div class="flex items-start gap-space-xs max-w-[85%]">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant text-label-sm font-bold flex-shrink-0">
+              AB
+            </div>
+<div class="bg-surface-container-lowest p-space-sm rounded-2xl rounded-tl-none shadow-sm space-y-1">
+<p class="font-body-md text-body-md text-on-surface">
+                Can I pay on delivery? I was scammed last month so I don't pay in advance.
+              </p>
+<div class="flex items-center justify-end gap-1 text-label-sm font-label-sm text-outline">
+<span>1:44 PM</span>
+</div>
+</div>
+</div>
+<!-- AI Objection Handling Node -->
+<div class="flex items-start justify-end gap-space-xs ml-auto max-w-[85%]">
+<div class="bg-primary text-on-primary p-space-sm rounded-2xl rounded-tr-none shadow-sm space-y-1">
+<div class="flex items-center gap-1.5 pb-0.5 border-b border-on-primary/10">
+<span class="material-symbols-outlined text-xs text-on-primary-container">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Objection Resolver • Trust &amp; NAFDAC Guarantee</span>
+</div>
+<p class="font-body-md text-body-md text-on-primary">
+                We completely understand your caution! AcroHealth operates strict Cash on Delivery. You inspect the sealed package with NAFDAC seal (#A7-2910L) before handing cash or card transfer to the dispatch rider. Shall I reserve the 2-bottle pack for your Abuja address?
+              </p>
+<div class="flex items-center justify-end gap-1 text-label-sm font-label-sm text-on-primary/80">
+<span>1:45 PM</span>
+<span class="material-symbols-outlined text-xs">done_all</span>
+</div>
+</div>
+</div>
+<!-- Lead Conversion Message (Address Captured) -->
+<div class="flex items-start gap-space-xs max-w-[85%]">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant text-label-sm font-bold flex-shrink-0">
+              AB
+            </div>
+<div class="bg-surface-container-lowest p-space-sm rounded-2xl rounded-tl-none shadow-sm space-y-1">
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                Okay reserve the 2 bottles for me. My address is House 14, 21 Crescent off Tafawa Balewa Way, Garki Area 2.
+              </p>
+<div class="flex items-center justify-end gap-1 text-label-sm font-label-sm text-outline">
+<span>1:47 PM</span>
+</div>
+</div>
+</div>
+<!-- High Intent AI Copilot Callout Banner -->
+<div class="p-space-sm bg-tertiary-fixed text-on-tertiary-fixed rounded-xl shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm font-bold">✨ AI Intent Copilot: High Purchase Intent (94% Confidence)</span>
+<span class="text-label-sm font-label-sm px-1.5 py-0.2 rounded bg-tertiary text-on-tertiary font-semibold">Ready to Book</span>
+</div>
+<p class="font-body-sm text-body-sm">
+                Valid residential address extracted. <strong>Package:</strong> 2x Sefway Bio-Cleanse (₦32,000 COD). Dispatch routing: Abuja Hub (24h GIG rider delivery).
+              </p>
+<div class="pt-1 flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md flex items-center gap-1 shadow-sm transition-all">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Confirm COD Order #FC-9851 (₦32,000)</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all shadow-sm">
+                  Edit Order Form
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Agent Response & AI Draft Desk Bar -->
+<div class="p-space-sm bg-surface-container-low/90 space-y-space-xs">
+<!-- Suggested Quick Prompt Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-label-sm font-label-sm">
+<span class="text-outline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">smart_toy</span>
+              Quick Reply:
+            </span>
+<button class="px-2 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface shadow-sm whitespace-nowrap">
+              ⚡ Send Dispatch Time Window
+            </button>
+<button class="px-2 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface shadow-sm whitespace-nowrap">
+              📦 Send NAFDAC Certificate Image
+            </button>
+<button class="px-2 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface shadow-sm whitespace-nowrap">
+              💳 Send 5% Prepay Discount Hook (Paystack)
+            </button>
+</div>
+<!-- Message Composition Input Box -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-sm flex items-end gap-space-xs">
+<div class="flex items-center gap-1 text-outline pb-1 pl-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Attach Media / Catalog">
+<span class="material-symbols-outlined text-lg">attach_file</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Select Meta Template">
+<span class="material-symbols-outlined text-lg">format_list_bulleted</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Send Voice Note">
+<span class="material-symbols-outlined text-lg">mic</span>
+</button>
+</div>
+<textarea class="w-full bg-transparent resize-none font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none p-1" placeholder="Type a WhatsApp message or review AI drafted response..." rows="2"></textarea>
+<button class="px-space-md py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1 shadow-sm hover:bg-primary-container transition-all flex-shrink-0">
+<span>Send</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Lead Intelligence & CRM Dossier (~340px / 3 cols) -->
+<div class="xl:col-span-3 space-y-space-md">
+<!-- Section 1: Customer Profile & Live Enrichment -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Lead Enrichment</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-semibold">Verified Contact</span>
+</div>
+<div class="flex items-center gap-space-sm pt-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary font-headline-sm font-bold">
+              HA
+            </div>
+<div>
+<div class="font-title-sm text-title-sm text-on-surface font-bold">Amina Bello</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span>+234 803 441 9920</span>
+<span class="material-symbols-outlined text-tertiary text-xs">call</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 space-y-1 text-label-sm font-label-sm">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Truecaller Name:</span>
+<span class="font-semibold text-on-surface">Amina Bello (FCT Admin)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Delivery Risk Score:</span>
+<span class="font-bold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">verified</span>
+                96% Low Risk
+              </span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Delivery City:</span>
+<span class="font-semibold text-on-surface">Abuja (Garki Area 2)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Lifetime Order Value:</span>
+<span class="font-bold text-on-surface">₦0 (1st Time Buyer)</span>
+</div>
+</div>
+<!-- Lifecycle Stage Progress Bar -->
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant uppercase tracking-wider font-semibold">Funnel Stage</span>
+<span class="text-primary font-bold">Step 4: Order Initiated</span>
+</div>
+<div class="grid grid-cols-5 gap-1">
+<div class="h-1.5 rounded-full bg-primary" title="New Lead"></div>
+<div class="h-1.5 rounded-full bg-primary" title="Contacted"></div>
+<div class="h-1.5 rounded-full bg-primary" title="Qualified"></div>
+<div class="h-1.5 rounded-full bg-primary" title="Order Initiated"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest" title="Fulfilled"></div>
+</div>
+</div>
+</div>
+<!-- Section 2: Active WhatsApp Funnel Flow -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Active Sales Workflow</span>
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">route</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">COD Closer - West Africa V3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Auto-objection handling -&gt; Delivery address validation -&gt; Dispatch ticket generation.</p>
+</div>
+<div class="space-y-2 text-label-sm font-label-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface">Step 1: Meta Click-to-Chat</span>
+<p class="text-outline">Triggered via Sefway Ad Set #2</p>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface">Step 2: Skepticism Objection Resolved</span>
+<p class="text-outline">NAFDAC #A7-2910L verification sent</p>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5 animate-spin">autorenew</span>
+<div>
+<span class="font-semibold text-primary">Step 3: Creating Dispatch Ticket</span>
+<p class="text-outline">Routing to GIG Express Abuja Central Hub</p>
+</div>
+</div>
+<div class="flex items-start gap-2 opacity-50">
+<span class="material-symbols-outlined text-outline text-sm mt-0.5">schedule</span>
+<div>
+<span class="font-medium text-on-surface">Step 4: Tracking Link WhatsApp Push</span>
+<p class="text-outline">Scheduled in 2 hours</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: WhatsApp Conversion Accelerators -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Interactive Tools</span>
+<div class="space-y-space-xs">
+<button class="w-full px-space-sm py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center justify-between text-left transition-all">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">shopping_cart_checkout</span>
+<span>Push Native WhatsApp Catalog</span>
+</span>
+<span class="material-symbols-outlined text-outline text-base">chevron_right</span>
+</button>
+<button class="w-full px-space-sm py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center justify-between text-left transition-all">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">video_library</span>
+<span>Send Doctor Video Testimonial</span>
+</span>
+<span class="material-symbols-outlined text-outline text-base">chevron_right</span>
+</button>
+<button class="w-full px-space-sm py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center justify-between text-left transition-all">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">credit_card</span>
+<span>Offer 5% Paystack Prepay Hook</span>
+</span>
+<span class="material-symbols-outlined text-outline text-base">chevron_right</span>
+</button>
+<button class="w-full px-space-sm py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-error font-title-sm text-title-sm flex items-center justify-between text-left transition-all">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-lg">block</span>
+<span>Flag Fake Address / Scam</span>
+</span>
+<span class="material-symbols-outlined text-outline text-base">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

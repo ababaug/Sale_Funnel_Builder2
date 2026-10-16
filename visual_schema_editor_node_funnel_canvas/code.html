@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#dfe2f1","on-surface-variant":"#464555","surface-tint":"#4d44e3","surface":"#faf8ff","primary":"#3525cd","surface-container-low":"#f2f3ff","on-primary":"#ffffff","outline-variant":"#c7c4d8","inverse-surface":"#2c303b","on-primary-fixed":"#0f0069","outline":"#777587","on-tertiary":"#ffffff","surface-container-highest":"#dfe2f1","on-primary-container":"#dad7ff","on-surface":"#171b26","tertiary-fixed":"#6ffbbe","on-background":"#171b26","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#4edea3","primary-fixed":"#e2dfff","error-container":"#ffdad6","on-tertiary-fixed":"#002113","primary-fixed-dim":"#c3c0ff","on-tertiary-container":"#67f4b7","surface-dim":"#d7d9e8","tertiary":"#005338","on-secondary-fixed-variant":"#003ea8","on-primary-fixed-variant":"#3323cc","inverse-on-surface":"#eef0ff","on-error":"#ffffff","tertiary-container":"#006e4b","secondary-container":"#316bf3","surface-bright":"#faf8ff","on-tertiary-fixed-variant":"#005236","inverse-primary":"#c3c0ff","secondary-fixed-dim":"#b4c5ff","surface-container-high":"#e5e7f6","secondary":"#0051d5","on-secondary-fixed":"#00174b","surface-container":"#ebedfc","on-error-container":"#93000a","on-secondary-container":"#fefcff","background":"#faf8ff","on-secondary":"#ffffff","error":"#ba1a1a","primary-container":"#4f46e5","secondary-fixed":"#dbe1ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter":"1rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-tablet":"1.5rem","margin-desktop":"2rem","space-md":"1rem","margin":"1rem","space-xl":"2.5rem"},fontFamily:{"body-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"metric-display":["Plus Jakarta Sans"],"title-sm":["Inter"],"title-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"body-md":["0.9375rem",{lineHeight:"1.55",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-lg-mobile":["1.625rem",{lineHeight:"1.25",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["2rem",{lineHeight:"1.2",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-xl":["3rem",{lineHeight:"1.15",letterSpacing:"-0.03em",fontWeight:"700"}],"label-md":["0.8125rem",{lineHeight:"1",letterSpacing:"0.01em",fontWeight:"500"}],"body-sm":["0.8125rem",{lineHeight:"1.5",letterSpacing:"0em",fontWeight:"400"}],"metric-display":["1.875rem",{lineHeight:"1.1",letterSpacing:"-0.03em",fontWeight:"700"}],"title-sm":["0.875rem",{lineHeight:"1.4",letterSpacing:"-0.005em",fontWeight:"600"}],"title-md":["1rem",{lineHeight:"1.4",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.35",letterSpacing:"-0.015em",fontWeight:"600"}],"body-lg":["1.125rem",{lineHeight:"1.6",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-lg":["2.25rem",{lineHeight:"1.2",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-md":["1.5rem",{lineHeight:"1.3",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["0.6875rem",{lineHeight:"1",letterSpacing:"0.04em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-xs"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[18px]">neurology</span></div><span class="font-title-md text-title-md text-on-surface tracking-tight">FunnelCraft<span class="text-primary-container">.ai</span></span></div></div><div class="overflow-y-auto flex-1 px-space-sm py-space-sm space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Funnel Builder</div><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span>Dashboard Overview</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-funnels" href="#"><span class="material-symbols-outlined text-[18px]">filter_alt</span>My Funnels</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="funnel-studio-wizard" href="#"><span class="material-symbols-outlined text-[18px]">auto_fix_high</span>Funnel Studio &amp; Wizard</a><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg transition-all bg-primary-container text-on-primary font-bold shadow-sm" data-path="visual-schema-editor" href="#"><span class="material-symbols-outlined text-[18px]">account_tree</span>Visual Schema Editor</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="template-library" href="#"><span class="material-symbols-outlined text-[18px]">widgets</span>12+ Template Library</a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Conversion &amp; Commerce</div><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="live-orders-cod" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span>Live Orders &amp; COD</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="lead-crm-whatsapp" href="#"><span class="material-symbols-outlined text-[18px]">contact_page</span>Lead CRM &amp; WhatsApp</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="checkout-gateways" href="#"><span class="material-symbols-outlined text-[18px]">payments</span>Checkout &amp; Gateways</a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Intelligence</div><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-optimizer-ab-engine" href="#"><span class="material-symbols-outlined text-[18px]">psychology</span>AI Optimizer &amp; A/B Engine</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="real-time-analytics-events" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span>Real-time Analytics &amp; Events</a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Platform</div><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="custom-domains-dns" href="#"><span class="material-symbols-outlined text-[18px]">language</span>Custom Domains &amp; DNS</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="subscriptions-limits" href="#"><span class="material-symbols-outlined text-[18px]">credit_card</span>Subscriptions &amp; Limits</a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="global-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span>Global Settings</a></div></nav></div></div><div class="p-space-sm bg-surface-container-low"><div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(11,15,25,0.04)] space-y-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase">Monthly Bandwidth</span><span class="font-label-sm text-label-sm font-bold text-primary-container">78%</span></div><div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="bg-primary-container h-full rounded-full" style="width: 78%;"></div></div><div class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">780k / 1.0M events tracked</div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer transition-colors"><span class="material-symbols-outlined text-primary-container text-[18px]">domain</span><span class="font-title-sm text-title-sm">AcroHealth Bio-Lab (NGN)</span><span class="material-symbols-outlined text-outline text-[16px]">unfold_more</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-primary-container font-label-sm text-label-sm font-semibold tracking-wider uppercase"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>PRO TIER - ACTIVE</div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><div class="flex items-center gap-space-xs w-64 h-9 px-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(11,15,25,0.04)] text-outline cursor-text"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-body-sm text-body-sm flex-1 text-outline">Search funnels, nodes...</span><kbd class="px-1.5 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-outline">⌘K</kbd></div></div><button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" type="button"><span class="material-symbols-outlined text-[16px]">add</span>+ Create New Funnel</button><div class="relative flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Tooling & Context Ribbon -->
+<div class="w-full bg-surface-container-lowest px-gutter-desktop py-space-sm shadow-sm flex flex-col gap-space-sm z-30">
+<div class="flex items-center justify-between gap-space-md">
+<!-- Left: Breadcrumbs & Live Schema Meta -->
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary cursor-pointer transition-colors">Funnel Builder</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors font-medium text-on-surface">Sefway Bio-Cleanse Infection Defense</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="font-semibold text-primary-container">Visual Schema Tree &amp; DAG Engine</span>
+</div>
+<div class="hidden xl:flex items-center gap-2 pl-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+            sefway.funnelcraft.site
+          </span>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary/10 text-tertiary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            Live CVR: 8.64%
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+            DAG v3.4.1 (Clean)
+          </span>
+</div>
+</div>
+<!-- Right: Main Graph Controls & Execution CTAs -->
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Undo (Cmd+Z)" type="button">
+<span class="material-symbols-outlined text-[18px]">undo</span>
+</button>
+<button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Redo (Cmd+Shift+Z)" type="button">
+<span class="material-symbols-outlined text-[18px]">redo</span>
+</button>
+<div class="w-px h-4 bg-outline-variant mx-1"></div>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">grid_4x4</span> Snap: 16px
+          </button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">account_tree</span> Auto-Align DAG
+          </button>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span> Export JSON
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-primary transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+          Validate &amp; Deploy Graph
+        </button>
+</div>
+</div>
+<!-- Bottom Ribbon: Mode Switchers & Canvas Micro Telemetry -->
+<div class="flex items-center justify-between pt-1 border-t border-surface-container">
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded font-label-md text-label-md font-semibold bg-primary-container text-on-primary shadow-xs flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">schema</span> Visual Canvas
+        </button>
+<button class="px-3 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">code_blocks</span> Raw JSON AST
+        </button>
+<button class="px-3 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Live Path Simulator
+        </button>
+<button class="px-3 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">timeline</span> Edge Attribution Analytics
+        </button>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span> 8 Active Nodes</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span> 10 Transition Edges</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> 2 Conditional Gates</span>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-0.5 rounded">
+<button class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">remove</span></button>
+<span class="font-semibold text-on-surface">100%</span>
+<button class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">add</span></button>
+<button class="text-on-surface-variant hover:text-on-surface ml-1"><span class="material-symbols-outlined text-[14px]">crop_free</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main 3-Column Studio Workspace -->
+<div class="relative w-full flex flex-1 h-[calc(100vh-8.5rem)] overflow-hidden bg-surface">
+<!-- LEFT COLUMN: Draggable Node Drawer & Block Palette -->
+<div class="w-72 bg-surface-container-lowest flex flex-col z-20 shadow-[1px_0_4px_rgba(0,0,0,0.03)] shrink-0 overflow-hidden">
+<!-- Search Box -->
+<div class="p-space-sm bg-surface-container-lowest">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-[18px] text-outline">search</span>
+<input class="w-full pl-8 pr-3 py-1.5 text-body-sm font-body-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Filter nodes (Traffic, Form, Logic)..." type="text"/>
+</div>
+</div>
+<!-- Quick Preset Dropdown Box -->
+<div class="px-space-sm pb-space-sm">
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Active Pipeline Recipe</span>
+<div class="flex items-center justify-between text-on-surface font-title-sm text-title-sm cursor-pointer">
+<span class="truncate">Nigerian COD High-Velocity Pipeline</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Scrollable Category Node Palette -->
+<div class="flex-1 overflow-y-auto px-space-sm space-y-space-md pb-space-lg">
+<!-- Category 1: Traffic & Ingress -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary-container">ads_click</span> Traffic &amp; Ingress
+            </span>
+<span class="font-label-sm text-label-sm text-outline">3 nodes</span>
+</div>
+<div class="p-2 rounded-lg bg-surface hover:bg-surface-container-low cursor-grab transition-all shadow-xs flex flex-col gap-1 group">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface group-hover:text-primary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">campaign</span> Meta WhatsApp Ad
+              </span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm bg-surface-container text-secondary font-bold">$0.18 CPC</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Direct CTWA campaign targeting Nigerian metropolitan regions</p>
+</div>
+<div class="p-2 rounded-lg bg-surface hover:bg-surface-container-low cursor-grab transition-all shadow-xs flex flex-col gap-1 group">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface group-hover:text-primary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">music_note</span> TikTok Spark Ingress
+              </span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm bg-surface-container text-on-surface-variant font-bold">₦210 CPM</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">UGC hook creator video direct to pre-lander</p>
+</div>
+</div>
+<!-- Category 2: Conversion Sections -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">web</span> Funnel Step Modules
+            </span>
+<span class="font-label-sm text-label-sm text-outline">5 nodes</span>
+</div>
+<div class="p-2 rounded-lg bg-surface hover:bg-surface-container-low cursor-grab transition-all shadow-xs flex flex-col gap-1 group">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface group-hover:text-primary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">dynamic_feed</span> Hero &amp; Urgency Block
+              </span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">drag_indicator</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Headline, dynamic countdown timer &amp; scarcity counter</p>
+</div>
+<div class="p-2 rounded-lg bg-surface hover:bg-surface-container-low cursor-grab transition-all shadow-xs flex flex-col gap-1 group">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface group-hover:text-primary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span> Clinical Proof &amp; NAFDAC
+              </span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">drag_indicator</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Authenticity seals, lab reports, doctor quote carousel</p>
+</div>
+<div class="p-2 rounded-lg bg-surface hover:bg-surface-container-low cursor-grab transition-all shadow-xs flex flex-col gap-1 group">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface group-hover:text-primary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">shopping_cart_checkout</span> 1-Click COD Order Form
+              </span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm bg-tertiary/10 text-tertiary-container font-bold">High CVR</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Zero-friction phone, state selection &amp; instant verification</p>
+</div>
+</div>
+<!-- Category 3: Decision & Logic Routers -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-outline">call_split</span> Logic &amp; Routing
+            </span>
+<span class="font-label-sm text-label-sm text-outline">4 nodes</span>
+</div>
+<div class="p-2 rounded-lg bg-surface hover:bg-surface-container-low cursor-grab transition-all shadow-xs flex flex-col gap-1 group">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface group-hover:text-primary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">alt_route</span> A/B Split Router
+              </span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm bg-secondary-fixed text-on-secondary-fixed-variant font-bold">50 / 50</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Multi-armed bandit variant test on frictionless checkout</p>
+</div>
+<div class="p-2 rounded-lg bg-surface hover:bg-surface-container-low cursor-grab transition-all shadow-xs flex flex-col gap-1 group">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface group-hover:text-primary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-error">shield</span> Fraud &amp; RTS Gatekeeper
+              </span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm bg-error-container text-on-error-container font-bold">AI Gate</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Interception rule: RTS prediction score cutoff &gt; 40</p>
+</div>
+</div>
+<!-- Category 4: Post-Action & Fulfillment -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">local_shipping</span> Dispatch &amp; CRM Hooks
+            </span>
+<span class="font-label-sm text-label-sm text-outline">3 nodes</span>
+</div>
+<div class="p-2 rounded-lg bg-surface hover:bg-surface-container-low cursor-grab transition-all shadow-xs flex flex-col gap-1 group">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface group-hover:text-primary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">forum</span> 1-Click WhatsApp Closer
+              </span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">drag_indicator</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Automated template bot ping with agent live takeover</p>
+</div>
+<div class="p-2 rounded-lg bg-surface hover:bg-surface-container-low cursor-grab transition-all shadow-xs flex flex-col gap-1 group">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface group-hover:text-primary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_shipping</span> GIG Logistics Ticket
+              </span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">drag_indicator</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Auto waybill generation &amp; driver assignment payload</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER CANVAS: Interactive Directed Acyclic Graph (DAG) -->
+<div class="flex-1 relative overflow-auto bg-surface-container-lowest flex flex-col select-none">
+<!-- Interactive Infinite Canvas Grid Backing -->
+<div class="min-w-[1550px] min-h-[950px] relative p-12 bg-[radial-gradient(#c7c4d8_1px,transparent_1px)] [background-size:20px_20px]">
+<!-- Connected Bezier Edges SVG Layer -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-0">
+<defs>
+<lineargradient id="edgeGradA" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#4f46e5" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#4f46e5" stop-opacity="0.8"></stop>
+</lineargradient>
+<lineargradient id="edgeGradBranch" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#316bf3" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#316bf3" stop-opacity="0.8"></stop>
+</lineargradient>
+<lineargradient id="edgeGradSuccess" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#006e4b" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#006e4b" stop-opacity="0.9"></stop>
+</lineargradient>
+<filter id="glowEffect">
+<fegaussianblur result="coloredBlur" stddeviation="2"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Edge 1: Ingress (Node 1) to Hero (Node 2) -->
+<path class="animate-[dash_10s_linear_infinite]" d="M 330 240 C 390 240, 410 240, 460 240" fill="none" stroke="url(#edgeGradA)" stroke-dasharray="5 3" stroke-width="2.5"></path>
+<!-- Edge 2A: Hero (Node 2) to Clinical Proof (Node 3) [78% deep dive] -->
+<path d="M 720 220 C 760 220, 770 170, 810 170" fill="none" stroke="#4f46e5" stroke-width="2.5"></path>
+<!-- Edge 2B: Hero (Node 2) Direct to Split Router (Node 4) [22% fast jump] -->
+<path d="M 720 260 C 770 260, 780 340, 810 340" fill="none" stroke="#777587" stroke-dasharray="4 2" stroke-width="1.5"></path>
+<!-- Edge 3: Clinical Proof (Node 3) into Split Router (Node 4) -->
+<path d="M 1060 170 C 1110 170, 1110 300, 1140 320" fill="none" stroke="#4f46e5" stroke-width="2.5"></path>
+<!-- Edge 4A: Split Router Path A (COD Form) -->
+<path d="M 1390 310 C 1430 310, 1440 260, 1480 260" fill="none" stroke="#316bf3" stroke-width="2.5"></path>
+<!-- Edge 4B: Split Router Path B (Paystack Prepay) -->
+<path d="M 1390 350 C 1430 350, 1440 440, 1480 440" fill="none" stroke="#777587" stroke-width="2"></path>
+<!-- Edge 5: State Condition to Logistics / Hub -->
+<path d="M 1740 260 C 1780 260, 1790 340, 1830 340" fill="none" stroke="url(#edgeGradSuccess)" stroke-width="2.5"></path>
+</svg>
+<!-- Dynamic Live Edge Metric Pills (Overlaid) -->
+<div class="absolute left-[360px] top-[226px] z-10 px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary-container font-label-sm text-label-sm shadow-xs flex items-center gap-1 font-semibold">
+          1,842 visits (100%)
+        </div>
+<div class="absolute left-[735px] top-[180px] z-10 px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-xs flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          1,437 read proof (78%)
+        </div>
+<div class="absolute left-[735px] top-[290px] z-10 px-2 py-0.5 rounded-full bg-surface-container-lowest text-outline font-label-sm text-label-sm shadow-xs flex items-center gap-1">
+          405 instant skip (22%)
+        </div>
+<!-- NODE 1: Ingress Traffic Node -->
+<div class="absolute left-[70px] top-[160px] w-64 bg-surface-container-lowest rounded-xl p-space-sm shadow-md transition-all hover:shadow-lg cursor-pointer">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-secondary-container text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">campaign</span>
+</span>
+<span class="font-title-sm text-title-sm text-on-surface">Meta Ingress Hub</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-ping"></span> Live
+            </span>
+</div>
+<div class="py-2.5 space-y-1.5 text-on-surface">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Daily Volume:</span>
+<span class="font-semibold text-on-surface">1,842 sessions</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Blended CPC:</span>
+<span class="font-semibold text-secondary-container">₦184 ($0.18)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Device Split:</span>
+<span class="font-semibold text-on-surface">98.2% Mobile (390px)</span>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between text-outline text-[11px] font-label-sm">
+<span>utm_source=meta_ng</span>
+<span class="text-primary-container font-semibold">Outbound Port •</span>
+</div>
+<!-- Node Output Anchor Pin -->
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary-container shadow-xs flex items-center justify-center cursor-crosshair">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+</div>
+<!-- NODE 2: Entry Page Node (Hero & PAS Hook) -->
+<div class="absolute left-[460px] top-[140px] w-64 bg-surface-container-lowest rounded-xl p-space-sm shadow-md transition-all hover:shadow-lg cursor-pointer">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">desktop_windows</span>
+</span>
+<span class="font-title-sm text-title-sm text-on-surface truncate">Hero: Urgency Bar B</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary-container font-label-sm text-label-sm font-semibold">
+              +14.2% Lift
+            </span>
+</div>
+<div class="py-2.5 space-y-1.5 text-on-surface">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Avg Dwell Time:</span>
+<span class="font-semibold text-on-surface">42 seconds</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Bounce Rate:</span>
+<span class="font-semibold text-tertiary-container">21.4% (Optimal)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Hook Variant:</span>
+<span class="font-semibold text-primary-container truncate max-w-[110px]">NAFDAC Bio-Defense</span>
+</div>
+</div>
+<!-- Micro bar showing split out -->
+<div class="pt-2 border-t border-surface-container">
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-primary-container h-full" style="width: 78%" title="78% to Clinical Proof"></div>
+<div class="bg-outline h-full" style="width: 22%" title="22% Direct Checkout"></div>
+</div>
+<div class="flex justify-between text-[10px] text-outline pt-1">
+<span>78% Proof Deep-Dive</span>
+<span>22% Skip</span>
+</div>
+</div>
+<!-- Output Ports -->
+<div class="absolute -right-2 top-[35%] w-4 h-4 rounded-full bg-primary-container shadow-xs flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div class="absolute -right-2 top-[65%] w-4 h-4 rounded-full bg-outline shadow-xs flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+</div>
+<!-- NODE 3: Clinical Proof & PAS Section -->
+<div class="absolute left-[810px] top-[90px] w-64 bg-surface-container-lowest rounded-xl p-space-sm shadow-md transition-all hover:shadow-lg cursor-pointer">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-tertiary-container text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+</span>
+<span class="font-title-sm text-title-sm text-on-surface truncate">Clinical Proof &amp; Doctor PAS</span>
+</div>
+<span class="text-outline text-label-sm font-label-sm">Sec #02</span>
+</div>
+<div class="py-2.5 space-y-1.5 text-on-surface">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">NAFDAC Reg View:</span>
+<span class="font-semibold text-on-surface">88.4% engagement</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Scroll Depth:</span>
+<span class="font-semibold text-tertiary-container">82% reach CTA</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Social Proof Lightbox:</span>
+<span class="font-semibold text-on-surface">312 video plays</span>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between text-outline text-[11px] font-label-sm">
+<span>Pass-through CVR: 84.1%</span>
+<span class="text-primary-container font-semibold">Ready for Offer →</span>
+</div>
+<!-- Output Pin -->
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary-container shadow-xs flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+</div>
+<!-- NODE 4: A/B Split Router (ACTIVE SELECTED NODE) -->
+<div class="absolute left-[1140px] top-[240px] w-64 bg-surface-container-lowest rounded-xl p-space-sm shadow-xl ring-2 ring-primary-container transition-all cursor-pointer">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">alt_route</span>
+</span>
+<span class="font-title-sm text-title-sm text-on-surface">A/B Friction Router</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Selected
+            </span>
+</div>
+<div class="py-2.5 space-y-2 text-on-surface">
+<!-- Branch 1: COD -->
+<div class="p-2 rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between text-label-md font-label-md">
+<span class="font-bold text-on-surface">Path A: COD 1-Page</span>
+<span class="font-bold text-tertiary-container">11.2% CVR</span>
+</div>
+<div class="flex justify-between text-[11px] text-outline">
+<span>Weight: 50%</span>
+<span class="text-error font-medium">RTS Risk: 6.4%</span>
+</div>
+</div>
+<!-- Branch 2: Paystack Instant Prepay -->
+<div class="p-2 rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between text-label-md font-label-md">
+<span class="font-bold text-on-surface">Path B: Paystack Prepay</span>
+<span class="font-bold text-secondary-container">7.1% CVR</span>
+</div>
+<div class="flex justify-between text-[11px] text-outline">
+<span>Weight: 50%</span>
+<span class="text-tertiary-container font-medium">0% RTS (Paid)</span>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between text-outline text-[11px] font-label-sm">
+<span>Confidence: 99.4%</span>
+<span class="text-primary-container font-semibold">Dual Edge Dispatch</span>
+</div>
+<!-- Dual Output Pins -->
+<div class="absolute -right-2 top-[30%] w-4 h-4 rounded-full bg-secondary shadow-xs flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div class="absolute -right-2 top-[70%] w-4 h-4 rounded-full bg-outline shadow-xs flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+</div>
+<!-- NODE 5: Downstream Conditional Routing Node (Delivery Gate) -->
+<div class="absolute left-[1480px] top-[190px] w-64 bg-surface-container-lowest rounded-xl p-space-sm shadow-md transition-all hover:shadow-lg cursor-pointer">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-tertiary-container text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">local_shipping</span>
+</span>
+<span class="font-title-sm text-title-sm text-on-surface truncate">Lagos / Abuja Fast Hub</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary-container font-label-sm text-label-sm font-semibold">24h SLA</span>
+</div>
+<div class="py-2.5 space-y-1.5 text-on-surface">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Target States:</span>
+<span class="font-semibold text-on-surface">Lagos, FCT, Rivers</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Logistics Partner:</span>
+<span class="font-semibold text-primary">GIG Express Auto-Ticket</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Verification Bypass:</span>
+<span class="font-semibold text-tertiary-container">Auto-Confirm (Instant)</span>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between text-outline text-[11px] font-label-sm">
+<span>Terminal Edge Node</span>
+<span class="text-tertiary-container font-semibold">• Fulfillment Ready</span>
+</div>
+</div>
+<!-- NODE 6: Upcountry Phone Verification Gate (WhatsApp Guard) -->
+<div class="absolute left-[1480px] top-[390px] w-64 bg-surface-container-lowest rounded-xl p-space-sm shadow-md transition-all hover:shadow-lg cursor-pointer">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-error text-on-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">shield_with_heart</span>
+</span>
+<span class="font-title-sm text-title-sm text-on-surface truncate">RTS Fraud Filter &amp; Bot</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Guard</span>
+</div>
+<div class="py-2.5 space-y-1.5 text-on-surface">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Condition:</span>
+<span class="font-semibold text-on-surface">State == Upcountry / Tier 3</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Action:</span>
+<span class="font-semibold text-error">WhatsApp Voice OTP / Ping</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">RTS Protection:</span>
+<span class="font-semibold text-tertiary-container">-38% Return Loss</span>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between text-outline text-[11px] font-label-sm">
+<span>Pre-dispatch clearance</span>
+<span class="text-on-surface font-semibold">• Pending Bot OK</span>
+</div>
+</div>
+</div>
+<!-- Mini-map Floating Overlay (Bottom-Right of Canvas) -->
+<div class="absolute bottom-5 right-5 w-52 h-36 bg-surface-container-lowest/90 backdrop-blur-md rounded-xl shadow-lg p-2 flex flex-col justify-between z-20">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider text-outline">DAG Mini-Map</span>
+<span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-on-surface">fullscreen</span>
+</div>
+<!-- Scaled Mini representation -->
+<div class="relative w-full flex-1 my-1 bg-surface-container-low rounded overflow-hidden">
+<div class="absolute left-2 top-4 w-4 h-3 bg-secondary-container rounded-xs"></div>
+<div class="absolute left-8 top-3 w-4 h-4 bg-primary-container rounded-xs"></div>
+<div class="absolute left-14 top-2 w-4 h-4 bg-tertiary-container rounded-xs"></div>
+<div class="absolute left-20 top-5 w-5 h-5 bg-secondary ring-1 ring-primary-container rounded-xs"></div>
+<div class="absolute left-28 top-3 w-4 h-3 bg-tertiary rounded-xs"></div>
+<div class="absolute left-28 top-8 w-4 h-3 bg-error rounded-xs"></div>
+<!-- Viewport Box indicator -->
+<div class="absolute inset-1 rounded ring-1 ring-primary-container/60 bg-primary-container/10 pointer-events-none"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline font-label-sm">
+<span>Viewport: 100%</span>
+<span class="text-primary-container cursor-pointer font-medium hover:underline">Recenter</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Node Inspector & Schema Configuration Panel -->
+<div class="w-80 bg-surface-container-lowest flex flex-col z-20 shadow-[-1px_0_4px_rgba(0,0,0,0.03)] shrink-0 overflow-hidden">
+<!-- Inspector Header: Active Node Identity -->
+<div class="p-space-sm bg-surface-container-lowest flex flex-col gap-1 border-b border-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold tracking-wider">Node Inspector</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-mono">logic.router.ab</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface flex items-center gap-1.5 font-semibold">
+<span class="material-symbols-outlined text-secondary text-[20px]">alt_route</span>
+          A/B Friction Router
+        </h3>
+<p class="font-body-sm text-body-sm text-outline text-[11px]">ID: <span class="font-mono text-on-surface-variant font-medium">node_checkout_split_v2</span></p>
+</div>
+<!-- Scrollable Properties Form -->
+<div class="flex-1 overflow-y-auto p-space-sm space-y-space-md">
+<!-- Tab Sub-selector within Inspector -->
+<div class="grid grid-cols-2 gap-1 p-1 bg-surface-container-low rounded-lg text-center font-label-sm text-label-sm">
+<button class="py-1 rounded bg-surface-container-lowest shadow-xs text-on-surface font-semibold">Properties</button>
+<button class="py-1 rounded text-outline hover:text-on-surface font-medium transition-colors">Telemetry</button>
+</div>
+<!-- Section 1: Traffic Distribution Controls -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="font-title-sm text-title-sm text-on-surface font-medium">Split Ratio</label>
+<span class="font-mono font-bold text-primary-container text-title-sm">50% / 50%</span>
+</div>
+<div class="w-full relative flex items-center">
+<input class="w-full accent-primary cursor-pointer h-2 bg-surface-container rounded-lg" max="100" min="0" type="range" value="50"/>
+</div>
+<div class="p-2 rounded bg-tertiary/10 text-tertiary-container font-label-sm text-label-sm flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[16px] shrink-0 mt-0.5">query_stats</span>
+<span><strong>99.4% Confidence:</strong> Path A (COD) generates +₦840 higher contribution margin per 100 sessions.</span>
+</div>
+</div>
+<!-- Section 2: Routing Rule Engine -->
+<div class="space-y-2">
+<label class="font-title-sm text-title-sm text-on-surface font-medium">Decision Evaluator Mode</label>
+<select class="w-full px-3 py-2 text-body-sm font-body-sm rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>Multi-Armed Bandit (Epsilon-Greedy)</option>
+<option>Strict Deterministic 50/50 Hash</option>
+<option>Margin Maximizer (Dynamic CPM/COD)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-title-sm text-title-sm text-on-surface font-medium">Fallback Abandonment Action</label>
+<select class="w-full px-3 py-2 text-body-sm font-body-sm rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>Reroute to WhatsApp AI Closer (15min delay)</option>
+<option>SMS Urgency Discount Hook (₦1,500 off)</option>
+<option>Silent Exit Pixel Broadcast</option>
+</select>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Max Edge Latency Budget:</span>
+<span class="font-mono font-semibold text-on-surface">120ms (Cloudflare Edge)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-outline">Cookie Persistence:</span>
+<span class="font-semibold text-on-surface">30 Days (Sticky IP/Session)</span>
+</div>
+</div>
+<!-- Section 3: AI Co-pilot Suggestion Box -->
+<div class="p-3 rounded-xl bg-gradient-to-br from-primary-container/10 via-surface-container to-transparent flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-primary-container font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span>AI Margin Optimization</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface text-[12px] leading-relaxed">
+            Routing first-time buyers with phone delivery risk score <strong>&gt; 45</strong> to WhatsApp verification before dispatch saves an estimated <strong>₦340,000/month</strong> in courier return fees.
+          </p>
+<button class="w-full py-1.5 px-2 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary transition-all flex items-center justify-center gap-1 shadow-xs" type="button">
+<span class="material-symbols-outlined text-[15px]">auto_fix_high</span>
+            Inject Risk Gate to Canvas
+          </button>
+</div>
+<!-- Section 4: JSON AST Block Preview -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Schema JSON Snippet</span>
+<button class="text-primary font-label-sm text-label-sm hover:underline">Copy</button>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-highest font-mono text-[11px] leading-relaxed text-on-surface overflow-x-auto">
+<span class="text-primary-container font-semibold">{</span><br/>
+              <span class="text-secondary font-medium">"id"</span>: <span class="text-tertiary">"node_checkout_split_v2"</span>,<br/>
+              <span class="text-secondary font-medium">"type"</span>: <span class="text-tertiary">"logic.router.ab"</span>,<br/>
+              <span class="text-secondary font-medium">"variants"</span>: [<br/>
+                { <span class="text-secondary">"id"</span>: <span class="text-tertiary">"cod_direct"</span>, <span class="text-secondary">"weight"</span>: 0.5 },<br/>
+                { <span class="text-secondary">"id"</span>: <span class="text-tertiary">"paystack_prepay"</span>, <span class="text-secondary">"weight"</span>: 0.5 }<br/>
+              ],<br/>
+              <span class="text-secondary font-medium">"confidence_score"</span>: 0.994<br/>
+<span class="text-primary-container font-semibold">}</span>
+</div>
+</div>
+</div>
+<!-- Inspector Footer Actions -->
+<div class="p-space-sm bg-surface-container-lowest border-t border-surface-container flex items-center gap-2">
+<button class="flex-1 py-1.5 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors text-center">
+          Reset Defaults
+        </button>
+<button class="flex-1 py-1.5 px-3 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-semibold transition-colors text-center shadow-xs">
+          Save Node
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

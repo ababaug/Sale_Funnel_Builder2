@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#044317", "primary-fixed": "#d0e2ff", "on-primary-fixed-variant": "#0043ce", "surface-container-high": "#e0e0e0", "on-secondary": "#ffffff", "inverse-surface": "#393939", "on-tertiary": "#ffffff", "surface-container-highest": "#c6c6c6", "tertiary-fixed-dim": "#42be65", "surface-container": "#f4f4f4", "on-tertiary-fixed": "#022d0d", "primary-fixed-dim": "#78a9ff", "surface-tint": "#0f62fe", "tertiary-fixed": "#a7f0ba", "on-error": "#ffffff", "inverse-on-surface": "#f4f4f4", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-dim": "#e0e0e0", "surface-variant": "#f4f4f4", "outline": "#8d8d8d", "inverse-primary": "#78a9ff", "on-secondary-fixed-variant": "#525252", "outline-variant": "#e0e0e0", "on-secondary-container": "#525252", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#161616", "on-primary": "#ffffff", "on-background": "#161616", "surface": "#ffffff", "secondary": "#6f6f6f", "secondary-container": "#e0e0e0", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-primary-container": "#161616", "on-primary-fixed": "#001d6c", "on-error-container": "#750e13", "error": "#da1e28", "tertiary": "#198038", "on-surface-variant": "#525252", "background": "#ffffff", "tertiary-container": "#a7f0ba", "error-container": "#fff1f1", "primary": "#0f62fe", "secondary-fixed-dim": "#c6c6c6", "primary-container": "#d0e2ff", "on-tertiary-fixed-variant": "#044317" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><span class="text-xl font-headline font-bold tracking-tight uppercase text-on-surface">FUNNELFLOW</span><nav class="hidden md:flex items-center gap-8" data-active-classes="bg-primary-container text-on-primary-container font-bold px-3 py-1 rounded"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Templates</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-4"><a class="bg-primary text-on-primary px-4 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- S1: Promotional Announcement Bar -->
+<div class="w-full bg-primary text-on-primary py-3 px-6 text-center text-sm font-semibold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>SPECIAL ACCELERATOR ACCESS: 85% OFF ENROLLMENT FOR THE NEXT <span class="font-mono font-bold tracking-wider" id="countdown-timer">04 : 59 : 32</span></span>
+</div>
+<!-- S2 & S3 & S4: Cinematic Hero, Headline, Video Player & Primary CTA -->
+<section class="w-full bg-inverse-surface text-inverse-on-surface py-20 px-6 lg:px-12 flex flex-col items-center">
+<div class="max-w-4xl w-full flex flex-col items-center text-center">
+<span class="text-xs uppercase tracking-widest text-primary-fixed-dim font-bold mb-4">Masterclass VSL Presentation</span>
+<h1 class="text-3xl md:text-5xl font-bold font-headline tracking-tight text-surface mb-6 leading-tight">
+        Scale Your Agency to 7-Figures Without Hiring More Staff or Working Weekends
+      </h1>
+<p class="text-lg text-surface-container-highest max-w-2xl mb-10 font-normal">
+        Discover the exact automation blueprint used by top 1% consulting firms to acquire high-ticket clients on autopilot.
+      </p>
+<!-- S3: Large Video Sales Letter Container -->
+<div class="w-full bg-surface-container-high rounded-lg overflow-hidden shadow-2xl relative group mb-8">
+<div class="w-full aspect-video bg-cover bg-center flex items-center justify-center relative" data-alt="Dark cinematic studio setting with a professional speaker gesturing toward data dashboards on a massive LED wall, dramatic blue and charcoal lighting, high contrast, 4k resolution aesthetic" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCf8hSjd16xW44kUaF1vwGHYHjVu7bVPh9nO_66Lnh5AILGB7ebhKfz_Z500gFuryeCR4Y5uA8UN1A4iK0keVZhdzMonwyqFv4QaQDGqp1hoqBGTZ4bvSuxtijJdUAIqvSbTJfh0lrTZGFABeT2th3j4dXlAnXw8BGBYgLSpFuNVVfBhA-Y6PXJTLlvY7-MpY1JuLpFzvsFo8skLFtf-x30Ur-nAwYT8di17qNXqeZmvGeYmzcJsdot9Q')">
+<!-- Play Overlay / Interactive Video Player Mock -->
+<div class="absolute inset-0 bg-inverse-surface/60 flex flex-col items-center justify-center cursor-pointer transition-opacity group-hover:bg-inverse-surface/40" id="vsl-play-overlay">
+<div class="w-20 h-20 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-4 text-sm font-semibold tracking-wide text-surface uppercase">Click to Play Presentation (14:22)</span>
+</div>
+<!-- Video UI Controls Bar (Simulated) -->
+<div class="absolute bottom-0 inset-x-0 bg-inverse-surface/90 px-6 py-3 flex items-center gap-4 text-surface text-xs">
+<button class="hover:text-primary transition-colors" id="vsl-ctrl-play">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+<span class="font-mono">00:00 / 14:22</span>
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden relative cursor-pointer">
+<div class="absolute inset-y-0 left-0 w-1/4 bg-primary"></div>
+</div>
+<span class="material-symbols-outlined text-[20px] hover:text-primary cursor-pointer">volume_up</span>
+<span class="material-symbols-outlined text-[20px] hover:text-primary cursor-pointer">fullscreen</span>
+</div>
+</div>
+</div>
+<!-- S4: Primary High-Contrasting CTA Button -->
+<div class="flex flex-col items-center gap-3">
+<a class="bg-primary text-on-primary font-bold text-lg px-10 py-5 rounded hover:bg-primary/90 transition-all shadow-lg flex items-center gap-3 transform hover:-translate-y-0.5" href="#pricing">
+<span>GET INSTANT ACCESS NOW</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<span class="text-xs text-surface-container-highest flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">lock</span>
+          Instant Access • 30-Day Money-Back Guarantee • Secure Checkout
+        </span>
+</div>
+</div>
+</section>
+<!-- S5: Audience Problem Breakdown in Dark Cards -->
+<section class="w-full bg-surface-container-low py-20 px-6 lg:px-12">
+<div class="max-w-6xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">The Bottleneck</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 text-on-surface">Why Traditional Scaling Methods Are Failing You</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Problem Card 1 -->
+<div class="bg-inverse-surface text-inverse-on-surface p-8 rounded-lg flex flex-col justify-between shadow-md">
+<div>
+<div class="w-12 h-12 bg-error-container text-error rounded flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<h3 class="text-lg font-bold mb-3">Unpredictable Lead Flow</h3>
+<p class="text-sm text-surface-container-highest leading-relaxed">Relying on referrals and cold outreach creates a feast-or-famine cycle that makes accurate forecasting impossible.</p>
+</div>
+<div class="mt-8 pt-4 text-xs font-mono text-error-container uppercase">Symptom 01</div>
+</div>
+<!-- Problem Card 2 -->
+<div class="bg-inverse-surface text-inverse-on-surface p-8 rounded-lg flex flex-col justify-between shadow-md">
+<div>
+<div class="w-12 h-12 bg-error-container text-error rounded flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">group_off</span>
+</div>
+<h3 class="text-lg font-bold mb-3">Operational Burnout</h3>
+<p class="text-sm text-surface-container-highest leading-relaxed">Every new client increases fulfillment complexity, chaining you to day-to-day operations instead of high-level growth.</p>
+</div>
+<div class="mt-8 pt-4 text-xs font-mono text-error-container uppercase">Symptom 02</div>
+</div>
+<!-- Problem Card 3 -->
+<div class="bg-inverse-surface text-inverse-on-surface p-8 rounded-lg flex flex-col justify-between shadow-md">
+<div>
+<div class="w-12 h-12 bg-error-container text-error rounded flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h3 class="text-lg font-bold mb-3">Low Profit Margins</h3>
+<p class="text-sm text-surface-container-highest leading-relaxed">Bloated software stacks and expensive agency retainers eat up 60% of your revenue before you ever see profit.</p>
+</div>
+<div class="mt-8 pt-4 text-xs font-mono text-error-container uppercase">Symptom 03</div>
+</div>
+</div>
+</div>
+</section>
+<!-- S6: Opportunity Explanation -->
+<section class="w-full bg-surface py-20 px-6 lg:px-12">
+<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="text-xs uppercase tracking-widest text-primary font-bold">The Paradigm Shift</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 mb-6">The Automated Client Acquisition Ecosystem</h2>
+<p class="text-on-surface-variant text-base mb-6 leading-relaxed">
+          Instead of chasing leads one by one, top performers build sovereign funnels that educate, qualify, and convert prospects completely on autopilot. 
+        </p>
+<p class="text-on-surface-variant text-base mb-8 leading-relaxed">
+          Our methodology eliminates friction by combining high-intent traffic systems with automated conversion accelerators. You spend zero time on unqualified discovery calls.
+        </p>
+<div class="flex gap-6">
+<div class="flex flex-col">
+<span class="text-3xl font-bold font-headline text-primary">3.4x</span>
+<span class="text-xs text-on-surface-variant uppercase mt-1">Average ROAS Increase</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold font-headline text-primary">18 hrs</span>
+<span class="text-xs text-on-surface-variant uppercase mt-1">Saved Per Week</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold font-headline text-primary">92%</span>
+<span class="text-xs text-on-surface-variant uppercase mt-1">Show-Up Rate</span>
+</div>
+</div>
+</div>
+<div class="w-full bg-surface-container-low p-2 rounded-lg">
+<div class="w-full h-96 bg-cover bg-center rounded" data-alt="Clean minimal analytics dashboard interface displaying high conversion graphs and customer acquisition metrics on a crisp white screen, professional corporate UI design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlXAeW3jyEJflO_cyqZhfltqcBBqZ70VnxNElYnqkeyAzhlC448Ro4jXMdU4GGJkC-VfWL0_O_P66deDyLRZJSUDj5q4Ugz-4NQeUl3JwBGEp9VWhwxX7ch3ZY334AItFFEwa3l5dymGKNEgbRfXxlFwzzPh0t9BRiHNK1RywFPrAlC5eYn-f1xnHtnqfo-5CLyivs0GVRrH54dXbGloKWhlMNbTQmHHUK00EjWdFtv0zpopfPgqYq2w')"></div>
+</div>
+</div>
+</section>
+<!-- S7: Product Introduction with Feature Grid -->
+<section class="w-full bg-surface-container-low py-20 px-6 lg:px-12">
+<div class="max-w-6xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">The Solution Suite</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 text-on-surface">Everything Included in the FunnelFlow Accelerator</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Plug-and-Play VSL Templates</h3>
+<p class="text-sm text-on-surface-variant">Pre-built, high-converting video sales letter structures optimized for maximum watch time and viewer retention.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Automated Qualification Engine</h3>
+<p class="text-sm text-on-surface-variant">Smart filtering workflows that weed out time-wasters and automatically route decision-makers to your calendar.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Real-Time Analytics Dashboard</h3>
+<p class="text-sm text-on-surface-variant">Track drop-off points, click-through rates, and cost-per-acquisition with enterprise-grade precision metrics.</p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h3 class="text-lg font-bold mb-2">CRM &amp; Email Integration</h3>
+<p class="text-sm text-on-surface-variant">One-click synchronization with your existing tech stack including HubSpot, ActiveCampaign, and Stripe.</p>
+</div>
+<!-- Feature 5 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Weekly Masterclass Coaching</h3>
+<p class="text-sm text-on-surface-variant">Live implementation sessions with 7-figure operators to review your copy, traffic, and conversion funnels.</p>
+</div>
+<!-- Feature 6 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">security</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Enterprise Security &amp; Compliance</h3>
+<p class="text-sm text-on-surface-variant">Bank-grade data encryption, GDPR compliance frameworks, and role-based team access controls.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- S8: Key Benefits with Checkmarks -->
+<section class="w-full bg-surface py-20 px-6 lg:px-12">
+<div class="max-w-4xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Tangible Outcomes</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 text-on-surface">What Changes Once You Deploy FunnelFlow</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded">
+<div class="w-6 h-6 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<h4 class="font-bold text-base mb-1">Predictable Client Acquisition</h4>
+<p class="text-sm text-on-surface-variant">Generate qualified sales conversations every single day like clockwork without manual outreach.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded">
+<div class="w-6 h-6 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<h4 class="font-bold text-base mb-1">Eliminate Cold Calling</h4>
+<p class="text-sm text-on-surface-variant">Prospects watch your VSL and arrive pre-sold on your value proposition before booking a call.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded">
+<div class="w-6 h-6 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<h4 class="font-bold text-base mb-1">Scale Without Headcount</h4>
+<p class="text-sm text-on-surface-variant">Handle 10x more traffic and transactions without needing to expand your administrative team.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded">
+<div class="w-6 h-6 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<h4 class="font-bold text-base mb-1">Higher Ticket Pricing</h4>
+<p class="text-sm text-on-surface-variant">Position your brand as the undisputed authority in your niche and command premium pricing.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- S9: How It Works 3-Step Process -->
+<section class="w-full bg-inverse-surface text-inverse-on-surface py-20 px-6 lg:px-12">
+<div class="max-w-6xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest text-primary-fixed-dim font-bold">Simple Execution</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 text-surface">Three Steps to Complete Funnel Deployment</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface/5 p-8 rounded-lg relative">
+<span class="text-5xl font-bold font-mono text-primary-fixed-dim opacity-40 absolute top-4 right-6">01</span>
+<h3 class="text-xl font-bold mb-4 text-surface mt-4">Select &amp; Customize Template</h3>
+<p class="text-sm text-surface-container-highest leading-relaxed">Choose from our library of proven VSL layouts and customize colors, copy, and branding in our visual builder.</p>
+</div>
+<div class="bg-surface/5 p-8 rounded-lg relative">
+<span class="text-5xl font-bold font-mono text-primary-fixed-dim opacity-40 absolute top-4 right-6">02</span>
+<h3 class="text-xl font-bold mb-4 text-surface mt-4">Connect Traffic Source</h3>
+<p class="text-sm text-surface-container-highest leading-relaxed">Route your target audience via meta ads, YouTube, or organic channels directly into your new cinematic VSL.</p>
+</div>
+<div class="bg-surface/5 p-8 rounded-lg relative">
+<span class="text-5xl font-bold font-mono text-primary-fixed-dim opacity-40 absolute top-4 right-6">03</span>
+<h3 class="text-xl font-bold mb-4 text-surface mt-4">Automate &amp; Convert</h3>
+<p class="text-sm text-surface-container-highest leading-relaxed">Let the automated qualification engine filter leads and book high-ticket prospects straight onto your team's calendar.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- S10: Live Interactive Product Demonstration Section -->
+<section class="w-full bg-surface-container-low py-20 px-6 lg:px-12">
+<div class="max-w-6xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Interactive Preview</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 text-on-surface">Experience the Builder in Action</h2>
+</div>
+<!-- Interactive Tabs -->
+<div class="flex justify-center gap-4 mb-8">
+<button class="px-6 py-2.5 rounded text-sm font-bold bg-primary text-on-primary transition-all" id="btn-analytics" onclick="switchTab('analytics')">Analytics View</button>
+<button class="px-6 py-2.5 rounded text-sm font-bold bg-surface text-on-surface hover:bg-surface-container transition-all" id="btn-builder" onclick="switchTab('builder')">Funnel Builder</button>
+<button class="px-6 py-2.5 rounded text-sm font-bold bg-surface text-on-surface hover:bg-surface-container transition-all" id="btn-crm" onclick="switchTab('crm')">CRM Pipeline</button>
+</div>
+<!-- Tab Content Area -->
+<div class="w-full bg-surface p-6 rounded-lg shadow-md">
+<div class="tab-content flex flex-col md:flex-row gap-8 items-center" id="tab-analytics">
+<div class="w-full md:w-1/2">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Real-Time Tracking</span>
+<h3 class="text-xl font-bold mt-2 mb-4">Granular Conversion Metrics at a Glance</h3>
+<p class="text-sm text-on-surface-variant mb-6">Monitor visitor behavior from the exact moment they hit play on your VSL until checkout completion. Spot drop-offs and optimize instantly.</p>
+<div class="space-y-3">
+<div class="flex justify-between text-sm"><span class="font-medium">Video Completion Rate</span><span class="font-bold text-primary">68.4%</span></div>
+<div class="w-full h-2 bg-surface-container-low rounded-full overflow-hidden"><div class="w-[68%] h-full bg-primary"></div></div>
+<div class="flex justify-between text-sm"><span class="font-medium">CTA Click-Through</span><span class="font-bold text-primary">34.2%</span></div>
+<div class="w-full h-2 bg-surface-container-low rounded-full overflow-hidden"><div class="w-[34%] h-full bg-primary"></div></div>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-surface-container-low p-2 rounded">
+<div class="w-full h-64 bg-cover bg-center rounded" data-alt="High fidelity software analytics graph showing upward trending conversion rates and active user metrics on a sleek dashboard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACX_-3i1brNgXQQhICFFilsF3N32iO0ysl271Vwn7F6LgqqNWNq0ZmDFU5C8tO68ZEgFcLt3SEO4a8TVVudEzL8XX0RgfXVTmusMBJF8evwTF3kvPFM84b2pzfcVK1StY0uhffnlDioe6iogtB9o1kjKVQlq93hmICkwduar4QhS53AEzYEyC2E3cPBiuGw0GEyffb6JIbioV74Ehrn0oTQ-GyrREYt-Gk-xsUfLTaCXsBKLKIuENCnQ')"></div>
+</div>
+</div>
+<div class="tab-content hidden flex flex-col md:flex-row gap-8 items-center" id="tab-builder">
+<div class="w-full md:w-1/2">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Visual Drag &amp; Drop</span>
+<h3 class="text-xl font-bold mt-2 mb-4">Build Cinematic Funnels in Minutes</h3>
+<p class="text-sm text-on-surface-variant mb-6">No coding required. Swap video embeds, adjust headline copy, and customize high-contrast CTA buttons with absolute ease.</p>
+</div>
+<div class="w-full md:w-1/2 bg-surface-container-low p-2 rounded">
+<div class="w-full h-64 bg-cover bg-center rounded" data-alt="Drag and drop website page builder interface with modular component blocks and clean minimalist UI" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBEHssjv-3gyALIOb4nLAFSiiQIGW6X4u3DU0Q2VwIIziQDKBbtb1ybSIZSfWlz4DWodnhbHeoz17nlhsocMmqXGB1z7OQJPtZY1soFGOuB4dvQpDtwACjXR9AHpgu_2oqqVJZnzk9WFuiJfMayzER95NtSw2J1lSMn_hksGFPEXKxHMpG3iGF2bwFgOsPCHOAiRZHjPElWoEA5SODYV5316Qk8TgUVoPOANbyVFA4BmGJnYEoAwC2NQ')"></div>
+</div>
+</div>
+<div class="tab-content hidden flex flex-col md:flex-row gap-8 items-center" id="tab-crm">
+<div class="w-full md:w-1/2">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Lead Management</span>
+<h3 class="text-xl font-bold mt-2 mb-4">Automated Pipeline &amp; Lead Scoring</h3>
+<p class="text-sm text-on-surface-variant mb-6">Every prospect is scored based on video watch duration and survey answers, ensuring your sales reps only talk to hot buyers.</p>
+</div>
+<div class="w-full md:w-1/2 bg-surface-container-low p-2 rounded">
+<div class="w-full h-64 bg-cover bg-center rounded" data-alt="Kanban style CRM pipeline dashboard with customer contact cards and status columns" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1IVAjEj8xPgiI7Wo1ZBzKl6OvQRVgw815l40qIItxaPsAIpK9thLKgkBSZY6nb3w6JhLPTu82w91mXHbnc9EBN6eIuEkLg3b3ppGtbg_i-uBmZnhZS4cyzQlSJ-i0wdcIxsccYxSImQxI5pPbDGvEfyg7kF_a_9MPGVcgM2_h7bDVdTUBgv6qn080ssF8DPDuqP-R6Sb0x3KLdZb_eTIgmtmJSlhtrNavCm4cRAFy557O_q24AR2M1Q')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- S11: Creator Credibility and Authority Metrics -->
+<section class="w-full bg-surface py-20 px-6 lg:px-12">
+<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="p-6 bg-surface-container-low rounded">
+<span class="text-4xl md:text-5xl font-bold font-headline text-primary block mb-2">$42M+</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">Client Revenue Generated</span>
+</div>
+<div class="p-6 bg-surface-container-low rounded">
+<span class="text-4xl md:text-5xl font-bold font-headline text-primary block mb-2">1,250+</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">Funnels Deployed</span>
+</div>
+<div class="p-6 bg-surface-container-low rounded">
+<span class="text-4xl md:text-5xl font-bold font-headline text-primary block mb-2">99.8%</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">System Uptime</span>
+</div>
+<div class="p-6 bg-surface-container-low rounded">
+<span class="text-4xl md:text-5xl font-bold font-headline text-primary block mb-2">15+</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">Industry Awards</span>
+</div>
+</div>
+</section>
+<!-- S12: Authentic Verified Testimonials -->
+<section class="w-full bg-surface-container-low py-20 px-6 lg:px-12">
+<div class="max-w-6xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Social Proof</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 text-on-surface">Trusted by Industry Leaders</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Testimonial 1 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">"Implementing FunnelFlow's VSL template added $120k to our monthly recurring revenue in less than 45 days. Absolutely game-changing."</p>
+</div>
+<div class="flex items-center gap-3 pt-4">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Headshot portrait of a confident tech founder in a sleek dark blazer against a neutral office background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApEOs7HMsfQ1GsKJChtGo1YUGnxVNAPNqHXZuU43vYraggn84wXhVbSx3mVH-bSg29qV8Wo66xfQOlx_NIfF23icM2Hp9LlW09jWo7am-ACZfs0KnXAIwmI2GazOArudvQoTMEeOuSvygah-CgzSgfIvb2uOXmLXTGDHTMs_LW9qo3cNS3r5Gap6Nn_WSwfr9LIOo99mvvgWaqtsrurxfSS5ImhmzrlJzY-YZDHJsUHs18RcOooVklug')"></div>
+<div>
+<h4 class="font-bold text-sm">Marcus Vance</h4>
+<p class="text-xs text-on-surface-variant">CEO, Apex Growth Media</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">"We went from cold calling 8 hours a day to having qualified buyers book straight onto our calendar. Our close rate tripled."</p>
+</div>
+<div class="flex items-center gap-3 pt-4">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Professional headshot of a female marketing executive smiling in a well-lit corporate boardroom" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7qsozj9JkpahhD95FdjzDhLBhimDFplpP82GLP5nmfppDVP71twAlLVULsYlkfZlX8vY0-4FLJ9SfkwfOEjr9GkjfLDVIpO9ZizXdCq3t4JqzS_PMhAOR42kf3Naf500nNa9BTtXFNlxN50djDATUAJPrwjY26eiAD7Vrm332elcvl4FvX6SXbGQN8pVXQnav16Ci8qjLEjwR-bZoho2MvYO-Oa0nrYc7BxrSuhPk_lypZuXbvblMTw')"></div>
+<div>
+<h4 class="font-bold text-sm">Elena Rostova</h4>
+<p class="text-xs text-on-surface-variant">Founder, ScaleSync AI</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">"The automated qualification engine alone saved us over 20 hours of wasted discovery calls every single week. Worth every penny."</p>
+</div>
+<div class="flex items-center gap-3 pt-4">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Corporate headshot of a managing director in a sharp navy suit with arms crossed" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxHhSCsR_W8sBXcXN9ENwKTtTsovv-IIHjacBqZ46y55HdcC6dYLO-7Kqi4E49ksTGxqkELGCBzBvRod2_Z7ldz__eaarUhruYa5BDBQpZsn-9ezylpFf6Dnum4-D45WflgW8ah6u3z1QL93moc4FZt_T1sD2KxWEjh-fDDAKTmX4tmufbDdEX1U3uw7l2wJnRo0SXiFu9Yoxa3BoCUYN64jUPzSY5MoYpDa4kmlySeDw9VVKR9Mf5Ag')"></div>
+<div>
+<h4 class="font-bold text-sm">David Chen</h4>
+<p class="text-xs text-on-surface-variant">Managing Partner, Zenith Capital</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- S13: Complete Offer Details -->
+<section class="w-full bg-surface py-20 px-6 lg:px-12">
+<div class="max-w-4xl mx-auto bg-surface-container-low p-8 md:p-12 rounded-lg">
+<div class="text-center max-w-xl mx-auto mb-10">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Total Package Overview</span>
+<h2 class="text-2xl md:text-3xl font-bold font-headline mt-2">What You Get Today</h2>
+</div>
+<div class="space-y-4 mb-10">
+<div class="flex justify-between items-center py-3 border-b border-outline-variant">
+<span class="text-sm font-medium">Complete Cinematic VSL Funnel Template Suite</span>
+<span class="font-mono text-sm line-through text-on-surface-variant">$2,997</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-outline-variant">
+<span class="text-sm font-medium">Automated Lead Qualification &amp; CRM Engine</span>
+<span class="font-mono text-sm line-through text-on-surface-variant">$1,997</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-outline-variant">
+<span class="text-sm font-medium">Live Weekly Masterclass &amp; Coaching Access (1 Year)</span>
+<span class="font-mono text-sm line-through text-on-surface-variant">$3,500</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-outline-variant">
+<span class="text-sm font-medium">Enterprise Security &amp; Compliance Framework</span>
+<span class="font-mono text-sm line-through text-on-surface-variant">$997</span>
+</div>
+<div class="flex justify-between items-center py-4 font-bold text-base">
+<span>Total Combined Value</span>
+<span class="font-mono text-lg line-through text-error">$9,491</span>
+</div>
+</div>
+</div>
+</section>
+<!-- S14: Fast-Action Bonuses Stack -->
+<section class="w-full bg-surface-container-low py-20 px-6 lg:px-12">
+<div class="max-w-6xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Limited-Time Incentives</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 text-on-surface">Fast-Action Bonus Stack (Included Free Today)</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bonus 1 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono uppercase bg-primary-container text-on-primary-container px-2.5 py-1 rounded font-bold mb-4 inline-block">Bonus #1 • Value $997</span>
+<h3 class="text-lg font-bold mb-3">The 8-Figure Ad Swipe File</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Get direct access to 50+ of the highest-converting Facebook and YouTube ad creatives currently spending $10k+/day.</p>
+</div>
+<div class="mt-8 pt-4 text-xs font-bold text-primary uppercase">Free With Enrollment</div>
+</div>
+<!-- Bonus 2 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono uppercase bg-primary-container text-on-primary-container px-2.5 py-1 rounded font-bold mb-4 inline-block">Bonus #2 • Value $1,497</span>
+<h3 class="text-lg font-bold mb-3">High-Ticket Email Sequences</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Our plug-and-play 14-day automated email follow-up sequence designed to convert dormant VSL viewers into buyers.</p>
+</div>
+<div class="mt-8 pt-4 text-xs font-bold text-primary uppercase">Free With Enrollment</div>
+</div>
+<!-- Bonus 3 -->
+<div class="bg-surface p-8 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono uppercase bg-primary-container text-on-primary-container px-2.5 py-1 rounded font-bold mb-4 inline-block">Bonus #3 • Value $2,497</span>
+<h3 class="text-lg font-bold mb-3">Private Mastermind Community</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Direct access to our private network of 7-figure agency owners and founders for partnership and scaling advice.</p>
+</div>
+<div class="mt-8 pt-4 text-xs font-bold text-primary uppercase">Free With Enrollment</div>
+</div>
+</div>
+</div>
+</section>
+<!-- S15: Multi-Tier Pricing Cards with Most Popular Highlight -->
+<section class="w-full bg-surface py-20 px-6 lg:px-12" id="pricing">
+<div class="max-w-6xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Investment Options</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 text-on-surface">Choose Your Accelerator Tier</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<!-- Tier 1 -->
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col justify-between shadow-sm">
+<div>
+<h3 class="text-lg font-bold mb-2">Starter Tier</h3>
+<p class="text-sm text-on-surface-variant mb-6">Essential VSL templates for solopreneurs launching their first automated funnel.</p>
+<div class="text-4xl font-bold font-headline mb-6">$497 <span class="text-xs font-normal text-on-surface-variant">/ one-time</span></div>
+<ul class="space-y-3 text-sm text-on-surface-variant mb-8">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check</span>Standard VSL Templates</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check</span>Basic Analytics</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check</span>Community Access</li>
+</ul>
+</div>
+<a class="w-full bg-surface text-on-surface font-semibold py-3 rounded text-center hover:bg-surface-container transition-colors" href="#">Select Starter</a>
+</div>
+<!-- Tier 2 (Most Popular - Highlighted in Primary Blue) -->
+<div class="bg-primary text-on-primary p-8 rounded-lg flex flex-col justify-between shadow-xl relative transform md:-translate-y-4">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded text-xs font-bold uppercase tracking-wider shadow">Most Popular</div>
+<div>
+<h3 class="text-lg font-bold mb-2">Accelerator Pro</h3>
+<p class="text-sm text-primary-fixed mb-6">The complete growth system for scaling agencies and consulting firms.</p>
+<div class="text-4xl font-bold font-headline mb-6">$997 <span class="text-xs font-normal text-primary-fixed">/ one-time</span></div>
+<ul class="space-y-3 text-sm text-primary-fixed mb-8">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">check</span>All VSL Templates &amp; Builders</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">check</span>Automated Lead Qualification</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">check</span>Live Weekly Coaching Calls</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">check</span>All 3 Fast-Action Bonuses</li>
+</ul>
+</div>
+<a class="w-full bg-surface text-on-surface font-bold py-3.5 rounded text-center hover:bg-surface-container transition-colors shadow" href="#">Get Pro Access</a>
+</div>
+<!-- Tier 3 -->
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col justify-between shadow-sm">
+<div>
+<h3 class="text-lg font-bold mb-2">Enterprise Scale</h3>
+<p class="text-sm text-on-surface-variant mb-6">Custom deployment and 1-on-1 advisory for high-volume enterprises.</p>
+<div class="text-4xl font-bold font-headline mb-6">$2,997 <span class="text-xs font-normal text-on-surface-variant">/ one-time</span></div>
+<ul class="space-y-3 text-sm text-on-surface-variant mb-8">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check</span>Custom Funnel Architecture</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check</span>Dedicated Success Manager</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check</span>Priority 24/7 Support</li>
+</ul>
+</div>
+<a class="w-full bg-surface text-on-surface font-semibold py-3 rounded text-center hover:bg-surface-container transition-colors" href="#">Select Enterprise</a>
+</div>
+</div>
+</div>
+</section>
+<!-- S16: Risk-Free 30-Day Guarantee Badge -->
+<section class="w-full bg-surface-container-low py-16 px-6 lg:px-12">
+<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 bg-surface p-8 rounded-lg shadow-sm">
+<div class="w-24 h-24 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">30-Day Risk-Free Ironclad Guarantee</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+          Put FunnelFlow through its paces for a full 30 days. Deploy the templates, run the automated qualification engine, and join our weekly coaching calls. If you don't generate at least 3x your investment or aren't completely blown away by the results, simply email our support team for a prompt, no-questions-asked 100% refund.
+        </p>
+</div>
+</div>
+</section>
+<!-- S17: Interactive FAQ Accordion -->
+<section class="w-full bg-surface py-20 px-6 lg:px-12">
+<div class="max-w-3xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Got Questions?</span>
+<h2 class="text-2xl md:text-4xl font-bold font-headline mt-2 text-on-surface">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<button class="w-full p-6 text-left font-bold flex justify-between items-center hover:bg-surface-container transition-colors" onclick="toggleFaq('faq-1')">
+<span>How fast can I deploy my VSL funnel after purchasing?</span>
+<span class="material-symbols-outlined" id="icon-faq-1">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed" id="faq-1">
+            Most users have their cinematic VSL funnel fully customized and live within 48 hours using our pre-built templates and visual drag-and-drop builder.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<button class="w-full p-6 text-left font-bold flex justify-between items-center hover:bg-surface-container transition-colors" onclick="toggleFaq('faq-2')">
+<span>Do I need any technical skills or coding knowledge?</span>
+<span class="material-symbols-outlined" id="icon-faq-2">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed" id="faq-2">
+            Zero coding required. The platform is entirely visual, and our step-by-step onboarding masterclass walks you through every configuration click.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<button class="w-full p-6 text-left font-bold flex justify-between items-center hover:bg-surface-container transition-colors" onclick="toggleFaq('faq-3')">
+<span>What traffic sources work best with this VSL system?</span>
+<span class="material-symbols-outlined" id="icon-faq-3">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed" id="faq-3">
+            The funnel is optimized for Meta Ads, YouTube Ads, LinkedIn outreach, and organic social traffic channels.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<button class="w-full p-6 text-left font-bold flex justify-between items-center hover:bg-surface-container transition-colors" onclick="toggleFaq('faq-4')">
+<span>Is the 30-day guarantee really unconditional?</span>
+<span class="material-symbols-outlined" id="icon-faq-4">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed" id="faq-4">
+            Yes. If you aren't satisfied for any reason within 30 days, just drop us an email and you'll receive a 100% refund immediately.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- S18: Final Conversion-Focused CTA Banner -->
+<section class="w-full bg-inverse-surface text-inverse-on-surface py-24 px-6 lg:px-12 text-center">
+<div class="max-w-4xl mx-auto flex flex-col items-center">
+<span class="text-xs uppercase tracking-widest text-primary-fixed-dim font-bold mb-4">Limited Enrollment Window</span>
+<h2 class="text-3xl md:text-5xl font-bold font-headline text-surface mb-6 leading-tight">
+        Ready to Automate Your Client Acquisition and Scale to 7-Figures?
+      </h2>
+<p class="text-lg text-surface-container-highest max-w-2xl mb-10">
+        Join over 1,250+ high-growth companies already scaling with FunnelFlow. Lock in your 85% discount before the countdown timer expires.
+      </p>
+<a class="bg-primary text-on-primary font-bold text-lg px-12 py-5 rounded hover:bg-primary/90 transition-all shadow-xl flex items-center gap-3 transform hover:-translate-y-0.5" href="#pricing">
+<span>CLAIM YOUR ACCELERATOR ACCESS NOW</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<span class="text-xs text-surface-container-highest mt-6 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">lock</span>
+        Secure 256-Bit Encrypted Checkout • Instant Digital Delivery
+      </span>
+</div>
+</section>
+</div>
+<script>
+  // Interactive Tab Switching for Demo Section
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+    document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+    ['analytics', 'builder', 'crm'].forEach(t => {
+      const btn = document.getElementById('btn-' + t);
+      if (t === tabId) {
+        btn.className = "px-6 py-2.5 rounded text-sm font-bold bg-primary text-on-primary transition-all";
+      } else {
+        btn.className = "px-6 py-2.5 rounded text-sm font-bold bg-surface text-on-surface hover:bg-surface-container transition-all";
+      }
+    });
+  }
+
+  // Interactive FAQ Accordion
+  function toggleFaq(faqId) {
+    const el = document.getElementById(faqId);
+    const icon = document.getElementById('icon-' + faqId);
+    if (el.classList.contains('hidden')) {
+      el.classList.remove('hidden');
+      icon.textContent = 'expand_less';
+    } else {
+      el.classList.add('hidden');
+      icon.textContent = 'expand_more';
+    }
+  }
+
+  // VSL Play Overlay Mock
+  document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('vsl-play-overlay');
+    const playBtn = document.getElementById('vsl-ctrl-play');
+    if (overlay) {
+      overlay.addEventListener('click', () => {
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.style.display = 'none', 300);
+      });
+    }
+    if (playBtn) {
+      playBtn.addEventListener('click', () => {
+        if (overlay) {
+          overlay.style.opacity = '0';
+          setTimeout(() => overlay.style.display = 'none', 300);
+        }
+      });
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6"><div class="text-sm text-on-surface-variant">© 2024 FunnelFlow Inc. Inspired by high-converting design systems.</div><div class="flex gap-6 text-sm text-on-surface-variant"><a class="hover:text-on-surface" href="#">Privacy</a><a class="hover:text-on-surface" href="#">Terms</a><a class="hover:text-on-surface" href="#">Support</a></div></div></footer><script>
+  // Countdown timer logic
+  function startCountdown() {
+    let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+    
+    setInterval(() => {
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      }
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }, 1000);
+  }
+  document.addEventListener('DOMContentLoaded', startCountdown);
+</script></body></html>

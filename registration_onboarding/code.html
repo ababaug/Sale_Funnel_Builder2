@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"on-tertiary-fixed": "#022d0d", "primary-fixed": "#d0e2ff", "on-background": "#161616", "tertiary-fixed-dim": "#42be65", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-secondary-fixed": "#161616", "error-container": "#fff1f1", "surface-dim": "#e0e0e0", "secondary": "#6f6f6f", "tertiary": "#198038", "surface-tint": "#0f62fe", "primary-fixed-dim": "#78a9ff", "inverse-on-surface": "#f4f4f4", "surface-container-lowest": "#ffffff", "tertiary-container": "#a7f0ba", "primary-container": "#d0e2ff", "surface": "#ffffff", "inverse-primary": "#78a9ff", "on-primary-fixed": "#001d6c", "outline": "#8d8d8d", "on-error-container": "#750e13", "on-secondary-fixed-variant": "#525252", "on-primary-fixed-variant": "#0043ce", "secondary-fixed-dim": "#c6c6c6", "inverse-surface": "#393939", "tertiary-fixed": "#a7f0ba", "primary": "#0f62fe", "surface-container-highest": "#c6c6c6", "secondary-container": "#e0e0e0", "surface-variant": "#f4f4f4", "on-error": "#ffffff", "error": "#da1e28", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-container-high": "#e0e0e0", "surface-bright": "#ffffff", "background": "#ffffff", "on-tertiary-container": "#044317", "on-tertiary-fixed-variant": "#044317", "on-secondary-container": "#525252", "outline-variant": "#e0e0e0", "on-primary-container": "#161616", "surface-container-low": "#f4f4f4", "on-surface-variant": "#525252", "surface-container": "#f4f4f4", "on-secondary": "#ffffff"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {}, "fontFamily": {"headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"]}, "fontSize": {}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface min-h-screen flex flex-col justify-between"><header class="w-full py-6 px-8 flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-8 h-8 bg-primary flex items-center justify-center text-on-primary font-headline font-bold text-sm">F</div><span class="font-headline font-semibold text-lg tracking-tight text-on-surface">FunnelAI</span></div><div class="text-xs text-on-surface-variant">Enterprise Auth</div></header><main class="w-full flex-1 flex items-center justify-center px-6"><div class="flex flex-col w-full max-w-5xl mx-auto py-12 px-6">
+<!-- Step Indicator & Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2.5 py-1 bg-primary-container text-on-primary-container text-xs font-semibold tracking-wider uppercase">Step 1 of 3</span>
+<span class="text-xs text-on-surface-variant font-medium">Enterprise Onboarding</span>
+</div>
+<h1 class="text-3xl font-headline font-semibold text-on-surface tracking-tight">Create your FunnelAI Workspace</h1>
+<p class="text-sm text-on-surface-variant mt-1">Configure your enterprise identity, tenant subdomain, and core business vertical.</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center text-on-surface text-xs font-semibold">1</div>
+<div class="w-12 h-0.5 bg-surface-container-highest"></div>
+<div class="w-8 h-8 bg-surface-container text-on-surface-variant flex items-center justify-center text-xs font-medium">2</div>
+<div class="w-12 h-0.5 bg-surface-container-highest"></div>
+<div class="w-8 h-8 bg-surface-container text-on-surface-variant flex items-center justify-center text-xs font-medium">3</div>
+</div>
+</div>
+<!-- Main Onboarding Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Registration & Tenant Form -->
+<div class="lg:col-span-7 bg-surface-container p-8 flex flex-col gap-8">
+<div>
+<h2 class="text-lg font-headline font-semibold text-on-surface mb-1">Account &amp; Tenant Setup</h2>
+<p class="text-xs text-on-surface-variant">Enter your credentials and choose your dedicated workspace address.</p>
+</div>
+<form class="flex flex-col gap-6" id="onboardingForm" onsubmit="event.preventDefault(); alert('Workspace initialized successfully!');">
+<!-- Full Name & Work Email -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold text-on-surface tracking-wide uppercase">Full Name</label>
+<input class="h-10 bg-surface px-4 text-sm text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Alex Mercer" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold text-on-surface tracking-wide uppercase">Work Email</label>
+<input class="h-10 bg-surface px-4 text-sm text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="alex@company.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold text-on-surface tracking-wide uppercase">Secure Password</label>
+<input class="h-10 bg-surface px-4 text-sm text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="••••••••••••" required="" type="password"/>
+<span class="text-[11px] text-on-surface-variant">Minimum 12 characters, including uppercase, numbers, and symbols.</span>
+</div>
+<!-- Company & Subdomain -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold text-on-surface tracking-wide uppercase">Company Name</label>
+<input class="h-10 bg-surface px-4 text-sm text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:ring-1 focus:ring-primary" id="companyNameInput" oninput="updateSubdomain(this.value)" placeholder="Acme Global" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold text-on-surface tracking-wide uppercase">Subdomain</label>
+<div class="flex items-center h-10 bg-surface px-4">
+<input class="bg-transparent text-sm text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none w-full" id="subdomainInput" placeholder="acmeglobal" required="" type="text"/>
+<span class="text-xs text-on-surface-variant whitespace-nowrap">.funnelai.ng</span>
+</div>
+<span class="text-[11px] text-tertiary flex items-center gap-1" id="availabilityStatus">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Subdomain available
+            </span>
+</div>
+</div>
+<!-- Industry Vertical Selection -->
+<div class="flex flex-col gap-3 pt-4">
+<label class="text-xs font-semibold text-on-surface tracking-wide uppercase">Industry Vertical</label>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+<label class="flex items-center gap-3 p-3 bg-surface cursor-pointer hover:bg-surface-dim transition-colors">
+<input checked="" class="text-primary focus:ring-0" name="vertical" type="radio" value="physical"/>
+<span class="text-xs text-on-surface font-medium">Physical Products</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface cursor-pointer hover:bg-surface-dim transition-colors">
+<input class="text-primary focus:ring-0" name="vertical" type="radio" value="skincare"/>
+<span class="text-xs text-on-surface font-medium">Skincare &amp; Beauty</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface cursor-pointer hover:bg-surface-dim transition-colors">
+<input class="text-primary focus:ring-0" name="vertical" type="radio" value="realestate"/>
+<span class="text-xs text-on-surface font-medium">Real Estate</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface cursor-pointer hover:bg-surface-dim transition-colors">
+<input class="text-primary focus:ring-0" name="vertical" type="radio" value="consulting"/>
+<span class="text-xs text-on-surface font-medium">B2B Consulting</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface cursor-pointer hover:bg-surface-dim transition-colors">
+<input class="text-primary focus:ring-0" name="vertical" type="radio" value="saas"/>
+<span class="text-xs text-on-surface font-medium">SaaS &amp; Tech</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface cursor-pointer hover:bg-surface-dim transition-colors">
+<input class="text-primary focus:ring-0" name="vertical" type="radio" value="other"/>
+<span class="text-xs text-on-surface font-medium">Other High-Growth</span>
+</label>
+</div>
+</div>
+<!-- Monthly Revenue / Funnel Volume -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold text-on-surface tracking-wide uppercase">Estimated Monthly Funnel Volume</label>
+<select class="h-10 bg-surface px-4 text-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Early Stage / Under $10k MRR</option>
+<option selected="">$10k - $50k MRR</option>
+<option>$50k - $250k MRR</option>
+<option>$250k+ Enterprise Scale</option>
+</select>
+</div>
+<!-- Terms & Compliance -->
+<div class="flex items-start gap-3 pt-2">
+<input class="mt-1 text-primary focus:ring-0" id="terms" required="" type="checkbox"/>
+<label class="text-xs text-on-surface-variant leading-relaxed" for="terms">
+            I agree to the <a class="text-primary underline" href="#">FunnelAI Enterprise Master Services Agreement</a>, Data Processing Addendum, and Privacy Policy. I confirm I am authorized to bind my organization.
+          </label>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-12 bg-primary text-on-primary font-semibold text-sm tracking-wide flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors mt-2" type="submit">
+<span>Complete Onboarding &amp; Launch Workspace</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Right Column: Enterprise Summary & Security Highlights -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Preview Card -->
+<div class="bg-surface-container p-8 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-headline font-bold text-lg">AI</div>
+<div>
+<h3 class="text-sm font-semibold text-on-surface">FunnelAI Engine v4.8</h3>
+<span class="text-xs text-tertiary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary inline-block"></span> All systems operational
+            </span>
+</div>
+</div>
+<div class="flex flex-col gap-4 text-xs text-on-surface-variant">
+<div class="flex justify-between py-2 border-b border-outline-variant">
+<span>Dedicated Infrastructure</span>
+<span class="text-on-surface font-medium">Multi-Region AWS / GCP</span>
+</div>
+<div class="flex justify-between py-2 border-b border-outline-variant">
+<span>Data Encryption</span>
+<span class="text-on-surface font-medium">AES-256 / TLS 1.3</span>
+</div>
+<div class="flex justify-between py-2 border-b border-outline-variant">
+<span>Compliance Ready</span>
+<span class="text-on-surface font-medium">SOC2 Type II, GDPR</span>
+</div>
+<div class="flex justify-between py-2">
+<span>SLA Guarantee</span>
+<span class="text-on-surface font-medium">99.99% Uptime</span>
+</div>
+</div>
+</div>
+<!-- Security Notice Card -->
+<div class="bg-surface-container p-8 flex flex-col gap-4">
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary">security</span>
+<h4 class="text-sm font-semibold">Enterprise-Grade Security</h4>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+          Your workspace will be isolated within an independent tenant partition. Encryption keys are managed securely via AWS KMS with automatic rotation policies enabled by default.
+        </p>
+</div>
+</div>
+</div>
+<script>
+    function updateSubdomain(val) {
+      const sanitized = val.toLowerCase().replace(/[^a-z0-9]/g, '');
+      document.getElementById('subdomainInput').value = sanitized;
+    }
+  </script>
+</div></main><footer class="w-full py-6 px-8 text-center text-xs text-on-surface-variant">© 2024 FunnelAI Systems. All rights reserved.</footer></body></html>

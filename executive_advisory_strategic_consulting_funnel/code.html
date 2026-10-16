@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#044317", "primary-fixed": "#d0e2ff", "on-primary-fixed-variant": "#0043ce", "surface-container-high": "#e0e0e0", "on-secondary": "#ffffff", "inverse-surface": "#393939", "on-tertiary": "#ffffff", "surface-container-highest": "#c6c6c6", "tertiary-fixed-dim": "#42be65", "surface-container": "#f4f4f4", "on-tertiary-fixed": "#022d0d", "primary-fixed-dim": "#78a9ff", "surface-tint": "#0f62fe", "tertiary-fixed": "#a7f0ba", "on-error": "#ffffff", "inverse-on-surface": "#f4f4f4", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-dim": "#e0e0e0", "surface-variant": "#f4f4f4", "outline": "#8d8d8d", "inverse-primary": "#78a9ff", "on-secondary-fixed-variant": "#525252", "outline-variant": "#e0e0e0", "on-secondary-container": "#525252", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#161616", "on-primary": "#ffffff", "on-background": "#161616", "surface": "#ffffff", "secondary": "#6f6f6f", "secondary-container": "#e0e0e0", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-primary-container": "#161616", "on-primary-fixed": "#001d6c", "on-error-container": "#750e13", "error": "#da1e28", "tertiary": "#198038", "on-surface-variant": "#525252", "background": "#ffffff", "tertiary-container": "#a7f0ba", "error-container": "#fff1f1", "primary": "#0f62fe", "secondary-fixed-dim": "#c6c6c6", "primary-container": "#d0e2ff", "on-tertiary-fixed-variant": "#044317" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><span class="text-xl font-headline font-bold tracking-tight uppercase text-on-surface">FUNNELFLOW</span><nav class="hidden md:flex items-center gap-8" data-active-classes="bg-primary-container text-on-primary-container font-bold px-3 py-1 rounded"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Templates</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-4"><a class="bg-primary text-on-primary px-4 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full text-on-surface bg-surface font-body">
+<!-- 1. Top Banner -->
+<div class="w-full bg-primary text-on-primary py-2.5 px-4 text-xs font-semibold tracking-wider uppercase flex flex-wrap items-center justify-center gap-4 text-center z-40">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">schedule</span>Q3 Cohort Intake Closing Soon</span>
+<span class="bg-on-primary/20 px-2 py-0.5 font-mono text-xs rounded" id="countdown-timer">04 : 59 : 32</span>
+<a class="underline hover:text-primary-fixed transition-colors" href="#apply">Secure Seat →</a>
+</div>
+<!-- 2. Hero -->
+<section class="relative overflow-hidden pt-20 pb-28 px-6 lg:px-12 bg-surface-container-lowest">
+<div class="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col items-start gap-6">
+<div class="inline-flex items-center gap-2 bg-surface-container px-3 py-1 text-xs font-semibold tracking-wider uppercase text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+          Exclusive Executive Mastermind
+        </div>
+<h1 class="text-4xl lg:text-6xl font-headline font-bold tracking-tight text-on-surface leading-[1.1]">
+          Scale Your Advisory Practice to <span class="text-primary">$500K+ ARR</span> Without Working More Hours.
+        </h1>
+<p class="text-lg text-on-surface-variant max-w-2xl font-normal leading-relaxed">
+          The elite strategic framework for managing partners, high-ticket advisors, and boutique consultants seeking systematic enterprise-level growth.
+        </p>
+<div class="flex flex-wrap gap-4 pt-2">
+<a class="bg-primary text-on-primary px-8 py-4 font-semibold text-sm hover:bg-primary/90 transition-all shadow-md flex items-center gap-2" href="#apply">
+            Apply For Strategy Session <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="bg-surface-container text-on-surface px-8 py-4 font-semibold text-sm hover:bg-surface-container-high transition-all" href="#framework">
+            Explore Framework
+          </a>
+</div>
+<div class="flex items-center gap-6 pt-4 text-xs text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>By-application only</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Verified 4.2x ROI in 90 days</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="bg-surface-container p-8 shadow-xl relative">
+<div class="absolute -top-4 -right-4 bg-primary text-on-primary px-4 py-2 text-xs font-bold uppercase tracking-wider">Cohort 09 Live</div>
+<div class="space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant pb-4">
+<span class="text-xs uppercase tracking-wider text-on-surface-variant">Average Client Revenue Lift</span>
+<span class="text-2xl font-bold font-mono text-primary">+248%</span>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant pb-4">
+<span class="text-xs uppercase tracking-wider text-on-surface-variant">Active Advisory Board Seats</span>
+<span class="text-2xl font-bold font-mono text-on-surface">12 / 15 Filled</span>
+</div>
+<div class="flex items-center justify-between pb-2">
+<span class="text-xs uppercase tracking-wider text-on-surface-variant">Time to First Retainer Shift</span>
+<span class="text-xl font-bold font-mono text-tertiary">14 Days</span>
+</div>
+<div class="pt-2">
+<div class="w-full bg-surface-container-high h-2 overflow-hidden">
+<div class="bg-primary h-full w-[80%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant mt-1 uppercase tracking-wider">
+<span>Intake Capacity</span>
+<span>80% Committed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Trust Metrics Bar -->
+<section class="bg-surface-container py-12 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="p-4">
+<div class="text-3xl lg:text-4xl font-bold font-mono text-primary">$42M+</div>
+<div class="text-xs uppercase tracking-wider text-on-surface-variant mt-2">Client Revenue Generated</div>
+</div>
+<div class="p-4">
+<div class="text-3xl lg:text-4xl font-bold font-mono text-on-surface">94.2%</div>
+<div class="text-xs uppercase tracking-wider text-on-surface-variant mt-2">Enterprise Retention Rate</div>
+</div>
+<div class="p-4">
+<div class="text-3xl lg:text-4xl font-bold font-mono text-primary">180+</div>
+<div class="text-xs uppercase tracking-wider text-on-surface-variant mt-2">Advisors Transformed</div>
+</div>
+<div class="p-4">
+<div class="text-3xl lg:text-4xl font-bold font-mono text-on-surface">14 Days</div>
+<div class="text-xs uppercase tracking-wider text-on-surface-variant mt-2">Avg. Retainer Close Time</div>
+</div>
+</div>
+</section>
+<!-- 4. Target Profile -->
+<section class="py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">Audience Criteria</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold mt-2 text-on-surface">Who Qualifies for This Mastermind?</h2>
+<p class="text-on-surface-variant mt-4">We maintain strict entry criteria to ensure peer-level value and immediate strategic synergy among all advisory partners.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-bold mb-6">01</div>
+<h3 class="text-xl font-bold mb-3 text-on-surface">Managing Partners</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Consultancy owners currently billing between $200k and $1.5M annual revenue who want to break through operational ceilings.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs text-primary font-semibold uppercase tracking-wider">Minimum $20k/mo baseline</div>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-bold mb-6">02</div>
+<h3 class="text-xl font-bold mb-3 text-on-surface">Senior Strategists</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Ex-MBB consultants or specialized domain experts looking to transition from hourly billing to high-ticket retainer models.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs text-primary font-semibold uppercase tracking-wider">Expertise Validation Required</div>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-bold mb-6">03</div>
+<h3 class="text-xl font-bold mb-3 text-on-surface">Boutique Agency Leads</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Agency founders bogged down in project delivery who need to pivot into high-margin executive advisory services.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs text-primary font-semibold uppercase tracking-wider">Team size: 2 - 15 staff</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Challenges Section -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-16">
+<span class="text-xs uppercase tracking-widest text-error font-semibold">The Bottleneck</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold mt-2 text-on-surface">Why Traditional Advisory Practices Stall</h2>
+<p class="text-on-surface-variant mt-4">Most experts remain trapped in an exhausting cycle of feast-or-famine project work.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface p-6 shadow-sm">
+<span class="material-symbols-outlined text-error text-3xl mb-4">hourglass_disabled</span>
+<h3 class="font-bold mb-2 text-on-surface">Time-for-Money Trap</h3>
+<p class="text-sm text-on-surface-variant">Trading hours for dollars limits revenue scaling and causes severe executive burnout.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm">
+<span class="material-symbols-outlined text-error text-3xl mb-4">trending_down</span>
+<h3 class="font-bold mb-2 text-on-surface">Fee Stagnation</h3>
+<p class="text-sm text-on-surface-variant">Inability to command enterprise-tier fees due to commoditized proposals and weak positioning.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm">
+<span class="material-symbols-outlined text-error text-3xl mb-4">sync_problem</span>
+<h3 class="font-bold mb-2 text-on-surface">Inconsistent Pipeline</h3>
+<p class="text-sm text-on-surface-variant">Relying entirely on word-of-mouth referrals without a predictable inbound acquisition system.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm">
+<span class="material-symbols-outlined text-error text-3xl mb-4">group_off</span>
+<h3 class="font-bold mb-2 text-on-surface">Scope Creep</h3>
+<p class="text-sm text-on-surface-variant">Clients demanding uncompensated out-of-scope deliverables because contracts lack strict boundaries.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. The Solution -->
+<section class="py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-6">
+<span class="text-xs uppercase tracking-widest text-tertiary font-semibold">The Paradigm Shift</span>
+<h2 class="text-3xl lg:text-5xl font-headline font-bold text-on-surface leading-tight">
+          Transitioning to High-Margin Recurring Retainers
+        </h2>
+<p class="text-on-surface-variant leading-relaxed">
+          Our mastermind replaces sporadic project engagements with institutionalized $10k-$25k/mo advisory retainers. By shifting focus from tactical execution to high-level strategic governance, you reclaim your calendar while multiplying your enterprise valuation.
+        </p>
+<div class="space-y-4 pt-2">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface">Predictable Monthly Recurring Revenue</h4>
+<p class="text-sm text-on-surface-variant">Lock in 12-month advisory agreements before onboarding begins.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface">Value-Based Pricing Architecture</h4>
+<p class="text-sm text-on-surface-variant">Price based on enterprise impact, never on billable hours.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface">Automated Client Acquisition System</h4>
+<p class="text-sm text-on-surface-variant">Deploy our proprietary outbound sequence targeting C-suite decision makers.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 bg-surface-container p-8 lg:p-12">
+<div class="space-y-8">
+<div class="border-b border-outline-variant pb-6">
+<div class="text-xs uppercase tracking-wider text-on-surface-variant mb-1">Traditional Model</div>
+<div class="text-2xl font-bold text-on-surface font-mono">Hourly / Project Billing</div>
+<p class="text-sm text-on-surface-variant mt-2">Low margins, constant pitching, high client friction, zero predictability.</p>
+</div>
+<div>
+<div class="text-xs uppercase tracking-wider text-tertiary mb-1">FunnelFlow Advisory Model</div>
+<div class="text-3xl font-bold text-tertiary font-mono">$15,000 / mo Retainers</div>
+<p class="text-sm text-on-surface-variant mt-2">High-margin advisory governance, long-term contracts, low touch-point leverage.</p>
+</div>
+<div class="bg-surface p-4 flex items-center justify-between">
+<span class="text-sm font-semibold">Average Margin Differential</span>
+<span class="text-xl font-bold text-primary font-mono">+340%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Framework Steps -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low" id="framework">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">The Methodology</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold mt-2 text-on-surface">The 4-Stage Practice Transformation Roadmap</h2>
+<p class="text-on-surface-variant mt-4">A proven, systematic blueprint engineered to scale your advisory practice from six to seven figures cleanly.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface p-8 relative flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Phase 01</span>
+<h3 class="text-xl font-bold mt-2 mb-3 text-on-surface">Positioning &amp; Niche Audit</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Refine your core expertise into a high-ticket proprietary framework that commands immediate authority.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs text-on-surface-variant font-mono">Weeks 1 - 3</div>
+</div>
+<div class="bg-surface p-8 relative flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Phase 02</span>
+<h3 class="text-xl font-bold mt-2 mb-3 text-on-surface">Offer Architecture</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Package your insights into standardized $15k/mo retainer tiers with airtight legal agreements.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs text-on-surface-variant font-mono">Weeks 4 - 6</div>
+</div>
+<div class="bg-surface p-8 relative flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Phase 03</span>
+<h3 class="text-xl font-bold mt-2 mb-3 text-on-surface">Pipeline Activation</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Deploy our automated C-suite outbound engine to secure qualified discovery calls on autopilot.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs text-on-surface-variant font-mono">Weeks 7 - 9</div>
+</div>
+<div class="bg-surface p-8 relative flex flex-col justify-between shadow-sm">
+<div>
+<span class="text-xs font-mono text-primary font-bold uppercase tracking-wider">Phase 04</span>
+<h3 class="text-xl font-bold mt-2 mb-3 text-on-surface">Scale &amp; Delegation</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Build out delivery frameworks and bring in junior analysts to remove yourself from day-to-day execution.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant text-xs text-on-surface-variant font-mono">Weeks 10 - 12</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Mastermind Inclusions -->
+<section class="py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">Comprehensive Support</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold mt-2 text-on-surface">What’s Included Inside the Mastermind</h2>
+<p class="text-on-surface-variant mt-4">Every resource, tool, and advisory channel required to build a world-class consultancy practice.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">forum</span>
+<h3 class="text-xl font-bold mb-2 text-on-surface">Private Advisory Sessions</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Bi-weekly 1-on-1 strategy teardowns with seasoned enterprise mentors to unblock pipeline bottlenecks.</p>
+<ul class="space-y-2 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Direct Telegram hotline access</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Custom pitch deck audits</li>
+</ul>
+</div>
+<div class="bg-surface-container p-8">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">folder_managed</span>
+<h3 class="text-xl font-bold mb-2 text-on-surface">Proprietary Toolkits</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Plug-and-play legal templates, master service agreements, and client onboarding workflows.</p>
+<ul class="space-y-2 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> 24 tested MSAs and contracts</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Automated proposal calculators</li>
+</ul>
+</div>
+<div class="bg-surface-container p-8">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">verified_user</span>
+<h3 class="text-xl font-bold mb-2 text-on-surface">VIP Mastermind Community</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">An elite, vetted Slack workspace connecting you with fellow high-earning advisory partners.</p>
+<ul class="space-y-2 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Monthly virtual masterclasses</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Joint venture referral network</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. ROI Metrics -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-6">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">Financial Benchmark</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface">Measurable Return on Investment</h2>
+<p class="text-on-surface-variant leading-relaxed">
+          We measure our success strictly by your practice's bottom-line growth. Our members typically achieve full program ROI within the first 45 days of implementation.
+        </p>
+<div class="pt-4">
+<a class="bg-primary text-on-primary px-6 py-3 font-semibold text-sm inline-flex items-center gap-2" href="#apply">
+            Calculate Your Potential ROI <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="bg-surface p-6 shadow-sm">
+<div class="text-3xl font-bold font-mono text-primary mb-2">3.8 Hours</div>
+<div class="text-xs uppercase tracking-wider text-on-surface-variant mb-1">Weekly Client Delivery Time</div>
+<p class="text-xs text-on-surface-variant">Down from 35+ hours/week through asynchronous advisory models.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm">
+<div class="text-3xl font-bold font-mono text-tertiary mb-2">86%</div>
+<div class="text-xs uppercase tracking-wider text-on-surface-variant mb-1">Average Profit Margin</div>
+<p class="text-xs text-on-surface-variant">Eliminating overhead costs and scaling high-ticket advisory retainers.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm">
+<div class="text-3xl font-bold font-mono text-on-surface mb-2">$18,500</div>
+<div class="text-xs uppercase tracking-wider text-on-surface-variant mb-1">Average Retainer Value</div>
+<p class="text-xs text-on-surface-variant">Up from an initial baseline of $3,200 project fees.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm">
+<div class="text-3xl font-bold font-mono text-primary mb-2">11.4 Months</div>
+<div class="text-xs uppercase tracking-wider text-on-surface-variant mb-1">Average Contract Duration</div>
+<p class="text-xs text-on-surface-variant">Long-term partnerships secured through rigorous onboarding frameworks.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Success Stories -->
+<section class="py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">Case Studies</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold mt-2 text-on-surface">Managing Partner Transformations</h2>
+<p class="text-on-surface-variant mt-4">Read how peer advisory leaders restructured their practices for maximum leverage and profitability.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-surface-container-high rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of Marcus Vance, Managing Partner at Apex Strategy Group, smiling professionally in a tailored navy blazer against a minimalist gray architectural background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdtnY9gO-umtMuPK8Kf9CmVQGAfcUPZzq1og8uLVnYyptZGDPdKibr497-gWy44Vkf9oSj2mqPsoCihKw2fUBSWyx4jf3Dmxrqirpe5YttvaTwJ1NMY55-76HQaIUUwdO1AG77gXQx87IDnE7b7N4AWXLuV8Iqti_pObioPtN2hy65Pr4mhYkKi6INpDnxQQ5k_b8BSRkpQDpkArG1PartNV3iFu2BhkC6j0jAFs0wgdO5Ph3iZqrMjQ"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Marcus Vance</h4>
+<p class="text-xs text-on-surface-variant">Managing Partner, Apex Strategy Group</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed italic mb-6">
+              "Before joining FunnelFlow, I was billing $15k/mo working 70 hours a week across a dozen chaotic client projects. Within 90 days of implementing the retainer framework, we locked in four enterprise clients at $18k/mo each. My revenue tripled while my working hours halved."
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between text-xs font-mono">
+<span class="text-on-surface-variant">Result: $72K/mo ARR</span>
+<span class="text-primary font-bold">Verified Review</span>
+</div>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-surface-container-high rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of Elena Rostova, Principal Advisor at Meridian Risk Advisory, in a professional charcoal executive suit with confident posture in a modern corporate boardroom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYVaYYra3nQUCn0tkZlGXGGckJ21OYjW7D5J-kqzg9--G-QdVc0fE3xF06eKJdKu7MYsqpEleFKmdFfUhXKdS5Qo5cg0f7aDdgzjhXcmh6f7ZTXcKw3lxH9VlxB4U88s9rODnLmPpe5XJ59gIVbpE43hPfEpgGy8n0YsEIO_3jYfP1HD1YiW4Z9ZRpLeDNPizTSX-7pf-OxQeKa9NmrMDNBQu8CFcL_TeIDLrE57hyNPfrxgiRzCR2eA"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Elena Rostova</h4>
+<p class="text-xs text-on-surface-variant">Principal Advisor, Meridian Risk</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed italic mb-6">
+              "The positioning modules alone were worth ten times the investment. I went from competing on price with freelance consultants to commanding a $25k upfront advisory audit fee. The mastermind community is exceptionally high-caliber."
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between text-xs font-mono">
+<span class="text-on-surface-variant">Result: +310% Fee Increase</span>
+<span class="text-primary font-bold">Verified Review</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. Onboarding Journey -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">The Process</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold mt-2 text-on-surface">Your Onboarding Journey</h2>
+<p class="text-on-surface-variant mt-4">A streamlined 4-step intake protocol designed to get you integrated and executing within 48 hours.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-surface p-6 shadow-sm">
+<div class="text-primary font-mono text-xs font-bold uppercase tracking-wider mb-2">Step 01</div>
+<h3 class="font-bold mb-2 text-on-surface">Submit Application</h3>
+<p class="text-xs text-on-surface-variant">Complete our brief qualification questionnaire detailing your current practice revenue.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm">
+<div class="text-primary font-mono text-xs font-bold uppercase tracking-wider mb-2">Step 02</div>
+<h3 class="font-bold mb-2 text-on-surface">Strategy Alignment</h3>
+<p class="text-xs text-on-surface-variant">15-minute diagnostic call with our senior admissions board to verify mutual fit.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm">
+<div class="text-primary font-mono text-xs font-bold uppercase tracking-wider mb-2">Step 03</div>
+<h3 class="font-bold mb-2 text-on-surface">Portal &amp; Tooling Access</h3>
+<p class="text-xs text-on-surface-variant">Immediate login credentials for the master toolkit, Slack workspace, and training vault.</p>
+</div>
+<div class="bg-surface p-6 shadow-sm">
+<div class="text-primary font-mono text-xs font-bold uppercase tracking-wider mb-2">Step 04</div>
+<h3 class="font-bold mb-2 text-on-surface">Kickoff Session</h3>
+<p class="text-xs text-on-surface-variant">Your first 1-on-1 strategy teardown to map your 90-day retainer rollout plan.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. Advisory Board -->
+<section class="py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-16">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">Leadership</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold mt-2 text-on-surface">Meet Your Senior Strategists</h2>
+<p class="text-on-surface-variant mt-4">Decades of combined experience scaling advisory practices for Fortune 500 enterprises and boutique firms.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-6">
+<div class="h-64 mb-6 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional studio headshot of Dr. Jonathan Hayes, Senior Managing Director, wearing a crisp white shirt and dark blazer with an assured, expert expression against a neutral studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAZy-hDOFOSNMpFWC9_fFUdxwKC7NjknCaTammZadk3vjFaPvbeXmi2fmca1BjBBqkhzIU0OcdlUMF3bPIDc_ujAacBX8JEVfYCFuLYEBEqowNd7CmnqzB3eT6CUnTacRwVhcFBTb3CRUE2Krg4pkfgK7wkifGw74Kvp--zn98kjqqQmJahwPDANL8KzG0rIGrDxoB07Fmord-WEpcl3WAZY8TliSdWZ11UtQ49U7CFa9sSGdX8EjNWg"/>
+</div>
+<h3 class="font-bold text-lg text-on-surface">Dr. Jonathan Hayes</h3>
+<p class="text-xs text-primary font-semibold uppercase tracking-wider mb-2">Senior Managing Director</p>
+<p class="text-sm text-on-surface-variant">Ex-McKinsey partner with over $120M in advisory contract closures throughout his career.</p>
+</div>
+<div class="bg-surface-container p-6">
+<div class="h-64 mb-6 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional studio headshot of Sarah Lin, Head of Advisory Operations, wearing professional business attire with an approachable yet authoritative expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmLGV14Tqd174v-zwNOao-HkpLWHn0j5Il3JYAxxmuT04G67es_2rf2j5slDPr-STiOiacERD3J1QQCRAubj6AEhf1Y5xbv5oXmf6kn7n9BnojB3TGncvYYOR7oVkq91QZUiK_IQT9Ns5yZxP6uE__JjG_V8KR8ZfKo0zXaS3hYVU5fBGSYOnnX82DmILaa0zhjaP45aWjrppruGs9hv7558nm7dJFQkromZQH8-AaK-YHK6kag6ugBg"/>
+</div>
+<h3 class="font-bold text-lg text-on-surface">Sarah Lin</h3>
+<p class="text-xs text-primary font-semibold uppercase tracking-wider mb-2">Head of Advisory Operations</p>
+<p class="text-sm text-on-surface-variant">Specializes in building high-margin retainer architectures and automated C-suite pipelines.</p>
+</div>
+<div class="bg-surface-container p-6">
+<div class="h-64 mb-6 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional studio headshot of David Sterling, Enterprise Legal Counsel, in sharp formal wear looking directly into the camera with a confident demeanor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE7hpccJI_xM6cnxOiKkz7JM4-m0b1CcLc-i2hICl6kcx0Brq-gUPA3JQbWc-9Cb6TLmjNsa6LxNpaZ6Q_bnWNYXZfvjMhTbNG0BS4NG6SU9N7MczsiDRGPvGvPbEdhWgFI10mQQnUOD9zIiGlpn0-pov352ROqVc15T1WzeqAD_lVyH65BdwasprF8obP0s0ZqOBNn7R4WG57I-4LA6Zm0zZ1wKB_RJ8mt7r2PGq43t60ZkNwM7V6ng"/>
+</div>
+<h3 class="font-bold text-lg text-on-surface">David Sterling</h3>
+<p class="text-xs text-primary font-semibold uppercase tracking-wider mb-2">Enterprise Legal Counsel</p>
+<p class="text-sm text-on-surface-variant">Expert in high-ticket advisory contracts, IP protection, and risk mitigation frameworks.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 13. Pricing Packages -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-16 text-center mx-auto">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">Investment Tiers</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold mt-2 text-on-surface">Select Your Mastermind Level</h2>
+<p class="text-on-surface-variant mt-4">Transparent pricing designed for practices ready to scale aggressively.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<div class="bg-surface p-8 flex flex-col justify-between shadow-sm">
+<div>
+<div class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-2">Standard Tier</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Associate Mastermind</h3>
+<div class="text-4xl font-mono font-bold text-on-surface mb-6">$4,500 <span class="text-sm font-normal text-on-surface-variant">/ quarter</span></div>
+<p class="text-sm text-on-surface-variant mb-6">Ideal for solo consultants starting their transition to retainer models.</p>
+<ul class="space-y-3 text-sm text-on-surface-variant mb-8">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Full training vault access</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Standard contract templates</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Monthly group coaching call</li>
+</ul>
+</div>
+<a class="w-full bg-surface-container text-on-surface py-3 font-semibold text-sm text-center hover:bg-surface-container-high transition-colors" href="#apply">Apply For Associate</a>
+</div>
+<div class="bg-surface p-8 flex flex-col justify-between shadow-xl relative border-t-4 border-primary">
+<div class="absolute -top-3 right-8 bg-primary text-on-primary px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Most Popular</div>
+<div>
+<div class="text-xs uppercase tracking-wider font-semibold text-primary mb-2">Executive Tier</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Partner Accelerator</h3>
+<div class="text-4xl font-mono font-bold text-on-surface mb-6">$9,500 <span class="text-sm font-normal text-on-surface-variant">/ quarter</span></div>
+<p class="text-sm text-on-surface-variant mb-6">Designed for established practices looking to scale past $500k ARR.</p>
+<ul class="space-y-3 text-sm text-on-surface-variant mb-8">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Bi-weekly 1-on-1 strategy teardowns</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Automated pipeline setup</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> VIP Slack community access</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Full legal toolkit &amp; MSAs</li>
+</ul>
+</div>
+<a class="w-full bg-primary text-on-primary py-3 font-semibold text-sm text-center hover:bg-primary/90 transition-colors" href="#apply">Secure Executive Seat</a>
+</div>
+<div class="bg-surface p-8 flex flex-col justify-between shadow-sm">
+<div>
+<div class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-2">Enterprise Tier</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Boardroom Elite</h3>
+<div class="text-4xl font-mono font-bold text-on-surface mb-6">$24,000 <span class="text-sm font-normal text-on-surface-variant">/ 6 months</span></div>
+<p class="text-sm text-on-surface-variant mb-6">For boutique firms with teams looking for bespoke advisory scaling.</p>
+<ul class="space-y-3 text-sm text-on-surface-variant mb-8">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Unlimited 1-on-1 board access</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Done-for-you pipeline deployment</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Team training &amp; delegation blueprints</li>
+</ul>
+</div>
+<a class="w-full bg-surface-container text-on-surface py-3 font-semibold text-sm text-center hover:bg-surface-container-high transition-colors" href="#apply">Apply For Boardroom</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 14. Application Form -->
+<section class="py-24 px-6 lg:px-12 bg-surface" id="apply">
+<div class="max-w-4xl mx-auto bg-surface-container p-8 lg:p-12 shadow-xl">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">Consultation Request</span>
+<h2 class="text-3xl font-headline font-bold mt-2 text-on-surface">Apply For Your Strategy Session</h2>
+<p class="text-on-surface-variant mt-2 text-sm">Complete the confidential intake form below to determine eligibility for our upcoming cohort.</p>
+</div>
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Application submitted successfully. Our admissions board will review your credentials within 24 hours.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-2">Full Name</label>
+<input class="w-full bg-surface border-b border-outline px-4 py-3 text-sm focus:outline-none focus:border-primary" placeholder="Marcus Vance" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-2">Professional Email</label>
+<input class="w-full bg-surface border-b border-outline px-4 py-3 text-sm focus:outline-none focus:border-primary" placeholder="marcus@apexstrategy.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-2">Company / Practice Name</label>
+<input class="w-full bg-surface border-b border-outline px-4 py-3 text-sm focus:outline-none focus:border-primary" placeholder="Apex Strategy Group" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-2">Current Monthly Revenue</label>
+<select class="w-full bg-surface border-b border-outline px-4 py-3 text-sm focus:outline-none focus:border-primary">
+<option>$10,000 - $25,000 / mo</option>
+<option>$25,000 - $50,000 / mo</option>
+<option>$50,000 - $100,000 / mo</option>
+<option>$100,000+ / mo</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-2">What is your primary scaling objective for Q3?</label>
+<textarea class="w-full bg-surface border-b border-outline p-4 text-sm focus:outline-none focus:border-primary resize-none" placeholder="Describe your current bottleneck and revenue goals..." rows="4"></textarea>
+</div>
+<div class="pt-4 text-center">
+<button class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 font-semibold text-sm hover:bg-primary/90 transition-all shadow-md" type="submit">
+            Submit Confidential Application
+          </button>
+<p class="text-[11px] text-on-surface-variant mt-3">Strictly confidential. We respect your privacy and never share your data.</p>
+</div>
+</form>
+</div>
+</section>
+<!-- 15. Guarantee -->
+<section class="py-16 px-6 lg:px-12 bg-surface-container-low">
+<div class="max-w-4xl mx-auto text-center space-y-4">
+<span class="material-symbols-outlined text-tertiary text-4xl">verified</span>
+<h3 class="text-2xl font-bold text-on-surface font-headline">The 30-Day Performance Guarantee</h3>
+<p class="text-sm text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+        If you actively deploy our framework, attend your advisory sessions, and fail to secure at least one high-ticket retainer within your first 30 days, simply notify us for a prompt, courteous 100% refund.
+      </p>
+</div>
+</section>
+<!-- 16. FAQ Section -->
+<section class="py-24 px-6 lg:px-12 bg-surface">
+<div class="max-w-4xl mx-auto">
+<div class="max-w-3xl mb-16 text-center mx-auto">
+<span class="text-xs uppercase tracking-widest text-primary font-semibold">Common Questions</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold mt-2 text-on-surface">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-6">
+<details class="bg-surface-container p-6 group cursor-pointer">
+<summary class="font-bold text-on-surface flex justify-between items-center text-lg">
+            How much time is required to participate in the mastermind?
+            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-sm text-on-surface-variant mt-4 leading-relaxed">
+            Most members invest between 3 to 5 hours per week. The curriculum is built for busy managing partners who want maximum leverage without sacrificing client delivery time.
+          </p>
+</details>
+<details class="bg-surface-container p-6 group cursor-pointer">
+<summary class="font-bold text-on-surface flex justify-between items-center text-lg">
+            Is this mastermind suitable for solo consultants?
+            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-sm text-on-surface-variant mt-4 leading-relaxed">
+            Yes. Over 40% of our members operate as solo practitioners looking to transition into structured advisory retainers before eventually building a small team.
+          </p>
+</details>
+<details class="bg-surface-container p-6 group cursor-pointer">
+<summary class="font-bold text-on-surface flex justify-between items-center text-lg">
+            How do the 1-on-1 advisory sessions work?
+            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-sm text-on-surface-variant mt-4 leading-relaxed">
+            You are paired with a dedicated senior mentor who conducts bi-weekly video strategy teardowns, reviews your outreach campaigns, and audits your retainer proposals.
+          </p>
+</details>
+<details class="bg-surface-container p-6 group cursor-pointer">
+<summary class="font-bold text-on-surface flex justify-between items-center text-lg">
+            What makes this different from traditional business coaching?
+            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-sm text-on-surface-variant mt-4 leading-relaxed">
+            We do not teach generic motivation. We provide plug-and-play legal contracts, exact C-suite outreach scripts, and structured retainer pricing frameworks tested across 180+ advisory practices.
+          </p>
+</details>
+</div>
+</div>
+</section>
+<!-- 17. Closing Banner -->
+<section class="py-24 px-6 lg:px-12 bg-primary text-on-primary text-center">
+<div class="max-w-4xl mx-auto space-y-6">
+<span class="text-xs uppercase tracking-widest font-semibold opacity-80">Cohort Intake Closing Soon</span>
+<h2 class="text-3xl lg:text-5xl font-headline font-bold leading-tight">
+        Ready to Scale Your Advisory Practice?
+      </h2>
+<p class="text-lg opacity-90 max-w-2xl mx-auto font-normal">
+        Secure your seat in our Q3 cohort before intake closes. Limited seats available to ensure personalized mentorship.
+      </p>
+<div class="pt-4">
+<a class="bg-surface text-on-surface px-8 py-4 font-semibold text-sm hover:bg-surface-bright transition-all inline-flex items-center gap-2 shadow-lg" href="#apply">
+          Apply For Strategy Session <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6"><div class="text-sm text-on-surface-variant">© 2024 FunnelFlow Inc. Inspired by high-converting design systems.</div><div class="flex gap-6 text-sm text-on-surface-variant"><a class="hover:text-on-surface" href="#">Privacy</a><a class="hover:text-on-surface" href="#">Terms</a><a class="hover:text-on-surface" href="#">Support</a></div></div></footer><script>
+  // Countdown timer logic
+  function startCountdown() {
+    let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+    
+    setInterval(() => {
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      }
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }, 1000);
+  }
+  document.addEventListener('DOMContentLoaded', startCountdown);
+</script></body></html>

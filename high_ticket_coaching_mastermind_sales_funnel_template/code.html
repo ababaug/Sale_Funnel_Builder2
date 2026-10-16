@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#044317", "primary-fixed": "#d0e2ff", "on-primary-fixed-variant": "#0043ce", "surface-container-high": "#e0e0e0", "on-secondary": "#ffffff", "inverse-surface": "#393939", "on-tertiary": "#ffffff", "surface-container-highest": "#c6c6c6", "tertiary-fixed-dim": "#42be65", "surface-container": "#f4f4f4", "on-tertiary-fixed": "#022d0d", "primary-fixed-dim": "#78a9ff", "surface-tint": "#0f62fe", "tertiary-fixed": "#a7f0ba", "on-error": "#ffffff", "inverse-on-surface": "#f4f4f4", "secondary-fixed": "#e0e0e0", "on-surface": "#161616", "surface-dim": "#e0e0e0", "surface-variant": "#f4f4f4", "outline": "#8d8d8d", "inverse-primary": "#78a9ff", "on-secondary-fixed-variant": "#525252", "outline-variant": "#e0e0e0", "on-secondary-container": "#525252", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#161616", "on-primary": "#ffffff", "on-background": "#161616", "surface": "#ffffff", "secondary": "#6f6f6f", "secondary-container": "#e0e0e0", "surface-bright": "#ffffff", "surface-container-low": "#f4f4f4", "on-primary-container": "#161616", "on-primary-fixed": "#001d6c", "on-error-container": "#750e13", "error": "#da1e28", "tertiary": "#198038", "on-surface-variant": "#525252", "background": "#ffffff", "tertiary-container": "#a7f0ba", "error-container": "#fff1f1", "primary": "#0f62fe", "secondary-fixed-dim": "#c6c6c6", "primary-container": "#d0e2ff", "on-tertiary-fixed-variant": "#044317" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "fontFamily": { "headline": ["IBM Plex Sans"], "display": ["IBM Plex Sans"], "body": ["IBM Plex Sans"], "label": ["IBM Plex Sans"] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><span class="text-xl font-headline font-bold tracking-tight uppercase text-on-surface">FUNNELFLOW</span><nav class="hidden md:flex items-center gap-8" data-active-classes="bg-primary-container text-on-primary-container font-bold px-3 py-1 rounded"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="templates" href="#">Templates</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-4"><a class="bg-primary text-on-primary px-4 py-2 text-sm font-semibold hover:bg-primary/90 transition-colors" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full bg-surface text-on-surface">
+<!-- 1. Top Announcement Bar -->
+<aside aria-label="Limited Time Offer" class="bg-primary text-on-primary py-3 px-6 text-center text-xs font-semibold tracking-wider uppercase flex flex-wrap items-center justify-center gap-4">
+<span>Applications closing soon for Q3 Mastermind cohort. Secure your seat.</span>
+<div class="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed px-3 py-1 font-mono text-xs font-bold">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span id="countdown-timer">04 : 59 : 32</span>
+</div>
+</aside>
+<!-- 2. High-Impact Hero Section -->
+<section class="relative px-6 lg:px-12 py-20 lg:py-32 overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 bg-[radial-gradient(#0f62fe_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col items-start gap-6">
+<div class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-3 py-1 text-xs font-bold uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Exclusive 7-Figure Accelerator
+        </div>
+<h1 class="text-4xl lg:text-6xl font-headline font-bold tracking-tight leading-none text-on-surface">
+          Scale From 6 to 7 Figures Without Burning Out.
+        </h1>
+<p class="text-lg text-on-surface-variant max-w-xl font-normal leading-relaxed">
+          The rigorous implementation framework for founders scaling past $100k/mo. Reclaim your calendar, optimize your operations, and build a self-sustaining elite advisory board.
+        </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="bg-primary text-on-primary px-8 py-4 font-semibold text-sm hover:bg-primary/90 transition-all shadow-md flex items-center gap-3 group" href="#apply">
+            Apply For Mentorship
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="bg-surface-container-high text-on-surface px-6 py-4 font-semibold text-sm hover:bg-surface-container-highest transition-colors" href="#curriculum">
+            Explore Curriculum
+          </a>
+</div>
+<div class="flex items-center gap-6 pt-6 border-t border-outline-variant w-full">
+<div>
+<div class="text-2xl font-bold font-mono">94.2%</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider">Scale Rate</div>
+</div>
+<div class="w-px h-8 bg-outline-variant"></div>
+<div>
+<div class="text-2xl font-bold font-mono">$42M+</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider">Client Revenue Added</div>
+</div>
+<div class="w-px h-8 bg-outline-variant"></div>
+<div>
+<div class="text-2xl font-bold font-mono">12 wks</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider">Average ROI Timeline</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="bg-surface p-2 shadow-xl relative group">
+<div class="relative aspect-video bg-cover bg-center overflow-hidden" data-alt="Professional entrepreneur explaining high ticket coaching strategy on a modern glass whiteboard in a minimalist executive boardroom with soft blue lighting and high contrast framing." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcsrwNl_8-eshPOfc3UQKP20_G-Ea_cS0C1UAKaggP3CTrQFAn8GBjx4CD3QvV3ydHpS5mZzMq3iC-VOgwtgi2lhie3HsZQ3a5wyDHiM-U7mJ38pQrvB5ZbBqQh-6lI4BgZFZjw1ygcWlKePpC5WD5IFDnKuYAUb4c2h2-TrDDzd9PA1JtbfIxLMCtBre8ky0Z3SEWUtZ1LHOexpAGLZX0eXDIGXcsxk3Fh-XxxZ1NRWCtWKO7-B294Q')">
+<div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center group-hover:bg-inverse-surface/30 transition-colors">
+<button aria-label="Play Founder Masterclass Preview" class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur p-3 text-xs flex justify-between items-center">
+<span class="font-semibold">Watch Founder Masterclass (14:20)</span>
+<span class="font-mono text-primary">HD 1080p</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Social Proof Partner/Press Marquee -->
+<section class="py-12 bg-surface-container border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<p class="text-center text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-8">
+        Featured In &amp; Trusted By Founders Scaling With Us
+      </p>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-70">
+<div class="text-center font-headline font-bold text-xl tracking-tighter">FORBES</div>
+<div class="text-center font-headline font-bold text-xl tracking-tighter">BLOOMBERG</div>
+<div class="text-center font-headline font-bold text-xl tracking-tighter">TECHCRUNCH</div>
+<div class="text-center font-headline font-bold text-xl tracking-tighter">FAST COMPANY</div>
+<div class="text-center font-headline font-bold text-xl tracking-tighter">YAHOO! FINANCE</div>
+<div class="text-center font-headline font-bold text-xl tracking-tighter">WALL STREET JOURNAL</div>
+</div>
+</div>
+</section>
+<!-- 4. The Core Curriculum & Mastermind Pillars -->
+<section class="py-24 max-w-7xl mx-auto px-6 lg:px-12 w-full" id="curriculum">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Systematic Architecture</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight mt-2">The Core Curriculum &amp; Mastermind Pillars</h2>
+</div>
+<p class="text-on-surface-variant max-w-md text-sm">
+        Built strictly on data-driven leverage points. No fluff, no endless modules—just precise operational blueprints.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8 flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div>
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-mono font-bold mb-6 text-lg">01</div>
+<h3 class="text-xl font-headline font-bold mb-3">Offer Architecture &amp; High-Ticket Positioning</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Re-engineer your core product suite into a high-ticket advisory model that commands $10k–$50k upfront without increased fulfillment overhead.
+          </p>
+</div>
+<ul class="mt-8 space-y-2 text-xs font-semibold text-on-surface-variant border-t border-outline-variant pt-4">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check</span> Value Metric Optimization</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check</span> Enterprise Closing Scripts</li>
+</ul>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div>
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-mono font-bold mb-6 text-lg">02</div>
+<h3 class="text-xl font-headline font-bold mb-3">Automated Acquisition &amp; Pipeline Systems</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Install predictable outbound and inbound engines that consistently deliver qualified decision-makers directly to your calendar every single week.
+          </p>
+</div>
+<ul class="mt-8 space-y-2 text-xs font-semibold text-on-surface-variant border-t border-outline-variant pt-4">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check</span> Omnichannel Funnel Routing</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check</span> Setter Team Playbooks</li>
+</ul>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div>
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-mono font-bold mb-6 text-lg">03</div>
+<h3 class="text-xl font-headline font-bold mb-3">Team Autonomy &amp; Executive Leadership</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Transition from operator to visionary owner. Build self-managed delivery teams and install fractional C-suite protocols to remove yourself from day-to-day firefighting.
+          </p>
+</div>
+<ul class="mt-8 space-y-2 text-xs font-semibold text-on-surface-variant border-t border-outline-variant pt-4">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check</span> Org Chart Restructuring</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check</span> KPI Dashboard Automation</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 5. Interactive ROI / Success Potential Calculator -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Predictive Growth Model</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight mt-2">Interactive ROI &amp; Revenue Potential Calculator</h2>
+<p class="text-on-surface-variant text-sm mt-4">Adjust your current metrics to forecast your 12-month revenue growth after implementing the FunnelFlow architecture.</p>
+</div>
+<div class="bg-surface p-8 lg:p-12 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-8">
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="text-sm font-semibold" for="monthly-revenue">Current Monthly Revenue</label>
+<span class="font-mono font-bold text-primary" id="rev-val">$45,000</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" id="monthly-revenue" max="250000" min="10000" oninput="updateCalculator()" step="5000" type="range" value="45000"/>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="text-sm font-semibold" for="ticket-size">Average High-Ticket Price</label>
+<span class="font-mono font-bold text-primary" id="ticket-val">$5,000</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" id="ticket-size" max="25000" min="2000" oninput="updateCalculator()" step="1000" type="range" value="5000"/>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="text-sm font-semibold" for="closing-rate">Sales Closing Rate (%)</label>
+<span class="font-mono font-bold text-primary" id="close-val">20%</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" id="closing-rate" max="50" min="5" oninput="updateCalculator()" step="1" type="range" value="20"/>
+</div>
+</div>
+<div class="lg:col-span-6 bg-surface-container p-8 flex flex-col justify-between h-full">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Projected 12-Month Run Rate</span>
+<div class="text-4xl lg:text-5xl font-mono font-bold text-primary mt-3" id="projected-revenue">$1,480,000</div>
+<p class="text-xs text-on-surface-variant mt-2">Based on historical client cohorts scaling through standardized pipeline automation and offer elevation.</p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant flex items-center justify-between">
+<div>
+<div class="text-xs text-on-surface-variant uppercase">Estimated ROI Multiple</div>
+<div class="text-xl font-mono font-bold" id="roi-multiple">14.8x</div>
+</div>
+<a class="bg-primary text-on-primary px-6 py-3 text-xs font-bold uppercase hover:bg-primary/90 transition-colors" href="#apply">
+              Claim This Growth
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Verified Success Stories and Video Testimonials -->
+<section class="py-24 max-w-7xl mx-auto px-6 lg:px-12 w-full">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Verified Case Studies</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight mt-2">Results From Founders Just Like You</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-cover bg-center rounded-full" data-alt="Headshot of a confident tech founder in a navy blue blazer smiling against a neutral studio background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACnmOWSNO7rqP9ZOHUFu9VsJWdbp7Oxu0jmZZ3H1Gt_-tqJE1HbOG4EO0EQoWY37DZHTR0lsrz1JcfVtIr2AMTMr3yqhW9skbS9NSItAGIoPU7Q_O-cFIWCqxR8bNclWTbuTiz7qqrEkQqeu4vnj0O8KXrsPmd3-_T-Wte5sC6UjXqRlVm1cTmM4y-kf9z0UF9uqHMwM_nqjTPeYVwjjCSu_YvXWG7yzBQ36z-RNuHmbyrCgofbko_-w')"></div>
+<div>
+<h4 class="font-bold text-sm">Marcus Vance</h4>
+<p class="text-xs text-on-surface-variant">CEO, Apex SaaS Advisory</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+            "We jumped from $30k/mo to over $110k/mo in 90 days. The positioning frameworks completely changed how enterprise clients perceive our value."
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex justify-between items-center text-xs font-mono font-bold">
+<span class="text-tertiary">+266% Revenue Growth</span>
+<span class="text-on-surface-variant">90 Days</span>
+</div>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-cover bg-center rounded-full" data-alt="Headshot of a female digital agency founder wearing professional minimalist attire with warm lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACmVMv4spiNDDtiu2UtwfXXR3eg-8-rr_yiFJKVvt092UILikouK_3GpJAlu1SvA1QrXlEACFWE2p0Bas1l7iZz-CnYr2G5j3Mh_8XVyeFlgIUkAwPUiqpHWVE1L0ZBqy3Uj0tGqdFww72W6isTKc7fFkZqR5tnrcIg0g2wDePLPpsvH_48B9ssrN2znFezyVlRM8Vm36CAI2HcCVgx4-6DVeWjegCh52bukMkSQjXOPiYoC5_8PgVog')"></div>
+<div>
+<h4 class="font-bold text-sm">Elena Rostova</h4>
+<p class="text-xs text-on-surface-variant">Founder, ScaleMedia</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+            "I used to work 70 hours a week fulfilling client work. Now I have a fractional team and clear operating dashboards. I took my first real vacation in 4 years."
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex justify-between items-center text-xs font-mono font-bold">
+<span class="text-tertiary">Work Hours Cut by 50%</span>
+<span class="text-on-surface-variant">$85k/mo Run Rate</span>
+</div>
+</div>
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-cover bg-center rounded-full" data-alt="Headshot of an executive consultant with glasses and crisp white collared shirt." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0y7AKaLGzlvVjw4iVQWeMksYG6ApcyX9qS80AxQfogKbrVSsjq9wV9_BOyWBIwzVbjMVuKbm1_jYGMM-lC-ewQj5m8J8eDbzu8HoChMZofxQLPzOk5FMwtTHBvchsPgns6LCg_aYpzNoQl6bRcC11qcmY-dfsLtJNZl23kjoDJRrubUXIfv5PpUhs0qF7ClxDrs9c27r8oLCOFfGcREE5WbOs4Ww4o2WUa-JT_nsZvcj1_30N7rRGVg')"></div>
+<div>
+<h4 class="font-bold text-sm">Julian Thorne</h4>
+<p class="text-xs text-on-surface-variant">Managing Partner, Thorne Capital</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+            "The peer group alone is worth 10x the tuition. Being in a room with other 7-figure founders pushing the envelope keeps you relentlessly accountable."
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex justify-between items-center text-xs font-mono font-bold">
+<span class="text-tertiary">$1.2M Annual Run Rate</span>
+<span class="text-on-surface-variant">Cohort 4</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Transparent Pricing / Application Tiers -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Investment Tiers</span>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold tracking-tight mt-2">Choose Your Mentorship Level</h2>
+<p class="text-on-surface-variant text-sm mt-4">All tiers require an application review to ensure cohort alignment and peer synergy.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<div class="bg-surface p-8 lg:p-12 flex flex-col justify-between shadow-md">
+<div>
+<div class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Growth Accelerator</div>
+<h3 class="text-2xl font-bold font-headline mb-4">6-Month Mastermind Tier</h3>
+<div class="text-4xl font-mono font-bold mb-6">$12,000 <span class="text-sm text-on-surface-variant font-normal">/ upfront or 3x $4,500</span></div>
+<p class="text-sm text-on-surface-variant mb-8 leading-relaxed">Designed for founders scaling from $20k to $60k/mo looking for rapid funnel deployment and group advisory.</p>
+<ul class="space-y-3 text-sm text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary">check</span> Bi-weekly group strategy calls with lead mentor</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary">check</span> Full access to SOP vault and funnel templates</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary">check</span> Private Slack community access</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary">check</span> 1x In-person retreat ticket</li>
+</ul>
+</div>
+<div class="mt-12">
+<a class="block w-full bg-surface-container-high text-on-surface text-center py-4 text-sm font-bold hover:bg-primary hover:text-on-primary transition-colors" href="#apply">
+              Apply For Growth Tier
+            </a>
+</div>
+</div>
+<div class="bg-inverse-surface text-inverse-on-surface p-8 lg:p-12 flex flex-col justify-between shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest px-4 py-1">Most Popular</div>
+<div>
+<div class="text-xs font-bold uppercase tracking-wider text-primary-fixed-dim mb-2">Private Boardroom</div>
+<h3 class="text-2xl font-bold font-headline mb-4">7-Figure Executive Tier</h3>
+<div class="text-4xl font-mono font-bold mb-6 text-surface-bright">$25,000 <span class="text-sm text-inverse-on-surface/60 font-normal">/ upfront or custom terms</span></div>
+<p class="text-sm text-inverse-on-surface/80 mb-8 leading-relaxed">For established 6-figure and 7-figure founders wanting direct 1-on-1 advisory, custom team training, and elite peer circles.</p>
+<ul class="space-y-3 text-sm text-inverse-on-surface/80">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">check</span> Weekly 1-on-1 advisory sessions</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">check</span> Done-with-you sales and setter pipeline installation</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">check</span> Direct Telegram access to mentors</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">check</span> VIP access to all annual masterminds and retreats</li>
+</ul>
+</div>
+<div class="mt-12">
+<a class="block w-full bg-primary text-on-primary text-center py-4 text-sm font-bold hover:bg-primary/90 transition-colors" href="#apply">
+              Apply For Executive Tier
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Frequently Asked Questions accordion -->
+<section class="py-24 max-w-4xl mx-auto px-6 lg:px-12 w-full">
+<div class="text-center mb-16">
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Got Questions?</span>
+<h2 class="text-3xl font-headline font-bold tracking-tight mt-2">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<details class="bg-surface-container group p-6 cursor-pointer">
+<summary class="flex justify-between items-center font-headline font-bold text-lg list-none">
+<span>Who is this mastermind specifically designed for?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-sm text-on-surface-variant leading-relaxed">
+          This program is built specifically for agency owners, consultants, coaches, and B2B service providers currently generating between $20k and $150k per month who want to scale efficiently without increasing operational chaos.
+        </p>
+</details>
+<details class="bg-surface-container group p-6 cursor-pointer">
+<summary class="flex justify-between items-center font-headline font-bold text-lg list-none">
+<span>What is the time commitment required?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-sm text-on-surface-variant leading-relaxed">
+          Expect to dedicate 3 to 5 hours per week toward executing the strategic frameworks, attending advisory calls, and training your internal team members on our operational templates.
+        </p>
+</details>
+<details class="bg-surface-container group p-6 cursor-pointer">
+<summary class="flex justify-between items-center font-headline font-bold text-lg list-none">
+<span>Is there a revenue guarantee?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-sm text-on-surface-variant leading-relaxed">
+          While we do not offer generic passive guarantees, we have a 94.2% success rate of clients doubling their investment within the first 90 days when following our exact pipeline installation protocols.
+        </p>
+</details>
+<details class="bg-surface-container group p-6 cursor-pointer">
+<summary class="flex justify-between items-center font-headline font-bold text-lg list-none">
+<span>How do the application and onboarding work?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-sm text-on-surface-variant leading-relaxed">
+          Once you submit your application below, our advisory team reviews your current metrics within 24 hours. If qualified, you will be invited to a 30-minute alignment call to determine your custom roadmap.
+        </p>
+</details>
+</div>
+</section>
+<!-- Application / Booking Anchor Section -->
+<section class="py-24 bg-surface-container-high" id="apply">
+<div class="max-w-3xl mx-auto px-6 lg:px-12 bg-surface p-8 lg:p-12 shadow-xl">
+<div class="text-center mb-10">
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Secure Your Interview</span>
+<h2 class="text-3xl font-headline font-bold tracking-tight mt-2">Apply For Mentorship Cohort</h2>
+<p class="text-sm text-on-surface-variant mt-2">Complete the preliminary application below to schedule your alignment call.</p>
+</div>
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Application submitted successfully! Our team will contact you within 24 hours.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider mb-2" for="full-name">Full Name</label>
+<input class="w-full bg-surface-container h-12 px-4 text-sm outline-none focus:ring-1 focus:ring-primary" id="full-name" placeholder="Alex Hormozi" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider mb-2" for="work-email">Work Email</label>
+<input class="w-full bg-surface-container h-12 px-4 text-sm outline-none focus:ring-1 focus:ring-primary" id="work-email" placeholder="alex@company.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider mb-2" for="company-url">Company Website / LinkedIn</label>
+<input class="w-full bg-surface-container h-12 px-4 text-sm outline-none focus:ring-1 focus:ring-primary" id="company-url" placeholder="https://yourcompany.com" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider mb-2" for="revenue-tier">Current Monthly Revenue</label>
+<select class="w-full bg-surface-container h-12 px-4 text-sm outline-none focus:ring-1 focus:ring-primary" id="revenue-tier">
+<option>$10k - $25k / mo</option>
+<option>$25k - $50k / mo</option>
+<option>$50k - $100k / mo</option>
+<option>$100k+ / mo</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider mb-2" for="primary-bottleneck">What is your primary bottleneck right now?</label>
+<textarea class="w-full bg-surface-container p-4 text-sm outline-none focus:ring-1 focus:ring-primary" id="primary-bottleneck" placeholder="Tell us about your current client acquisition and team structure..." required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 font-bold text-sm uppercase tracking-wider hover:bg-primary/90 transition-colors" type="submit">
+          Submit Application For Review
+        </button>
+</form>
+</div>
+</section>
+<!-- Interactive Calculator Script -->
+<script>
+    function updateCalculator() {
+      const rev = parseInt(document.getElementById('monthly-revenue').value);
+      const ticket = parseInt(document.getElementById('ticket-size').value);
+      const closeRate = parseInt(document.getElementById('closing-rate').value);
+
+      document.getElementById('rev-val').textContent = '$' + rev.toLocaleString();
+      document.getElementById('ticket-val').textContent = '$' + ticket.toLocaleString();
+      document.getElementById('close-val').textContent = closeRate + '%';
+
+      // Simple predictive simulation calculation
+      const projectedAnnual = (rev * 12) * 2.8;
+      document.getElementById('projected-revenue').textContent = '$' + Math.round(projectedAnnual).toLocaleString();
+      
+      const multiple = (projectedAnnual / (rev * 12)).toFixed(1);
+      document.getElementById('roi-multiple').textContent = multiple + 'x';
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6"><div class="text-sm text-on-surface-variant">© 2024 FunnelFlow Inc. Inspired by high-converting design systems.</div><div class="flex gap-6 text-sm text-on-surface-variant"><a class="hover:text-on-surface" href="#">Privacy</a><a class="hover:text-on-surface" href="#">Terms</a><a class="hover:text-on-surface" href="#">Support</a></div></div></footer><script>
+  function startCountdown() {
+    let totalSeconds = 4 * 3600 + 59 * 60 + 32;
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+    setInterval(() => {
+      if (totalSeconds > 0) totalSeconds--;
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      timerDisplay.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }, 1000);
+  }
+  document.addEventListener('DOMContentLoaded', startCountdown);
+</script></body></html>
